@@ -1,3 +1,11 @@
 .header {
+  &__logo {
+    @include sprite('logo');
+  }
 
+  &__inner {
+    padding: 28px 0;
+    display: flex;
+    justify-content: space-between;
+  }
 }
