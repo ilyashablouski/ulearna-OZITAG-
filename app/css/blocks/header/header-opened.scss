@@ -1,7 +1,97 @@
 .header.opened {
   .header {
     &__burger {
-      display: none;
+      position: fixed;
+      right: 10px;
+      top: 32px;
+      display: block;
+      z-index: z(default) + 1;
+      transform: none;
+
+      &:after {
+        @include sprite('header-close');
+      }
+    }
+
+    &__inner {
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: z(default);
+      background: #fff;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 25px;
+    }
+
+    &__left {
+      padding-left: 16px;
+    }
+
+    &__center {
+      display: block;
+      margin: 30px 0 0 0;
+      padding: 0 16px;
+      width: 100%;
+    }
+
+    &__right {
+      display: block;
+      width: 100%;
+    }
+
+    &__actions {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-top: auto;
+      padding: 20px 16px;
+      margin-left: 0;
+
+      &-item {
+        margin: 0 0 20px 0;
+
+        &:first-child {
+          margin-bottom: 0;
+        }
+
+        .btn {
+          width: 100%;
+          display: block;
+        }
+
+        display: block !important;
+      }
+    }
+  }
+
+  .header-menu {
+    &__nav {
+      display: block;
+      margin: 0;
+    }
+
+    &__item {
+      margin: 15px 0 0 0;
+      padding: 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &-link{
+        width: 100%;
+        margin: 0;
+      }
+
+      &--dropdown{
+        .header-menu__item-link{
+          justify-content: space-between;
+        }
+      }
     }
   }
 }

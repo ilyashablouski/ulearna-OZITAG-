@@ -23,11 +23,13 @@ class HeaderBurger extends Widget {
   open() {
     this.opened = true;
     this.$node.classList.add('opened');
+    hideScrollbar();
   }
 
   close() {
     this.opened = false;
     this.$node.classList.remove('opened');
+    showScrollbar();
   }
 
   onBurgerClick(e) {
