@@ -1,5 +1,8 @@
 <header class="header page__header">
   <div class="container">
+    <button class="header__burger">
+      <i></i>
+    </button>
     <div class="header__inner">
       <div class="header__left">
         <div class="header__logo">
@@ -14,7 +17,7 @@
           {{> blocks/header/header-language }}
         </div>
         <div class="header__actions">
-          <div class="header__actions-item">
+          <div class="header__actions-item header__actions-item--mobile-visible">
             {{> ui/btn label="Sign In" outline=true}}
           </div>
           <div class="header__actions-item">

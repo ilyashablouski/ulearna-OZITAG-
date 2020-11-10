@@ -10,6 +10,7 @@
   letter-spacing: 0.01em;
   font-weight: bold;
   @include transition;
+  white-space: nowrap;
 
   &--outline {
     border: 1px solid $color-black;

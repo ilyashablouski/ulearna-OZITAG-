@@ -1,6 +1,12 @@
 .header {
   &__logo {
     @include sprite('logo');
+    @include tablet {
+      @include sprite('logo-tablet');
+    }
+    @include mobile {
+      @include sprite('logo-mobile');
+    }
   }
 
   &__inner {
@@ -8,11 +14,41 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include tablet-and-mobile {
+      padding-left: 45px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      position: relative;
+    }
+  }
+
+  &__burger {
+    display: none;
+    @include tablet-and-mobile {
+      display: block;
+    }
+
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    @include align(false, true);
+    z-index: 1;
+
+    &:after {
+      content: '';
+      @include sprite('burger');
+      @include align(true, true);
+    }
   }
 
   &__center {
     flex: 1 1 1px;
-    margin-left: 44px;;
+    margin-left: 44px;
+
+    @include tablet-and-mobile {
+      display: none;
+    }
   }
 
   &__actions {
@@ -24,6 +60,16 @@
 
       &:first-child {
         margin-left: 0;
+      }
+
+      @include mobile {
+        display: none;
+      }
+
+      &--mobile-visible {
+        @include mobile {
+          display: block;
+        }
       }
     }
   }
