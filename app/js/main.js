@@ -11,6 +11,10 @@ import './src/utils/vh-hack';
 import './src/utils/mobile-debug';
 
 import './src/widgets/popups';
+
+import './src/widgets/header/header-burger';
+import './src/widgets/header/header';
+
 import './src/widgets/example';
 import './src/widgets/link-select';
 

@@ -48,7 +48,6 @@
       }
     }
 
-
     &--dropdown {
       &:hover {
         .header-menu__item-link {
@@ -69,7 +68,7 @@
     transition: 0.5s transform ease, 0.3s opacity ease;
     transform: translateY(15px);
 
-    left: -1000px;
+    left: -10000px;
     visibility: hidden;
     opacity: 0;
 
