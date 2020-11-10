@@ -1,0 +1,30 @@
+.header {
+  &__logo {
+    @include sprite('logo');
+  }
+
+  &__inner {
+    padding: 28px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__center {
+    flex: 1 1 1px;
+    margin-left: 44px;;
+  }
+
+  &__actions {
+    display: flex;
+    margin-left: 30px;
+
+    &-item {
+      margin-left: 20px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
