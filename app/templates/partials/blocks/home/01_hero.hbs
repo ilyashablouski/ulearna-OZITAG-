@@ -1,10 +1,25 @@
 <section class="hero">
-    <div class="hero__bg">
-{{>components/image img="" mobile-img="" smalltablet-img="" tablet-img="" ext="png"}}
-    </div>
-    <div class="hero__inner container">
-      <div class="hero__content">
+  <div class="hero__bg">
+    {{>components/image img="home/hero-bg" mobile-img="home/hero-bg-mobile" ext="jpg"}}
+  </div>
+  <div class="container">
+    <div class="hero__inner">
+      <i class="hero__icon hero__icon--1"></i>
+      <i class="hero__icon hero__icon--2"></i>
+      <i class="hero__icon hero__icon--3"></i>
+      <i class="hero__icon hero__icon--4"></i>
 
+      <h1 class="hero__title">Transformative Learning Space for curious minds</h1>
+      <p class="hero__text">Ulearna is a platform facilitating a community of students and instructors all over the
+        world to share career based skills and knowledge without boundaries.</p>
+      <div class="hero__search">
+        <form action="#" method="get">
+          {{> widgets/search-input }}
+          <div class="hero__search-button">
+            {{> ui/btn button=true color="blue" size="large" label="Find Best Course"}}
+          </div>
+        </form>
       </div>
     </div>
+  </div>
 </section>

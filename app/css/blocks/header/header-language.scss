@@ -8,9 +8,11 @@
 
   &__label {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 24px;
-    margin-left: 8px;
+    margin-left: 9px;
+    display: block;
+    margin-top: 3px;
   }
 
   &__select {

@@ -7,7 +7,7 @@
   color: $color-white;
   font-size: 16px;
   text-align: center;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
   font-weight: bold;
   @include transition;
   white-space: nowrap;
@@ -21,10 +21,25 @@
     }
   }
 
+  &--large{
+    height: 55px;
+    line-height: 55px;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 28px;
+  }
+
   &--orange {
     background: $color-orange;
     &:hover{
       background: $color-orange-hover;
+    }
+  }
+
+  &--blue{
+    background: $color-blue;
+    &:hover{
+      background: $color-blue-hover;
     }
   }
 }
