@@ -29,6 +29,14 @@
     padding: 0 28px;
   }
 
+  &--middle{
+    height: 51px;
+    line-height: 51px;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0 16px;
+  }
+
   &--orange {
     background: $color-orange;
     &:hover{

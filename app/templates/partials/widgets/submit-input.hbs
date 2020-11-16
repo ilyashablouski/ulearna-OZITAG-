@@ -1,0 +1,10 @@
+<div class="submit-input {{#if search}}submit-input--search{{/if}} {{#if big}}submit-input--big{{/if}}">
+  <input type="text" class="submit-input__input" placeholder="{{placeholder}}">
+  <div class="submit-input__button">
+    {{#if big}}
+      {{> ui/btn size="large" color="blue" label=label}}
+    {{else}}
+      {{> ui/btn size="middle" color="blue" label=label}}
+    {{/if}}
+  </div>
+</div>
