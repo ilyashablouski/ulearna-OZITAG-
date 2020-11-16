@@ -2,6 +2,14 @@
   position: relative;
   padding-bottom: 93px;
 
+  @include tablet{
+    padding-bottom: 80px;
+  }
+
+  @include smallTablet-and-mobile{
+    padding-bottom: 60px;
+  }
+
   &__bg {
     @include fill;
     z-index: -1;
@@ -19,6 +27,16 @@
     margin: 0 auto;
     color: #333;
     position: relative;
+
+    @include tablet {
+      padding-top: 185px;
+      max-width: 746px;
+    }
+
+    @include smallTablet-and-mobile{
+      padding-top: 159px;
+      text-align: left;
+    }
   }
 
   &__title {
@@ -27,6 +45,16 @@
     line-height: 99px;
     display: block;
     margin: 0;
+
+    @include tablet {
+      font-size: 56px;
+      line-height: 84px;
+    }
+
+    @include smallTablet-and-mobile{
+      font-size: 35px;
+      line-height: 52px;
+    }
   }
 
   &__text {
@@ -35,6 +63,16 @@
     font-size: 18px;
     line-height: 150%;
     display: block;
+    position: relative;
+
+    @include tablet {
+      font-size: 16px;
+    }
+
+    @include tablet-and-mobile{
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
 
   &__search {
@@ -53,14 +91,22 @@
       .btn {
         height: 59px;
         line-height: 59px;
+
+        @include mobile{
+          display: none;
+        }
       }
+    }
+
+    @include smallTablet-and-mobile{
+      margin-top: 30px;
     }
   }
 
   &__icon {
     position: absolute;
     display: block;
-    z-index: 0;
+    z-index: -1;
 
     &--1 {
       width: 30px;
@@ -69,6 +115,20 @@
       border-radius: 6px;
       left: -110px;
       top: 405px;
+
+      @include tablet {
+        left: -80px;
+      }
+
+      @include smallTablet{
+        left: -35px;
+        top: 120px;
+      }
+
+      @include mobile{
+        left: -25px;
+        top: 100px;
+      }
     }
 
     &--2 {
@@ -78,24 +138,51 @@
       border-radius: 100%;
       left: -132px;
       top: 465px;
+      @include tablet {
+        left: -102px;
+      }
+
+      @include smallTablet-and-mobile{
+        display: none;
+      }
     }
 
-    &--3{
+    &--3 {
       width: 40px;
       height: 40px;
       background: rgba(198, 105, 255, 0.8);
       border-radius: 100%;
       right: -102px;
       top: 232px;
+      @include tablet {
+        right: -72px;
+      }
+
+      @include smallTablet-and-mobile{
+        right: 0px;
+        width: 26px;
+        height: 26px;
+      }
+
+      @include mobile{
+        top: 270px;
+      }
     }
 
-    &--4{
+    &--4 {
       width: 25px;
       height: 25px;
       border-radius: 6px;
       background: #20B7F7;
       right: -138px;
       top: 290px;
+      @include tablet {
+        right: -108px;
+      }
+      @include smallTablet-and-mobile{
+        right: -30px;
+        top: 300px;
+      }
     }
   }
 }
