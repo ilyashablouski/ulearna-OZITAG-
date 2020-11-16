@@ -1,7 +1,19 @@
 <section class="home-categories">
   <div class="container">
     <div class="home-categories__inner">
-
+      {{# times 4}}
+        <div class="home-categories__cell">
+          <span class="home-categories__title">Share Title</span>
+          <ul class="home-categories__list">
+            {{#times 5}}
+              <li class="home-categories__item">
+                <a href="#" class="home-categories__link">Category Title</a>
+              </li>
+            {{/times}}
+          </ul>
+          <a href="#" class="home-categories__more">More Categories</a>
+        </div>
+      {{/times}}
     </div>
   </div>
 </section>
