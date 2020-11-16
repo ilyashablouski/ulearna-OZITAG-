@@ -1,0 +1,21 @@
+<section class="home-testimonials">
+  <div class="home-testimonials__bg">
+    {{>components/image img="home/testimonials-bg" ext="png" no-2x=true}}
+  </div>
+  <div class="container">
+    <h2 class="home-testimonials__title">
+      <span>What students say about Ulearna</span>
+    </h2>
+    <div class="home-testimonials__row">
+      <div class="home-testimonials__cell">
+        {{> widgets/testimonial image="01" name="Wade Warren" position="Photographer"}}
+      </div>
+      <div class="home-testimonials__cell">
+        {{> widgets/testimonial image="02" name="Kristin Watson" position="Junior Developer"}}
+      </div>
+    </div>
+    <div class="home-testimonials__cta">
+      {{> ui/btn size="large" color="orange" label="Get Started For Free"}}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,49 @@
+.testimonial-card {
+  &__body {
+    background: $color-white;
+    padding: 37px 50px 80px 50px;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 31px;
+    color: $color-black;
+    border-radius: 10px;
+    position: relative;
+
+    &:before {
+      content: '';
+      top: 20px;
+      left: 24px;
+      position: absolute;
+      @include sprite('testimonial-arrows');
+    }
+  }
+
+  &__author {
+    margin-top: -35px;
+    display: flex;
+    padding-left: 50px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__info {
+    margin-left: 20px;
+  }
+
+  &__name {
+    display: block;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 31px;
+  }
+
+  &__position {
+    display: block;
+    font-size: 16px;
+    line-height: 146%;
+    color: $color-blue;
+    margin-top: 3px;
+  }
+}
