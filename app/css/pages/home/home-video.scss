@@ -1,17 +1,36 @@
 .home-video {
   position: relative;
   min-height: 580px;
+  overflow: hidden;
 
-  &:after {
+  &__overlay {
     content: '';
     position: absolute;
     height: 110px;
-    left: 0;
-    right: 0;
     bottom: 0;
     background: url($images_dir + 'home/video-overlay.png');
     background-size: cover;
     z-index: 1;
+    width: 1440px;
+    @include align(true, false);
+
+    &:before, &:after {
+      content: '';
+      z-index: 1;
+      position: absolute;
+      top: 1px;
+      bottom: 0;
+      width: 5000px;
+      background: $color-white;
+    }
+
+    &:before {
+      left: -5000px;
+    }
+
+    &:after {
+      right: -5000px;
+    }
   }
 
   &__bg {
@@ -54,7 +73,7 @@
     display: block;
     position: absolute;
     @include align(true, false);
-    bottom: 0;
+    bottom: 27px;
     @include circle(54px);
     z-index: 2;
 
@@ -77,7 +96,7 @@
     text-align: center;
   }
 
-  &__title{
+  &__title {
     color: $color-white;
     font-weight: bold;
     font-size: 38px;
@@ -86,12 +105,12 @@
     margin: 0 auto;
     display: block;
 
-    &-bold{
+    &-bold {
       color: $color-blue;
     }
   }
 
-  &__cta{
+  &__cta {
     margin-top: 60px;
     display: flex;
     justify-content: center;
