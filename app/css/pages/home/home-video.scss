@@ -1,0 +1,99 @@
+.home-video {
+  position: relative;
+  min-height: 580px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    height: 110px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url($images_dir + 'home/video-overlay.png');
+    background-size: cover;
+    z-index: 1;
+  }
+
+  &__bg {
+    @include fill;
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__watch {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    background: rgba(130, 154, 178, 0.2);
+    backdrop-filter: blur(44px);
+    border-radius: 8px;
+    color: $color-white;
+    height: 40px;
+    padding: 0 16px 0 38px;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 22px;
+
+    &:before {
+      content: '';
+      @include sprite('video-watch');
+      @include align(false, true);
+      left: 16px;
+    }
+
+    &:hover {
+      opacity: .85;
+    }
+  }
+
+  &__scroll {
+    display: block;
+    position: absolute;
+    @include align(true, false);
+    bottom: 0;
+    @include circle(54px);
+    z-index: 2;
+
+    &:before {
+      content: '';
+      @include sprite('video-arrow');
+      @include align();
+      z-index: 3;
+    }
+
+    background: $color-blue;
+
+    &:hover {
+      background: $color-blue-hover;
+    }
+  }
+
+  &__inner {
+    padding-top: 110px;
+    text-align: center;
+  }
+
+  &__title{
+    color: $color-white;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 57px;
+    max-width: 714px;
+    margin: 0 auto;
+    display: block;
+
+    &-bold{
+      color: $color-blue;
+    }
+  }
+
+  &__cta{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+  }
+}
