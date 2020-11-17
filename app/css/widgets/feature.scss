@@ -1,0 +1,28 @@
+.feature {
+  &__title {
+    margin-top: 16px;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 31px;
+    color: $color-black;
+    display: block;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 146%;
+    display: block;
+    margin-top: 8px;
+    color: $color-dark;
+  }
+
+  &__link {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    display: inline-block;
+    margin-top: 12px;
+    color: $color-blue;
+  }
+}

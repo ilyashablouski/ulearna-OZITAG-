@@ -1,0 +1,28 @@
+.tabs {
+  display: flex;
+
+  &__item {
+    margin-left: 30px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__link{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-gray-light;
+    padding: 14px 0;
+    border-bottom: 2px solid transparent;
+
+    &.active{
+      color: $color-black;
+      border-color: $color-active-tab-underline;
+    }
+
+    &:hover{
+      color: $color-black;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.home-instructor {
+  &__ways {
+    &-splitter {
+      height: 1px;
+      background: $color-gray;
+      margin-bottom: 40px;
+      margin-top: 40px;
+      width: 100%;
+      display: block;
+      border: 0 none;
+    }
+
+    &-title {
+      display: block;
+      text-align: center;
+      font-weight: bold;
+      font-size: 38px;
+      line-height: 57px;
+      color: $color-blue;
+    }
+
+    &-row {
+      display: flex;
+      margin-top: 52px;
+      margin-left: -45px;
+      margin-right: -45px;
+      padding: 0 20px;
+    }
+
+    &-cell {
+      flex: 1 1 1px;
+      padding: 0 45px;
+    }
+
+    &-footer {
+      margin-top: 35px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
