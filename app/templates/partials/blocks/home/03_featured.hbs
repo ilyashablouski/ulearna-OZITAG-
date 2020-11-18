@@ -1,32 +1,94 @@
-<section class="home-featured">
+<section class="home-featured js-tabs-slider">
   <div class="container">
     <h2 class="home-featured__title">Featured courses in Ulearna</h2>
-    <div class="home-featured__row">
-      <div class="tabs-carousel js-tabs-slider">
-        <div class="tabs">
-          <div class="tabs__item">
-            <a href="#" class="tabs__link active">All Categories</a>
+    <div class="home-featured__inner">
+      <div class="tabs-slider">
+        <div class="tabs-slider__tabs">
+          <div class="tabs">
+            <div class="tabs__item">
+              <a href="#" class="tabs__link active">All Categories</a>
+            </div>
+            <div class="tabs__item">
+              <a href="#" class="tabs__link">Business</a>
+            </div>
+            <div class="tabs__item">
+              <a href="#" class="tabs__link">Category</a>
+            </div>
+            <div class="tabs__item">
+              <a href="#" class="tabs__link">Category</a>
+            </div>
+            <div class="tabs__item">
+              <a href="#" class="tabs__link">Category</a>
+            </div>
+            <div class="tabs__item">
+              <a href="#" class="tabs__link">Category</a>
+            </div>
           </div>
-          <div class="tabs__item">
-            <a href="#" class="tabs__link">Business</a>
+        </div>
+      </div>
+      <div class="tabs-slider__slider swiper-container js-tabs-slider__slider">
+        <div class="swiper-wrapper">
+          <div class="tabs-slider__slide swiper-slide">
+            {{> widgets/course-card
+                    image="home/featured/01"
+                    title="Customizing Type with Draplin: Creating Wordmarks That Work"
+                    author="by Leo Workman"
+            }}
           </div>
-          <div class="tabs__item">
-            <a href="#" class="tabs__link">Category</a>
+          <div class="tabs-slider__slide swiper-slide">
+            {{> widgets/course-card
+                    image="home/featured/02"
+                    title="Productivity Masterclass: Create a Custom System that Works"
+                    author="by Makenna Baptista"
+            }}
           </div>
-          <div class="tabs__item">
-            <a href="#" class="tabs__link">Category</a>
+          <div class="tabs-slider__slide swiper-slide">
+            {{> widgets/course-card
+                    image="home/featured/03"
+                    title="ODD BODIES: Illustrating Expressive, Stylized People"
+                    author="by Leo Workman"
+            }}
           </div>
-          <div class="tabs__item">
-            <a href="#" class="tabs__link">Category</a>
+          <div class="tabs-slider__slide swiper-slide">
+            {{> widgets/course-card
+                    image="home/featured/04"
+                    title="Fundamentals of DSLR Photography"
+                    author="by Marley Torff"
+            }}
           </div>
-          <div class="tabs__item">
-            <a href="#" class="tabs__link">Category</a>
+          <div class="tabs-slider__slide swiper-slide">
+            {{> widgets/course-card
+                    image="home/featured/01"
+                    title="Customizing Type with Draplin: Creating Wordmarks That Work"
+                    author="by Leo Workman"
+            }}
+          </div>
+          <div class="tabs-slider__slide swiper-slide">
+            {{> widgets/course-card
+                    image="home/featured/02"
+                    title="Productivity Masterclass: Create a Custom System that Works"
+                    author="by Makenna Baptista"
+            }}
+          </div>
+          <div class="tabs-slider__slide swiper-slide">
+            {{> widgets/course-card
+                    image="home/featured/03"
+                    title="ODD BODIES: Illustrating Expressive, Stylized People"
+                    author="by Leo Workman"
+            }}
+          </div>
+          <div class="tabs-slider__slide swiper-slide">
+            {{> widgets/course-card
+                    image="home/featured/04"
+                    title="Fundamentals of DSLR Photography"
+                    author="by Marley Torff"
+            }}
           </div>
         </div>
       </div>
     </div>
-    <div class="home-featured__bottom">
-      {{> ui/btn outline=true color="black" label="Explore all Courses"}}
-    </div>
+  </div>
+  <div class="home-featured__bottom">
+    {{> ui/btn outline=true color="black" label="Explore all Courses"}}
   </div>
 </section>

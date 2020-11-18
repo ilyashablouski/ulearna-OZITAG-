@@ -1,0 +1,40 @@
+.course-card {
+  //max-width: 282px;
+  height: 100%;
+
+
+  box-shadow: 0px 4px 14px rgba(1, 64, 139, 0.14);
+  border-radius: 12px;
+  overflow: hidden;
+  height: 100%;
+
+
+  &__image {
+    height: 208px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    padding: 14px 16px 23px;
+  }
+
+  &__title {
+    display: block;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: $color-black;
+  }
+
+  &__author {
+    display: block;
+    font-size: 16px;
+    line-height: 146%;
+    color: $color-gray-dark;
+  }
+}
