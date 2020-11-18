@@ -1,0 +1,49 @@
+.home-students {
+  margin: 120px 0;
+
+  &__slider {
+    padding-top: 40px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &-image {
+      position: relative;
+
+      &:before{
+        content: '';
+        position: absolute;
+        left: -59px;
+        right: -29px;
+        top: -54px;
+        bottom: -26px;
+        z-index: -1;
+        background: url($images_dir + 'home/students/background.png');
+      }
+    }
+
+    &-content {
+      margin-left: 100px;
+    }
+
+    &-title {
+      font-weight: bold;
+      font-size: 56px;
+      line-height: 84px;
+      color: $color-black;
+    }
+
+    &-text {
+      font-size: 18px;
+      line-height: 150%;
+      color: $color-dark;
+    }
+
+    &-button {
+      margin-top: 40px;
+    }
+  }
+
+}
