@@ -15,8 +15,8 @@ import './src/widgets/popups';
 import './src/widgets/header/header-burger';
 import './src/widgets/header/header';
 
-import './src/widgets/example';
 import './src/widgets/link-select';
+import './src/widgets/home-students';
 
 import './src/app';
 

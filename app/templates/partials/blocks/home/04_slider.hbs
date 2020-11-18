@@ -1,4 +1,4 @@
-<section class="home-students">
+<section class="home-students js-home-students">
   <div class="container">
     <div class="home-students__scene">
       <div class="home-students__slide">
@@ -16,50 +16,54 @@
         </div>
       </div>
     </div>
-    <div class="home-students__slider">
-      <div class="home-students__cell">
-        {{> widgets/feature
-                icon="home/students/icon_01"
-                title="Discover our unrivalled courses libraries"
-                text="Study any subject in our extensive multilanguage libraries with the cutting-edge resources at hand."
-        }}
+    <div class="home-students__slider swiper-container js-home-students__slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide home-students__cell">
+          {{> widgets/feature
+                  icon="home/students/icon_01"
+                  title="Discover our unrivalled courses libraries"
+                  text="Study any subject in our extensive multilanguage libraries with the cutting-edge resources at hand."
+          }}
+        </div>
+        <div class="swiper-slide home-students__cell">
+          {{> widgets/feature
+                  icon="home/students/icon_02"
+                  title="Achieve your rewards"
+                  text="Get shareable certificates of completion as you pass the course exam."
+          }}
+        </div>
+        <div class="swiper-slide home-students__cell">
+          {{> widgets/feature
+                  icon="home/students/icon_03"
+                  title="Read exclusive content"
+                  text="Explore world-class publications from inspiring writers. Follow and share the topics you love."
+          }}
+        </div>
+        <div class="swiper-slide home-students__cell">
+          {{> widgets/feature
+                  icon="home/students/icon_04"
+                  title="Join the conversation"
+                  text="Ask and get answers in the community. Engage with instructors directly."
+          }}
+        </div>
+        <div class="swiper-slide home-students__cell">
+          {{> widgets/feature
+                  icon="home/students/icon_05"
+                  title="Go extra mile"
+                  text="Get additional classes in the subjects that matter to you."
+          }}
+        </div>
+        <div class="swiper-slide home-students__cell">
+          {{> widgets/feature
+                  icon="home/students/icon_06" color="purple"
+                  title="Ulearna<b>Plus</b>"
+                  text="Ulearna+ Short Description"
+                  link="More About UlearnaPlus"
+          }}
+        </div>
       </div>
-      <div class="home-students__cell">
-        {{> widgets/feature
-                icon="home/students/icon_02"
-                title="Achieve your rewards"
-                text="Get shareable certificates of completion as you pass the course exam."
-        }}
-      </div>
-      <div class="home-students__cell">
-        {{> widgets/feature
-                icon="home/students/icon_03"
-                title="Read exclusive content"
-                text="Explore world-class publications from inspiring writers. Follow and share the topics you love."
-        }}
-      </div>
-      <div class="home-students__cell">
-        {{> widgets/feature
-                icon="home/students/icon_04"
-                title="Join the conversation"
-                text="Ask and get answers in the community. Engage with instructors directly."
-        }}
-      </div>
-      <div class="home-students__cell">
-        {{> widgets/feature
-                icon="home/students/icon_05"
-                title="Go extra mile"
-                text="Get additional classes in the subjects that matter to you."
-        }}
-      </div>
-      <div class="home-students__cell">
-        {{> widgets/feature
-                icon="home/students/icon_06" color="purple"
-                title="Ulearna<b>Plus</b>"
-                text="Ulearna+ Short Description"
-                link="More About UlearnaPlus"
-        }}
-      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
   </div>
 </section>

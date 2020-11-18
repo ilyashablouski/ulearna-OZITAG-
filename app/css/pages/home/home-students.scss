@@ -3,6 +3,16 @@
 
   &__slider {
     padding-top: 40px;
+    margin-top: 40px;
+    display: flex;
+    border-top: 1px solid $color-gray;
+  }
+
+  &__cell {
+    .feature{
+      width: 394px;
+      padding-right: 100px;
+    }
   }
 
   &__item {
@@ -12,7 +22,7 @@
     &-image {
       position: relative;
 
-      &:before{
+      &:before {
         content: '';
         position: absolute;
         left: -59px;
