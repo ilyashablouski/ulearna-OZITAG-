@@ -5,6 +5,8 @@ class TabsSlider extends Widget {
     this.swiper = null;
     this.$slider = this.queryElement('.slider');
 
+    this.$navPrev = this.queryElement('.prev');
+    this.$navNext = this.queryElement('.next');
 
     this.init();
   }
@@ -15,7 +17,11 @@ class TabsSlider extends Widget {
       spaceBetween: 35,
       pagination: {
         el: '.swiper-pagination',
-      }
+      },
+      navigation: {
+        prevEl: this.$navPrev,
+        nextEl: this.$navNext,
+      },
     });
   }
 
