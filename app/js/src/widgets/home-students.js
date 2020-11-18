@@ -15,9 +15,6 @@ class HomeStudents extends Widget {
     this.swiper = new Swiper(this.$slider, {
       slidesPerView: 3,
       spaceBetween: 50,
-      pagination: {
-        el: '.swiper-pagination',
-      },
       navigation: {
         prevEl: this.$navPrev,
         nextEl: this.$navNext,
