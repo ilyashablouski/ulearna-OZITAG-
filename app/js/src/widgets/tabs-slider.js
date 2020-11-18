@@ -22,6 +22,10 @@ class TabsSlider extends Widget {
         prevEl: this.$navPrev,
         nextEl: this.$navNext,
       },
+      on: {
+        slideChangeTransitionStart: () => this.$slider.classList.add('transition'),
+        slideChangeTransitionEnd: () => this.$slider.classList.remove('transition'),
+      },
     });
   }
 
