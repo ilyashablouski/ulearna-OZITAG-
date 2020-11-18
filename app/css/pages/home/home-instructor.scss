@@ -1,4 +1,70 @@
 .home-instructor {
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__left {
+    flex: 0 0 515px;
+  }
+
+  &-right {
+
+  }
+
+  &__icon {
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+
+    &:after {
+      content: '';
+      position: absolute;
+      border-radius: 6px;
+      width: 27px;
+      height: 27px;
+      right: -36px;
+      top: -40px;
+      display: block;
+      background: $color-orange;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 94px;
+      height: 94px;
+      display: block;
+      border-radius: 100%;
+      background: rgba(242, 183, 30, 0.12);
+      filter: blur(24px);
+      left: -100px;
+      top: 0;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 84px;
+    color: #000;
+    display: block;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 150%;
+    color: $color-dark;
+    display: block;
+    margin-top: 30px;
+  }
+
+  &__button {
+    margin-top: 40px;
+  }
+
   &__ways {
     &-splitter {
       height: 1px;

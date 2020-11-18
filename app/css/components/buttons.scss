@@ -15,13 +15,14 @@
   &--outline {
     border: 1px solid $color-black;
     color: $color-black;
-    &:hover{
+
+    &:hover {
       background: $color-black;
       color: $color-white;
     }
   }
 
-  &--large{
+  &--large {
     height: 55px;
     line-height: 55px;
     font-weight: bold;
@@ -29,7 +30,7 @@
     padding: 0 28px;
   }
 
-  &--middle{
+  &--middle {
     height: 51px;
     line-height: 51px;
     font-weight: bold;
@@ -39,14 +40,24 @@
 
   &--orange {
     background: $color-orange;
-    &:hover{
+
+    &:hover {
       background: $color-orange-hover;
     }
   }
 
-  &--blue{
+  &--purple {
+    background: $color-purple;
+
+    &:hover {
+      background: $color-purple-hover;
+    }
+  }
+
+  &--blue {
     background: $color-blue;
-    &:hover{
+
+    &:hover {
       background: $color-blue-hover;
     }
   }
