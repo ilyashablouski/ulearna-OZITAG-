@@ -2,16 +2,23 @@
   margin: 120px 0;
 
   &__slider {
-    padding-top: 40px;
     margin-top: 40px;
-    display: flex;
+    padding-top: 40px;
     border-top: 1px solid $color-gray;
   }
 
+  &__navigation{
+    margin-top: 40px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
   &__cell {
+    padding: 0 20px;
     .feature{
-      width: 394px;
-      padding-right: 100px;
+      width: 354px;
+      padding-right: 50px;
     }
   }
 

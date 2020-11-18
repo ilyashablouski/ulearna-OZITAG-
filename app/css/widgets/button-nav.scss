@@ -1,0 +1,26 @@
+.button-nav{
+  width: 54px;
+  height: 54px;
+  border-radius: 100%;
+  background: $color-blue-light;
+  display: block;
+  position: relative;
+  @include transition;
+
+  &:before{
+    content: '';
+    position: absolute;
+    @include sprite('button-nav-arrow');
+    @include align(true, true);
+  }
+
+  &--next{
+    &:before{
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+  }
+
+  &:hover{
+    background: $color-blue-light-hover;
+  }
+}
