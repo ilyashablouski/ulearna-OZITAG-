@@ -5,24 +5,25 @@
   }
 
   &__row {
+    margin: 0 -15px 0 -15px;
   }
 
   &__slide {
     height: auto;
-    padding-bottom: 15px;
+    padding: 0 15px 15px 15px;
   }
 
   &__prev {
     position: absolute;
     top: 50%;
-    left: -10px;
+    left: -15px;
     transform: translateY(-50%) translateX(-100%);
   }
 
   &__next {
     position: absolute;
     top: 50%;
-    right: -10px;
+    right: -15px;
     transform: translateY(-50%) translateX(100%);
   }
 }

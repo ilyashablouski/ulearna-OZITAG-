@@ -1,4 +1,4 @@
-.button-nav{
+.button-nav {
   width: 54px;
   height: 54px;
   border-radius: 100%;
@@ -7,20 +7,32 @@
   position: relative;
   @include transition;
 
-  &:before{
+  &:before {
     content: '';
     position: absolute;
     @include sprite('button-nav-arrow');
     @include align(true, true);
   }
 
-  &--next{
-    &:before{
-      transform: translate(-50%, -50%) rotate(180deg);
-    }
+
+  &:hover {
+    background: $color-blue-light-hover;
   }
 
-  &:hover{
-    background: $color-blue-light-hover;
+  &--next:before {
+    transform: translate(-50%, -50%) rotate(180deg);
+    margin-left: 2px;
+  }
+
+  &--prev:before {
+    margin-left: -2px;
+  }
+
+  &.swiper-button-disabled {
+    background: rgba(218, 228, 237, 0.5) !important;
+
+    &:before {
+      @include sprite('button-nav-arrow-disabled');
+    }
   }
 }

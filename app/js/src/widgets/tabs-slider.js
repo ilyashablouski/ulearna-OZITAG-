@@ -14,7 +14,7 @@ class TabsSlider extends Widget {
   build() {
     this.swiper = new Swiper(this.$slider, {
       slidesPerView: 4,
-      spaceBetween: 35,
+      spaceBetween: 10,
       pagination: {
         el: '.swiper-pagination',
       },
