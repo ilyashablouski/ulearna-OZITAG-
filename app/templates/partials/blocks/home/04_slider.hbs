@@ -8,10 +8,14 @@
               <div class="home-students__slide">
                 <div class="home-students__item">
                   <div class="home-students__item-image">
-                    {{>components/image img="home/students/scene_01" ext="png" no-2x=true}}
+                    {{#ifCond this 1}}
+                      {{>components/image img="home/students/scene_01" ext="png" no-lazy=true}}
+                    {{else}}
+                      {{>components/image img="home/instructor/image" ext="png" no-lazy=true}}
+                    {{/ifCond}}
                   </div>
                   <div class="home-students__item-content">
-                    <span class="home-students__item-title">Ulearna for&nbsp;students {{ this }}</span>
+                    <span class="home-students__item-title">Ulearna for&nbsp;students{{#ifCond this 1}}{{else}}{{ this }}{{/ifCond}}</span>
                     <p class="home-students__item-text">Student option promo. Student option promo text</p>
                     <div class="home-students__item-button">
                       {{> ui/btn size="large" color="blue" label="Get Started for Free"}}

@@ -64,7 +64,7 @@
     padding: 16px 20px;
     height: 100%;
 
-    &:hover {
+    &.hovered {
       background: #FFFFFF;
       box-shadow: 0px 4px 24px rgba(1, 64, 139, 0.24);
       border-radius: 12px;
@@ -78,7 +78,10 @@
     &-image {
       position: relative;
 
-      min-height: 485px;
+      img{
+        max-height: 500px;
+      }
+      height: 500px;
       width: 610px;
       min-width: 610px;
 
