@@ -79,6 +79,8 @@ class TabsSlider extends Widget {
       }
     });
 
+    this.$node.classList.toggle('no-navigation', visibleCount <= 4);
+
     this.swiper.destroy(true, true);
 
     this.initSwiper();

@@ -1,5 +1,6 @@
 .tabs-slider {
 
+
   &__slider {
     position: relative;
     margin-top: 33px;
@@ -46,6 +47,10 @@
     top: 50%;
     left: -15px;
     transform: translateY(-50%) translateX(-100%);
+
+    .no-navigation &{
+      display: none;
+    }
   }
 
   &__next {
@@ -53,5 +58,10 @@
     top: 50%;
     right: -15px;
     transform: translateY(-50%) translateX(100%);
+
+    .no-navigation &{
+      display: none;
+    }
   }
+
 }
