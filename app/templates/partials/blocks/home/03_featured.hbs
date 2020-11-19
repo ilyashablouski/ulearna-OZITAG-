@@ -6,22 +6,22 @@
         <div class="tabs-slider__tabs">
           <div class="tabs">
             <div class="tabs__item">
-              <a href="#" class="tabs__link active">All Categories</a>
+              <button data-filter="*" class="js-tabs-slider__tab tabs__link active">All Categories</button>
             </div>
             <div class="tabs__item">
-              <a href="#" class="tabs__link">Business</a>
+              <button data-filter="filter-1" class="js-tabs-slider__tab tabs__link">Business</button>
             </div>
             <div class="tabs__item">
-              <a href="#" class="tabs__link">Category</a>
+              <button data-filter="filter-2" class="js-tabs-slider__tab tabs__link">Category</button>
             </div>
             <div class="tabs__item">
-              <a href="#" class="tabs__link">Category</a>
+              <button data-filter="filter-3" class="js-tabs-slider__tab tabs__link">Category</button>
             </div>
             <div class="tabs__item">
-              <a href="#" class="tabs__link">Category</a>
+              <button data-filter="filter-4" class="js-tabs-slider__tab tabs__link">Category</button>
             </div>
             <div class="tabs__item">
-              <a href="#" class="tabs__link">Category</a>
+              <button data-filter="filter-5" class="js-tabs-slider__tab tabs__link">Category</button>
             </div>
           </div>
         </div>
@@ -36,7 +36,7 @@
         <div class="tabs-slider__row">
           <div class="swiper-container js-tabs-slider__slider">
             <div class="swiper-wrapper">
-              <div class="tabs-slider__slide swiper-slide">
+              <div class="tabs-slider__slide swiper-slide js-tabs-slider__item" data-filters="filter-2,filter-4">
                 {{> widgets/course-card
                         image="home/featured/01"
                         title="Customizing Type with Draplin: Creating Wordmarks That Work"
@@ -44,7 +44,7 @@
                         original=true
                 }}
               </div>
-              <div class="tabs-slider__slide swiper-slide">
+              <div class="tabs-slider__slide swiper-slide js-tabs-slider__item" data-filters="filter-1,filter-3">
                 {{> widgets/course-card
                         image="home/featured/02"
                         title="Productivity Masterclass: Create a Custom System that Works"
@@ -52,7 +52,7 @@
                         original=true
                 }}
               </div>
-              <div class="tabs-slider__slide swiper-slide">
+              <div class="tabs-slider__slide swiper-slide js-tabs-slider__item" data-filters="filter-5">
                 {{> widgets/course-card
                         image="home/featured/03"
                         title="ODD BODIES: Illustrating Expressive, Stylized People"
@@ -60,7 +60,7 @@
                         original=true
                 }}
               </div>
-              <div class="tabs-slider__slide swiper-slide">
+              <div class="tabs-slider__slide swiper-slide js-tabs-slider__item" data-filters="filter-2,filter-3,filter-4">
                 {{> widgets/course-card
                         image="home/featured/04"
                         title="Fundamentals of DSLR Photography"
@@ -68,7 +68,7 @@
                         original=true
                 }}
               </div>
-              <div class="tabs-slider__slide swiper-slide">
+              <div class="tabs-slider__slide swiper-slide js-tabs-slider__item" data-filters="filter-1,filter-2,filter-3">
                 {{> widgets/course-card
                         image="home/featured/01"
                         title="Customizing Type with Draplin: Creating Wordmarks That Work"
@@ -76,7 +76,7 @@
                         original=true
                 }}
               </div>
-              <div class="tabs-slider__slide swiper-slide">
+              <div class="tabs-slider__slide swiper-slide js-tabs-slider__item" data-filters="filter-1,filter-4,filter-5">
                 {{> widgets/course-card
                         image="home/featured/02"
                         title="Productivity Masterclass: Create a Custom System that Works"
@@ -84,7 +84,7 @@
                         original=true
                 }}
               </div>
-              <div class="tabs-slider__slide swiper-slide">
+              <div class="tabs-slider__slide swiper-slide js-tabs-slider__item" data-filters="filter-1">
                 {{> widgets/course-card
                         image="home/featured/03"
                         title="ODD BODIES: Illustrating Expressive, Stylized People"
@@ -92,7 +92,7 @@
                         original=true
                 }}
               </div>
-              <div class="tabs-slider__slide swiper-slide">
+              <div class="tabs-slider__slide swiper-slide js-tabs-slider__item" data-filters="filter-2">
                 {{> widgets/course-card
                         image="home/featured/04"
                         title="Fundamentals of DSLR Photography"

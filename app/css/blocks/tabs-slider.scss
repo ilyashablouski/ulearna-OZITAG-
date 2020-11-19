@@ -1,4 +1,5 @@
 .tabs-slider {
+
   &__slider {
     position: relative;
     margin-top: 33px;
@@ -6,6 +7,10 @@
 
   &__row {
     margin: 0 -15px 0 -15px;
+
+    .non-swiper-slide {
+      display: none;
+    }
 
     .swiper-container.transition {
       position: relative;
