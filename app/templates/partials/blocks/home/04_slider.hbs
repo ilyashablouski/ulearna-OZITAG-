@@ -1,18 +1,26 @@
 <section class="home-students js-home-students">
   <div class="container">
     <div class="home-students__scene">
-      <div class="home-students__slide">
-        <div class="home-students__item">
-          <div class="home-students__item-image">
-            {{>components/image img="home/students/scene_01" ext="png" no-2x=true}}
-          </div>
-          <div class="home-students__item-content">
-            <span class="home-students__item-title">Ulearna for&nbsp;students</span>
-            <p class="home-students__item-text">Student option promo. Student option promo text</p>
-            <div class="home-students__item-button">
-              {{> ui/btn size="large" color="blue" label="Get Started for Free"}}
+      <div class="home-students__scene-slider swiper-container js-home-students__scene">
+        <div class="swiper-wrapper">
+          {{#times 6}}
+            <div class="swiper-slide">
+              <div class="home-students__slide">
+                <div class="home-students__item">
+                  <div class="home-students__item-image">
+                    {{>components/image img="home/students/scene_01" ext="png" no-2x=true}}
+                  </div>
+                  <div class="home-students__item-content">
+                    <span class="home-students__item-title">Ulearna for&nbsp;students {{ this }}</span>
+                    <p class="home-students__item-text">Student option promo. Student option promo text</p>
+                    <div class="home-students__item-button">
+                      {{> ui/btn size="large" color="blue" label="Get Started for Free"}}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
+          {{/times}}
         </div>
       </div>
     </div>
@@ -28,7 +36,7 @@
 
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <div class="home-students__cell">
+            <div class="home-students__cell js-home-students__cell">
               {{> widgets/feature
                       icon="home/students/icon_01"
                       title="Discover our unrivalled courses libraries"
@@ -37,7 +45,7 @@
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="home-students__cell">
+            <div class="home-students__cell js-home-students__cell">
               {{> widgets/feature
                       icon="home/students/icon_02"
                       title="Achieve your rewards"
@@ -46,7 +54,7 @@
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="home-students__cell">
+            <div class="home-students__cell js-home-students__cell">
               {{> widgets/feature
                       icon="home/students/icon_03"
                       title="Read exclusive content"
@@ -55,7 +63,7 @@
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="home-students__cell">
+            <div class="home-students__cell js-home-students__cell">
               {{> widgets/feature
                       icon="home/students/icon_04"
                       title="Join the conversation"
@@ -64,7 +72,7 @@
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="home-students__cell">
+            <div class="home-students__cell js-home-students__cell">
               {{> widgets/feature
                       icon="home/students/icon_05"
                       title="Go extra mile"
@@ -73,7 +81,7 @@
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="home-students__cell">
+            <div class="home-students__cell js-home-students__cell">
               {{> widgets/feature
                       icon="home/students/icon_06" color="purple"
                       title="Ulearna<b>Plus</b>"
