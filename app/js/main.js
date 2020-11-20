@@ -9,6 +9,8 @@ import './src/utils/scroll-control';
 import './src/utils/preloader';
 import './src/utils/vh-hack';
 import './src/utils/mobile-debug';
+import './src/utils/scroll-to';
+import './src/utils/scroll-to-link';
 
 import './src/widgets/popups';
 

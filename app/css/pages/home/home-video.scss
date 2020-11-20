@@ -1,37 +1,6 @@
 .home-video {
   position: relative;
   min-height: 580px;
-  overflow: hidden;
-
-  &__overlay {
-    content: '';
-    position: absolute;
-    height: 110px;
-    bottom: 0;
-    background: url($images_dir + 'home/video-overlay.png');
-    background-size: cover;
-    z-index: 1;
-    width: 1440px;
-    @include align(true, false);
-
-    &:before, &:after {
-      content: '';
-      z-index: 1;
-      position: absolute;
-      top: 1px;
-      bottom: 0;
-      width: 5000px;
-      background: $color-white;
-    }
-
-    &:before {
-      left: -5000px;
-    }
-
-    &:after {
-      right: -5000px;
-    }
-  }
 
   &__bg {
     @include fill;
@@ -73,7 +42,7 @@
     display: block;
     position: absolute;
     @include align(true, false);
-    bottom: 27px;
+    bottom: -27px;
     @include circle(54px);
     z-index: 2;
 
