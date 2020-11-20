@@ -39,6 +39,7 @@
       @include sprite('search-big');
       @include align(false, true);
       left: 17px;
+      margin-top: -2px;
     }
 
     .submit-input__input{
