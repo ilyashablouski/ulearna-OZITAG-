@@ -1,0 +1,52 @@
+.header {
+  @include transition(top, 0.3s);
+
+  &.fixed-prepare {
+    position: fixed;
+    height: 92px;
+    top: -92px;
+    z-index: z(header);
+    left: 0;
+    right: 0;
+
+    .header-menu {
+      display: none;
+    }
+
+    .header__language {
+      display: none;
+    }
+
+
+    .header__inner {
+      padding: 24px 0;
+    }
+
+    .header__actions-item {
+      margin-left: 0;
+      &:first-child {
+        display: none;
+      }
+    }
+
+    .header__actions{
+      margin-left: 26px;
+    }
+
+    .header__center {
+      margin-left: 80px;
+    }
+  }
+
+  &.fixed {
+    background-color: $color-white;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: z(header);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.96));
+    box-shadow: 0px 5px 26px rgba(1, 64, 139, 0.14);
+    backdrop-filter: blur(30px);
+  }
+}

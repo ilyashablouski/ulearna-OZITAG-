@@ -13,6 +13,7 @@ import './src/utils/mobile-debug';
 import './src/widgets/popups';
 
 import './src/widgets/header/header-burger';
+import './src/widgets/header/header-fixed';
 import './src/widgets/header/header';
 
 import './src/widgets/link-select';

@@ -1,0 +1,7 @@
+.header-search{
+  display: none;
+
+  .fixed &{
+    display: block;
+  }
+}

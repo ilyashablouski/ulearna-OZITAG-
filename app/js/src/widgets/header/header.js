@@ -3,6 +3,7 @@ class Header extends Widget {
     super(node, 'js-header');
 
     HeaderBurger.init(this.$node);
+    HeaderFixed.init(this.$node);
   }
 
   static init(el) {
