@@ -1,6 +1,7 @@
 .home-hero {
   position: relative;
   padding-bottom: 93px;
+  margin-top: -100px;
 
   @include tablet{
     padding-bottom: 80px;
