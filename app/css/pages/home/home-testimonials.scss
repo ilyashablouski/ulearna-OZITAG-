@@ -51,7 +51,7 @@
 
   &__row {
     display: flex;
-    max-width: 1156px;
+    max-width: 1206px;
     margin: 60px auto 0;
     position: relative;
 
@@ -66,9 +66,9 @@
       width: 28px;
       height: 28px;
       position: absolute;
-      right: 0px;
-      bottom: -50px;
       background: $color-purple;
+      right: -6px;
+      bottom: 11px
     }
 
     &:after {
@@ -76,8 +76,8 @@
       height: 21px;
       background: rgba(198, 105, 255, 0.3);
       border-radius: 6px;
-      bottom: -80px;
-      right: 50px;
+      bottom: -15px;
+      right: 35px;
     }
   }
 
@@ -87,7 +87,7 @@
   }
 
   &__cta {
-    margin-top: 60px;
+    margin-top: 45px;
     display: flex;
     justify-content: center;
   }

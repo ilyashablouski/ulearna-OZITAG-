@@ -7,6 +7,11 @@
   width: 80px;
   height: 80px;
 
+  &.icon--small{
+    width: 64px;
+    height: 64px;
+  }
+
   &.icon--orange{
     background: $color-orange;
   }

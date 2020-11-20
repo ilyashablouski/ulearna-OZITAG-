@@ -1,10 +1,10 @@
 .home-featured {
-  margin: 60px 0 120px;
+  margin: 40px 0 120px;
 
   &__title {
     font-weight: bold;
-    font-size: 36px;
-    line-height: 54px;
+    font-size: 38px;
+    line-height: 57px;
     color: $color-black;
     display: block;
   }
@@ -14,7 +14,7 @@
   }
 
   &__bottom {
-    margin-top: 40px;
+    margin-top: 24px;
     display: flex;
     justify-content: center;
   }

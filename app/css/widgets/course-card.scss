@@ -107,6 +107,7 @@
 
   &__content {
     padding: 14px 16px 23px;
+    margin-right: -1px;
   }
 
   &__title {
@@ -124,5 +125,6 @@
     line-height: 146%;
     color: $color-gray-dark;
     @include transition;
+    margin-top: 5px;
   }
 }

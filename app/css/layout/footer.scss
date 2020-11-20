@@ -2,7 +2,7 @@
   box-shadow: inset 0px 1px 0px #DAE4ED;
 
   &__main {
-    padding: 47px 0 58px;
+    padding: 50px 0 58px;
     display: flex;
     justify-content: space-between;
 
@@ -42,17 +42,11 @@
 
   &__center {
     flex: 1 1 1px;
-    padding-top: 13px;
-    @include tablet {
-      padding-top: 8px;
-    }
+
+    padding-top: 8px;
   }
 
   &__right {
-    @include desktop {
-      padding-top: 5px;
-    }
-
     @include smallTablet-and-mobile {
       margin-top: 40px;
     }

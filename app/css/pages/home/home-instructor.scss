@@ -17,15 +17,24 @@
 
   &__image{
     position: relative;
+    width: 564px;
+    height: 448px;
+    margin-top: 33px;
+
+    img{
+      box-shadow: 0px 4px 44px rgba(1, 64, 139, 0.24);
+      border-radius: 10px;
+      overflow: hidden;
+    }
 
     &:before{
       content: '';
       position: absolute;
       z-index: -1;
-      top: -24px;
-      left: -12px;
-      right: -33px;
-      bottom: -47px;
+      top: -31px;
+      left: -35px;
+      right: -39px;
+      bottom: -46px;
       background: url($images_dir + 'home/instructor/background.png');
     }
   }
@@ -41,8 +50,8 @@
       border-radius: 6px;
       width: 27px;
       height: 27px;
-      right: -36px;
-      top: -40px;
+      right: -34px;
+      top: -32px;
       display: block;
       background: $color-orange;
     }
@@ -86,7 +95,7 @@
       height: 1px;
       background: $color-gray;
       margin-bottom: 40px;
-      margin-top: 40px;
+      margin-top: 51px;
       width: 100%;
       display: block;
       border: 0 none;
@@ -115,7 +124,7 @@
     }
 
     &-footer {
-      margin-top: 35px;
+      margin-top: 33px;
       display: flex;
       justify-content: center;
     }

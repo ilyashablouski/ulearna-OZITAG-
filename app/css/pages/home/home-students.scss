@@ -1,6 +1,6 @@
 .home-students {
   margin: 120px 0;
-  padding-bottom: 60px;
+  padding-bottom: 117px;
 
   &__inner {
     position: relative;
@@ -20,20 +20,40 @@
     transform: translateY(-50%) translateX(100%);
   }
 
-  &__scene-slider{
+  &__scene {
+    margin-left: -40px;
+
+    position: relative;
+
+
+    &:before {
+      content: '';
+      position: absolute;
+      border-radius: 6px;
+      width: 25px;
+      height: 25px;
+      background: $color-orange;
+      display: block;
+      top: 52px;
+      right: -23px;
+    }
+  }
+
+  &__scene-slider {
     margin-left: -50px;
-    .swiper-slide{
+
+    .swiper-slide {
       padding-left: 50px;
     }
   }
 
   &__slider {
-    margin-top: 40px;
+    margin-top: 6px;
     padding-top: 40px;
     border-top: 1px solid $color-gray;
     position: relative;
 
-    .swiper-slide{
+    .swiper-slide {
       height: auto;
     }
   }
@@ -53,7 +73,7 @@
     margin-bottom: -25px;
     padding-right: 20px;
 
-    .feature{
+    .feature {
       padding-right: 40px;
     }
   }
@@ -78,27 +98,29 @@
     &-image {
       position: relative;
 
-      img{
-        max-height: 500px;
+      img {
+        max-height: 448px;
+        box-shadow: 0px 4px 44px rgba(1, 64, 139, 0.24);
+        border-radius: 10px;
+        overflow: hidden;
       }
-      height: 500px;
-      width: 610px;
-      min-width: 610px;
+
+      padding: 39px 15px 33px 39px;
+      width: 618px;
+      height: 520px;
 
       &:before {
         content: '';
-        position: absolute;
-        left: -59px;
-        right: -29px;
-        top: -54px;
-        bottom: -26px;
+        @include fill;
         z-index: -1;
         background: url($images_dir + 'home/students/background.png');
+        background-size: cover;
       }
     }
 
     &-content {
-      margin-left: 90px;
+      margin-left: 87px;
+      flex: 1 1 1px;
     }
 
     &-title {
@@ -106,12 +128,16 @@
       font-size: 56px;
       line-height: 84px;
       color: $color-black;
+      display: block;
+      max-width: 500px;
     }
 
     &-text {
       font-size: 18px;
       line-height: 150%;
       color: $color-dark;
+      max-width: 500px;
+      margin-top: 30px;
     }
 
     &-button {

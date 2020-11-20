@@ -23,6 +23,7 @@ class HeaderFixed extends Widget {
     this.isFixed = true;
 
     this.$node.classList.add('fixed');
+    this.$node.classList.add('fixed-prepare');
   }
 
   setHeaderAsNotFixed() {

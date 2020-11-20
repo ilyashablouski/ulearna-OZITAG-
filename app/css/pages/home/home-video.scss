@@ -57,7 +57,7 @@
     display: block;
     position: absolute;
     @include align(true, false);
-    bottom: -27px;
+    bottom: 27px;
     @include circle(54px);
     z-index: 2;
 
@@ -77,10 +77,7 @@
 
   &__inner {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    padding-top: 111px;
     min-height: 580px;
   }
 
@@ -89,9 +86,10 @@
     font-weight: bold;
     font-size: 38px;
     line-height: 57px;
-    max-width: 714px;
+    max-width: 667px;
     margin: 0 auto;
     display: block;
+    text-align: center;
 
     &-bold {
       color: $color-blue;
@@ -99,7 +97,7 @@
   }
 
   &__cta {
-    margin-top: 60px;
+    margin-top: 61px;
     display: flex;
     justify-content: center;
   }
