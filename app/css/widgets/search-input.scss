@@ -1,27 +1,27 @@
 .search-input {
   background: #FFFFFF;
-  border: 2px solid #DAE4ED;
-  box-sizing: border-box;
-  border-radius: 12px;
   position: relative;
   overflow: hidden;
-  padding: 0 20px 0 50px;
 
   &:before {
     content: '';
     @include sprite('search-big');
     @include align(false, true);
     left: 17px;
+    margin-top: -1px;
   }
 
   &__input {
     display: block;
-    border: 0 none;
     height: 41px;
     width: 100%;
     font-weight: 500;
     font-size: 18px;
     line-height: 150%;
+    padding: 0 20px 0 50px;
+    border: 2px solid #DAE4ED;
+    border-radius: 12px;
+    @include transition;
 
     @include mobile{
       height: 50px;
@@ -30,6 +30,10 @@
 
     @include placeholder {
       color: rgba(5, 36, 51, 0.2);
+    }
+
+    &:focus{
+      border-color: $color-blue;
     }
   }
 }
