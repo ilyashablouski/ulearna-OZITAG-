@@ -21,6 +21,7 @@ import './src/widgets/header/header';
 import './src/widgets/link-select';
 import './src/widgets/home-students';
 import './src/widgets/tabs-slider';
+import './src/widgets/video-link';
 
 import './src/app';
 

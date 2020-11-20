@@ -15,3 +15,32 @@
     @content;
   }
 }
+
+@mixin cross($size, $color) {
+  display: block;
+  position: relative;
+  width: to-number($size);
+  height: to-number($size);
+
+  &::after,
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+    display: block;
+    width: #{diagonal(to-number($size))};
+    height: 1.8px;
+    border-radius: 5px;
+    background-color: $color;
+    @include transition;
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
