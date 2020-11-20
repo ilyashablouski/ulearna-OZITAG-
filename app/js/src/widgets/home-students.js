@@ -38,20 +38,13 @@ class HomeStudents extends Widget {
     });
 
     this.$cells.forEach((node, ind) => {
-      node.addEventListener('mouseover', () => {
+      node.querySelector('.feature').addEventListener('mouseover', () => {
         if (this.switchTimer) clearTimeout(this.switchTimer);
         this.switchTimer = setTimeout(() => {
           this.sceneSwiper.slideTo(ind);
 
           this.$cells.forEach($node => $node.classList.remove('hovered'));
           node.classList.add('hovered');
-        }, 200);
-      });
-
-      node.addEventListener('mouseout', () => {
-        if (this.switchTimer) clearTimeout(this.switchTimer);
-        this.switchTimer = setTimeout(() => {
-          //this.sceneSwiper.slideTo(0);
         }, 200);
       });
     });
