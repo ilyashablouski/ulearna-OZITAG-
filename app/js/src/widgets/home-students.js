@@ -15,10 +15,12 @@ class HomeStudents extends Widget {
 
     this.switchTimer = null;
 
+    this.onChangeLayout = this.onChangeLayout.bind(this);
+
     this.init();
   }
 
-  build() {
+  initSwippers() {
     this.swiper = new Swiper(this.$slider, {
       slidesPerView: 3,
       spaceBetween: 0,
@@ -36,7 +38,9 @@ class HomeStudents extends Widget {
         crossFade: true,
       },
     });
+  }
 
+  build() {
     this.$cells.forEach((node, ind) => {
       node.querySelector('.feature').addEventListener('mouseover', () => {
         if (this.switchTimer) clearTimeout(this.switchTimer);
@@ -48,10 +52,17 @@ class HomeStudents extends Widget {
         }, 200);
       });
     });
+
+    Layout.addListener(this.onChangeLayout);
+    this.onChangeLayout();
   }
 
-  destroy() {
-    this.swiper.destroy(true, true);
+  onChangeLayout() {
+    if (Layout.isDesktopLayout()) {
+      this.initSwippers();
+    } else {
+      this.swiper.destroy(true, true);
+    }
   }
 
   static init(el) {

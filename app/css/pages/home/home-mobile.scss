@@ -4,6 +4,12 @@
   padding-top: 120px;
   overflow: hidden;
 
+  @include tablet{
+    margin-bottom: 80px;
+    margin-top: -80px;
+    padding-top: 80px;
+  }
+
   &__inner {
     display: flex;
   }
@@ -14,12 +20,24 @@
     min-width: 481px;
     margin-left: 60px;
     margin-top: 20px;
+
+    @include tablet-and-mobile{
+      margin-left: 0;
+    }
+
+    @include tablet{
+      width: 414px;
+      min-width: 414px;
+    }
   }
 
   &__right {
     flex: 1 1 1px;
     position: relative;
     height: 619px;
+    @include tablet{
+      height: 485px;
+    }
   }
 
   &__image{
@@ -28,6 +46,14 @@
     top: -38px;
     bottom: 0;
     width: 824px;
+
+    img{
+      max-height: 100%;
+    }
+
+    @include tablet{
+      width: 650px;
+    }
   }
 
   &__title {
@@ -38,6 +64,11 @@
     margin: 0;
     color: $color-black;
     max-width: 400px;
+
+    @include tablet-and-mobile{
+      font-size: 36px;
+      line-height: 54px;
+    }
   }
 
   &__text {
@@ -46,6 +77,11 @@
     display: block;
     margin-top: 16px;
     color: $color-dark;
+
+    @include tablet-and-mobile{
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
 
   &__form {

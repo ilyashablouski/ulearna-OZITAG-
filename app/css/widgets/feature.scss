@@ -20,6 +20,12 @@
     line-height: 31px;
     color: $color-black;
     display: block;
+
+    @include tablet-and-mobile{
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 27px;
+    }
   }
 
   &__text {
@@ -28,6 +34,11 @@
     display: block;
     margin-top: 8px;
     color: $color-dark;
+
+    @include tablet-and-mobile{
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
 
   &__link {

@@ -3,20 +3,23 @@
   padding: 60px 0;
   overflow: hidden;
 
-  @include smallTablet-and-mobile{
+  @include smallTablet-and-mobile {
     padding: 0 0 40px 0;
   }
 
   &__inner {
     display: flex;
-    padding-left: 55px;
-    margin-right: -100px;
+
+    @include desktop {
+      padding-left: 55px;
+      margin-right: -100px;
+    }
 
     @include smallTablet-and-mobile {
       flex-wrap: wrap;
     }
 
-    @include small-desktop{
+    @include small-desktop {
       margin-right: 0;
       padding-left: 20px;
     }
@@ -32,7 +35,7 @@
       padding-top: 40px;
     }
 
-    @include mobile320{
+    @include mobile320 {
       flex-basis: 100%;
     }
   }
@@ -51,7 +54,8 @@
 
   &__item {
     margin-top: 2px;
-    &:first-child{
+
+    &:first-child {
       margin-top: 0;
     }
   }

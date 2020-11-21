@@ -42,6 +42,11 @@
     display: flex;
     align-items: center;
 
+    @include tablet-and-mobile{
+      top: 15px;
+      right: 15px;
+    }
+
     &:before {
       content: '';
       @include sprite('video-watch');

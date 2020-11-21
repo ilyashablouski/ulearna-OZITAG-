@@ -2,14 +2,14 @@
   &__slider {
     position: relative;
     margin-top: 33px;
-
-    @include small-desktop {
-
-    }
   }
 
   &__row {
-    margin: 0 -15px;
+    @include desktop {
+      margin: 0 -15px;
+    }
+
+    @include reset-slider-container;
 
     .non-swiper-slide {
       display: none;
@@ -48,9 +48,24 @@
   &__slide {
     height: auto;
     padding: 0 18px 15px;
+
+    @include tablet-and-mobile {
+      width: 282px;
+      margin-left: 24px;
+      padding: 0;
+      padding-bottom: 15px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
   }
 
   &__prev {
+    @include no-desktop {
+      display: none;
+    }
+
     position: absolute;
     top: 50%;
     left: -15px;
@@ -69,6 +84,10 @@
   }
 
   &__next {
+    @include no-desktop {
+      display: none;
+    }
+
     position: absolute;
     top: 50%;
     right: -15px;

@@ -1,6 +1,6 @@
 class TabsSlider extends Widget {
   constructor(node) {
-    super(node, '.js-tabs-slider');
+    super(node, '.js-tabs-slider', 'desktop');
 
     this.swiper = null;
     this.activeFilter = null;

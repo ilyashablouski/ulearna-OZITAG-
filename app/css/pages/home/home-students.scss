@@ -1,7 +1,11 @@
 .home-students {
-  margin: 120px 0;
   padding-bottom: 117px;
   overflow: hidden;
+
+  margin: 120px 0;
+  @include tablet {
+    margin: 80px 0;
+  }
 
   &__inner {
     position: relative;
@@ -20,9 +24,17 @@
     @include desktop1280 {
       left: 50px;
     }
+
+    @include tablet-and-mobile {
+      display: none;
+    }
   }
 
   &__next {
+    @include tablet-and-mobile {
+      display: none;
+    }
+
     position: absolute;
     top: 50%;
     right: -15px;
@@ -41,7 +53,11 @@
     margin-left: -40px;
     position: relative;
 
-    @include small-desktop{
+    @include tablet {
+      margin-left: -100px;
+    }
+
+    @include small-desktop {
       margin-left: 0;
     }
 
@@ -81,7 +97,7 @@
       padding-right: 35px;
     }
 
-    @include desktop1280{
+    @include desktop1280 {
       padding-left: 55px;
       padding-right: 55px;
     }
@@ -96,16 +112,28 @@
 
   &__row {
     padding-top: 30px;
-    padding-left: 25px;
     padding-bottom: 25px;
     margin-top: -30px;
     margin-bottom: -25px;
-    padding-right: 20px;
+
+    @include desktop {
+      padding-left: 25px;
+      padding-right: 20px;
+    }
 
     .feature {
       padding-right: 40px;
     }
+
+    @include reset-slider-container;
+
+    .swiper-slide {
+      @include tablet {
+        width: 350px;
+      }
+    }
   }
+
 
   &__cell {
     cursor: pointer;
@@ -151,7 +179,11 @@
       margin-left: 87px;
       flex: 1 1 1px;
 
-      @include small-desktop{
+      @include small-desktop {
+        margin-left: 50px;
+      }
+
+      @include tablet {
         margin-left: 50px;
       }
     }
@@ -163,6 +195,11 @@
       color: $color-black;
       display: block;
       max-width: 500px;
+
+      @include tablet-and-mobile {
+        font-size: 36px;
+        line-height: 54px;
+      }
     }
 
     &-text {
@@ -171,6 +208,11 @@
       color: $color-dark;
       max-width: 500px;
       margin-top: 30px;
+
+      @include tablet-and-mobile {
+        font-size: 14px;
+        line-height: 21px;
+      }
     }
 
     &-button {

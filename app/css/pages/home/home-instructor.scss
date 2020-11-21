@@ -1,5 +1,8 @@
 .home-instructor {
   margin: 120px 0;
+  @include tablet{
+    margin: 80px 0;
+  }
 
   &__inner {
     display: flex;
@@ -13,6 +16,10 @@
 
   &__left {
     flex: 0 0 515px;
+
+    @include tablet{
+      flex-basis: 350px;
+    }
   }
 
   &-right {
@@ -44,6 +51,10 @@
       right: -39px;
       bottom: -46px;
       background: url($images_dir + 'home/instructor/background.png');
+
+      @include tablet-and-mobile{
+        display: none;
+      }
     }
   }
 
@@ -84,6 +95,11 @@
     line-height: 84px;
     color: #000;
     display: block;
+
+    @include tablet-and-mobile{
+      font-size: 36px;
+      line-height: 54px;
+    }
   }
 
   &__text {
@@ -92,10 +108,19 @@
     color: $color-dark;
     display: block;
     margin-top: 30px;
+
+    @include tablet-and-mobile{
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
 
   &__button {
     margin-top: 40px;
+
+    @include tablet-and-mobile{
+      margin-top: 30px;
+    }
   }
 
   &__ways {
@@ -116,6 +141,12 @@
       font-size: 38px;
       line-height: 57px;
       color: $color-blue;
+
+      @include tablet-and-mobile{
+        font-size: 34px;
+        line-height: 51px;
+        text-align: left;
+      }
     }
 
     &-row {
@@ -124,11 +155,25 @@
       margin-left: -45px;
       margin-right: -45px;
       padding: 0 20px;
+
+      @include tablet-and-mobile{
+        margin-top: 40px;
+        padding: 0;
+      }
+
+      @include tablet{
+        margin-left: -20px;
+        margin-right: -20px;
+      }
     }
 
     &-cell {
       flex: 1 1 1px;
       padding: 0 45px;
+
+      @include tablet{
+        padding: 0 30px;
+      }
     }
 
     &-footer {

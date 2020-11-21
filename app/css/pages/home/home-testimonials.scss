@@ -1,6 +1,10 @@
 .home-testimonials {
   position: relative;
+
   margin: 120px 0;
+  @include tablet{
+    margin: 80px 0;
+  }
 
   &__bg {
     @include fill;
@@ -23,6 +27,11 @@
     line-height: 57px;
     color: #000;
     display: block;
+
+    @include tablet-and-mobile{
+      font-size: 34px;
+      line-height: 51px;
+    }
 
     span {
       position: relative;
@@ -64,6 +73,10 @@
       position: absolute;
       display: block;
     }
+
+    @include tablet-and-mobile{
+      margin-top: 40px;
+    }
   }
 
   &__icon{
@@ -104,6 +117,10 @@
   &__cell {
     padding: 0 25px;
     flex: 1 1 1px;
+
+    @include tablet{
+      padding: 0 10px;
+    }
   }
 
   &__cta {
