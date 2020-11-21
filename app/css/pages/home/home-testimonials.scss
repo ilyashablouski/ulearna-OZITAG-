@@ -12,6 +12,10 @@
     }
   }
 
+  &__inner{
+    position: relative;
+  }
+
   &__title {
     text-align: center;
     font-weight: bold;
@@ -60,24 +64,40 @@
       position: absolute;
       display: block;
     }
+  }
 
-    &:before {
-      border-radius: 6px;
-      width: 28px;
-      height: 28px;
-      position: absolute;
-      background: $color-purple;
+  &__icon{
+    position: absolute;
+    display: block;
+
+    &--1 {
+      @include square(28px, $color-purple, 6px);
       right: -6px;
       bottom: 11px
     }
 
-    &:after {
-      width: 21px;
-      height: 21px;
-      background: rgba(198, 105, 255, 0.3);
+    &--2{
+      @include square(21px, $color-purple-30, 6px);
       border-radius: 6px;
       bottom: -15px;
       right: 35px;
+    }
+
+    &--plus{
+      @include square(32px, $color-purple, 6px);
+
+      &:before, &:after {
+        content: '';
+        @include align(true, true);
+        width: 3.92px;
+        height: 18.29px;
+        background: $color-white;
+        border-radius: 50%;
+      }
+
+      &:after {
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
     }
   }
 
