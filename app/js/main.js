@@ -18,6 +18,7 @@ import './src/widgets/accord';
 import './src/widgets/header/header-burger';
 import './src/widgets/header/header-fixed';
 import './src/widgets/header/header-menu';
+import './src/widgets/header/header-search';
 import './src/widgets/header/header';
 
 import './src/widgets/home/home-students';

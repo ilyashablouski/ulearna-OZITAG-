@@ -2,6 +2,15 @@
   <div class="container">
     <div class="header__wrapper">
       <button class="header__burger js-header__burger"></button>
+      <button class="header__search-toggle js-header__search-toggle"></button>
+
+      <div class="header__search js-header__search">
+        <div class="header__search-input">
+          {{> widgets/search-input }}
+        </div>
+        <button class="header__search-close js-header__search-toggle">Cancel</button>
+      </div>
+
       <div class="header__inner">
         <div class="header__left">
           <a href="home.html" class="header__logo"></a>

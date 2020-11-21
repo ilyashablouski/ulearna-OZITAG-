@@ -5,6 +5,7 @@ class Header extends Widget {
     HeaderBurger.init(this.$node);
     HeaderFixed.init(this.$node);
     HeaderMenu.init(this.$node);
+    HeaderSearch.init(this.$node);
   }
 
   static init(el) {

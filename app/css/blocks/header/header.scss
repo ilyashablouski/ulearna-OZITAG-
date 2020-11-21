@@ -1,6 +1,10 @@
 .header {
   z-index: 1;
 
+  &__search-toggle, &__search{
+    display: none;
+  }
+
   &__logo {
     @include sprite('logo');
     @include tablet {
