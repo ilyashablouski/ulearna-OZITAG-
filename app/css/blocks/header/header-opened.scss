@@ -6,7 +6,7 @@
     &__burger {
       position: fixed;
       right: 10px;
-      top: 22px;
+      top: 17px;
       display: block;
       z-index: z(default) + 1;
       transform: none;
@@ -16,13 +16,13 @@
       }
     }
 
-    &__logo{
+    &__logo {
       position: fixed;
-      top: 12px;
+      top: 10px;
       left: 15px;
     }
 
-    &__wrapper{
+    &__wrapper {
       position: fixed;
       left: 0;
       top: 0;
@@ -98,15 +98,42 @@
         margin-top: 0;
       }
 
-      &-link{
+      &-link {
         width: 100%;
         margin: 0;
+        color: $color-black;
+
+        svg{
+          color: $color-blue;
+          @include transition(transform, 0.3s);
+        }
       }
 
-      &--dropdown{
-        .header-menu__item-link{
+      &--dropdown {
+        .header-menu__item-link {
           justify-content: space-between;
         }
+      }
+
+      &.opened {
+        .header-menu__dropdown {
+          display: block;
+        }
+        .header-menu__item-link svg{
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &__dropdown {
+      display: none;
+
+      &.animate {
+        position: relative;
+        display: block;
+        height: 0;
+        overflow: hidden;
+        transition: height .32s ease;
       }
     }
   }
