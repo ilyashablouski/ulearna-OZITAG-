@@ -10,12 +10,25 @@
     border-radius: 10px;
     position: relative;
 
+    @include mobile{
+      font-size: 18px;
+      line-height: 27px;
+      padding: 52px 20px 44px;
+    }
+
     &:before {
       content: '';
       top: 20px;
       left: 24px;
       position: absolute;
       @include sprite('testimonial-arrows');
+    }
+  }
+
+  &__image{
+    @include mobile{
+      width: 84px;
+      height: 84px;
     }
   }
 
@@ -26,11 +39,20 @@
     z-index: 1;
     margin-top: -32px;
     padding-left: 38px;
+
+    @include mobile{
+      margin-top: 10px;
+      padding-left: 0;
+    }
   }
 
   &__info {
     margin-left: 9px;
     margin-top: 16px;
+
+    @include mobile{
+      margin: 0 0 0 10px;
+    }
   }
 
   &__name {
@@ -38,6 +60,11 @@
     font-weight: 600;
     font-size: 21px;
     line-height: 31px;
+
+    @include mobile{
+      font-size: 18px;
+      line-height: 27px;
+    }
   }
 
   &__position {
@@ -46,5 +73,11 @@
     line-height: 146%;
     color: $color-blue;
     margin-top: 3px;
+
+    @include mobile{
+      font-size: 14px;
+      line-height: 21px;
+      margin-top: 8px;
+    }
   }
 }

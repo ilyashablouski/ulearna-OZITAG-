@@ -86,9 +86,15 @@
     @include tablet-and-mobile {
       margin-top: 40px;
     }
+  }
 
-    @include mobile{
-      display: block;
+  @include mobile {
+    .swiper-pagination {
+      margin-top: 50px;
+    }
+
+    .swiper-container {
+      margin: 0 -15px;
     }
   }
 
@@ -96,8 +102,8 @@
     position: absolute;
     display: block;
 
-    @include mobile{
-      display: none;
+    @include mobile {
+      display: none !important;
     }
 
     &--1 {
@@ -133,10 +139,16 @@
 
   &__cell {
     padding: 0 25px;
-    flex: 1 1 1px;
+    @include no-mobile {
+      flex: 1 1 1px;
+    }
 
     @include tablet {
       padding: 0 10px;
+    }
+
+    @include mobile {
+      padding: 0 15px;
     }
   }
 
@@ -145,7 +157,7 @@
     display: flex;
     justify-content: center;
 
-    @include mobile{
+    @include mobile {
       display: none;
     }
   }

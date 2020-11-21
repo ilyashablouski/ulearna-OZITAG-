@@ -19,8 +19,8 @@ import './src/widgets/header/header-fixed';
 import './src/widgets/header/header';
 
 import './src/widgets/home/home-students';
-import './src/widgets/home/home-instructor';
 
+import './src/widgets/mobile-slider';
 import './src/widgets/link-select';
 import './src/widgets/tabs-slider';
 import './src/widgets/video-link';

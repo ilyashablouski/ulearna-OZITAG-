@@ -1,11 +1,11 @@
-class HomeInstructor extends Widget {
+class MobileSlider extends Widget {
   constructor(node) {
-    super(node, '.js-home-instructor', 'mobile');
+    super(node, '.js-mobile-slider', 'mobile');
 
     this.swiper = null;
 
-    this.$wrapper = this.queryElement('.wrapper');
-    this.$slides = this.queryElements('.slide');
+    this.$wrapper = this.queryElement('.row');
+    this.$slides = this.$wrapper.children;
     this.$pagination = null;
 
     this.init();
@@ -25,7 +25,7 @@ class HomeInstructor extends Widget {
       spaceBetween: 0,
       pagination: {
         el: '.swiper-pagination',
-        clickable: true
+        clickable: true,
       },
     });
   }
@@ -42,10 +42,10 @@ class HomeInstructor extends Widget {
   }
 
   static init(el) {
-    el && new HomeInstructor(el);
+    el && new MobileSlider(el);
   }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.js-home-instructor').forEach(item => HomeInstructor.init(item));
+  document.querySelectorAll('.js-mobile-slider').forEach(item => MobileSlider.init(item));
 });
