@@ -24,6 +24,7 @@ $color-dark: #333333;
 $color-dark-hover: #000;
 $color-blue-dark: #2994FF;
 $color-blue: #20B7F7;
+$color-blue-80: rgba(32, 183, 247, 0.8);
 $color-blue-hover: darken($color-blue, 5%);
 $color-blue-light: #EBF9FF;
 $color-blue-light-hover: darken($color-blue-light, 5%);
@@ -32,6 +33,7 @@ $color-gray-dark: #829AB2;
 $color-gray-dark-hover: darken($color-gray-dark, 5%);
 $color-purple: #C669FF;
 $color-purple-hover: darken($color-purple, 5%);
+$color-purple-40: rgba(198, 105, 255, 0.4);
 $color-orange: #F2B71E;
 $color-orange-hover: darken($color-orange, 5%);
 

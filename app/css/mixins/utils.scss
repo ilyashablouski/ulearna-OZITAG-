@@ -241,9 +241,14 @@
   }
 }
 
-@mixin circle($size) {
-  border-radius: 50%;
+@mixin square($size, $background: #fff, $border-radius: 0px) {
   width: $size;
   height: $size;
   display: inline-block;
+  background: $background;
+  border-radius: $border-radius;
+}
+
+@mixin circle($size, $background: #fff) {
+  @include square($size, $background, 50%);
 }
