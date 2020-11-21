@@ -59,6 +59,14 @@
         margin-left: 0;
       }
     }
+
+    @include tablet{
+      &:last-child{
+        padding-right: 30px;
+        width: calc(282px + 30px);
+      }
+    }
+
   }
 
   &__prev {

@@ -12,6 +12,10 @@
     @include desktop1280{
       padding: 0 40px;
     }
+
+    @include smallTablet-and-mobile{
+      display: block;
+    }
   }
 
   &__left {

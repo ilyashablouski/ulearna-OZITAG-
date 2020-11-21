@@ -1,6 +1,10 @@
 .home-students {
-  padding-bottom: 117px;
   overflow: hidden;
+
+  padding-bottom: 117px;
+  @include smallTablet-and-mobile{
+    padding-bottom: 50px;
+  }
 
   margin: 120px 0;
   @include tablet {
