@@ -1,0 +1,39 @@
+.plus-subscription {
+  margin-top: 80px;
+  text-align: center;
+
+  &__inner {
+    padding-top: 75px;
+    padding-bottom: 118px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 160px;
+      @include sprite('subscription-bg');
+    }
+  }
+
+  &__title {
+    max-width: 836px;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 57px;
+  }
+
+  &__form {
+    max-width: 615px;
+    margin: 40px auto 0;
+  }
+
+  &__note {
+    font-size: 14px;
+    line-height: 140%;
+    color: $color-gray-dark;
+    display: block;
+    margin-top: 20px;
+  }
+}
