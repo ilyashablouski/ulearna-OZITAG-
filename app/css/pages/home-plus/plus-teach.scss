@@ -3,6 +3,10 @@
   padding-top: 80px;
   text-align: center;
 
+  + .home-testimonials{
+    margin-top: 95px;
+  }
+
   &__subtitle {
     font-weight: 600;
     font-size: 21px;
@@ -30,7 +34,7 @@
   &__note {
     font-size: 14px;
     line-height: 140%;
-    margin: 20px auto 0;
+    margin: 22px auto 0;
     color: $color-gray-dark;
     max-width: 392px;
   }
@@ -46,10 +50,10 @@
   }
 
   &__image {
-    margin-top: 60px;
+    margin-top: 40px;
     position: relative;
 
-    &-mask{
+    &-mask {
       position: absolute;
       right: 100px;
       z-index: -1;
@@ -59,5 +63,9 @@
 
   &__button {
     margin-top: 40px;
+
+    .btn {
+      min-width: 320px;
+    }
   }
 }

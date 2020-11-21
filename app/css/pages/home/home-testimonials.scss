@@ -72,15 +72,15 @@
 
     &--1 {
       @include square(28px, $color-purple, 6px);
-      right: -6px;
-      bottom: 11px
+      right: 21px;
+      bottom: 111px;
     }
 
     &--2{
       @include square(21px, $color-purple-30, 6px);
       border-radius: 6px;
-      bottom: -15px;
-      right: 35px;
+      bottom: 76px;
+      right: 78px;
     }
 
     &--plus{
@@ -107,7 +107,7 @@
   }
 
   &__cta {
-    margin-top: 45px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
   }
