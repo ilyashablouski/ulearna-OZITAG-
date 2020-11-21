@@ -2,8 +2,11 @@
   position: relative;
 
   margin: 120px 0;
-  @include tablet{
+  @include tablet {
     margin: 80px 0;
+  }
+  @include mobile {
+    margin: 60px 0;
   }
 
   &__bg {
@@ -16,7 +19,7 @@
     }
   }
 
-  &__inner{
+  &__inner {
     position: relative;
   }
 
@@ -28,9 +31,15 @@
     color: #000;
     display: block;
 
-    @include tablet-and-mobile{
+    @include tablet-and-mobile {
       font-size: 34px;
       line-height: 51px;
+    }
+
+    @include mobile {
+      font-size: 22px;
+      line-height: 33px;
+      text-align: left;
     }
 
     span {
@@ -74,14 +83,22 @@
       display: block;
     }
 
-    @include tablet-and-mobile{
+    @include tablet-and-mobile {
       margin-top: 40px;
+    }
+
+    @include mobile{
+      display: block;
     }
   }
 
-  &__icon{
+  &__icon {
     position: absolute;
     display: block;
+
+    @include mobile{
+      display: none;
+    }
 
     &--1 {
       @include square(28px, $color-purple, 6px);
@@ -89,14 +106,14 @@
       bottom: 111px;
     }
 
-    &--2{
+    &--2 {
       @include square(21px, $color-purple-30, 6px);
       border-radius: 6px;
       bottom: 76px;
       right: 78px;
     }
 
-    &--plus{
+    &--plus {
       @include square(32px, $color-purple, 6px);
 
       &:before, &:after {
@@ -118,7 +135,7 @@
     padding: 0 25px;
     flex: 1 1 1px;
 
-    @include tablet{
+    @include tablet {
       padding: 0 10px;
     }
   }
@@ -127,5 +144,9 @@
     margin-top: 50px;
     display: flex;
     justify-content: center;
+
+    @include mobile{
+      display: none;
+    }
   }
 }

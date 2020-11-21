@@ -1,6 +1,14 @@
 .home-featured {
   margin: 80px 0 120px;
 
+  @include tablet{
+    margin: 60px 0 80px;
+  }
+
+  @include mobile{
+    margin: 20px 0 0 0;
+  }
+
   &--background {
     background: linear-gradient(355.57deg, rgba(242, 251, 255, 0) 3.65%, #F9F5FF 96.49%);
     padding-top: 80px;
@@ -13,10 +21,19 @@
     line-height: 57px;
     color: $color-black;
     display: block;
+
+    @include mobile{
+      font-size: 22px;
+      line-height: 33px;
+    }
   }
 
   &__slider {
     margin-top: 30px;
+
+    @include mobile{
+      margin-top: 16px;
+    }
   }
 
   &__bottom {

@@ -10,6 +10,12 @@
     padding-top: 80px;
   }
 
+  @include mobile {
+    margin-top: 60px;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
   @include smallTablet-and-mobile {
     margin-bottom: 0;
   }
@@ -98,6 +104,11 @@
     @include smallTablet-and-mobile {
       max-width: none;
     }
+
+    @include mobile {
+      font-size: 28px;
+      line-height: 42px;
+    }
   }
 
   &__text {
@@ -111,10 +122,29 @@
       font-size: 14px;
       line-height: 21px;
     }
+
+    @include mobile {
+      margin-top: 8px;
+    }
   }
 
   &__form {
     margin-top: 30px;
+
+    @include mobile {
+      margin-top: 16px;
+
+      .submit-input__button{
+        position: static;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin-top: 16px;
+        .btn{
+          width: 100%;
+        }
+      }
+    }
   }
 
   &__note {
@@ -123,5 +153,9 @@
     font-size: 14px;
     line-height: 140%;
     color: $color-gray-dark;
+
+    @include mobile {
+      display: none;
+    }
   }
 }

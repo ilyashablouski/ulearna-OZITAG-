@@ -1,10 +1,18 @@
 .tabs {
-  display: flex;
+  @include reset-slider-container-mobile;
+
+  &__inner{
+    display: flex;
+  }
 
   &__item {
     margin-left: 30px;
     &:first-child {
       margin-left: 0;
+    }
+
+    @include mobile{
+      margin-left: 20px;
     }
   }
 
@@ -16,6 +24,12 @@
     padding-bottom: 9px;
     display: block;
     border-bottom: 4px solid transparent;
+    white-space: nowrap;
+
+    @include mobile{
+      font-size: 14px;
+      line-height: 21px;
+    }
 
     &.active{
       color: $color-black;

@@ -28,6 +28,12 @@
     font-weight: bold;
     font-size: 18px;
     padding: 0 28px;
+
+    @include mobile{
+      height: 48px;
+      line-height: 48px;
+      font-size: 16px;
+    }
   }
 
   &--middle {

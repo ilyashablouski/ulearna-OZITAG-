@@ -5,10 +5,16 @@
   @include smallTablet-and-mobile {
     padding-bottom: 50px;
   }
+  @include mobile {
+    padding-bottom: 0;
+  }
 
   margin: 120px 0;
   @include tablet {
     margin: 80px 0;
+  }
+  @include mobile {
+    margin: 60px 0;
   }
 
   &__inner {
@@ -61,6 +67,10 @@
       margin-left: -100px;
     }
 
+    @include mobile {
+      margin: 0 -15px;
+    }
+
     @include small-desktop {
       margin-left: 0;
     }
@@ -75,6 +85,10 @@
       display: block;
       top: 52px;
       right: -23px;
+
+      @include mobile {
+        display: none;
+      }
     }
   }
 
@@ -83,6 +97,14 @@
 
     .swiper-slide {
       padding-left: 50px;
+      @include mobile {
+        padding: 0;
+      }
+    }
+
+    @include mobile {
+      margin: 0;
+      padding: 0;
     }
   }
 
@@ -104,6 +126,11 @@
     @include desktop1280 {
       padding-left: 55px;
       padding-right: 55px;
+    }
+
+    @include mobile {
+      border-top: 0 none;
+      padding-top: 0;
     }
   }
 
@@ -169,6 +196,11 @@
       padding-bottom: 50px;
     }
 
+    @include mobile {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+
     &-image {
       position: relative;
 
@@ -177,6 +209,10 @@
         box-shadow: 0px 4px 44px rgba(1, 64, 139, 0.24);
         border-radius: 10px;
         overflow: hidden;
+
+        @include mobile {
+          max-height: 100%;
+        }
       }
 
       padding: 39px 15px 33px 39px;
@@ -187,6 +223,11 @@
         padding: 0;
         width: auto;
         height: auto;
+      }
+
+      @include mobile {
+        height: 305px;
+        padding: 0 0 40px 15px;
       }
 
       &:before {
@@ -213,6 +254,11 @@
       @include tablet {
         margin-left: 50px;
       }
+
+      @include mobile {
+        margin: 0 0 30px 0;
+        padding-left: 15px;
+      }
     }
 
     &-title {
@@ -223,9 +269,14 @@
       display: block;
       max-width: 500px;
 
-      @include tablet-and-mobile {
+      @include tablet {
         font-size: 36px;
         line-height: 54px;
+      }
+
+      @include mobile {
+        font-size: 28px;
+        line-height: 42px;
       }
     }
 
@@ -240,10 +291,20 @@
         font-size: 14px;
         line-height: 21px;
       }
+
+      @include mobile {
+        margin-top: 20px;
+      }
     }
 
     &-button {
       margin-top: 40px;
+      @include mobile {
+        margin-top: 30px;
+        .btn {
+          width: 100%;
+        }
+      }
     }
   }
 }

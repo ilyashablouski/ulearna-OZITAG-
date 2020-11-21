@@ -2,6 +2,10 @@
   &__slider {
     position: relative;
     margin-top: 33px;
+
+    @include mobile{
+      margin-top: 20px;
+    }
   }
 
   &__row {
@@ -64,6 +68,13 @@
       &:last-child{
         padding-right: 30px;
         width: calc(282px + 30px);
+      }
+    }
+
+    @include mobile{
+      &:last-child{
+        padding-right: 15px;
+        width: calc(282px + 15px);
       }
     }
 

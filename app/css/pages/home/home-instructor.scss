@@ -1,19 +1,25 @@
 .home-instructor {
   margin: 120px 0;
-  @include tablet{
+  @include tablet {
     margin: 80px 0;
   }
+  @include mobile {
+    margin: 60px 0;
+    position: relative;
+    padding-bottom: 75px;
+  }
+
 
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    @include desktop1280{
+    @include desktop1280 {
       padding: 0 40px;
     }
 
-    @include smallTablet-and-mobile{
+    @include smallTablet-and-mobile {
       display: block;
     }
   }
@@ -21,7 +27,7 @@
   &__left {
     flex: 0 0 515px;
 
-    @include tablet{
+    @include tablet {
       flex-basis: 350px;
     }
   }
@@ -30,23 +36,34 @@
 
   }
 
-  &__ways{
+  &__ways {
     overflow: hidden;
+    @include mobile{
+      margin-top: 30px;
+    }
   }
 
-  &__image{
+  &__image {
     position: relative;
     width: 564px;
     height: 448px;
     margin-top: 33px;
 
-    img{
+    @include mobile {
+      margin-top: 30px;
+      margin-right: -15px;
+      max-height: 320px;
+      max-width: 100%;
+    }
+
+    img {
       box-shadow: 0px 4px 44px rgba(1, 64, 139, 0.24);
       border-radius: 10px;
       overflow: hidden;
+      max-height: 100%;
     }
 
-    &:before{
+    &:before {
       content: '';
       position: absolute;
       z-index: -1;
@@ -56,7 +73,7 @@
       bottom: -46px;
       background: url($images_dir + 'home/instructor/background.png');
 
-      @include tablet-and-mobile{
+      @include tablet-and-mobile {
         display: none;
       }
     }
@@ -66,6 +83,10 @@
     margin-bottom: 30px;
     position: relative;
     display: inline-block;
+
+    @include mobile {
+      display: none;
+    }
 
     &:after {
       content: '';
@@ -100,9 +121,14 @@
     color: #000;
     display: block;
 
-    @include tablet-and-mobile{
+    @include tablet {
       font-size: 36px;
       line-height: 54px;
+    }
+
+    @include mobile {
+      font-size: 28px;
+      line-height: 42px;
     }
   }
 
@@ -113,17 +139,31 @@
     display: block;
     margin-top: 30px;
 
-    @include tablet-and-mobile{
+    @include tablet-and-mobile {
       font-size: 14px;
       line-height: 21px;
+    }
+
+    @include mobile {
+      margin-top: 20px;
     }
   }
 
   &__button {
     margin-top: 40px;
 
-    @include tablet-and-mobile{
+    @include tablet-and-mobile {
       margin-top: 30px;
+    }
+
+    @include mobile {
+      position: absolute;
+      bottom: 0;
+      left: 15px;
+      right: 15px;
+      .btn {
+        width: 100%;
+      }
     }
   }
 
@@ -136,6 +176,9 @@
       width: 100%;
       display: block;
       border: 0 none;
+      @include mobile {
+        display: none;
+      }
     }
 
     &-title {
@@ -146,10 +189,15 @@
       line-height: 57px;
       color: $color-blue;
 
-      @include tablet-and-mobile{
+      @include tablet-and-mobile {
         font-size: 34px;
         line-height: 51px;
         text-align: left;
+      }
+
+      @include mobile{
+        font-size: 22px;
+        line-height: 33px;
       }
     }
 
@@ -160,12 +208,16 @@
       margin-right: -45px;
       padding: 0 20px;
 
-      @include tablet-and-mobile{
+      @include tablet-and-mobile {
         margin-top: 40px;
         padding: 0;
       }
 
-      @include tablet{
+      @include mobile{
+        margin-top: 30px;
+      }
+
+      @include tablet {
         margin-left: -20px;
         margin-right: -20px;
         flex-wrap: wrap;
@@ -177,7 +229,7 @@
       flex: 1 1 1px;
       padding: 0 45px;
 
-      @include tablet{
+      @include tablet {
         padding: 0 30px;
         flex-basis: 50%;
         margin-top: 30px;
@@ -189,7 +241,13 @@
       display: flex;
       justify-content: center;
 
-      @include smallTablet{
+      @include mobile{
+        .btn{
+          width: 100%;
+        }
+      }
+
+      @include smallTablet {
         margin-top: 50px;
       }
     }
