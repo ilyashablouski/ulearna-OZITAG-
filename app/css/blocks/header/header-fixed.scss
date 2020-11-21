@@ -1,5 +1,8 @@
 body.header-fixed {
   margin-top: 100px;
+  @include mobile{
+    margin-top: 80px;
+  }
 }
 
 .header {
@@ -41,6 +44,24 @@ body.header-fixed {
 
     .header__center {
       margin-left: 80px;
+    }
+
+    @include mobile{
+      height: 80px;
+      top: -80px;
+      .header__inner{
+        padding: 15px 0;
+      }
+      .header__left{
+        display: none;
+      }
+      .header__center{
+        display: block;
+        margin-left: 40px;
+      }
+      .header__right{
+        display: none;
+      }
     }
   }
 
