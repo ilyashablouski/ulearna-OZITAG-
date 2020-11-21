@@ -5,10 +5,19 @@
       <button class="header__search-toggle js-header__search-toggle"></button>
 
       <div class="header__search js-header__search">
-        <div class="header__search-input">
-          {{> widgets/search-input }}
+        <div class="header__search-header">
+          <div class="header__search-input">
+            {{> widgets/search-input }}
+          </div>
+          <button class="header__search-close js-header__search-toggle">Cancel</button>
         </div>
-        <button class="header__search-close js-header__search-toggle">Cancel</button>
+        <div class="header__search-body">
+          <p class="header__search-intro">Search for courses, instructor, skills, university and institutes</p>
+          <ul class="header__search-results">
+            <li class="header__search-results-item">Develop</li>
+            <li class="header__search-results-item">Development</li>
+          </ul>
+        </div>
       </div>
 
       <div class="header__inner">
