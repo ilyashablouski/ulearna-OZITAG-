@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
 
-  @include mobile{
+  @include mobile {
     display: none;
   }
 
@@ -11,7 +11,11 @@
     font-size: 17px;
     line-height: 24px;
     margin-left: 9px;
+
     display: block;
+    &--opened {
+      display: none;
+    }
   }
 
   &__select {

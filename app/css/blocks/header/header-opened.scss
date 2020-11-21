@@ -2,10 +2,54 @@
   z-index: 10;
   background: $color-white;
 
+  .header-language {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    right: 15px;
+
+    @include tablet {
+      left: 30px;
+      right: 30px;
+    }
+
+    z-index: 11;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &__label {
+      margin-left: 0;
+      margin-bottom: 5px;
+
+      display: none;
+
+      &--opened {
+        display: block;
+      }
+    }
+
+    &__select {
+      width: 100%;
+
+      .select {
+        width: 100%;
+      }
+
+      .select__input {
+        width: 100%;
+      }
+    }
+  }
+
   .header {
     &__burger {
       position: fixed;
       right: 10px;
+      @include tablet {
+        right: 25px;
+      }
       top: 17px;
       display: block;
       z-index: z(default) + 1;
@@ -19,6 +63,9 @@
     &__search-toggle {
       position: fixed;
       right: 50px;
+      @include tablet{
+        right: 65px;
+      }
       top: 17px;
       display: block;
       z-index: z(default) + 1;
@@ -105,13 +152,16 @@
         color: $color-gray-dark;
         margin-left: 12px;
       }
-
     }
+
 
     &__logo {
       position: fixed;
       top: 10px;
       left: 15px;
+      @include tablet {
+        left: 30px;
+      }
     }
 
     &__wrapper {
@@ -143,7 +193,12 @@
     &__center {
       display: block;
       margin: 0 0 0 0;
-      padding: 0 16px;
+
+      padding: 0 30px;
+      @include mobile {
+        padding: 0 15px;
+      }
+
       width: 100%;
     }
 
@@ -156,7 +211,10 @@
       display: flex;
       flex-direction: column-reverse;
       margin-top: auto;
-      padding: 20px 16px;
+      padding: 20px 15px;
+      @include tablet {
+        padding: 20px 30px;
+      }
       margin-left: 0;
 
       &-item {
@@ -177,6 +235,12 @@
   }
 
   .header-menu {
+    margin-top: 90px;
+
+    .no-language & {
+      margin-top: 0;
+    }
+
     &__nav {
       display: block;
       margin: 0;

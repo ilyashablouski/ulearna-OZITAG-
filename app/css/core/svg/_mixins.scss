@@ -202,6 +202,8 @@ $sprite: map-get($icons, sprite) !default;
   @if $type == all or $type == bg {
     background-position: mq-px2em(map-get($iconMap, x)) mq-px2em(map-get($iconMap, y));
   }
+
+  transition: none;
 }
 
 @mixin sprite_hover($icon, $icon_hover) {
