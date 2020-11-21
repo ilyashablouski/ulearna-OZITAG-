@@ -4,6 +4,9 @@ class HomeStudents extends Widget {
 
     this.swiper = null;
     this.sceneSwiper = null;
+    this.mobileSwiper = null;
+
+    this.$pagination = null;
 
     this.$scene = this.queryElement('.scene');
     this.$slider = this.queryElement('.slider');
@@ -25,6 +28,7 @@ class HomeStudents extends Widget {
       slidesPerView: 1,
       effect: 'fade',
       simulateTouch: false,
+      allowTouchMove: false,
       fadeEffect: {
         crossFade: true,
       },
@@ -42,6 +46,10 @@ class HomeStudents extends Widget {
     });
   }
 
+  setActiveScene(ind) {
+    this.sceneSwiper.slideTo(ind);
+  }
+
   build() {
     this.initSceneSwiper();
 
@@ -49,7 +57,7 @@ class HomeStudents extends Widget {
       node.querySelector('.feature').addEventListener('mouseover', () => {
         if (this.switchTimer) clearTimeout(this.switchTimer);
         this.switchTimer = setTimeout(() => {
-          this.sceneSwiper.slideTo(ind);
+          this.setActiveScene(ind);
 
           this.$cells.forEach($node => $node.classList.remove('hovered'));
           node.classList.add('hovered');
@@ -58,7 +66,8 @@ class HomeStudents extends Widget {
 
       node.addEventListener('click', () => {
         if (isTouchDevice() === false) return;
-        this.sceneSwiper.slideTo(ind);
+        this.setActiveScene(ind);
+
         this.$cells.forEach($node => $node.classList.remove('hovered'));
         node.classList.add('hovered');
       });
@@ -68,12 +77,44 @@ class HomeStudents extends Widget {
     this.onChangeLayout();
   }
 
+  destroyMobile() {
+    if (this.mobileSwiper) {
+      this.$pagination.remove();
+      this.mobileSwiper.destroy();
+    }
+  }
+
+  initMobile() {
+    this.$pagination = document.createElement('div');
+    this.$pagination.classList.add('swiper-pagination');
+    this.$slider.append(this.$pagination);
+
+    this.mobileSwiper = new Swiper(this.$slider, {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      on: {
+        slideChange: () => {
+          this.setActiveScene(this.mobileSwiper.activeIndex);
+        },
+      },
+    });
+  }
+
   onChangeLayout() {
     if (Layout.isDesktopLayout()) {
       this.initNavigationSwiper();
+      this.destroyMobile();
     } else {
       if (this.swiper) {
         this.swiper.destroy(true, true);
+      }
+
+      if (Layout.isMobileLayout()) {
+        this.initMobile();
       }
     }
   }

@@ -269,6 +269,12 @@
         }
       }
 
+      @include mobile320{
+        .btn{
+          font-size: 14px;
+        }
+      }
+
       @include smallTablet {
         margin-top: 50px;
       }

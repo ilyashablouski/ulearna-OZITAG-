@@ -38,6 +38,27 @@
   }
 }
 
+@mixin reset-slider-container-tablet {
+  @include tablet {
+    margin-left: -30px;
+    margin-right: -30px;
+
+    > * {
+      overflow: auto;
+      overflow-y: hidden;
+      padding-left: 30px;
+      width: auto;
+      @include hide-scrollbar;
+
+      > * {
+        &:last-child {
+          padding-right: 30px;
+        }
+      }
+    }
+  }
+}
+
 @mixin reset-slider-container-mobile {
   @include mobile {
     margin-left: -15px;
