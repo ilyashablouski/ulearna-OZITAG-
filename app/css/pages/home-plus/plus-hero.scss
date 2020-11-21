@@ -5,6 +5,7 @@
 
   &__bg {
     @include fill;
+    background: $color-gray-dark;
     z-index: -1;
 
     img {
