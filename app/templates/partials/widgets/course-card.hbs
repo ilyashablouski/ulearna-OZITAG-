@@ -1,10 +1,26 @@
 <div class="course-card">
   <a href="#" class="course-card__link"></a>
-  <div class="course-card__image {{#if original}}course-card__image--original{{/if}}">
+  <div class="course-card__image {{#if image}}{{else}}course-card__image--no-image{{/if}}">
+    <div class="course-card__badges">
+      {{#if free}}
+        <span class="course-card__badge">Free</span>
+      {{/if}}
+      {{#if original}}
+        <span class="course-card__badge course-card__badge--original"></span>
+      {{/if}}
+    </div>
+
+    {{#if plus}}
+      <span class="course-card__plus">UlearnaPlus</span>
+    {{/if}}
+
     <button class="course-card__wish">
       {{> ui/svg name="course-wish"}}
     </button>
-    {{>components/image img=image ext="jpg"}}
+
+    {{#if image}}
+      {{>components/image img=image ext="jpg"}}
+    {{/if}}
   </div>
   <div class="course-card__content">
     <span class="course-card__title">{{ title }}</span>

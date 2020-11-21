@@ -1,0 +1,108 @@
+<section class="home-featured home-featured--background js-tabs-slider">
+  <div class="container">
+    <h2 class="home-featured__title">Featured courses in UlearnaPlus</h2>
+    <div class="home-featured__inner">
+      <div class="tabs-slider">
+        <div class="tabs-slider__tabs">
+          <div class="tabs">
+            <div class="tabs__item">
+              <button data-filter="*" class="js-tabs-slider__tab tabs__link active">All Categories</button>
+            </div>
+            <div class="tabs__item">
+              <button data-filter="filter-1" class="js-tabs-slider__tab tabs__link">Business</button>
+            </div>
+            <div class="tabs__item">
+              <button data-filter="filter-2" class="js-tabs-slider__tab tabs__link">Category</button>
+            </div>
+            <div class="tabs__item">
+              <button data-filter="filter-3" class="js-tabs-slider__tab tabs__link">Category</button>
+            </div>
+            <div class="tabs__item">
+              <button data-filter="filter-4" class="js-tabs-slider__tab tabs__link">Category</button>
+            </div>
+            <div class="tabs__item">
+              <button data-filter="filter-5" class="js-tabs-slider__tab tabs__link">Category</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tabs-slider__slider">
+        <div class="tabs-slider__prev">
+          <button class="button-nav button-nav--prev js-tabs-slider__prev"></button>
+        </div>
+        <div class="tabs-slider__next">
+          <button class="button-nav button-nav--next js-tabs-slider__next"></button>
+        </div>
+        <div class="tabs-slider__row">
+          <div class="swiper-container js-tabs-slider__slider">
+            <div class="swiper-wrapper">
+              <div class="tabs-slider__slide swiper-slide js-tabs-slider__item" data-filters="filter-2,filter-4">
+                {{> widgets/course-card plus=true free=true original=true
+                        image="home-plus/featured/01"
+                        title="Customizing Type with Draplin: Creating Wordmarks That Work"
+                        author="by Leo Workman"
+                        original=true
+                }}
+              </div>
+              <div class="tabs-slider__slide swiper-slide js-tabs-slider__item" data-filters="filter-1,filter-3">
+                {{> widgets/course-card plus=true free=true original=true
+                        image="home-plus/featured/02"
+                        title="Productivity Masterclass: Create a Custom System that Works"
+                        author="by Makenna Baptista"
+                        original=true
+                }}
+              </div>
+              <div class="tabs-slider__slide swiper-slide js-tabs-slider__item" data-filters="filter-5">
+                {{> widgets/course-card plus=true original=true
+                        image="home-plus/featured/03"
+                        title="ODD BODIES: Illustrating Expressive, Stylized People"
+                        author="by Leo Workman"
+                        original=true
+                }}
+              </div>
+              <div class="tabs-slider__slide swiper-slide js-tabs-slider__item" data-filters="filter-2,filter-3,filter-4">
+                {{> widgets/course-card plus=true original=true
+                        image="home-plus/featured/04"
+                        title="Fundamentals of DSLR Photography"
+                        author="by Marley Torff"
+                        original=true
+                }}
+              </div>
+              <div class="tabs-slider__slide swiper-slide js-tabs-slider__item" data-filters="filter-1,filter-2,filter-4,filter-3">
+                {{> widgets/course-card plus=true original=true
+                        title="Customizing Type with Draplin: Creating Wordmarks That Work"
+                        author="by Leo Workman"
+                        original=true
+                }}
+              </div>
+              <div class="tabs-slider__slide swiper-slide js-tabs-slider__item" data-filters="filter-1,filter-4,filter-5">
+                {{> widgets/course-card plus=true original=true
+                        title="Productivity Masterclass: Create a Custom System that Works"
+                        author="by Makenna Baptista"
+                        original=true
+                }}
+              </div>
+              <div class="tabs-slider__slide swiper-slide js-tabs-slider__item" data-filters="filter-1,filter-4">
+                {{> widgets/course-card plus=true
+                        title="ODD BODIES: Illustrating Expressive, Stylized People"
+                        author="by Leo Workman"
+                        original=true
+                }}
+              </div>
+              <div class="tabs-slider__slide swiper-slide js-tabs-slider__item" data-filters="filter-2">
+                {{> widgets/course-card plus=true
+                        title="Fundamentals of DSLR Photography"
+                        author="by Marley Torff"
+                        original=true
+                }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="home-featured__bottom">
+    {{> ui/btn outline=true color="black" label="Explore all Courses"}}
+  </div>
+</section>
