@@ -13,6 +13,10 @@
     background: linear-gradient(355.57deg, rgba(242, 251, 255, 0) 3.65%, #F9F5FF 96.49%);
     padding-top: 80px;
     margin-top: 0;
+
+    @include mobile{
+      padding-top: 20px;
+    }
   }
 
   &__title {

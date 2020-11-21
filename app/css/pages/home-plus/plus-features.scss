@@ -9,6 +9,19 @@
     padding: 74px 60px;
     display: flex;
     justify-content: space-between;
+
+    @include tablet-and-mobile {
+      box-shadow: 0px 4px 14px rgba(1, 64, 139, 0.14);
+      display: block;
+      border-radius: 0;
+      margin: 0 -15px;
+      padding: 0 15px;
+    }
+
+    @include tablet{
+      margin: 0 -30px;
+      padding: 0 30px;
+    }
   }
 
   &__cell {
@@ -16,14 +29,36 @@
     display: flex;
     justify-content: flex-end;
 
-    &:first-child {
-      justify-content: flex-start;
-      border-right: 2px solid $color-gray;
+    @include tablet-and-mobile {
+      display: block;
+      padding: 30px 0;
+      margin: 0;
+      position: relative;
+
+      &:after {
+        content: '';
+        width: 136px;
+        @include align(true, false);
+        bottom: 0;
+        height: 2px;
+        background: $color-gray;
+      }
+
+      &:last-child:after{
+        display: none;
+      }
     }
 
-    &:last-child {
-      border-left: 2px solid $color-gray;
-      margin-left: -2px;
+    @include desktop {
+      &:first-child {
+        justify-content: flex-start;
+        border-right: 2px solid $color-gray;
+      }
+
+      &:last-child {
+        border-left: 2px solid $color-gray;
+        margin-left: -2px;
+      }
     }
   }
 
@@ -32,6 +67,11 @@
     text-align: center;
     margin-top: -23px;
     margin-bottom: -15px;
+
+    @include tablet-and-mobile {
+      width: auto;
+      margin: 0;
+    }
   }
 
   &__image {
@@ -39,12 +79,22 @@
     margin-bottom: 25px;
     display: flex;
     justify-content: center;
+
+    @include mobile {
+      max-width: 110px;
+      margin: 0 auto 15px;
+    }
   }
 
   &__title {
     font-weight: 600;
     font-size: 29px;
     line-height: 43px;
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 27px;
+    }
   }
 
   &__text {
@@ -52,6 +102,12 @@
     line-height: 150%;
     color: $color-gray-dark;
     margin-top: 20px;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 21px;
+      margin-top: 15px;
+    }
   }
 
   &__link {
@@ -62,8 +118,13 @@
     letter-spacing: 0.01em;
     margin-top: 15px;
     display: inline-block;
-
     color: $color-blue;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 21px;
+    }
+
 
     &:hover {
       color: $color-blue-hover;

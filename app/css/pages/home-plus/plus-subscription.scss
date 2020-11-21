@@ -2,10 +2,18 @@
   margin-top: 80px;
   text-align: center;
 
+  @include mobile {
+    margin-top: 60px;
+    text-align: left;
+  }
+
   &__inner {
     padding-top: 35px;
     padding-bottom: 118px;
     position: relative;
+    @include mobile{
+      padding-bottom: 160px;
+    }
 
     &:before {
       content: '';
@@ -13,6 +21,13 @@
       bottom: 0;
       right: 147px;
       @include sprite('subscription-bg');
+
+      @include mobile {
+        @include sprite('subscription-bg-mobile');
+        @include align(true, false);
+        margin-left: 50px;
+        right: auto;
+      }
     }
   }
 
@@ -22,12 +37,34 @@
     font-weight: bold;
     font-size: 38px;
     line-height: 57px;
+
+    @include mobile {
+      font-size: 28px;
+      line-height: 42px;
+    }
   }
 
   &__form {
     max-width: 615px;
     margin: 40px auto 0;
+
+    @include mobile {
+      max-width: 100%;
+      margin-top: 30px;
+    }
+
+    .submit-input__button{
+      @include mobile{
+        position: static;
+        margin-top: 16px;
+        .btn{
+          width: 100%;
+        }
+      }
+    }
   }
+
+
 
   &__note {
     font-size: 14px;
@@ -35,5 +72,11 @@
     color: $color-gray-dark;
     display: block;
     margin-top: 20px;
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 150%;
+      margin-top: 16px;
+    }
   }
 }
