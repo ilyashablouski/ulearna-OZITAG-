@@ -21,9 +21,6 @@ class TabsSlider extends Widget {
       1440: {
         spaceBetween: 15
       },
-      pagination: {
-        el: '.swiper-pagination',
-      },
       navigation: {
         prevEl: this.$navPrev,
         nextEl: this.$navNext,

@@ -18,8 +18,10 @@ import './src/widgets/header/header-burger';
 import './src/widgets/header/header-fixed';
 import './src/widgets/header/header';
 
+import './src/widgets/home/home-students';
+import './src/widgets/home/home-instructor';
+
 import './src/widgets/link-select';
-import './src/widgets/home-students';
 import './src/widgets/tabs-slider';
 import './src/widgets/video-link';
 

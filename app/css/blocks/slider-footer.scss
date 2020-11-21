@@ -18,29 +18,4 @@
   &__pagination {
     margin: 0 20px;
   }
-
-  .swiper-pagination {
-    display: flex;
-
-    &-bullet {
-      width: 10px;
-      height: 10px;
-      display: block;
-      border-radius: 100%;
-      margin: 0 5px;
-      background: $color-gray;
-
-      &:first-child {
-        margin-left: 0;
-      }
-
-      &:last-child {
-        margin-right: 0;
-      }
-
-      &-active{
-        background: $color-blue;
-      }
-    }
-  }
 }
