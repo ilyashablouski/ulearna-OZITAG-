@@ -1,13 +1,11 @@
 .tabs-slider {
-
-
   &__slider {
     position: relative;
     margin-top: 33px;
   }
 
   &__row {
-    margin: 0 -18px;
+    margin: 0 -15px;
 
     .non-swiper-slide {
       display: none;
@@ -25,6 +23,12 @@
         display: block;
         background: #fff;
         z-index: 2;
+      }
+
+      .home-featured--background &{
+        &:before, &:after{
+          display: none;
+        }
       }
 
       &:before {
