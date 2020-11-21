@@ -24,7 +24,7 @@ class MobileSlider extends Widget {
       slidesPerView: 1,
       spaceBetween: 0,
       pagination: {
-        el: '.swiper-pagination',
+        el: this.$pagination,
         clickable: true,
       },
     });

@@ -93,7 +93,7 @@ class HomeStudents extends Widget {
       slidesPerView: 1,
       spaceBetween: 0,
       pagination: {
-        el: '.swiper-pagination',
+        el: this.$pagination,
         clickable: true,
       },
       on: {
@@ -105,9 +105,12 @@ class HomeStudents extends Widget {
   }
 
   onChangeLayout() {
+    if (!Layout.isMobileLayout()) {
+      this.destroyMobile();
+    }
+
     if (Layout.isDesktopLayout()) {
       this.initNavigationSwiper();
-      this.destroyMobile();
     } else {
       if (this.swiper) {
         this.swiper.destroy(true, true);

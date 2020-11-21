@@ -33,25 +33,36 @@
     overflow: hidden;
   }
 
-  &--search{
+  &--search {
     &:before {
       content: '';
       @include sprite('search-big');
       @include align(false, true);
       left: 17px;
       margin-top: -2px;
+
+      @include mobile {
+        left: 15px;
+      }
     }
 
-    .submit-input__input{
+    .submit-input__input {
       padding-left: 48px;
+      @include mobile {
+        padding-left: 45px;
+      }
     }
   }
 
-  &--big{
-    .submit-input__input{
+  &--big {
+    .submit-input__input {
       height: 63px;
+      @include mobile {
+        height: 50px;
+      }
     }
-    .btn{
+
+    .btn {
       height: 59px;
       line-height: 59px;
     }
