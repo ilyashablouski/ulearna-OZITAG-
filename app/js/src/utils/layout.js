@@ -1,6 +1,6 @@
 const MOBILE_WIDTH = 767;
-const TABLET_WIDTH = 1023;
-const LAPTOP_WIDTH = 1279;
+const TABLET_WIDTH = 1259;
+const LAPTOP_WIDTH = 1259;
 
 const Layout = {
   _listeners: [],
