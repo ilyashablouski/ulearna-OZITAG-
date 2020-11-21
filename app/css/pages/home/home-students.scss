@@ -156,6 +156,10 @@
     display: flex;
     align-items: center;
 
+    @include smallTablet{
+      padding-bottom: 50px;
+    }
+
     &-image {
       position: relative;
 
@@ -170,12 +174,22 @@
       width: 618px;
       height: 520px;
 
+      @include smallTablet-and-mobile{
+        padding: 0;
+        width: auto;
+        height: auto;
+      }
+
       &:before {
         content: '';
         @include fill;
         z-index: -1;
         background: url($images_dir + 'home/students/background.png');
         background-size: cover;
+
+        @include smallTablet-and-mobile{
+          display: none;
+        }
       }
     }
 
