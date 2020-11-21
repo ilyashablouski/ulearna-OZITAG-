@@ -1,0 +1,63 @@
+.plus-teach {
+  background: $color-gray-20;
+  padding-top: 80px;
+  text-align: center;
+
+  &__subtitle {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 31px;
+    display: block;
+    color: $color-gray-dark;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 84px;
+    color: $color-black;
+    margin-top: 10px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 150%;
+    color: $color-dark;
+    max-width: 836px;
+    margin: 30px auto 0;
+  }
+
+  &__note {
+    font-size: 14px;
+    line-height: 140%;
+    margin: 20px auto 0;
+    color: $color-gray-dark;
+    max-width: 392px;
+  }
+
+  &__row {
+    display: flex;
+    margin: 60px -25px 0;
+  }
+
+  &__cell {
+    flex: 1 1px;
+    padding: 0 25px;
+  }
+
+  &__image {
+    margin-top: 60px;
+    position: relative;
+
+    &-mask{
+      position: absolute;
+      right: 100px;
+      z-index: -1;
+      bottom: 0;
+    }
+  }
+
+  &__button {
+    margin-top: 40px;
+  }
+}
