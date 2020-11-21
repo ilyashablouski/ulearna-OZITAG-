@@ -168,6 +168,8 @@
       @include tablet{
         margin-left: -20px;
         margin-right: -20px;
+        flex-wrap: wrap;
+        margin-top: 0px;
       }
     }
 
@@ -177,6 +179,8 @@
 
       @include tablet{
         padding: 0 30px;
+        flex-basis: 50%;
+        margin-top: 30px;
       }
     }
 
@@ -184,6 +188,10 @@
       margin-top: 33px;
       display: flex;
       justify-content: center;
+
+      @include smallTablet{
+        margin-top: 50px;
+      }
     }
   }
 }

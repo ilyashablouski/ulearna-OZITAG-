@@ -49,5 +49,9 @@
     display: inline-block;
     margin-top: 12px;
     color: $color-blue;
+
+    @include tablet{
+      font-size: 14px;
+    }
   }
 }

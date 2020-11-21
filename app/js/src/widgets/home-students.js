@@ -20,16 +20,7 @@ class HomeStudents extends Widget {
     this.init();
   }
 
-  initSwippers() {
-    this.swiper = new Swiper(this.$slider, {
-      slidesPerView: 3,
-      spaceBetween: 0,
-      navigation: {
-        prevEl: this.$navPrev,
-        nextEl: this.$navNext,
-      },
-    });
-
+  initSceneSwiper() {
     this.sceneSwiper = new Swiper(this.$scene, {
       slidesPerView: 1,
       effect: 'fade',
@@ -40,7 +31,20 @@ class HomeStudents extends Widget {
     });
   }
 
+  initNavigationSwiper() {
+    this.swiper = new Swiper(this.$slider, {
+      slidesPerView: 3,
+      spaceBetween: 0,
+      navigation: {
+        prevEl: this.$navPrev,
+        nextEl: this.$navNext,
+      },
+    });
+  }
+
   build() {
+    this.initSceneSwiper();
+
     this.$cells.forEach((node, ind) => {
       node.querySelector('.feature').addEventListener('mouseover', () => {
         if (this.switchTimer) clearTimeout(this.switchTimer);
@@ -51,6 +55,13 @@ class HomeStudents extends Widget {
           node.classList.add('hovered');
         }, 200);
       });
+
+      node.addEventListener('click', () => {
+        if (isTouchDevice() === false) return;
+        this.sceneSwiper.slideTo(ind);
+        this.$cells.forEach($node => $node.classList.remove('hovered'));
+        node.classList.add('hovered');
+      });
     });
 
     Layout.addListener(this.onChangeLayout);
@@ -59,9 +70,11 @@ class HomeStudents extends Widget {
 
   onChangeLayout() {
     if (Layout.isDesktopLayout()) {
-      this.initSwippers();
+      this.initNavigationSwiper();
     } else {
-      this.swiper.destroy(true, true);
+      if (this.swiper) {
+        this.swiper.destroy(true, true);
+      }
     }
   }
 

@@ -2,7 +2,7 @@
   overflow: hidden;
 
   padding-bottom: 117px;
-  @include smallTablet-and-mobile{
+  @include smallTablet-and-mobile {
     padding-bottom: 50px;
   }
 
@@ -131,6 +131,15 @@
 
     @include reset-slider-container;
 
+    .swiper-wrapper {
+      @include tablet {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin-top: -25px;
+        margin-bottom: -25px;
+      }
+    }
+
     .swiper-slide {
       @include tablet {
         width: 350px;
@@ -156,7 +165,7 @@
     display: flex;
     align-items: center;
 
-    @include smallTablet{
+    @include smallTablet {
       padding-bottom: 50px;
     }
 
@@ -174,7 +183,7 @@
       width: 618px;
       height: 520px;
 
-      @include smallTablet-and-mobile{
+      @include smallTablet-and-mobile {
         padding: 0;
         width: auto;
         height: auto;
@@ -187,7 +196,7 @@
         background: url($images_dir + 'home/students/background.png');
         background-size: cover;
 
-        @include smallTablet-and-mobile{
+        @include smallTablet-and-mobile {
           display: none;
         }
       }
