@@ -2,6 +2,10 @@
   &__slider {
     position: relative;
     margin-top: 33px;
+
+    @include small-desktop {
+
+    }
   }
 
   &__row {
@@ -25,8 +29,8 @@
         z-index: 2;
       }
 
-      .home-featured--background &{
-        &:before, &:after{
+      .home-featured--background & {
+        &:before, &:after {
           display: none;
         }
       }
@@ -52,8 +56,15 @@
     left: -15px;
     transform: translateY(-50%) translateX(-100%);
 
-    .no-navigation &{
+    .no-navigation & {
       display: none;
+    }
+
+    @include small-desktop {
+      transform: none;
+      top: auto;
+      bottom: -60px;
+      left: 10px;
     }
   }
 
@@ -63,8 +74,19 @@
     right: -15px;
     transform: translateY(-50%) translateX(100%);
 
-    .no-navigation &{
+    .no-navigation & {
       display: none;
+    }
+
+    @include small-desktop {
+      right: 30px;
+    }
+
+    @include small-desktop {
+      transform: none;
+      top: auto;
+      bottom: -60px;
+      right: 10px;
     }
   }
 

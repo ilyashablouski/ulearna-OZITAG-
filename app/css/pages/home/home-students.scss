@@ -1,6 +1,7 @@
 .home-students {
   margin: 120px 0;
   padding-bottom: 117px;
+  overflow: hidden;
 
   &__inner {
     position: relative;
@@ -11,6 +12,14 @@
     top: 50%;
     left: -15px;
     transform: translateY(-50%) translateX(-100%);
+
+    @include small-desktop {
+      left: 30px;
+    }
+
+    @include desktop1280 {
+      left: 50px;
+    }
   }
 
   &__next {
@@ -18,13 +27,23 @@
     top: 50%;
     right: -15px;
     transform: translateY(-50%) translateX(100%);
+
+    @include small-desktop {
+      right: 30px;
+    }
+
+    @include desktop1280 {
+      right: 50px;
+    }
   }
 
   &__scene {
     margin-left: -40px;
-
     position: relative;
 
+    @include small-desktop{
+      margin-left: 0;
+    }
 
     &:before {
       content: '';
@@ -55,6 +74,16 @@
 
     .swiper-slide {
       height: auto;
+    }
+
+    @include small-desktop {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+
+    @include desktop1280{
+      padding-left: 55px;
+      padding-right: 55px;
     }
   }
 
@@ -121,6 +150,10 @@
     &-content {
       margin-left: 87px;
       flex: 1 1 1px;
+
+      @include small-desktop{
+        margin-left: 50px;
+      }
     }
 
     &-title {

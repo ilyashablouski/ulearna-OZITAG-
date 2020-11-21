@@ -13,6 +13,14 @@ html {
   margin-right: auto;
   margin-left: auto;
 
+  @include small-desktop{
+    width: 1240px;
+  }
+
+  @include desktop1280{
+    width: 1200px;
+  }
+
   @include tablet {
     padding-left: 30px;
     padding-right: 30px;

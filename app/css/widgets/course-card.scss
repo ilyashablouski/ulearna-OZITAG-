@@ -124,10 +124,15 @@
   }
 
   &__image {
-    height: 208px;
+    //max-height: 208px;
     overflow: hidden;
     position: relative;
     background: $color-gray;
+    padding-top: 73.75%;
+
+    img{
+      @include fill;
+    }
 
     &--no-image {
       &:before {

@@ -5,6 +5,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include desktop1280{
+      padding: 0 40px;
+    }
   }
 
   &__left {
@@ -13,6 +17,10 @@
 
   &-right {
 
+  }
+
+  &__ways{
+    overflow: hidden;
   }
 
   &__image{
