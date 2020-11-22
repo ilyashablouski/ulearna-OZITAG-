@@ -20,7 +20,7 @@
       background-color: #f8f8f9;
 
       &:focus {
-        border-color: $color-primary;
+        border-color: #1B74FD;
         background-color: transparent;
       }
     }
@@ -30,7 +30,7 @@
       top: 100%;
       margin-top: 2px;
       font-size: 12px;
-      color: $color-error;
+      color: #ff0000;
       left: 0;
     }
   }
@@ -64,7 +64,7 @@
       width: $radio-value;
 
       &:checked + * {
-        border: 5px solid $color-primary;
+        border: 5px solid #1B74FD;
       }
     }
 
@@ -73,7 +73,7 @@
       margin-right: 13px;
       width: $radio-value;
       height: $radio-value;
-      border: 2px solid $color-gray-40;
+      border: 2px solid #DFE3EC;
       border-radius: 50%;
     }
   }
@@ -86,8 +86,8 @@
 
       &:checked {
         + * {
-          background-color: $color-primary;
-          border-color: $color-primary;
+          background-color: #1B74FD;
+          border-color: #1B74FD;
 
           > * {
             &::before,
@@ -137,7 +137,7 @@
         margin-right: 13px;
         width: $checkbox-value;
         height: $checkbox-value;
-        border: 2px solid $color-gray-40;
+        border: 2px solid #DFE3EC;
         border-radius: 6px;
       }
     }
@@ -154,7 +154,7 @@
     resize: none;
 
     &:focus {
-      border-color: $color-primary;
+      border-color: #1B74FD;
       background-color: transparent;
     }
   }
@@ -181,7 +181,7 @@
       border-radius: 100px;
 
       &:checked + * {
-        background-color: $color-primary;
+        background-color: #1B74FD;
 
         > * {
           transform: translateX($switcher-width - $switcher-value - ($switcher-padding * 2));
@@ -199,7 +199,7 @@
       display: flex;
       align-items: center;
       padding: $switcher-padding;
-      background-color: $color-gray-100;
+      background-color: $color-black;
       transition: all 350ms ease;
 
       span {
@@ -223,10 +223,10 @@
 
   &-error {
     * {
-      border-color: $color-error;
+      border-color: #ff0000;
 
       &:focus {
-        border-color: $color-error;
+        border-color: #ff0000;
       }
     }
   }

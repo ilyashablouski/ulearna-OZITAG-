@@ -161,18 +161,18 @@
 
       &:focus,
       &:hover {
-        color: $color-gray-100;
+        color: $color-black;
         background-color: $color-gray-20;
         transition: all 150ms ease-in;
         cursor: pointer;
       }
 
       &--selected {
-        color: $color-primary;
+        color: #1B74FD;
 
         &:focus,
         &:hover {
-          color: $color-primary;
+          color: #1B74FD;
         }
       }
     }
