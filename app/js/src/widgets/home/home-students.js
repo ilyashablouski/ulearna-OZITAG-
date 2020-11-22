@@ -3,13 +3,13 @@ class HomeStudents extends Widget {
     super(node, '.js-home-students');
 
     this.swiper = null;
-    this.sceneSwiper = null;
     this.mobileSwiper = null;
 
     this.$pagination = null;
 
     this.$scene = this.queryElement('.scene');
     this.$slider = this.queryElement('.slider');
+    this.$slides = this.$scene.querySelectorAll('.home-students__slide');
 
     this.$navPrev = this.queryElement('.prev');
     this.$navNext = this.queryElement('.next');
@@ -21,18 +21,6 @@ class HomeStudents extends Widget {
     this.onChangeLayout = this.onChangeLayout.bind(this);
 
     this.init();
-  }
-
-  initSceneSwiper() {
-    this.sceneSwiper = new Swiper(this.$scene, {
-      slidesPerView: 1,
-      effect: 'fade',
-      simulateTouch: false,
-      allowTouchMove: false,
-      fadeEffect: {
-        crossFade: true,
-      },
-    });
   }
 
   initNavigationSwiper() {
@@ -47,11 +35,17 @@ class HomeStudents extends Widget {
   }
 
   setActiveScene(ind) {
-    this.sceneSwiper.slideTo(ind);
+    this.$slides.forEach(($slide, _ind) => {
+      if (ind === _ind) {
+        $slide.classList.add('visible');
+      } else {
+        $slide.classList.remove('visible');
+      }
+    });
   }
 
   build() {
-    this.initSceneSwiper();
+    this.setActiveScene(0);
 
     this.$cells.forEach((node, ind) => {
       node.querySelector('.feature').addEventListener('mouseover', () => {

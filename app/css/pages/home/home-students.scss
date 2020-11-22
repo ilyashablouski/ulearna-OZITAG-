@@ -108,6 +108,14 @@
     }
   }
 
+  &__slide {
+    display: none;
+
+    &.visible {
+      display: block;
+    }
+  }
+
   &__slider {
     margin-top: 6px;
     padding-top: 40px;
