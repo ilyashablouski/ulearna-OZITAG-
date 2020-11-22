@@ -14,6 +14,26 @@
           </li>
           <li>
             <button class="ui-aside__link" data-id="widgets">Widgets</button>
+            <ul>
+              <li>
+                <button data-id="widgets-icon">Icon</button>
+              </li>
+              <li>
+                <button data-id="widgets-feature">Feature</button>
+              </li>
+              <li>
+                <button data-id="widgets-course-card">Course Card</button>
+              </li>
+              <li>
+                <button data-id="widgets-testimonial">Testimonial</button>
+              </li>
+              <li>
+                <button data-id="widgets-search-input">Search Input</button>
+              </li>
+              <li>
+                <button data-id="widgets-submit-input">Submit Input</button>
+              </li>
+            </ul>
           </li>
         </ul>
       </nav>
@@ -43,7 +63,7 @@
 
 <script defer>
   window.onload = () => {
-    const $btn = $('.ui-aside__link');
+    const $btn = $('.ui-aside__nav button');
 
     $btn.on('click', function() {
       const id = $(this).data('id');

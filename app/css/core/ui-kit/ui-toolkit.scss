@@ -66,6 +66,21 @@
         background-color: transparentize($color-black, 0.95);
       }
     }
+
+    &__nav {
+      li ul {
+        li {
+          margin-left: 40px;
+          button{
+            padding: 5px 0;
+            font-size: 14px;
+            &:hover{
+              color: #666;
+            }
+          }
+        }
+      }
+    }
   }
 
   &-main {
