@@ -18,7 +18,6 @@
     @include media(tabletSmall) {
       display: block;
       max-height: initial;
-      us: unset;
     }
   }
 
@@ -32,6 +31,7 @@
     background: rgba(249, 249, 249, 0.7);
     box-shadow: inset 0 1px 2px transparentize($color-white, 0.3);
     backdrop-filter: blur(80px);
+    font-family: Verdana, sans-serif;
 
     @include media(tabletSmall) {
       display: none;
@@ -49,12 +49,12 @@
 
   &-aside {
     &__inner {
-      padding: $ui-header-mah 10px;
+      padding: 10px 0;
     }
 
     &__link {
       display: block;
-      padding: 5px 10px;
+      padding: 10px 20px;
       width: 100%;
       font-size: 18px;
       font-weight: 500;
@@ -80,6 +80,7 @@
       padding: 15px $ui-container-gutters;
       border-bottom: 1px solid $color-gray-20;
       background-color: $color-white;
+      font-family: Verdana, sans-serif;
 
       @include media(tabletSmall) {
         left: 0;
@@ -95,6 +96,7 @@
       padding: 0;
       font-size: 1.5em;
       line-height: 1.4;
+      font-family: Verdana, sans-serif;
     }
 
     &__content {
@@ -253,6 +255,62 @@
 
       &.dark {
         border: 1px solid $color-black;
+      }
+    }
+  }
+}
+
+.uikit {
+  &-row {
+    margin-top: 30px;
+
+    &__content {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: -30px;
+    }
+
+    &__title {
+      display: block;
+      text-align: left;
+      margin-bottom: 10px;
+      font-size: 17px;
+      font-weight: bold;
+    }
+  }
+
+  &-cell {
+    margin-top: 30px;
+    margin-left: -1px;
+
+    &--background {
+      .uikit-widget__content {
+        background: #efefef;
+      }
+    }
+  }
+
+  &-widget {
+    border: 1px solid #ddd;
+
+    &__title {
+      padding: 5px 10px;
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: 12px;
+      font-style: italic;
+      font-family: Verdana, sans-serif;
+      color: #333;
+      text-align: center;
+    }
+
+    &__content {
+      padding: 5px;
+
+      &-inner {
+        margin: 5px;
+        display: flex;
+        justify-content: center;
       }
     }
   }

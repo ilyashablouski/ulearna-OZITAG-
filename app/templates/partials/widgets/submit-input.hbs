@@ -1,10 +1,18 @@
 <div class="submit-input {{#if search}}submit-input--search{{/if}} {{#if big}}submit-input--big{{/if}}">
   <input type="text" class="submit-input__input" placeholder="{{placeholder}}">
   <div class="submit-input__button">
-    {{#if big}}
-      {{> ui/btn button=true size="large" color="blue" label=label}}
+    {{#if label}}
+      {{#if big}}
+        {{> ui/btn button=true size="large" color="blue" label=label}}
+      {{else}}
+        {{> ui/btn button=true size="middle" color="blue" label=label}}
+      {{/if}}
     {{else}}
-      {{> ui/btn button=true size="middle" color="blue" label=label}}
+      {{#if big}}
+        {{> ui/btn button=true size="large" color="blue" label="Submit"}}
+      {{else}}
+        {{> ui/btn button=true size="middle" color="blue" label="Submit"}}
+      {{/if}}
     {{/if}}
   </div>
 </div>
