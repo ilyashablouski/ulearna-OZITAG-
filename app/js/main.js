@@ -21,7 +21,7 @@ import './src/widgets/header/header-menu';
 import './src/widgets/header/header-search';
 import './src/widgets/header/header';
 
-import './src/widgets/home/home-students';
+import './src/widgets/home-students';
 
 import './src/widgets/mobile-slider';
 import './src/widgets/link-select';
