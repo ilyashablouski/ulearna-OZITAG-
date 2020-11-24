@@ -10,6 +10,14 @@
     line-height: 150%;
     width: 100%;
 
+    @include mobile {
+      height: 50px;
+      padding: 0 14px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+    }
+
     @include placeholder {
       color: rgba(5, 36, 51, 0.2);
     }
@@ -20,16 +28,23 @@
 
     input {
       padding-left: 48px;
+      @include mobile {
+        padding-left: 46px;
+      }
     }
   }
 
-  &__icon{
+  &__icon {
     content: '';
     @include align(false, true);
     left: 17px;
     z-index: 1;
 
-    &--card{
+    @include mobile {
+      left: 15px;
+    }
+
+    &--card {
       @include sprite('input-card');
     }
   }

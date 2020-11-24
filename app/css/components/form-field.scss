@@ -2,6 +2,10 @@
   padding-bottom: 26px;
   position: relative;
 
+  @include mobile{
+    padding-bottom: 22px;
+  }
+
   &__label {
     font-weight: 600;
     font-size: 16px;
@@ -10,7 +14,7 @@
     display: block;
     color: $color-gray-dark;
 
-    @include mobile{
+    @include mobile {
       font-weight: 600;
       font-size: 16px;
       line-height: 24px;
@@ -27,8 +31,12 @@
     bottom: 0;
     font-size: 14px;
     line-height: 20px;
-    margin-top: 6px;
     display: block;
     color: $color-gray-dark;
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 150%;
+    }
   }
 }

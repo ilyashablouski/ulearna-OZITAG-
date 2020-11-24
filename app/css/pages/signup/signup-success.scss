@@ -43,10 +43,11 @@
         content: '';
         @include sprite('signup-success');
         @include align(true, false);
-        top: 10px;
+        top: -30px;
 
         @include mobile {
           @include sprite('signup-success-mobile');
+          top: 10px;
         }
       }
     }

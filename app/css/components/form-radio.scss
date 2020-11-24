@@ -21,7 +21,7 @@
     display: block;
     position: relative;
 
-    &:before, &:after{
+    &:before, &:after {
       @include transition;
     }
 
@@ -50,7 +50,7 @@
     line-height: 31px;
     display: block;
 
-    @include mobile{
+    @include mobile {
       font-size: 16px;
       line-height: 24px;
     }
@@ -63,7 +63,7 @@
     margin-top: 6px;
     display: block;
 
-    @include mobile{
+    @include mobile {
       font-size: 14px;
       line-height: 21px;
     }
@@ -81,6 +81,14 @@
     border-radius: 8px;
     right: 0;
     @include align(false, true);
+
+    @include mobile {
+      position: static;
+      margin-top: 10px;
+      display: inline-block;
+      transform: none;
+      left: auto;
+    }
   }
 
   input:checked + .form-radio__inner {
