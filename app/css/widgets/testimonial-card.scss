@@ -10,10 +10,10 @@
     border-radius: 10px;
     position: relative;
 
-    @include mobile{
+    @include mobile {
       font-size: 18px;
       line-height: 27px;
-      padding: 52px 20px 44px;
+      padding: 52px 20px 30px;
     }
 
     &:before {
@@ -23,10 +23,24 @@
       position: absolute;
       @include sprite('testimonial-arrows');
     }
+
+    &:after {
+      content: '';
+      left: 20px;
+      bottom: -23px;
+      @include sprite('testimonial-arrow');
+      position: absolute;
+
+      @include mobile {
+        @include sprite('testimonial-arrow-mobile');
+        left: 10px;
+        bottom: -9px;
+      }
+    }
   }
 
-  &__image{
-    @include mobile{
+  &__image {
+    @include mobile {
       width: 84px;
       height: 84px;
     }
@@ -38,10 +52,10 @@
     position: relative;
     z-index: 1;
     margin-top: -32px;
-    padding-left: 38px;
+    padding-left: 80px;
 
-    @include mobile{
-      margin-top: 10px;
+    @include mobile {
+      margin-top: 20px;
       padding-left: 0;
     }
   }
@@ -50,7 +64,7 @@
     margin-left: 9px;
     margin-top: 16px;
 
-    @include mobile{
+    @include mobile {
       margin: 0 0 0 10px;
     }
   }
@@ -61,7 +75,7 @@
     font-size: 21px;
     line-height: 31px;
 
-    @include mobile{
+    @include mobile {
       font-size: 18px;
       line-height: 27px;
     }
@@ -74,7 +88,7 @@
     color: $color-blue;
     margin-top: 3px;
 
-    @include mobile{
+    @include mobile {
       font-size: 14px;
       line-height: 21px;
       margin-top: 8px;
