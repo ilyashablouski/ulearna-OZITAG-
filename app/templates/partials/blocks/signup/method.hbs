@@ -1,9 +1,9 @@
 <div class="signup-section">
   <h2 class="signup-section__title">Add payment method</h2>
   <div class="signup-section__content">
-    {{> ui/radio name="method" value="1" label="Stripe" text="Description"}}
-    {{> ui/radio name="method" value="2" label="Sepa" text="Description"}}
-    {{> ui/radio name="method" value="3" label="PayPal" text="Prepay your bill making incremental Paypal payments"}}
+    {{> ui/radio name="method" checked=true id="method_1" value="1" label="Stripe" text="Description"}}
+    {{> ui/radio name="method" value="2" id="method_2" label="Sepa" text="Description"}}
+    {{> ui/radio name="method" value="3" id="method_3" label="PayPal" text="Prepay your bill making incremental Paypal payments"}}
   </div>
 
   {{> blocks/signup/form }}

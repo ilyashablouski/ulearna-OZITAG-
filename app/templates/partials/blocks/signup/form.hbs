@@ -1,37 +1,43 @@
 <div class="signup-form">
-  <div class="signup-form__cell">
-    {{#> ui/field label="Cardnumber" id="cardnumber"}}
-      {{> ui/input id="cardnumber" card=true}}
-    {{/ui/field}}
+  <div class="signup-form__inner">
+    <div class="signup-form__cell">
+      {{#> ui/field label="Cardnumber" id="cardnumber"}}
+        {{> ui/input id="cardnumber" card=true}}
+      {{/ui/field}}
+    </div>
+
+    <div class="signup-form__cell signup-form__cell--small">
+      {{#> ui/field label="Exp. date" id="exp_date"}}
+        {{> ui/input id="exp_date" date=true}}
+      {{/ui/field}}
+    </div>
+
+    <div class="signup-form__cell">
+      {{#> ui/field label="Name of Cardholder" id="cardholder"}}
+        {{> ui/input id="cardholder"}}
+      {{/ui/field}}
+    </div>
+
+    <div class="signup-form__cell signup-form__cell--small">
+      {{#> ui/field label="CVC" id="cvc" note="Help text"}}
+        {{> ui/input id="cvc" placeholder="***"}}
+      {{/ui/field}}
+    </div>
+
+    <div class="signup-form__cell">
+      {{#> ui/field label="Payment Address" id="payment_address"}}
+        {{> ui/input id="payment_address"}}
+      {{/ui/field}}
+    </div>
+
+    <div class="signup-form__cell">
+      {{#> ui/field label="Street name" id="street_name"}}
+        {{> ui/input id="payment_address" placeholder="Your street name"}}
+      {{/ui/field}}
+    </div>
   </div>
 
-  <div class="signup-form__cell">
-    {{#> ui/field label="Exp. date" id="exp_date"}}
-      {{> ui/input id="exp_date" date=true}}
-    {{/ui/field}}
-  </div>
-
-  <div class="signup-form__cell">
-    {{#> ui/field label="Name of Cardholder" id="cardholder"}}
-      {{> ui/input id="cardholder"}}
-    {{/ui/field}}
-  </div>
-
-  <div class="signup-form__cell">
-    {{#> ui/field label="CVC" id="cvc" note="Help text"}}
-      {{> ui/input id="cvc" placeholder="***"}}
-    {{/ui/field}}
-  </div>
-
-  <div class="signup-form__cell">
-    {{#> ui/field label="Payment Address" id="payment_address"}}
-      {{> ui/input id="payment_address"}}
-    {{/ui/field}}
-  </div>
-
-  <div class="signup-form__cell">
-    {{#> ui/field label="Street name" id="street_name"}}
-      {{> ui/input id="payment_address" placeholder="Your street name"}}
-    {{/ui/field}}
+  <div class="signup-form__bottom">
+    {{> ui/checkbox id="default" label="Save as my default card"}}
   </div>
 </div>

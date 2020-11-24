@@ -1,0 +1,17 @@
+.form-input {
+  input {
+    background: #FFFFFF;
+    border: 2px solid #DAE4ED;
+    border-radius: 12px;
+    padding: 0 16px;
+    height: 57px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    width: 100%;
+
+    @include placeholder {
+      color: rgba(5, 36, 51, 0.2);
+    }
+  }
+}
