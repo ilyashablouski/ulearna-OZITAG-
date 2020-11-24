@@ -40,9 +40,14 @@
   }
 
   &__image {
-    @include mobile {
-      width: 84px;
-      height: 84px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 11px solid rgba(111, 213, 255, 0.08);
+
+    .testimonial-card--purple & {
+      border: 11px solid rgba(198, 104, 255, 0.08);
     }
   }
 
