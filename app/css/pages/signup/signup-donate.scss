@@ -2,22 +2,44 @@
   background: $color-blue-light;
   border-radius: 12px;
   overflow: hidden;
+
   margin-top: 16px;
+  @include mobile {
+    margin: 16px -16px 0;
+  }
 
   &__inner {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px 0;
+
+    @include mobile {
+      padding: 20px 16px;
+      position: relative;
+      display: block;
+    }
   }
 
   &__icon {
     @include sprite('donate');
     margin-right: 30px;
+
+    @include mobile {
+      top: 20px;
+      right: 20px;
+      margin-right: 0;
+      position: absolute;
+      @include sprite('donate-mobile');
+    }
   }
 
   &__content {
     margin-left: 30px;
+
+    @include mobile {
+      margin: 0;
+    }
   }
 
   &__title {
@@ -25,6 +47,11 @@
     font-size: 21px;
     line-height: 31px;
     display: block;
+    @include mobile {
+      padding-right: 100px;
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &__text {
@@ -33,6 +60,12 @@
     line-height: 146%;
     display: block;
     color: $color-gray-dark;
+    @include mobile {
+      padding-right: 100px;
+      display: block;
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
 
   &__checkbox {

@@ -44,8 +44,8 @@ html {
   }
 
   @include mobile {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: $mobileGutter;
+    padding-right: $mobileGutter;
   }
 }
 

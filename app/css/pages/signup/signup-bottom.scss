@@ -17,6 +17,10 @@
     display: flex;
     justify-content: center;
 
+    @include mobile{
+      margin-top: 40px;
+    }
+
     .btn {
       width: 395px;
       max-width: 100%;

@@ -20,6 +20,11 @@
     line-height: 150%;
     color: $color-black;
 
+    @include mobile{
+      font-size: 14px;
+      line-height: 21px;
+    }
+
     a {
       color: $color-blue;
       font-weight: 600;

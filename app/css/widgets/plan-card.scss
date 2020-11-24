@@ -8,6 +8,12 @@
   flex-direction: column;
   cursor: pointer;
   width: 100%;
+  min-width: 288px;
+
+  @include mobile{
+    padding: 16px;
+    box-shadow: 0px 4px 7px rgba(1, 64, 139, 0.14);
+  }
 
   &__icon {
     display: flex;
@@ -22,6 +28,13 @@
     line-height: 44px;
     color: $color-black;
     margin: 20px 0 0 0;
+
+    @include mobile{
+      margin-top: 16px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 27px;
+    }
   }
 
   &__text {
@@ -30,6 +43,11 @@
     line-height: 146%;
     color: $color-gray-dark;
     margin-top: 8px;
+
+    @include mobile{
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
 
   &__price {
@@ -69,6 +87,12 @@
       padding: 15px 0;
       text-align: center;
 
+      font-size: 18px;
+      line-height: 150%;
+      @include mobile{
+        font-size: 12px;
+      }
+
       &:first-child {
         border-top: 1px solid #DAE4ED;
       }
@@ -79,19 +103,38 @@
         span {
           position: relative;
           padding-left: 38px;
+          display: inline-block;
+          text-align: left;
+
+          @include mobile{
+            display: block;
+            padding-left: 31px;
+          }
 
           &:before {
             content: '';
+            position: absolute;
             @include circle(28px, $color-green-12);
-            @include align(false, true);
+            top: -4px;
             left: 0;
+
+            @include mobile{
+              width: 21px;
+              height: 21px;
+            }
           }
 
           &:after {
             content: '';
+            position: absolute;
             @include sprite('plan-card-tick');
-            @include align(false, true);
+            top: 4px;
             left: 5px;
+
+            @include mobile{
+              @include sprite('plan-card-tick-mobile');
+              top: 3px;
+            }
           }
         }
       }
@@ -105,6 +148,10 @@
     font-size: 16px;
     line-height: 146%;
     color: $color-gray-dark;
+
+    @include mobile{
+      font-size: 16px;
+    }
   }
 
   &__submit {

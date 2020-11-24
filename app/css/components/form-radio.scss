@@ -49,6 +49,11 @@
     font-size: 21px;
     line-height: 31px;
     display: block;
+
+    @include mobile{
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &__text {
@@ -57,6 +62,11 @@
     color: $color-gray-dark;
     margin-top: 6px;
     display: block;
+
+    @include mobile{
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
 
   &__badge {

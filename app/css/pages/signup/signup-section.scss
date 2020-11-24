@@ -1,12 +1,21 @@
 .signup-section{
   margin-top: 40px;
 
+  @include mobile{
+    margin-top: 30px;
+  }
+
   &__title {
     font-weight: 600;
     font-size: 29px;
     line-height: 43px;
     color: $color-black;
     display: block;
+
+    @include mobile{
+      font-size: 18px;
+      line-height: 27px;
+    }
   }
 
   &__description {
@@ -15,5 +24,10 @@
     color: $color-gray-dark;
     display: block;
     margin-top: 8px;
+
+    @include mobile{
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
 }

@@ -1,7 +1,8 @@
-<section class="signup-plans">
-  <div class="container">
-    <h2 class="signup-plans__title">Choose your personal learning plan</h2>
-    <div class="signup-plans__inner js-plan-select">
+<div class="signup-plans">
+  <h2 class="signup-plans__title">Choose your personal learning plan</h2>
+  <div class="signup-plans__row  js-plan-select">
+    <input type="hidden" value="1" class="js-plan-select__value"/>
+    <div class="signup-plans__inner">
       <div class="signup-plans__cell">
         {{> widgets/plan-card value="1" mod="js-plan-select__item"
                 icon="signup/plan_01"
@@ -26,7 +27,6 @@
                 note="Start for Free trial 3 days"
         }}
       </div>
-      <input type="hidden" value="" class="js-plan-select__value"/>
     </div>
   </div>
-</section>
+</div>
