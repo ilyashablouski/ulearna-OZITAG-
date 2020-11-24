@@ -1,0 +1,126 @@
+.plan-card {
+  border: 3px solid $color-gray;
+  box-shadow: 0px 4px 14px rgba(1, 64, 139, 0.14);
+  border-radius: 12px;
+  padding: 25px 25px 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  width: 100%;
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__title {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    font-size: 29px;
+    line-height: 44px;
+    color: $color-black;
+    margin: 20px 0 0 0;
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 16px;
+    line-height: 146%;
+    color: $color-gray-dark;
+    margin-top: 8px;
+  }
+
+  &__price {
+    display: flex;
+    margin-top: 7px;
+    justify-content: center;
+    align-items: baseline;
+
+    &-from {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+    }
+
+    &-value {
+      font-style: italic;
+      font-weight: 600;
+      font-size: 71px;
+      line-height: 106px;
+      margin: 0 4px;
+    }
+
+    &-text {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+      color: $color-gray-dark;
+    }
+  }
+
+  &__list {
+    margin-top: 7px;
+
+    &-item {
+      padding: 15px 0;
+      text-align: center;
+
+      &:first-child {
+        border-top: 1px solid #DAE4ED;
+      }
+
+      border-bottom: 1px solid #DAE4ED;
+
+      &--active {
+        span {
+          position: relative;
+          padding-left: 38px;
+
+          &:before {
+            content: '';
+            @include circle(28px, $color-green-12);
+            @include align(false, true);
+            left: 0;
+          }
+
+          &:after {
+            content: '';
+            @include sprite('plan-card-tick');
+            @include align(false, true);
+            left: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  &__note {
+    margin-top: 20px;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    line-height: 146%;
+    color: $color-gray-dark;
+  }
+
+  &__submit {
+    padding-top: 30px;
+    margin-top: auto;
+
+    &-text {
+      background: $color-blue-light;
+      border-radius: 8px;
+      text-align: center;
+      display: block;
+      height: 42px;
+      line-height: 42px;
+      font-weight: bold;
+      font-size: 15px;
+      color: $color-blue;
+    }
+  }
+}

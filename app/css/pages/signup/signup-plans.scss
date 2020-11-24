@@ -1,0 +1,23 @@
+.signup-plans {
+  margin: 40px 0;
+
+  &__title{
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 57px;
+    color: $color-black;
+    text-align: center;
+  }
+
+  &__inner {
+    display: flex;
+    margin: 40px -25px 0;
+    justify-content: center;
+  }
+
+  &__cell{
+    flex: 1 1 1px;
+    padding: 0 25px;
+    max-width: 504px;
+  }
+}

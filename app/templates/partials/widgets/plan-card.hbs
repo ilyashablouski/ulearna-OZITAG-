@@ -1,0 +1,38 @@
+<div class="plan-card {{#if js}}js-signup-plan__item{{/if}}" data-value="{{ value }}">
+  <div class="plan-card__icon">
+    {{> widgets/icon color="blue" icon=icon}}
+  </div>
+  <span class="plan-card__title">{{title}}</span>
+  <span class="plan-card__text">{{text}}</span>
+  <div class="plan-card__price">
+    <span class="plan-card__price-from">From</span>
+    <span class="plan-card__price-value">{{ price }}$</span>
+    <span class="plan-card__price-text">/month</span>
+  </div>
+  <ul class="plan-card__list">
+    {{#if feature-1}}
+      <li class="plan-card__list-item {{#if feature-1-enabled}}plan-card__list-item--active{{/if}}">
+        <span>{{ feature-1}}</span></li>
+    {{/if}}
+
+    {{#if feature-2}}
+      <li class="plan-card__list-item {{#if feature-2-enabled}}plan-card__list-item--active{{/if}}">
+        <span>{{ feature-2}}</span></li>
+    {{/if}}
+
+    {{#if feature-3}}
+      <li class="plan-card__list-item {{#if feature-3-enabled}}plan-card__list-item--active{{/if}}">
+        <span>{{ feature-3}}</span></li>
+    {{/if}}
+
+    {{#if feature-4}}
+      <li class="plan-card__list-item {{#if feature-4-enabled}}plan-card__list-item--active{{/if}}">
+        <span>{{ feature-4}}</span></li>
+    {{/if}}
+  </ul>
+  <span class="plan-card__note">{{ note }}</span>
+
+  <div class="plan-card__submit">
+    <span class="plan-card__submit-text">Choose This</span>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<section class="signup-plans">
+  <div class="container">
+    <h2 class="signup-plans__title">Choose your personal learning plan</h2>
+    <div class="signup-plans__inner js-signup-plan">
+      <div class="signup-plans__cell">
+        {{> widgets/plan-card value="1" js=true
+                icon="signup/plan_01"
+                title="Learner"
+                text="For whom/desctiption text"
+                price="8"
+                feature-1="Сourses are only available in English"
+                feature-2="Subscription feature description"
+                note="Start for Free trial 3 days"
+        }}
+      </div>
+      <div class="signup-plans__cell">
+        {{> widgets/plan-card value="2" js=true
+                icon="signup/plan_02"
+                title="Student"
+                text="For whom/desctiption text"
+                price="8"
+                feature-1="Сourses are only available in English" feature-1-enabled=true
+                feature-2="Subscription feature description" feature-2-enabled=true
+                feature-3="Subscription feature description" feature-3-enabled=true
+                feature-4="Subscription feature description" feature-4-enabled=true
+                note="Start for Free trial 3 days"
+        }}
+      </div>
+      <input type="hidden" value="" class="js-signup-plan__value"/>
+    </div>
+  </div>
+</section>
