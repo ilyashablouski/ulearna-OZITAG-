@@ -30,6 +30,7 @@ import './src/widgets/mobile-slider';
 import './src/widgets/link-select';
 import './src/widgets/tabs-slider';
 import './src/widgets/video-link';
+import './src/widgets/plan-select';
 
 import './src/app';
 

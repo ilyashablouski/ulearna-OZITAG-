@@ -1,4 +1,4 @@
-<div class="plan-card {{#if js}}js-signup-plan__item{{/if}}" data-value="{{ value }}">
+<div class="plan-card {{#if mod}}{{mod}}{{/if}}" data-value="{{ value }}">
   <div class="plan-card__icon">
     {{> widgets/icon color="blue" icon=icon}}
   </div>
@@ -32,6 +32,9 @@
   </ul>
   <span class="plan-card__note">{{ note }}</span>
   <div class="plan-card__submit">
-    <span class="plan-card__submit-text">Choose This</span>
+    <span class="plan-card__submit-text">
+      <span class="plan-card__submit-label">Choose This</span>
+      <span class="plan-card__submit-selected">Selected</span>
+    </span>
   </div>
 </div>

@@ -1,9 +1,9 @@
 <section class="signup-plans">
   <div class="container">
     <h2 class="signup-plans__title">Choose your personal learning plan</h2>
-    <div class="signup-plans__inner js-signup-plan">
+    <div class="signup-plans__inner js-plan-select">
       <div class="signup-plans__cell">
-        {{> widgets/plan-card value="1" js=true
+        {{> widgets/plan-card value="1" mod="js-plan-select__item"
                 icon="signup/plan_01"
                 title="Learner"
                 text="For whom/desctiption text"
@@ -14,7 +14,7 @@
         }}
       </div>
       <div class="signup-plans__cell">
-        {{> widgets/plan-card value="2" js=true
+        {{> widgets/plan-card value="2" mod="js-plan-select__item"
                 icon="signup/plan_02"
                 title="Student"
                 text="For whom/desctiption text"
@@ -26,7 +26,7 @@
                 note="Start for Free trial 3 days"
         }}
       </div>
-      <input type="hidden" value="" class="js-signup-plan__value"/>
+      <input type="hidden" value="" class="js-plan-select__value"/>
     </div>
   </div>
 </section>

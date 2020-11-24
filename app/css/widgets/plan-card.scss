@@ -121,6 +121,37 @@
       font-weight: bold;
       font-size: 15px;
       color: $color-blue;
+
+      .selected & {
+        background: $color-blue;
+        color: $color-white;
+      }
+    }
+
+    &-label {
+      .selected & {
+        display: none;
+      }
+    }
+
+    &-selected {
+      position: relative;
+      color: $color-white;
+
+      display: none;
+
+      .selected & {
+        display: inline-block;
+        padding-left: 25px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        @include sprite('plan-card-selected-tick');
+        left: 0;
+        @include align(false, true);
+      }
     }
   }
 }
