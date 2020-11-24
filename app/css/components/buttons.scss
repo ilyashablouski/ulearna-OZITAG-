@@ -29,7 +29,7 @@
     font-size: 18px;
     padding: 0 28px;
 
-    @include mobile{
+    @include mobile {
       height: 48px;
       line-height: 48px;
       font-size: 16px;
@@ -66,5 +66,24 @@
     &:hover {
       background: $color-blue-hover;
     }
+  }
+
+  &--note {
+    height: auto;
+    padding: 12px 50px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    letter-spacing: 0.01em;
+  }
+
+  &__note {
+    display: block;
+    margin-top: 3px;
+    font-size: 14px;
+    line-height: 140%;
+    font-weight: normal;
+    text-align: center;
   }
 }

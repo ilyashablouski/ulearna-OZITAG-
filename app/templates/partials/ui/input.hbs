@@ -1,3 +1,7 @@
-<div class="form-input {{#if icon}}form-input--icon form-input--{{icon}}{{/if}} {{#if mod}}{{mod}}{{/if}}">
-  <input type="text" placeholder="{{ placeholder }}"/>
+<div class="form-input {{#if icon}}form-input--icon{{/if}} {{#if mod}}{{mod}}{{/if}}">
+  <input type="text" placeholder="{{ placeholder }}" class="{{#if numeric}}js-numeric-input{{/if}}"
+         {{#if maxlength}}maxlength="{{maxlength}}"{{/if}}/>
+  {{#if icon}}
+    <i class="form-input__icon form-input__icon--card"></i>
+  {{/if}}
 </div>

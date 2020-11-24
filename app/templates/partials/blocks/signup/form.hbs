@@ -2,7 +2,7 @@
   <div class="signup-form__inner">
     <div class="signup-form__cell">
       {{#> ui/field label="Cardnumber" id="cardnumber"}}
-        {{> ui/input id="cardnumber" icon="card" mod="js-input-card" placeholder="•••• •••• •••• ••••"}}
+        {{> ui/input id="cardnumber" icon="card" mod="js-input-card" numeric=true placeholder="•••• •••• •••• ••••"}}
       {{/ui/field}}
     </div>
 
@@ -20,7 +20,7 @@
 
     <div class="signup-form__cell signup-form__cell--small">
       {{#> ui/field label="CVC" id="cvc" note="Help text"}}
-        {{> ui/input id="cvc" placeholder="***"}}
+        {{> ui/input id="cvc" placeholder="***" maxlength=3 numeric=true}}
       {{/ui/field}}
     </div>
 

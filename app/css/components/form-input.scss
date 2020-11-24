@@ -18,19 +18,19 @@
   &--icon {
     position: relative;
 
-    &:before {
-      content: '';
-      @include align(false, true);
-      left: 17px;
-      z-index: 1;
-    }
-
     input {
       padding-left: 48px;
     }
   }
 
-  &--card:before{
-    @include sprite('input-card');
+  &__icon{
+    content: '';
+    @include align(false, true);
+    left: 17px;
+    z-index: 1;
+
+    &--card{
+      @include sprite('input-card');
+    }
   }
 }
