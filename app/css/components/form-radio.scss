@@ -1,0 +1,85 @@
+.form-radio {
+  display: block;
+
+  input {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__label {
+    cursor: pointer;
+    display: block;
+  }
+
+  &__inner {
+    padding: 17px 0 17px 0;
+    margin-left: 52px;
+    border-bottom: 1px solid $color-gray;
+    display: block;
+    position: relative;
+
+    &:before, &:after{
+      @include transition;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      @include circle(32px);
+      border: 3px solid $color-gray;
+      @include align(false, true);
+      left: -52px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      opacity: 0;
+      @include align(false, true);
+      left: -44px;
+      @include sprite('radio-tick');
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 31px;
+    display: block;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 146%;
+    color: $color-gray-dark;
+    margin-top: 6px;
+    display: block;
+  }
+
+  &__badge {
+    position: absolute;
+    color: $color-white;
+    background: $color-green;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    display: block;
+    padding: 2px 8px;
+    border-radius: 8px;
+    right: 0;
+    @include align(false, true);
+  }
+
+  input:checked + .form-radio__inner {
+    &:before {
+      background: $color-blue;
+      border-color: $color-blue;
+    }
+
+    &:after {
+      opacity: 1;
+    }
+  }
+}

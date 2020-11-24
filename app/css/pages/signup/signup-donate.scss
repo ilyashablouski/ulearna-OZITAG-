@@ -1,0 +1,41 @@
+.signup-donate {
+  background: $color-blue-light;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 16px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+  }
+
+  &__icon {
+    @include sprite('donate');
+    margin-right: 30px;
+  }
+
+  &__content {
+    margin-left: 30px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 31px;
+    display: block;
+  }
+
+  &__text {
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 146%;
+    display: block;
+    color: $color-gray-dark;
+  }
+
+  &__checkbox {
+    margin-top: 16px;
+  }
+}

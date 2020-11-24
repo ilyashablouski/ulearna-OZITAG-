@@ -1,3 +1,13 @@
 <div class="form-radio">
+  <label class="form-radio__label">
+    <input type="radio" id="{{id}}" name="{{name}}" value="{{value}}"/>
+    <div class="form-radio__inner">
+      <span class="form-radio__title">{{ label }}</span>
+      <span class="form-radio__text">{{ text }}</span>
+    </div>
 
+    {{#if badge}}
+      <span class="form-radio__badge">{{badge}}</span>
+    {{/if}}
+  </label>
 </div>
