@@ -1,0 +1,98 @@
+.page-header {
+  background: linear-gradient(0deg, #33C2FF 0%, #7AD7FF 137.49%);
+  padding: 22px 0;
+  color: $color-white;
+
+  &__wrapper {
+    position: relative;
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__back {
+    position: absolute;
+    left: 0;
+    @include align(false, true);
+
+    &-link {
+      font-size: 15px;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+      color: $color-white;
+      font-weight: bold;
+      padding-left: 25px;
+      position: relative;
+
+      &:before {
+        content: '';
+        @include align(false, true);
+        @include sprite('header-back-arrow');
+        @include transition;
+      }
+
+      &:hover {
+        color: $color-blue-light;
+
+        &:before {
+          transform: translateX(-3px) translateY(-50%);
+        }
+      }
+    }
+
+    @include mobile {
+      display: block;
+      position: static;
+      transform: none;
+    }
+  }
+
+  &__inner {
+    text-align: center;
+
+    @include mobile {
+      text-align: left;
+      padding-top: 20px;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 29px;
+    line-height: 43px;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    &--success {
+      padding-right: 30px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        @include align(false, true);
+        @include sprite('header-title-tick');
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 6px;
+    display: block;
+    font-size: 18px;
+    line-height: 150%;
+    color: $color-blue-light;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+}

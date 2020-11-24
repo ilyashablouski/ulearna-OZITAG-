@@ -71,10 +71,12 @@
       li ul {
         li {
           margin-left: 40px;
-          button{
+
+          button {
             padding: 5px 0;
             font-size: 14px;
-            &:hover{
+
+            &:hover {
               color: #666;
             }
           }
@@ -327,6 +329,24 @@
         display: flex;
         justify-content: center;
       }
+    }
+  }
+
+  &-module {
+    &__header {
+      padding: 20px;
+      font-size: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__title {
+
+    }
+
+    &__path {
+      font-style: italic;
+      font-size: 20px;
     }
   }
 }
