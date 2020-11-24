@@ -14,4 +14,23 @@
       color: rgba(5, 36, 51, 0.2);
     }
   }
+
+  &--icon {
+    position: relative;
+
+    &:before {
+      content: '';
+      @include align(false, true);
+      left: 17px;
+      z-index: 1;
+    }
+
+    input {
+      padding-left: 48px;
+    }
+  }
+
+  &--card:before{
+    @include sprite('input-card');
+  }
 }

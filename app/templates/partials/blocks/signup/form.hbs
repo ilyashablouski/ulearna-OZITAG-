@@ -2,19 +2,19 @@
   <div class="signup-form__inner">
     <div class="signup-form__cell">
       {{#> ui/field label="Cardnumber" id="cardnumber"}}
-        {{> ui/input id="cardnumber" card=true}}
+        {{> ui/input id="cardnumber" icon="card" mod="js-input-card" placeholder="•••• •••• •••• ••••"}}
       {{/ui/field}}
     </div>
 
     <div class="signup-form__cell signup-form__cell--small">
       {{#> ui/field label="Exp. date" id="exp_date"}}
-        {{> ui/input id="exp_date" date=true}}
+        {{> ui/input id="exp_date" date=true placeholder="DD/MM/YYYY"}}
       {{/ui/field}}
     </div>
 
     <div class="signup-form__cell">
       {{#> ui/field label="Name of Cardholder" id="cardholder"}}
-        {{> ui/input id="cardholder"}}
+        {{> ui/input id="cardholder" placeholder="CARDHOLDER"}}
       {{/ui/field}}
     </div>
 
@@ -26,7 +26,7 @@
 
     <div class="signup-form__cell">
       {{#> ui/field label="Payment Address" id="payment_address"}}
-        {{> ui/input id="payment_address"}}
+        {{> ui/input id="payment_address" placeholder="Select Country"}}
       {{/ui/field}}
     </div>
 
