@@ -1,0 +1,26 @@
+.link-arrow {
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: $color-blue;
+  font-weight: bold;
+  padding-right: 18px;
+  display: inline-block;
+  position: relative;
+
+  &:after {
+    content: '';
+    @include sprite('link-arrow-arrow');
+    right: 0;
+    @include align(false, true);
+    @include transition;
+  }
+
+  &:hover {
+    color: $color-blue-hover;
+
+    &:after {
+      transform: translateX(2px) translateY(-50%);
+    }
+  }
+}

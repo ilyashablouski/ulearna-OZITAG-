@@ -1,0 +1,145 @@
+.signup-success {
+  &__user {
+    width: 392px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    @include mobile {
+      width: auto;
+    }
+
+    &-inner {
+      border: 3px solid $color-gray;
+      box-sizing: border-box;
+      box-shadow: 0px 4px 14px rgba(1, 64, 139, 0.14);
+      border-radius: 12px;
+      padding: 74px 0 30px;
+      position: relative;
+      margin-top: 90px;
+
+      @include mobile {
+        margin-top: 16px;
+        padding-top: 80px;
+        padding-bottom: 0;
+        box-shadow: none;
+        border: 0 none;
+      }
+
+      &:before {
+        content: '';
+        @include circle(116px, $color-orange);
+        top: -58px;
+        @include align(true, false);
+
+        @include mobile {
+          filter: drop-shadow(0px 4px 14px rgba(1, 64, 139, 0.14));
+          top: 0;
+          @include align(true, false);
+          @include circle(72px, $color-orange);
+        }
+      }
+
+      &:after {
+        content: '';
+        @include sprite('signup-success');
+        @include align(true, false);
+        top: 10px;
+
+        @include mobile {
+          @include sprite('signup-success-mobile');
+        }
+      }
+    }
+
+    &-name {
+      font-weight: 600;
+      font-size: 29px;
+      line-height: 43px;
+      display: block;
+      text-align: center;
+      color: $color-black;
+
+      @include mobile {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+      }
+    }
+
+    &-role {
+      margin-top: 8px;
+      font-size: 16px;
+      line-height: 146%;
+      display: block;
+      text-align: center;
+      color: $color-dark;
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+
+    &-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+  }
+
+  &__content {
+    text-align: center;
+    width: 836px;
+    max-width: 100%;
+    margin: 40px auto 0;
+
+    @include mobile {
+      margin-top: 16px;
+    }
+  }
+
+  &__title {
+    font-size: 56px;
+    line-height: 84px;
+    display: block;
+    color: $color-black;
+    font-weight: bold;
+
+    @include mobile {
+      font-size: 22px;
+      line-height: 33px;
+    }
+  }
+
+  &__text {
+    color: $color-dark;
+    font-size: 18px;
+    line-height: 150%;
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 21px;
+      margin-top: 8px;
+    }
+  }
+
+  &__button {
+    margin-top: 40px;
+    display: block;
+
+    @include mobile {
+      margin-top: 16px;
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}
