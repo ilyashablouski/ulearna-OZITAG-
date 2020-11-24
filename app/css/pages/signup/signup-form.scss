@@ -1,0 +1,11 @@
+.signup-form {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -25px;
+  margin-top: -42px;
+
+  &__cell {
+    margin-top: 42px;
+    padding: 0 25px;
+  }
+}
