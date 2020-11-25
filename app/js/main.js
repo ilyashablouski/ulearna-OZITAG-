@@ -16,6 +16,7 @@ import './src/utils/input-filter';
 import './src/widgets/inputs/numeric-input';
 import './src/widgets/inputs/masked-input';
 import './src/widgets/inputs/datepicker';
+import './src/widgets/inputs/select';
 
 import './src/widgets/popups';
 import './src/widgets/accord';
