@@ -1,11 +1,14 @@
 // Libraries
 @import "~normalize-scss/sass/normalize/import-now";
 @import '~swiper/swiper';
+@import '~js-datepicker/src/datepicker';
 
 // Base
 @import 'config/index';
 @import 'mixins/index';
 @import 'core/index';
+
+@import 'vendor/index';
 
 // Layout & Components
 @import 'layout/index';

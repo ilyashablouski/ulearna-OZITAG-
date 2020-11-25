@@ -1,6 +1,7 @@
 .form-field {
   padding-bottom: 26px;
   position: relative;
+  width: 100%;
 
   @include mobile{
     padding-bottom: 22px;

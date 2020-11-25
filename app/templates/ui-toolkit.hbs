@@ -13,6 +13,9 @@
             <button class="ui-aside__link" data-id="buttons">Buttons</button>
           </li>
           <li>
+            <button class="ui-aside__link" data-id="forms">Form Elements</button>
+          </li>
+          <li>
             <button class="ui-aside__link" data-id="widgets">Widgets</button>
             <ul>
               <li>
@@ -55,6 +58,10 @@
 
         {{#> core/ui-kit/section title="Buttons" id="buttons"}}
           {{> ui-kit/buttons }}
+        {{/core/ui-kit/section}}
+
+        {{#> core/ui-kit/section title="Form Elements" id="forms"}}
+          {{> ui-kit/forms }}
         {{/core/ui-kit/section}}
 
         {{#> core/ui-kit/section title="Widgets" id="widgets"}}

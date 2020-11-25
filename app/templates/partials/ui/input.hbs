@@ -1,7 +1,16 @@
-<div class="form-input {{#if icon}}form-input--icon{{/if}} {{#if mod}}{{mod}}{{/if}}">
-  <input type="text" placeholder="{{ placeholder }}" class="{{#if numeric}}js-numeric-input{{/if}}"
-         {{#if maxlength}}maxlength="{{maxlength}}"{{/if}}/>
+<div class="form-input {{#if icon}}form-input--icon{{/if}} {{#if date}}form-input--icon-right{{/if}} {{#if
+        mod}}{{mod}}{{/if}}">
+  <input type="{{#if type}}{{type}}{{else}}{{#if date}}date{{else}}{{/if}}text{{/if}}" autocomplete="off"
+         placeholder="{{ placeholder }}"
+         class=" {{#if mask}}js-masked-input{{/if}} {{#if numeric}}js-numeric-input{{/if}} {{#if
+                 date}}js-datepicker{{/if}}"
+         {{#if maxlength}}maxlength="{{maxlength}}"{{/if}}  {{#if mask}}data-mask="{{mask}}"{{/if}}/>
+
   {{#if icon}}
-    <i class="form-input__icon form-input__icon--card"></i>
+    <i class="form-input__icon form-input__icon--{{icon}}"></i>
+  {{/if}}
+
+  {{#if date}}
+    <i class="form-input__icon form-input__icon--date"></i>
   {{/if}}
 </div>

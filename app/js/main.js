@@ -13,10 +13,12 @@ import './src/utils/scroll-to';
 import './src/utils/scroll-to-link';
 import './src/utils/input-filter';
 
+import './src/widgets/inputs/numeric-input';
+import './src/widgets/inputs/masked-input';
+import './src/widgets/inputs/datepicker';
+
 import './src/widgets/popups';
 import './src/widgets/accord';
-
-import './src/widgets/numeric-input';
 
 import './src/widgets/header/header-burger';
 import './src/widgets/header/header-fixed';
