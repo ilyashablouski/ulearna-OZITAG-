@@ -30,7 +30,7 @@
     padding: 0 16px;
     font-weight: 500;
     font-size: 18px;
-    color: $color-black;
+    color: rgba(5, 36, 51, 0.2);
     position: relative;
 
     &:after {
@@ -90,7 +90,6 @@
       }
     }
   }
-
 }
 
 .select2-search {
@@ -115,5 +114,11 @@
     @include placeholder {
       color: $color-placeholder;
     }
+  }
+}
+
+select.selected + .select2{
+  .select2-selection__rendered{
+    color: $color-dark;
   }
 }

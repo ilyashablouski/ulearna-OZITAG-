@@ -12,8 +12,11 @@ class Select extends Widget {
     this.withSearch = !!this.$node.dataset.search;
     this.placeholder = this.$node.dataset.placeholder;
 
+    this.hasInitialValue = ($(this.$node).find('option[selected]').length > 0 && $(this.$node).find('option[selected]').text() !== '') || (!this.placeholder && $(this.$node).find('option').length > 0 && ($(this.$node).find('option').first().text() !== ''));
+
     this.init();
   }
+
 
   onChange(e) {
     if (e.target.value) {
@@ -23,14 +26,12 @@ class Select extends Widget {
     }
   }
 
-  build() {
+  initSelect2() {
     const withSearch = this.withSearch;
-
-    console.log(withSearch);
 
     $(this.$node).select2({
       minimumResultsForSearch: -1,
-      placeholder: this.placeholder,
+      placeholder: this.hasInitialValue ? this.placeholder : null,
       'language': {
         'noResults': locale.notFoundMessage,
       },
@@ -47,39 +48,36 @@ class Select extends Widget {
       $(this).data('select2').$dropdown.find(':input.select2-search__field').attr('placeholder', locale.searchPlaceholder);
     });
 
-    if (withSearch) {
-      return;
-    }
-
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-      $(this.$node).select2('destroy');
-      $(this.$node).removeClass('visually-hidden');
+    if (withSearch === false) {
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        $(this.$node).select2('destroy');
+        $(this.$node).removeClass('visually-hidden');
+      }
     }
 
     $(this.$node).on('change', this.onChange);
 
-    let hasValue = $(this.$node).find('option[selected]').length > 0 || ($(this.$node).find('option').length > 0 && ($(this.$node).find('option').first().text() !== ''));
-    if (hasValue) {
+    if (this.hasInitialValue) {
       this.setAsSelected();
     } else {
       this.setAsNotSelected();
     }
   }
 
+  build() {
+    if (this.placeholder && this.hasInitialValue === false) {
+      $(this.$node).prepend('<option selected></option>');
+    }
+
+    this.initSelect2();
+  }
+
   setAsSelected() {
     this.$node.classList.add('selected');
-    const $label = this.$node.parentElement.querySelector('.form-select__label');
-    if ($label) {
-      $label.classList.add('active');
-    }
   }
 
   setAsNotSelected() {
     this.$node.classList.remove('selected');
-    const $label = this.$node.parentElement.querySelector('.form-select__label');
-    if ($label) {
-      $label.classList.remove('active');
-    }
   }
 
   static init(el) {
