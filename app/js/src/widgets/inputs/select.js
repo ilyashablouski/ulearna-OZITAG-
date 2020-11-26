@@ -73,11 +73,11 @@ class Select extends Widget {
   }
 
   setAsSelected() {
-    this.$node.classList.add('selected');
+    this.$node.parentNode.classList.add('selected');
   }
 
   setAsNotSelected() {
-    this.$node.classList.remove('selected');
+    this.$node.parentNode.classList.remove('selected');
   }
 
   static init(el) {
