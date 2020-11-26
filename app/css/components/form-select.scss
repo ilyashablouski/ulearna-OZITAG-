@@ -38,15 +38,18 @@
       @include sprite('select2-arrow');
       right: 16px;
       @include align(false, true);
-      @include transition(0.3s);
     }
   }
 
   &-container--open {
     .select2-selection__rendered {
       &:after {
+        @include sprite('select2-arrow-active');
         transform: rotate(180deg) translateY(50%);
+        margin-top: -1px;
       }
+
+      border-color: $color-blue;
     }
   }
 }
@@ -117,8 +120,8 @@
   }
 }
 
-select.selected + .select2{
-  .select2-selection__rendered{
+select.selected + .select2 {
+  .select2-selection__rendered {
     color: $color-dark;
   }
 }
