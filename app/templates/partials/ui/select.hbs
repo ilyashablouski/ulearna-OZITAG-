@@ -1,9 +1,3 @@
-<div class="form-select form-select--border">
-  <select class="js-select visually-hidden {{mod}}" {{#if
-          search-empty}}data-select-empty="{{search-empty}}"{{/if}} {{dataset}} {{#if
-          name}}name="{{name}}"{{/if}}>
-    {{#if empty-value}}
-      <option value=""></option>{{/if}}
-    {{> @partial-block}}
-  </select>
-</div>
+<select class="js-select visually-hidden" {{#if placeholder}}data-placeholder="{{placeholder}}"{{/if}} {{#if search}}data-search="1"{{/if}}>
+  {{> @partial-block}}
+</select>

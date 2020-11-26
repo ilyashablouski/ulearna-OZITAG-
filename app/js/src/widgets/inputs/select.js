@@ -1,8 +1,16 @@
+const locale = {
+  searchPlaceholder: 'Search...',
+  notFoundMessage: 'Not Found',
+};
+
 class Select extends Widget {
   constructor(node) {
     super(node, 'js-select');
 
     this.onChange = this.onChange.bind(this);
+
+    this.withSearch = !!this.$node.dataset.search;
+    this.placeholder = this.$node.dataset.placeholder;
 
     this.init();
   }
@@ -16,25 +24,27 @@ class Select extends Widget {
   }
 
   build() {
-    const withSearch = this.$node.dataset.selectSearch;
-    const emptyMessage = this.$node.dataset.selectEmpty || 'Не найдено';
+    const withSearch = this.withSearch;
+
+    console.log(withSearch);
 
     $(this.$node).select2({
-      placeholder: this.$node.dataset.label,
-      "language": {
-        "noResults": () => emptyMessage
-      }
-    }).on("select2:open", function () {
+      minimumResultsForSearch: -1,
+      placeholder: this.placeholder,
+      'language': {
+        'noResults': locale.notFoundMessage,
+      },
+    }).on('select2:open', function() {
       if (withSearch) {
-        $('.select2-dropdown').get(0).classList.add('_with-search');
+        $('.select2-dropdown').get(0).classList.add('select2-with-search');
       }
       const width = parseInt($('.select2-dropdown').get(0).style.width);
       $('.select2-dropdown').css('min-width', (width + 1) + 'px');
       new PerfectScrollbar($('.select2-results__options').get(0), {
-        minScrollbarLength: 20
+        minScrollbarLength: 20,
       });
 
-      $(this).data('select2').$dropdown.find(':input.select2-search__field').attr('placeholder', 'Поиск...');
+      $(this).data('select2').$dropdown.find(':input.select2-search__field').attr('placeholder', locale.searchPlaceholder);
     });
 
     if (withSearch) {

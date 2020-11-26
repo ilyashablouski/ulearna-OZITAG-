@@ -26,10 +26,8 @@
 
     <div class="signup-form__cell">
       {{#> ui/field label="Payment Address" id="payment_address"}}
-        {{#> ui/select id="payment_address" name="payment_address" }}
-          <option value="0" selected>United States </option>
-          <option value="1">England</option>
-          <option value="2">Russian</option>
+        {{#> ui/select id="country" placeholder="Select Country" search=true }}
+          {{> modules/select/countries }}
         {{/ui/select}}
       {{/ui/field}}
     </div>
