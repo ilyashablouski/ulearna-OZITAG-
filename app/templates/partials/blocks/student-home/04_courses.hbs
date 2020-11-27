@@ -1,83 +1,11 @@
-<section class="home-featured js-tabs-slider">
-  <div class="container">
-    <div class="home-featured__inner">
-      <h2 class="home-featured__title">Recommended for you</h2>
-      <div class="home-featured__slider">
-        <div class="tabs-slider__slider">
-          <div class="tabs-slider__prev">
-            <button class="button-nav button-nav--prev js-tabs-slider__prev"></button>
-          </div>
-          <div class="tabs-slider__next">
-            <button class="button-nav button-nav--next js-tabs-slider__next"></button>
-          </div>
-          <div class="tabs-slider__row">
-            <div class="swiper-container js-tabs-slider__slider">
-              <div class="swiper-wrapper">
-                <div class="tabs-slider__slide swiper-slide js-tabs-slider__item">
-                  {{> widgets/course-card original=true
-                          image="home/featured/01"
-                          title="Customizing Type with Draplin: Creating Wordmarks That Work"
-                          author="by Leo Workman"
-                          original=true
-                  }}
-                </div>
-                <div class="tabs-slider__slide swiper-slide js-tabs-slider__item">
-                  {{> widgets/course-card original=true
-                          image="home/featured/02"
-                          title="Productivity Masterclass: Create a Custom System that Works"
-                          author="by Makenna Baptista"
-                          original=true
-                  }}
-                </div>
-                <div class="tabs-slider__slide swiper-slide js-tabs-slider__item">
-                  {{> widgets/course-card original=true
-                          image="home/featured/03"
-                          title="ODD BODIES: Illustrating Expressive, Stylized People"
-                          author="by Leo Workman"
-                          original=true
-                  }}
-                </div>
-                <div class="tabs-slider__slide swiper-slide js-tabs-slider__item">
-                  {{> widgets/course-card original=true
-                          image="home/featured/04"
-                          title="Fundamentals of DSLR Photography"
-                          author="by Marley Torff"
-                          original=true
-                  }}
-                </div>
-                <div class="tabs-slider__slide swiper-slide js-tabs-slider__item">
-                  {{> widgets/course-card
-                          title="Customizing Type with Draplin: Creating Wordmarks That Work"
-                          author="by Leo Workman"
-                          original=true
-                  }}
-                </div>
-                <div class="tabs-slider__slide swiper-slide js-tabs-slider__item">
-                  {{> widgets/course-card
-                          title="Productivity Masterclass: Create a Custom System that Works"
-                          author="by Makenna Baptista"
-                          original=true
-                  }}
-                </div>
-                <div class="tabs-slider__slide swiper-slide js-tabs-slider__item">
-                  {{> widgets/course-card
-                          title="ODD BODIES: Illustrating Expressive, Stylized People"
-                          author="by Leo Workman"
-                          original=true
-                  }}
-                </div>
-                <div class="tabs-slider__slide swiper-slide js-tabs-slider__item">
-                  {{> widgets/course-card
-                          title="Fundamentals of DSLR Photography"
-                          author="by Marley Torff"
-                          original=true
-                  }}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+{{#> modules/carousel/_component title="Recommended for you" see-all=true}}
+  ...
+{{/modules/carousel/_component}}
+
+{{#> modules/carousel/_component title="Featured courses in Ulearna" see-all=true}}
+  ...
+{{/modules/carousel/_component}}
+
+{{#> modules/carousel/_component title="Popular in my region" see-all=true}}
+  ...
+{{/modules/carousel/_component}}

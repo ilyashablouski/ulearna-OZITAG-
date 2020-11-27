@@ -1,0 +1,32 @@
+{{#> modules/carousel/_component title=title see-all=true}}
+  {{#times 3}}
+    <div class="carousel__slide swiper-slide js-carousel__item">
+      {{> widgets/course-card original=true
+              image="home/featured/01"
+              title="Customizing Type with Draplin: Creating Wordmarks That Work"
+              author="by Leo Workman"
+      }}
+    </div>
+    <div class="carousel__slide swiper-slide js-carousel__item">
+      {{> widgets/course-card original=true
+              image="home/featured/02"
+              title="Productivity Masterclass: Create a Custom System that Works"
+              author="by Makenna Baptista"
+      }}
+    </div>
+    <div class="carousel__slide swiper-slide js-carousel__item">
+      {{> widgets/course-card original=true
+              image="home/featured/03"
+              title="ODD BODIES: Illustrating Expressive, Stylized People"
+              author="by Leo Workman"
+      }}
+    </div>
+    <div class="carousel__slide swiper-slide js-carousel__item">
+      {{> widgets/course-card original=true
+              image="home/featured/04"
+              title="Fundamentals of DSLR Photography"
+              author="by Marley Torff"
+      }}
+    </div>
+  {{/times}}
+{{/modules/carousel/_component}}

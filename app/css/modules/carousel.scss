@@ -1,9 +1,42 @@
 .carousel {
+
+  &__title {
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 57px;
+    color: $color-black;
+    display: block;
+
+    @include mobile {
+      font-size: 22px;
+      line-height: 33px;
+    }
+  }
+
+  &__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__inner {
+    margin-top: 30px;
+    @include mobile {
+      margin-top: 16px;
+    }
+  }
+
+  &__bottom {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+  }
+
   &__slider {
     position: relative;
     margin-top: 33px;
 
-    @include mobile{
+    @include mobile {
       margin-top: 20px;
     }
   }
@@ -64,15 +97,15 @@
       }
     }
 
-    @include tablet{
-      &:last-child{
+    @include tablet {
+      &:last-child {
         padding-right: 30px;
         width: calc(282px + 30px);
       }
     }
 
-    @include mobile{
-      &:last-child{
+    @include mobile {
+      &:last-child {
         padding-right: 15px;
         width: calc(282px + 15px);
       }
@@ -127,5 +160,4 @@
       right: 10px;
     }
   }
-
 }
