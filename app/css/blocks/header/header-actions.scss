@@ -77,22 +77,25 @@
     }
   }
 
-  .opened:not(.header--authenticated) & {
+  .header.opened:not(.header--authenticated) & {
     .header-actions {
-      display: flex;
-      flex-direction: row;
+      &__row {
+        display: flex;
+        flex-direction: column;
+      }
 
       &__item {
         display: block;
+        width: 100%;
 
         &:first-child {
-          order: 1;
-          margin: 0;
+          order: 2;
+          margin: 20px 0 0 0;
         }
 
         &:last-child {
-          order: 2;
-          margin: 20px 0 0 0;
+          order: 1;
+          margin: 0;
         }
 
         .btn {

@@ -33,6 +33,9 @@ body.header-fixed {
 
     &.header--authenticated .header__inner{
       padding: 16px 0;
+      @include mobile{
+        padding: 15px 0;
+      }
     }
 
     .header__actions-item {
