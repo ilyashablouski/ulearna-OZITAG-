@@ -1,7 +1,7 @@
 .header {
   z-index: 1;
 
-  &__search-toggle, &__search{
+  &__search-toggle, &__search {
     display: none;
   }
 
@@ -60,24 +60,6 @@
   &__actions {
     display: flex;
     margin-left: 30px;
-
-    &-item {
-      margin-left: 20px;
-
-      &:first-child {
-        margin-left: 0;
-      }
-
-      @include mobile {
-        display: none;
-      }
-
-      &--mobile-visible {
-        @include mobile {
-          display: block;
-        }
-      }
-    }
   }
 
   &__right {

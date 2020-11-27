@@ -33,12 +33,11 @@
             {{> blocks/header/header-language }}
           </div>
           <div class="header__actions">
-            <div class="header__actions-item header__actions-item--mobile-visible">
-              {{> ui/btn label="Sign In" outline=true}}
-            </div>
-            <div class="header__actions-item">
-              {{> ui/btn label="Get Started for Free" color="orange"}}
-            </div>
+            {{#if authenticated}}
+              {{> blocks/header/header-actions-authenticated }}
+            {{else}}
+              {{> blocks/header/header-actions-guest }}
+            {{/if}}
           </div>
         </div>
       </div>
@@ -47,3 +46,4 @@
 </header>
 
 <main class="page__content">
+

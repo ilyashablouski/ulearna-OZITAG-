@@ -1,0 +1,63 @@
+.header-actions {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    margin-left: 20px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__button {
+    @include square(40px, $color-blue-12, 10px);
+    position: relative;
+
+    &:before {
+      content: '';
+      @include align(true, true);
+    }
+
+    &--bell:before {
+      @include sprite('header-bell');
+    }
+
+    &--messages:before {
+      @include sprite('header-messages');
+    }
+
+    &--new:after {
+      content: '';
+      position: absolute;
+      @include circle(12px, #42DB92);
+      top: 5px;
+      right: 5px;
+      border: 2px solid #E4F6FE;
+    }
+
+    &:hover {
+      background: $color-blue-25;
+    }
+  }
+
+  &__user {
+    img {
+      width: 48px;
+      height: 48px;
+      display: block;
+      border-radius: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      filter: drop-shadow(0px 4px 14px rgba(0, 29, 72, 0.12));
+    }
+  }
+
+  @include mobile {
+    &.header-actions--authenticated {
+    }
+
+    &.header-actions--guest {
+    }
+  }
+}
