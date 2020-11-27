@@ -154,10 +154,20 @@
     font-size: 18px;
     line-height: 150%;
     color: $color-dark;
-    cursor: pointer;
 
-    &:hover {
-      background: rgba(218, 228, 237, 0.22);
+    &:not(.select2-results__message) {
+      cursor: pointer;
+
+      :hover {
+        background: rgba(218, 228, 237, 0.22);
+      }
+    }
+
+    &.select2-results__message{
+      font-weight: 400;
+      display: block;
+      text-align: center;
+      font-size: 16px;
     }
 
     &[aria-selected="true"] {

@@ -64,8 +64,8 @@ class Select extends Widget {
     $(this.$node).select2({
       minimumResultsForSearch: -1,
       placeholder: placeholder,
-      'language': {
-        'noResults': locale.notFoundMessage,
+      language: {
+        noResults: () => locale.notFoundMessage,
       },
     }).on('select2:open', () => {
       const $selectDropdown = document.querySelector('.select2-dropdown');
