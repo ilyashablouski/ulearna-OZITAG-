@@ -8,17 +8,16 @@ class Select extends Widget {
     super(node, 'js-select');
 
     this.onChange = this.onChange.bind(this);
+    this.onFocus = this.onFocus.bind(this);
+    this.onBlur = this.onBlur.bind(this);
 
     this.$container = this.$node.parentNode;
 
     this.withSearch = !!this.$node.dataset.search;
     this.placeholder = this.$node.dataset.placeholder;
 
-    this.hasInitialValue = ($(this.$node).find('option[selected]').length > 0 && $(this.$node).find('option[selected]').text() !== '') || (!this.placeholder && $(this.$node).find('option').length > 0 && ($(this.$node).find('option').first().text() !== ''));
-
     this.init();
   }
-
 
   onChange(e) {
     if (e.target.value) {
@@ -28,49 +27,78 @@ class Select extends Widget {
     }
   }
 
+  onFocus() {
+    this.$container.classList.add('focus');
+  }
+
+  onBlur() {
+    this.$container.classList.remove('focus');
+  }
+
   isMobile() {
     return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
   }
 
   enableMobileMode() {
+    this.$node.addEventListener('change', this.onChange);
+    this.$node.addEventListener('focus', this.onFocus);
+    this.$node.addEventListener('blur', this.onBlur);
+
+    const hasInitialValue = !this.placeholder || ($(this.$node).find('option[selected]').length > 0 && $(this.$node).find('option[selected]').text() !== '');
+
     $(this.$node).removeClass('visually-hidden');
     this.$container.classList.add('mobile');
 
-    this.$node.addEventListener('focus', () => {
-      this.$container.classList.add('focus')
-    });
-    this.$node.addEventListener('blur', () => {
-      this.$container.classList.remove('focus')
-    });
-  }
-
-  enableDesktopMode() {
-    if (this.placeholder && this.hasInitialValue === false) {
-      $(this.$node).prepend('<option selected></option>');
+    if (this.placeholder && hasInitialValue === false) {
+      const $mobilePlaceholder = document.createElement('span');
+      $mobilePlaceholder.classList.add('select-placeholder');
+      $mobilePlaceholder.innerText = this.placeholder;
+      this.$container.append($mobilePlaceholder);
     }
 
-    const withSearch = this.withSearch;
+    if (hasInitialValue) {
+      this.setAsSelected();
+    } else {
+      this.setAsNotSelected();
+    }
+  }
 
+  initSelect2(placeholder) {
     $(this.$node).select2({
       minimumResultsForSearch: -1,
-      placeholder: this.hasInitialValue ? this.placeholder : null,
+      placeholder: placeholder,
       'language': {
         'noResults': locale.notFoundMessage,
       },
-    }).on('select2:open', function() {
-      if (withSearch) {
-        $('.select2-dropdown').get(0).classList.add('select2-with-search');
+    }).on('select2:open', () => {
+      const $selectDropdown = document.querySelector('.select2-dropdown');
+      const $selectOptions = document.querySelector('.select2-results__options');
+
+      if (this.withSearch) {
+        $selectDropdown.classList.add('select2-with-search');
       }
-      const width = parseInt($('.select2-dropdown').get(0).style.width);
-      $('.select2-dropdown').css('min-width', (width + 1) + 'px');
-      new PerfectScrollbar($('.select2-results__options').get(0), {
+
+      const width = parseInt($selectDropdown.style.width);
+      $selectDropdown.style.minWidth = (width + 1) + 'px';
+
+      new PerfectScrollbar($selectOptions, {
         minScrollbarLength: 20,
       });
 
-      $(this).data('select2').$dropdown.find(':input.select2-search__field').attr('placeholder', locale.searchPlaceholder);
-    });
+      $(this.$node).data('select2').$dropdown.find(':input.select2-search__field').attr('placeholder', locale.searchPlaceholder);
+    }).on('change', this.onChange);
+  }
 
-    if (this.hasInitialValue) {
+  enableDesktopMode() {
+    const hasInitialValue = ($(this.$node).find('option[selected]').length > 0 && $(this.$node).find('option[selected]').text() !== '') || (!this.placeholder && $(this.$node).find('option').length > 0 && ($(this.$node).find('option').first().text() !== ''));
+
+    if (this.placeholder && hasInitialValue === false) {
+      $(this.$node).prepend('<option selected></option>');
+    }
+
+    this.initSelect2(hasInitialValue ? this.placeholder : null);
+
+    if (hasInitialValue) {
       this.setAsSelected();
     } else {
       this.setAsNotSelected();
@@ -78,13 +106,11 @@ class Select extends Widget {
   }
 
   build() {
-    if (this.isMobile() && !this.withSearch) {
+    if (this.isMobile() && this.withSearch === false) {
       this.enableMobileMode();
     } else {
       this.enableDesktopMode();
     }
-
-    $(this.$node).on('change', this.onChange);
   }
 
   setAsSelected() {

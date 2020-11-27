@@ -26,7 +26,7 @@
 
     <div class="signup-form__cell">
       {{#> ui/field label="Payment Address" id="payment_address"}}
-        {{#> ui/select id="country" placeholder="Select Country" }}
+        {{#> ui/select id="country" placeholder="Select Country" search=true }}
           {{> modules/select/countries }}
         {{/ui/select}}
       {{/ui/field}}

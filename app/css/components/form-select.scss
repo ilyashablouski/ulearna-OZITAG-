@@ -81,7 +81,7 @@
     box-sizing: border-box;
     border-radius: 12px;
     height: 57px;
-    line-height: 57px;
+    line-height: 53px;
     padding: 0 16px;
     font-weight: 500;
     font-size: 18px;
@@ -93,8 +93,31 @@
     }
   }
 
-  &.selected select {
-    color: $color-black;
+
+  .select-placeholder {
+    position: absolute;
+    left: 5px;
+    top: 4px;
+    bottom: 4px;
+    right: 20px;
+    background: $color-white;
+    color: rgba(5, 36, 51, 0.2);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    pointer-events: none;
+  }
+
+  &.selected {
+    .select-placeholder {
+      display: none;
+    }
+
+    select {
+      color: $color-black;
+    }
   }
 
   &.focus {
