@@ -10,8 +10,8 @@ body.header-fixed {
 
   &.fixed-prepare {
     position: fixed;
-    height: 92px;
-    top: -92px;
+    height: 80px;
+    top: -80px;
     z-index: z(header);
     left: 0;
     right: 0;
@@ -28,7 +28,11 @@ body.header-fixed {
     }
 
     .header__inner {
-      padding: 24px 0;
+      padding: 17px 0;
+    }
+
+    &.header--authenticated .header__inner{
+      padding: 16px 0;
     }
 
     .header__actions-item {
@@ -44,7 +48,7 @@ body.header-fixed {
     }
 
     .header__center {
-      margin-left: 80px;
+      margin-left: 44px;
     }
 
     @include mobile {
@@ -63,6 +67,10 @@ body.header-fixed {
       .header__right {
         display: none;
       }
+    }
+
+    .header__right-search{
+      display: none;
     }
   }
 

@@ -19,6 +19,7 @@
   &__button {
     @include square(40px, $color-blue-12, 10px);
     position: relative;
+    display: block;
 
     @include mobile {
       background: transparent;
