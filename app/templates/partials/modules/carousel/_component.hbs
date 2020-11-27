@@ -1,0 +1,64 @@
+<section class="home-featured {{#if background}}home-featured--background{{/if}}">
+  <div class="container">
+    <header class="home-featured__header">
+      <h2 class="home-featured__title">{{ title }}</h2>
+      {{#if see-all}}
+        <div class="home-featured__right">
+          {{> widgets/link-arrow label="See all"}}
+        </div>
+      {{/if}}
+    </header>
+    <div class="home-featured__inner js-carousel">
+      <div class="home-featured__slider">
+        <div class="carousel">
+          {{#if tabs}}
+            <div class="carousel__tabs">
+              <div class="tabs">
+                <div class="tabs__inner">
+                  <div class="tabs__item">
+                    <button data-filter="*" class="js-carousel__tab tabs__link active">All Categories</button>
+                  </div>
+                  <div class="tabs__item">
+                    <button data-filter="filter-1" class="js-carousel__tab tabs__link">Business</button>
+                  </div>
+                  <div class="tabs__item">
+                    <button data-filter="filter-2" class="js-carousel__tab tabs__link">Category</button>
+                  </div>
+                  <div class="tabs__item">
+                    <button data-filter="filter-3" class="js-carousel__tab tabs__link">Category</button>
+                  </div>
+                  <div class="tabs__item">
+                    <button data-filter="filter-4" class="js-carousel__tab tabs__link">Category</button>
+                  </div>
+                  <div class="tabs__item">
+                    <button data-filter="filter-5" class="js-carousel__tab tabs__link">Category</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {{/if}}
+          <div class="carousel__slider">
+            <div class="carousel__prev">
+              <button class="button-nav button-nav--prev js-carousel__prev"></button>
+            </div>
+            <div class="carousel__next">
+              <button class="button-nav button-nav--next js-carousel__next"></button>
+            </div>
+            <div class="carousel__row">
+              <div class="swiper-container js-carousel__slider">
+                <div class="swiper-wrapper">
+                  {{> @partial-block}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{#if bottom-button}}
+        <div class="home-featured__bottom">
+          {{> ui/btn outline=true color="black" label=bottom-button}}
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</section>

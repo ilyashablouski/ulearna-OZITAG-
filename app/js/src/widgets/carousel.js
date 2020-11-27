@@ -1,6 +1,6 @@
-class TabsSlider extends Widget {
+class Carousel extends Widget {
   constructor(node) {
-    super(node, '.js-tabs-slider', 'desktop');
+    super(node, '.js-carousel', 'desktop');
 
     this.swiper = null;
     this.activeFilter = null;
@@ -114,10 +114,10 @@ class TabsSlider extends Widget {
   }
 
   static init(el) {
-    el && new TabsSlider(el);
+    el && new Carousel(el);
   }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.js-tabs-slider').forEach(item => TabsSlider.init(item));
+  document.querySelectorAll('.js-carousel').forEach(item => Carousel.init(item));
 });

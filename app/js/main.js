@@ -30,9 +30,9 @@ import './src/widgets/header/header';
 
 import './src/widgets/home-students';
 
+import './src/widgets/carousel';
 import './src/widgets/mobile-slider';
 import './src/widgets/link-select';
-import './src/widgets/tabs-slider';
 import './src/widgets/video-link';
 import './src/widgets/plan-select';
 
