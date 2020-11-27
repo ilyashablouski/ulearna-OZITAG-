@@ -54,7 +54,24 @@
     }
   }
 
-  select:not(.visually-hidden) {
+
+  &.selected .select2 .select2-selection__rendered {
+    color: $color-dark;
+  }
+}
+
+
+.form-select.mobile {
+  position: relative;
+
+  &:after {
+    content: '';
+    @include sprite('select2-arrow');
+    right: 16px;
+    @include align(false, true);
+  }
+
+  select {
     appearance: none;
     width: 100%;
     display: flex;
@@ -71,13 +88,25 @@
     color: rgba(5, 36, 51, 0.2);
     position: relative;
 
-    .form-select & {
-      color: $color-black;
+    &:focus {
+      border-color: $color-blue;
     }
   }
 
-  &.selected .select2 .select2-selection__rendered {
-    color: $color-dark;
+  &.selected select {
+    color: $color-black;
+  }
+
+  &.focus {
+    select {
+      border-color: $color-blue;
+    }
+
+    &:after {
+      @include sprite('select2-arrow-active');
+      transform: rotate(180deg) translateY(50%);
+      margin-top: -1px;
+    }
   }
 }
 
@@ -143,7 +172,7 @@
     }
   }
 
-  &.select2-with-search .select2-search{
+  &.select2-with-search .select2-search {
     display: block;
   }
 }

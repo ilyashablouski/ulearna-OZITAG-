@@ -9,6 +9,8 @@ class Select extends Widget {
 
     this.onChange = this.onChange.bind(this);
 
+    this.$container = this.$node.parentNode;
+
     this.withSearch = !!this.$node.dataset.search;
     this.placeholder = this.$node.dataset.placeholder;
 
@@ -26,7 +28,27 @@ class Select extends Widget {
     }
   }
 
-  initSelect2() {
+  isMobile() {
+    return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+  }
+
+  enableMobileMode() {
+    $(this.$node).removeClass('visually-hidden');
+    this.$container.classList.add('mobile');
+
+    this.$node.addEventListener('focus', () => {
+      this.$container.classList.add('focus')
+    });
+    this.$node.addEventListener('blur', () => {
+      this.$container.classList.remove('focus')
+    });
+  }
+
+  enableDesktopMode() {
+    if (this.placeholder && this.hasInitialValue === false) {
+      $(this.$node).prepend('<option selected></option>');
+    }
+
     const withSearch = this.withSearch;
 
     $(this.$node).select2({
@@ -48,15 +70,6 @@ class Select extends Widget {
       $(this).data('select2').$dropdown.find(':input.select2-search__field').attr('placeholder', locale.searchPlaceholder);
     });
 
-    if (withSearch === false) {
-      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        $(this.$node).select2('destroy');
-        $(this.$node).removeClass('visually-hidden');
-      }
-    }
-
-    $(this.$node).on('change', this.onChange);
-
     if (this.hasInitialValue) {
       this.setAsSelected();
     } else {
@@ -65,11 +78,13 @@ class Select extends Widget {
   }
 
   build() {
-    if (this.placeholder && this.hasInitialValue === false) {
-      $(this.$node).prepend('<option selected></option>');
+    if (this.isMobile() && !this.withSearch) {
+      this.enableMobileMode();
+    } else {
+      this.enableDesktopMode();
     }
 
-    this.initSelect2();
+    $(this.$node).on('change', this.onChange);
   }
 
   setAsSelected() {
