@@ -1,5 +1,4 @@
 .btn {
-  display: inline-block;
   border-radius: 8px;
   padding: 14px 16px;
   color: $color-white;
@@ -11,14 +10,12 @@
   @include transition;
   white-space: nowrap;
 
-  &--outline {
-    border: 1px solid $color-black;
-    color: $color-black;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-    &:hover {
-      background: $color-black;
-      color: $color-white;
-    }
+  svg {
+    margin-right: 6px;
   }
 
   &--large {
@@ -60,12 +57,44 @@
     }
   }
 
+  &--outline {
+    border: 1px solid $color-black;
+    color: $color-black;
+    background: $color-white;
+
+    &:hover {
+      background: $color-black;
+      color: $color-white;
+    }
+
+    &.btn--blue {
+      color: $color-blue;
+      border-color: $color-blue;
+
+      &:hover {
+        background: $color-blue;
+        color: $color-white;
+      }
+    }
+
+    &.btn--purple {
+      color: $color-purple;
+      border-color: $color-purple;
+
+      &:hover {
+        background: $color-purple;
+        color: $color-white;
+      }
+    }
+  }
+
   &--note {
     padding: 12px 50px;
     font-size: 18px;
     line-height: 27px;
     text-align: center;
     letter-spacing: 0.01em;
+    display: inline-block;
   }
 
   &__note {
