@@ -1,6 +1,7 @@
 import './src/core/widget';
 import './src/core/observer';
 
+import './src/utils/device';
 import './src/utils/helpers';
 import './src/utils/layout';
 import './src/utils/scroll-observer';

@@ -35,18 +35,15 @@ class Select extends Widget {
     this.$container.classList.remove('focus');
   }
 
-  isMobile() {
-    return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
-  }
-
   enableMobileMode() {
     this.$node.addEventListener('change', this.onChange);
     this.$node.addEventListener('focus', this.onFocus);
     this.$node.addEventListener('blur', this.onBlur);
 
-    const hasInitialValue = !this.placeholder || ($(this.$node).find('option[selected]').length > 0 && $(this.$node).find('option[selected]').text() !== '');
+    const optionSelected = this.$node.querySelector('option[selected]');
+    const hasInitialValue = !this.placeholder || (optionSelected && optionSelected.innerText.length > 0);
 
-    $(this.$node).removeClass('visually-hidden');
+    this.$node.classList.remove('visually-hidden');
     this.$container.classList.add('mobile');
 
     if (this.placeholder && hasInitialValue === false) {
@@ -90,7 +87,10 @@ class Select extends Widget {
   }
 
   enableDesktopMode() {
-    const hasInitialValue = ($(this.$node).find('option[selected]').length > 0 && $(this.$node).find('option[selected]').text() !== '') || (!this.placeholder && $(this.$node).find('option').length > 0 && ($(this.$node).find('option').first().text() !== ''));
+    const optionSelected = this.$node.querySelector('option[selected]');
+    const options = this.$node.querySelectorAll('option');
+    const hasInitialValue = (optionSelected && optionSelected.innerText.length > 0) ||
+      (!this.placeholder && options.length > 0 && options[0].innerText.length > 0);
 
     if (this.placeholder && hasInitialValue === false) {
       $(this.$node).prepend('<option selected></option>');
@@ -106,7 +106,7 @@ class Select extends Widget {
   }
 
   build() {
-    if (this.isMobile() && this.withSearch === false) {
+    if (isMobileOrTablet() && this.withSearch === false) {
       this.enableMobileMode();
     } else {
       this.enableDesktopMode();
