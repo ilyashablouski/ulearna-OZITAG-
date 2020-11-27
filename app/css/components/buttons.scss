@@ -1,12 +1,11 @@
 .btn {
   display: inline-block;
-  height: 44px;
-  line-height: 44px;
   border-radius: 8px;
-  padding: 0 16px;
+  padding: 10.5px 16px;
   color: $color-white;
   font-size: 16px;
   text-align: center;
+  line-height: 100%;
   letter-spacing: 0.02em;
   font-weight: bold;
   @include transition;
@@ -23,25 +22,18 @@
   }
 
   &--large {
-    height: 55px;
-    line-height: 55px;
-    font-weight: bold;
     font-size: 18px;
-    padding: 0 28px;
+    padding: 18.5px 28px;
 
     @include mobile {
-      height: 48px;
-      line-height: 48px;
+      padding: 12px 28px;
       font-size: 16px;
     }
   }
 
   &--middle {
-    height: 51px;
-    line-height: 51px;
-    font-weight: bold;
     font-size: 16px;
-    padding: 0 16px;
+    padding: 18px 16px;
   }
 
   &--orange {
@@ -69,9 +61,7 @@
   }
 
   &--note {
-    height: auto;
     padding: 12px 50px;
-    font-weight: bold;
     font-size: 18px;
     line-height: 27px;
     text-align: center;

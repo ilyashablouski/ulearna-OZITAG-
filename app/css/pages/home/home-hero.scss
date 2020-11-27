@@ -98,6 +98,8 @@
       .btn {
         height: 59px;
         line-height: 59px;
+        padding-top: 0;
+        padding-bottom: 0;
 
         @include mobile {
           display: none;
