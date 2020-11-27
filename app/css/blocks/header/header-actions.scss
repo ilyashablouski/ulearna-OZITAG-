@@ -1,6 +1,8 @@
 .header-actions {
-  display: flex;
-  align-items: center;
+  &__row {
+    display: flex;
+    align-items: center;
+  }
 
   &__item {
     margin-left: 20px;
@@ -8,11 +10,19 @@
     &:first-child {
       margin-left: 0;
     }
+
+    @include mobile {
+      margin-left: 10px;
+    }
   }
 
   &__button {
     @include square(40px, $color-blue-12, 10px);
     position: relative;
+
+    @include mobile {
+      background: transparent;
+    }
 
     &:before {
       content: '';
@@ -41,6 +51,14 @@
     }
   }
 
+  &__mobile {
+    display: none;
+
+    .btn {
+      width: 100%;
+    }
+  }
+
   &__user {
     img {
       width: 48px;
@@ -53,11 +71,55 @@
     }
   }
 
-  @include mobile {
-    &.header-actions--authenticated {
+  &__search-toggle {
+    display: none;
+
+    @include mobile {
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 20px;
+      @include sprite('search-mobile');
+    }
+  }
+
+  .opened:not(.header--authenticated) & {
+    .header-actions {
+      display: flex;
+      flex-direction: row;
+
+      &__item {
+        display: block;
+
+        &:first-child {
+          order: 1;
+          margin: 0;
+        }
+
+        &:last-child {
+          order: 2;
+          margin: 20px 0 0 0;
+        }
+
+        .btn {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .opened.header--authenticated & {
+    .header-actions__row {
+      display: none;
     }
 
-    &.header-actions--guest {
+    .header-actions__mobile {
+      display: block;
+    }
+
+    .header-actions__search-toggle {
+      display: none;
     }
   }
 }
+

@@ -63,7 +63,7 @@
     &__search-toggle {
       position: fixed;
       right: 50px;
-      @include tablet{
+      @include tablet {
         right: 65px;
       }
       top: 17px;

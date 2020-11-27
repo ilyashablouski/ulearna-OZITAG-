@@ -1,0 +1,28 @@
+@include mobile {
+  .header:not(.opened) {
+
+    &.header--authenticated {
+      .header__logo {
+        display: none;
+      }
+
+      .header__inner {
+        margin-left: 10px;
+        padding-left: 0;
+        justify-content: flex-start;
+      }
+
+      .header-actions__item:last-child {
+        order: -1;
+        margin-right: 10px;
+        margin-left: 0;
+      }
+    }
+
+    &:not(.header--authenticated) {
+      .header-actions__item:last-child {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,13 +1,23 @@
-<div class="header-actions header-actions--authenticated">
-  <div class="header-actions__item">
-    <a href="#" class="header-actions__button header-actions__button--bell header-actions__button--new"></a>
-  </div>
-  <div class="header-actions__item">
-    <a href="#" class="header-actions__button header-actions__button--messages header-actions__button--new"></a>
-  </div>
-  <div class="header-actions__item">
-    <div class="header-actions__user">
-      {{> components/image img="header/avatar" ext="jpg"}}
+<div class="header-actions">
+  <div class="header-actions__row">
+    <div class="header-actions__item">
+      <a href="#" class="header-actions__button header-actions__button--bell header-actions__button--new"></a>
+    </div>
+    <div class="header-actions__item">
+      <a href="#" class="header-actions__button header-actions__button--messages header-actions__button--new"></a>
+    </div>
+    <div class="header-actions__item">
+      <div class="header-actions__user">
+        {{> components/image img="header/avatar" ext="jpg"}}
+      </div>
     </div>
   </div>
+
+  <div class="header-actions__mobile">
+    <div class="header-actions__item">
+      {{> ui/btn label="Logout" outline=true}}
+    </div>
+  </div>
+
+  <button class="header-actions__search-toggle"></button>
 </div>
