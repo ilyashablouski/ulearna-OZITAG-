@@ -25,10 +25,26 @@
           <a href="home.html" class="header__logo"></a>
         </div>
         <div class="header__center">
+          <div class="header__language-mobile">
+            {{> blocks/header/header-language }}
+            {{#if authenticated}}
+              <span class="header__language-mobile-text">
+              To switch library’s language you need to upgrade your account
+            </span>
+              <div class="header__language-mobile-button">
+                {{> ui/btn color="blue" label="Upgrade to Student"}}
+              </div>
+            {{/if}}
+          </div>
           {{> blocks/header/header-menu }}
           {{> blocks/header/header-search }}
         </div>
         <div class="header__right">
+          {{#if authenticated}}
+            <div class="header__right-search">
+              <a href="#" class="header__right-search-button"></a>
+            </div>
+          {{/if}}
           <div class="header__language">
             {{> blocks/header/header-language }}
           </div>

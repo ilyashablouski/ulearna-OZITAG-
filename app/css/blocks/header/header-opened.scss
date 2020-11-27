@@ -2,42 +2,55 @@
   z-index: 10;
   background: $color-white;
 
-  .header-language {
-    position: absolute;
-    top: 10px;
-    left: 15px;
-    right: 15px;
+  .header-language{
+    display: none;
+  }
 
-    @include tablet {
-      left: 30px;
-      right: 30px;
-    }
+  .header__language-mobile {
+    display: block;
+    margin-bottom: 20px;
 
-    z-index: 1;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: flex-start;
-    align-items: flex-start;
+    .header-language {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-start;
 
-    &__label {
-      margin-left: 0;
-      margin-bottom: 5px;
+      &__label {
+        margin-left: 0;
+        margin-bottom: 5px;
 
-      display: none;
+        display: none;
 
-      &--opened {
-        display: block;
+        &--opened {
+          display: block;
+        }
       }
-    }
 
-    &__select {
-      width: 100%;
-
-      .select {
+      &__select {
         width: 100%;
-      }
 
-      .select__input {
+        .select {
+          width: 100%;
+        }
+
+        .select__input {
+          width: 100%;
+        }
+      }
+    }
+
+    &-text {
+      margin-top: 16px;
+      font-size: 12px;
+      line-height: 150%;
+      color: $color-gray-dark;
+      display: block;
+    }
+
+    &-button {
+      margin-top: 10px;
+
+      .btn {
         width: 100%;
       }
     }
@@ -235,12 +248,6 @@
   }
 
   .header-menu {
-    margin-top: 90px;
-
-    .no-language & {
-      margin-top: 0;
-    }
-
     &__nav {
       display: block;
       margin: 0;
@@ -250,6 +257,8 @@
       margin: 0;
       padding: 0;
 
+      margin: 0 -15px;
+
       &:first-child {
         margin-top: 0;
       }
@@ -258,6 +267,8 @@
         width: 100%;
         margin: 0;
         color: $color-black;
+        padding-left: 15px;
+        padding-right: 15px;
 
         svg {
           color: $color-blue;
@@ -291,6 +302,10 @@
         height: 0;
         overflow: hidden;
         transition: height .32s ease;
+      }
+
+      &-item{
+        padding: 0 15px;
       }
     }
   }

@@ -7,9 +7,11 @@
       }
 
       .header__inner {
-        margin-left: 10px;
-        padding-left: 0;
         justify-content: flex-start;
+      }
+
+      .header__actions {
+        margin-left: 0;
       }
 
       .header-actions__item:last-child {

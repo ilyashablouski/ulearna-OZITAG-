@@ -1,7 +1,7 @@
 body.header-fixed {
   margin-top: 100px;
-  @include mobile{
-    margin-top: 80px;
+  @include tablet-and-mobile {
+    margin-top: 70px;
   }
 }
 
@@ -33,12 +33,13 @@ body.header-fixed {
 
     .header__actions-item {
       margin-left: 0;
+
       &:first-child {
         display: none;
       }
     }
 
-    .header__actions{
+    .header__actions {
       margin-left: 26px;
     }
 
@@ -46,20 +47,20 @@ body.header-fixed {
       margin-left: 80px;
     }
 
-    @include mobile{
+    @include mobile {
       height: 80px;
       top: -80px;
-      .header__inner{
+      .header__inner {
         padding: 15px 0;
       }
-      .header__left{
+      .header__left {
         display: none;
       }
-      .header__center{
+      .header__center {
         display: block;
         margin-left: 40px;
       }
-      .header__right{
+      .header__right {
         display: none;
       }
     }

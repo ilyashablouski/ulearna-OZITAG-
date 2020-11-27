@@ -60,6 +60,11 @@
   }
 
   &__user {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    background: #eee;
+
     img {
       width: 48px;
       height: 48px;
@@ -68,18 +73,6 @@
       max-width: 100%;
       max-height: 100%;
       filter: drop-shadow(0px 4px 14px rgba(0, 29, 72, 0.12));
-    }
-  }
-
-  &__search-toggle {
-    display: none;
-
-    @include mobile {
-      position: absolute;
-      display: block;
-      right: 0;
-      top: 20px;
-      @include sprite('search-mobile');
     }
   }
 
