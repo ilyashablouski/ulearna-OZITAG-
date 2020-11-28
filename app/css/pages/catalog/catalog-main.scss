@@ -4,6 +4,10 @@
     display: flex;
     justify-content: space-between;
 
+    @include tablet{
+      display: block;
+    }
+
     @include smallTablet-and-mobile {
       display: none;
     }
@@ -12,8 +16,13 @@
       flex: 1 1 1px;
       margin-right: 30px;
 
+      @include tablet{
+        margin-bottom: 20px;
+      }
+
       @include smallTablet-and-mobile {
         margin-right: 0;
+        margin-bottom: 0;
       }
     }
 
