@@ -36,6 +36,8 @@ class HeroSlider extends Widget {
       slidesPerView: 1,
       spaceBetween: 0,
       loop: true,
+      simulateTouch: false,
+      noSwiping: true,
       navigation: {
         prevEl: this.$navPrev,
         nextEl: this.$navNext,
@@ -86,11 +88,13 @@ class HeroSlider extends Widget {
 
     this.$soundButton.addEventListener('click', e => {
       e.preventDefault();
+      e.stopPropagation();
       this.onSoundClick();
     });
 
     this.$playButton.addEventListener('click', e => {
       e.preventDefault();
+      e.stopPropagation();
       this.onPlayClick();
     });
 
