@@ -1,0 +1,129 @@
+.hero-slider {
+  padding-top: 31.25%;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  color: $color-white;
+
+  &__inner {
+    @include fill;
+  }
+
+  &__slide {
+    height: 100%;
+
+    /*
+      &:before {
+        content: '';
+        @include fill;
+        z-index: 1;
+        background: linear-gradient(0deg, rgba(1, 19, 64, 0.5), rgba(1, 19, 64, 0.5));
+      }
+    */
+  }
+
+  &:not(.swiper-container-initialized) {
+    .hero-slider__slide {
+      display: none;
+
+      &:first-child {
+        display: block;
+      }
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    @include circle(60px, transparent);
+    @include align(false, true);
+    z-index: 1;
+
+    @include transition;
+
+    &:before {
+      content: '';
+      @include align(true, true);
+      @include sprite('hero-slider-arrow');
+    }
+
+    &--prev {
+      left: 10px;
+    }
+
+    &--next {
+      right: 10px;
+
+      &:before{
+        transform: translateY(-50%) rotate(180deg);
+        margin-left: -5px;
+      }
+    }
+
+    &:hover {
+      background: $color-white-20;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    z-index: 2;
+    position: relative;
+  }
+
+  &__bg {
+    @include fill;
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__video {
+    @include fill;
+    z-index: -1;
+
+    video {
+      width: 100%;
+      @include align(true, true);
+    }
+  }
+
+  &__date {
+    font-size: 16px;
+    line-height: 146%;
+    color: $color-orange;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 66px;
+    line-height: 99px;
+    margin: 0 auto;
+    width: 615px;
+    display: block;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    margin-top: 30px;
+    display: block;
+    text-align: center;
+  }
+
+  .swiper-pagination{
+    @include align(true, false);
+    bottom: 27px;
+    z-index: 1;
+  }
+}

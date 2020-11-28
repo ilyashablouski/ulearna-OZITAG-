@@ -29,6 +29,7 @@ import './src/widgets/header/header-search';
 import './src/widgets/header/header';
 
 import './src/widgets/home-students';
+import './src/widgets/hero-slider';
 
 import './src/widgets/carousel';
 import './src/widgets/mobile-slider';

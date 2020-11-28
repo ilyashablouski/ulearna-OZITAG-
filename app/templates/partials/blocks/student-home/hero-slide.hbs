@@ -1,0 +1,19 @@
+<div class="hero-slider__slide js-hero-slider__slide" {{#if video}}data-video="1"{{/if}}>
+  <div class="hero-slider__bg">
+    {{> components/image img=image img-mobile=(concat image '-mobile') ext="jpg"}}
+  </div>
+
+  {{#if video}}
+    <div class="hero-slider__video">
+      <video src="../assets/video/{{video}}.mp4" loop muted></video>
+    </div>
+  {{/if}}
+
+  <div class="hero-slider__content">
+    <div class="container">
+      <time datetime="{{ date }}" class="hero-slider__date">{{ date }}</time>
+      <span class="hero-slider__title">{{ title }}</span>
+      <p class="hero-slider__text">{{ text }}</p>
+    </div>
+  </div>
+</div>

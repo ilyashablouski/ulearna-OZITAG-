@@ -8,8 +8,8 @@
     display: block;
     border-radius: 100%;
     margin: 0 5px;
-    background: $color-gray;
     cursor: pointer;
+    background: $color-gray;
 
     &:first-child {
       margin-left: 0;
@@ -19,8 +19,12 @@
       margin-right: 0;
     }
 
-    &-active{
+    &-active {
       background: $color-blue;
+
+      &:hover {
+        background: $color-blue;
+      }
     }
   }
 }
