@@ -1,4 +1,4 @@
-<div class="catalog-main">
+<div class="catalog-main js-catalog-filter">
   <div class="catalog-main__search">
     {{#if search}}
       {{> widgets/search-input placeholder="Search for courses, skills, instructor" value="Graphic Design" big=true }}
@@ -7,7 +7,7 @@
     {{/if}}
 
     <div class="catalog-main__search-right">
-      <button class="catalog-main__search-button"></button>
+      <button class="catalog-main__search-button js-catalog-filter__search-toggle"></button>
     </div>
   </div>
 
@@ -18,7 +18,7 @@
       </div>
       <div class="catalog-main__header-right">
         <div class="catalog-main__header-action">
-          {{> ui/btn-icon icon="button-reset" label="Reset Filters"}}
+          {{> ui/btn-icon icon="button-reset" mod="js-catalog-filter__reset" label="Reset Filters"}}
         </div>
         <div class="catalog-main__header-action">
           {{> ui/btn color="blue" label="Filters" icon="button-arrow-down" icon-right=true mod="js-accord__toggle"}}

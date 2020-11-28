@@ -14,28 +14,29 @@ import './src/utils/scroll-to';
 import './src/utils/scroll-to-link';
 import './src/utils/input-filter';
 
+import './src/widgets/popups';
+import './src/widgets/accord';
+
 import './src/widgets/inputs/numeric-input';
 import './src/widgets/inputs/masked-input';
 import './src/widgets/inputs/datepicker';
 import './src/widgets/inputs/select';
-
-import './src/widgets/popups';
-import './src/widgets/accord';
-
-import './src/widgets/header/header-burger';
-import './src/widgets/header/header-fixed';
-import './src/widgets/header/header-menu';
-import './src/widgets/header/header-search';
-import './src/widgets/header/header';
-
-import './src/widgets/home-students';
-import './src/widgets/hero-slider';
 
 import './src/widgets/carousel';
 import './src/widgets/mobile-slider';
 import './src/widgets/link-select';
 import './src/widgets/video-link';
 import './src/widgets/plan-select';
+
+import './src/modules/header/header-burger';
+import './src/modules/header/header-fixed';
+import './src/modules/header/header-menu';
+import './src/modules/header/header-search';
+import './src/modules/header/header';
+
+import './src/modules/home-students';
+import './src/modules/hero-slider';
+import './src/modules/catalog-filter';
 
 import './src/app';
 

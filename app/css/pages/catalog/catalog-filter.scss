@@ -1,4 +1,100 @@
 .catalog-filter {
+
+  @include smallTablet-and-mobile {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: $color-white;
+    z-index: 10;
+
+    display: none;
+    .catalog-main.mobile-opened & {
+      display: block;
+    }
+  }
+
+  &__header, &__footer {
+    @include no-smallTablet {
+      display: none;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $color-gray;
+    padding: 15px 0;
+    position: relative;
+
+    @include tablet {
+      padding-left: $tabletGutter;
+      padding-right: $tabletGutter;
+    }
+
+    @include mobile {
+      padding-left: $mobileGutter;
+      padding-right: $mobileGutter;
+    }
+
+
+    &-title {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 27px;
+      color: $color-black;
+      display: block;
+    }
+
+    &-close {
+      @include sprite('catalog-filter-close');
+      position: absolute;
+      @include align(false, true);
+
+      right: $tabletGutter;
+      @include mobile {
+        right: $mobileGutter;
+      }
+    }
+  }
+
+  &__main {
+    @include smallTablet-and-mobile {
+      position: fixed;
+      top: 80px;
+      bottom: 80px;
+      left: 0;
+      right: 0;
+      overflow-y: auto;
+      padding-bottom: 20px;
+
+      padding-left: $tabletGutter;
+      padding-right: $tabletGutter;
+      @include mobile {
+        padding-left: $mobileGutter;
+        padding-right: $mobileGutter;
+      }
+    }
+  }
+
+  &__footer {
+    position: fixed;
+    bottom: 20px;
+
+    .btn {
+      width: 100%;
+    }
+
+    left: $tabletGutter;
+    right: $tabletGutter;
+    @include mobile {
+      left: $mobileGutter;
+      right: $mobileGutter;
+    }
+  }
+
+
   &__title {
     font-weight: 600;
     font-size: 16px;
@@ -22,6 +118,10 @@
         flex-wrap: wrap;
         margin-top: 10px;
       }
+
+      @include mobile {
+        display: block;
+      }
     }
   }
 
@@ -35,6 +135,13 @@
     @include tablet {
       flex-basis: 50%;
       margin-top: 20px;
+    }
+
+    @include mobile {
+      margin-top: 20px;
+      &:first-child {
+        margin-top: 0;
+      }
     }
   }
 
