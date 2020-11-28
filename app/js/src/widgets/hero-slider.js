@@ -12,6 +12,7 @@ class HeroSlider extends Widget {
     this.$pagination = null;
     this.initialized = false;
 
+    this.$buttons = null;
     this.$soundButton = null;
     this.$playButton = null;
 
@@ -44,6 +45,10 @@ class HeroSlider extends Widget {
         clickable: true,
       },
     });
+
+    this.swiper.on('slideChange', () => {
+      this.initializeSlide(this.$slides[this.swiper.activeIndex]);
+    });
   }
 
   createSliderElements() {
@@ -63,21 +68,21 @@ class HeroSlider extends Widget {
   }
 
   createVideoElements() {
-    const $buttons = document.createElement('div');
-    $buttons.classList.add('hero-slider__buttons');
+    this.$buttons = document.createElement('div');
+    this.$buttons.classList.add('hero-slider__buttons');
 
     this.$playButton = document.createElement('button');
     this.$playButton.classList.add('hero-slider__button');
     this.$playButton.classList.add('hero-slider__button--toggle');
     this.$playButton.classList.add('js-hero-slider__slide-toggle');
-    $buttons.appendChild(this.$playButton);
+    this.$buttons.appendChild(this.$playButton);
 
     this.$soundButton = document.createElement('button');
     this.$soundButton.innerText = 'Sound On';
     this.$soundButton.classList.add('hero-slider__button');
     this.$soundButton.classList.add('hero-slider__button--sound');
     this.$soundButton.classList.add('js-hero-slider__slide-sound');
-    $buttons.appendChild(this.$soundButton);
+    this.$buttons.appendChild(this.$soundButton);
 
     this.$soundButton.addEventListener('click', e => {
       e.preventDefault();
@@ -89,7 +94,7 @@ class HeroSlider extends Widget {
       this.onPlayClick();
     });
 
-    this.$node.appendChild($buttons);
+    this.$node.appendChild(this.$buttons);
   }
 
   onSoundClick() {
@@ -130,16 +135,23 @@ class HeroSlider extends Widget {
     }
   }
 
+  toggleVideoButtons(state) {
+    this.$buttons.classList.toggle('hidden', !state);
+  }
+
   initializeSlide($slide) {
     if (this.currentVideo) {
-      this.currentVideo.stop();
+      this.currentVideo.pause();
     }
 
     this.currentVideo = $slide.querySelector('video');
 
     if (!this.currentVideo) {
+      this.toggleVideoButtons(false);
       return;
     }
+
+    this.toggleVideoButtons(true);
 
     if (this.playEnabled) {
       this.currentVideo.play();

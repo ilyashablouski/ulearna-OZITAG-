@@ -133,6 +133,12 @@
     top: 30px;
     display: flex;
     z-index: 2;
+    opacity: 1;
+    @include transition;
+
+    &.hidden {
+      opacity: 0;
+    }
   }
 
   &__button {
@@ -164,7 +170,7 @@
         @include sprite('hero-video-pause');
       }
 
-      &._paused:before{
+      &._paused:before {
         @include sprite('hero-video-play');
       }
     }
@@ -180,7 +186,7 @@
         @include sprite('hero-video-sound-on');
       }
 
-      &._off:before{
+      &._off:before {
         @include sprite('hero-video-sound-off');
       }
     }
