@@ -37,4 +37,12 @@
       border-color: $color-blue;
     }
   }
+
+  &--big{
+    .search-input{
+      &__input{
+        height: 55px;
+      }
+    }
+  }
 }

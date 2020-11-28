@@ -1,0 +1,29 @@
+<div class="catalog-main">
+  <div class="catalog-main__search">
+    {{> widgets/search-input placeholder="Search for courses, skills, instructor" big=true}}
+  </div>
+
+  <div class="js-catalog-filter js-accord">
+    <div class="catalog-main__header">
+      <div class="catalog-main__header-left">
+        <span class="catalog-main__title">Creative Writing</span>
+      </div>
+      <div class="catalog-main__header-right">
+        <div class="catalog-main__header-action">
+          <button>Reset Filters</button>
+        </div>
+        <div class="catalog-main__header-action">
+          {{> ui/btn color="blue" label="Filters" arrow=true mod="js-accord__toggle"}}
+        </div>
+      </div>
+    </div>
+
+    <div class="catalog-main__filter js-accord__body">
+      {{> blocks/catalog/filter }}
+    </div>
+  </div>
+
+  <div class="catalog-main__results">
+    {{> blocks/catalog/results }}
+  </div>
+</div>
