@@ -1,16 +1,18 @@
-{{#> modules/carousel/_component title=title see-all=true}}
-  <div class="carousel__slide swiper-slide js-carousel__item">
-    {{> widgets/course-card
+{{#> modules/carousel/_component title=title big=true  see-all=true}}
+  {{# times 3}}
+  <div class="swiper-slide carousel__slide js-carousel__item">
+    {{> widgets/course-card big=true progress=25 free=true
             image="carousel/big_01"
             title="Customizing Type with Draplin: Creating Wordmarks That Work"
             author="by Kaylynn Dorwart"
     }}
   </div>
-  <div class="carousel__slide swiper-slide js-carousel__item">
-    {{> widgets/course-card
+  <div class="swiper-slide carousel__slide js-carousel__item">
+    {{> widgets/course-card big=true progress=75 original=true
             image="carousel/big_02"
             title="Productivity Masterclass: Create a Custom System that Works"
             author="by Leo Workman"
     }}
   </div>
+  {{/times}}
 {{/modules/carousel/_component}}

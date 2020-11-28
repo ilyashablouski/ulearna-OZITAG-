@@ -1,4 +1,4 @@
-<div class="course-card">
+<div class="course-card {{#if big}}course-card--big{{/if}}">
   <a href="#" class="course-card__link"></a>
   <div class="course-card__image {{#if image}}{{else}}course-card__image--no-image{{/if}}">
     <div class="course-card__badges">
@@ -25,5 +25,14 @@
   <div class="course-card__content">
     <span class="course-card__title">{{ title }}</span>
     <span class="course-card__author">{{ author }}</span>
+
+    {{#if progress}}
+      <div class="course-card__progress">
+        <div class="course-card__progress-line">
+          <i class="course-card__progress-value" style="width: {{progress}}%"></i>
+        </div>
+        {{> ui/btn color="blue" label="Start"}}
+      </div>
+    {{/if}}
   </div>
 </div>

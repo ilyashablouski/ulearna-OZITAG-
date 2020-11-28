@@ -1,7 +1,7 @@
 <div class="carousel">
 
   <header class="carousel__header">
-    <h2 class="carousel__title">{{ title }}</h2>
+    <h2 class="carousel__title {{#if see-all}}{{else}}carousel__title--big{{/if}}">{{ title }}</h2>
     {{#if see-all}}
       <div class="carousel__right">
         {{> widgets/link-arrow label="See all"}}
@@ -9,7 +9,7 @@
     {{/if}}
   </header>
 
-  <div class="carousel__inner js-carousel">
+  <div class="carousel__inner js-carousel" {{#if big}}data-carousel-big="1"{{/if}}>
     {{#if tabs}}
       <div class="carousel__tabs">
         <div class="tabs">

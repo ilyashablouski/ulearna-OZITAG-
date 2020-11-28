@@ -11,15 +11,17 @@ class Carousel extends Widget {
     this.$navNext = this.queryElement('.next');
     this.$tabs = this.queryElements('.tab');
 
+    this.isBig = !!this.$node.dataset.carouselBig;
+
     this.init();
   }
 
   initSwiper() {
     this.swiper = new Swiper(this.$slider, {
-      slidesPerView: 4,
+      slidesPerView: this.isBig ? 2 : 4,
       spaceBetween: 0,
       1440: {
-        spaceBetween: 15
+        spaceBetween: 15,
       },
       navigation: {
         prevEl: this.$navPrev,
