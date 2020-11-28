@@ -25,6 +25,7 @@
 
     .course-card-image {
       &:after {
+        opacity: 1;
         background: rgba(1, 19, 64, 0.3);;
       }
     }

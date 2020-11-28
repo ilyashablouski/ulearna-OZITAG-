@@ -1,5 +1,6 @@
 .course-card-image {
   @include fill;
+  background: $color-gray;
 
   &--no-image {
     &:before {
@@ -14,6 +15,7 @@
     @include fill;
     background: rgba(0, 0, 0, 0.06);
     @include transition(0.4s);
+    opacity: 0;
   }
 
   img {
@@ -42,7 +44,6 @@
     }
   }
 
-
   &__badges {
     position: absolute;
     left: 10px;
@@ -51,7 +52,6 @@
     align-items: center;
     z-index: 1;
   }
-
 
   &__plus {
     position: absolute;
