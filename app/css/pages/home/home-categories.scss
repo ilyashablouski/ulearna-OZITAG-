@@ -7,6 +7,8 @@
     padding: 0 0 40px 0;
   }
 
+  @include reset-footer-margin;
+
   &__inner {
     display: flex;
 

@@ -1,22 +1,17 @@
-<section class="home-hero">
-  <div class="home-hero__bg">
-    {{>components/image img="home/hero-bg" mobile-img="home/hero-bg-mobile" ext="jpg" no-2x=true}}
-  </div>
-  <div class="container">
-    <div class="home-hero__inner">
-      <i class="home-hero__icon home-hero__icon--1"></i>
-      <i class="home-hero__icon home-hero__icon--2"></i>
-      <i class="home-hero__icon home-hero__icon--3"></i>
-      <i class="home-hero__icon home-hero__icon--4"></i>
+{{#> blocks/common/section-background image="home/hero-bg" up=true}}
+  <div class="home-hero__inner">
+    <i class="home-hero__icon home-hero__icon--1"></i>
+    <i class="home-hero__icon home-hero__icon--2"></i>
+    <i class="home-hero__icon home-hero__icon--3"></i>
+    <i class="home-hero__icon home-hero__icon--4"></i>
 
-      <h1 class="home-hero__title">Transformative Learning Space for curious minds</h1>
-      <p class="home-hero__text">Ulearna is a platform facilitating a community of students and instructors all over the
-        world to share career based skills and knowledge without boundaries.</p>
-      <div class="home-hero__search">
-        <form action="#" method="get">
-          {{> widgets/submit-input search=true placeholder="What do you want to learn?" label="Find Best Course" big=true}}
-        </form>
-      </div>
+    <h1 class="home-hero__title">Transformative Learning Space for curious minds</h1>
+    <p class="home-hero__text">Ulearna is a platform facilitating a community of students and instructors all over the
+      world to share career based skills and knowledge without boundaries.</p>
+    <div class="home-hero__search">
+      <form action="#" method="get">
+        {{> widgets/submit-input search=true placeholder="What do you want to learn?" label="Find Best Course" big=true}}
+      </form>
     </div>
   </div>
-</section>
+{{/blocks/common/section-background}}

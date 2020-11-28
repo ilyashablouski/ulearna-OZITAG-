@@ -2,6 +2,11 @@
   position: relative;
   text-align: center;
   color: $color-white;
+  padding: 90px 0 83px;
+
+  @include mobile{
+    padding: 56px 0 150px;
+  }
 
   @include tablet-and-mobile{
     text-align: left;
@@ -20,14 +25,6 @@
     }
   }
 
-  &__inner {
-    padding: 90px 0 83px;
-    position: relative;
-
-    @include mobile{
-      padding: 56px 0 150px;
-    }
-  }
 
   &__title {
     font-weight: bold;

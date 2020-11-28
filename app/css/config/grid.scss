@@ -12,3 +12,13 @@ $mobileGutter: 16px;
 
 //Grid gutter
 $gridGutter: 10px;
+
+
+$footerMarginDesktop: 100px;
+$footerMarginMobile: 60px;
+@mixin reset-footer-margin {
+  margin-bottom: -$footerMarginDesktop;
+  @include smallTablet-and-mobile {
+    margin-bottom: -$footerMarginMobile;
+  }
+}

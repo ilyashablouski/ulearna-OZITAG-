@@ -1,0 +1,16 @@
+.home-search {
+  padding: 60px 0;
+
+  &__title {
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 57px;
+    text-align: center;
+    display: block;
+  }
+
+  &__field {
+    max-width: 840px;
+    margin: 40px auto 0;
+  }
+}

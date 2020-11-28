@@ -1,9 +1,22 @@
 .home-video {
-  position: relative;
+  padding-top: 111px;
+  min-height: 580px;
 
-  margin-bottom: -40px;
-  @include mobile{
-    margin-bottom: 0;
+  @include smallTablet-and-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 44px;
+  }
+
+  @include smallTablet {
+    min-height: 0;
+    padding-top: 27%;
+    padding-bottom: 0;
+  }
+
+  @include mobile {
+    padding-top: 56%;
   }
 
   &__bg {
@@ -19,16 +32,6 @@
     &-image {
       @include fill;
       z-index: 1;
-    }
-
-    @include no-smallTablet {
-      &:before {
-        content: '';
-        @include fill;
-        z-index: 2;
-        background: url($images_dir + 'home/video-bg-mask.png');
-        background-size: 100% 100%;
-      }
     }
   }
 
@@ -104,13 +107,13 @@
       padding-bottom: 44px;
     }
 
-    @include smallTablet{
+    @include smallTablet {
       min-height: 0;
       padding-top: 27%;
       padding-bottom: 0;
     }
 
-    @include mobile{
+    @include mobile {
       padding-top: 56%;
     }
   }
@@ -129,7 +132,7 @@
       color: $color-blue;
     }
 
-    @include mobile{
+    @include mobile {
       font-size: 28px;
       line-height: 42px;
       text-align: left;
@@ -141,19 +144,19 @@
     display: flex;
     justify-content: center;
 
-    @include smallTablet-and-mobile{
+    @include smallTablet-and-mobile {
       margin-top: 40px;
     }
 
-    @include mobile{
+    @include mobile {
       display: block;
       margin-top: 30px;
-      .btn{
+      .btn {
         width: 100%;
       }
     }
 
-    @include smallTablet{
+    @include smallTablet {
       padding-bottom: 50px;
     }
   }

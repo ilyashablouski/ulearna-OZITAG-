@@ -1,0 +1,10 @@
+<section class="section section--background{{#if up}} section--up{{/if}}">
+  <div class="section__background {{#if shape}}section__background--shape{{/if}}">
+    {{> components/image img=image img-mobile=(concat image '-mobile')  ext="jpg" no-2x=true}}
+  </div>
+  <div class="section__inner">
+    <div class="container">
+      {{> @partial-block }}
+    </div>
+  </div>
+</section>

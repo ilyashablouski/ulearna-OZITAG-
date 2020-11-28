@@ -1,18 +1,13 @@
-<section class="home-video">
-  <div class="home-video__bg">
-    {{>components/image img="home/video-bg" img-mobile="home/video-bg-mobile" ext="jpg" no-2x=true}}
-  </div>
-  <a href="https://www.youtube.com/watch?v=ze_ie8Ctp60" target="_blank" data-youtube-id="ze_ie8Ctp60"
-     class="js-video-link home-video__watch">
-    Watch Full Video
-  </a>
-  <div class="container">
-    <div class="home-video__inner">
+{{#> blocks/common/section-background image="home/video-bg" shape=true}}
+  <div class="home-video">
+    <a href="https://www.youtube.com/watch?v=ze_ie8Ctp60" target="_blank" data-youtube-id="ze_ie8Ctp60"
+       class="js-video-link home-video__watch">
+      Watch Full Video
+    </a>
       <span class="home-video__title">Join <strong class="home-video__title-bold">Ulearna</strong> to watch, read, learn, create, debate ideas and Inspire</span>
       <div class="home-video__cta">
         {{> ui/btn size="large" color="orange" label="Get Started For Free"}}
       </div>
-    </div>
+    <button class="home-video__scroll js-scroll-to" data-target=".home-featured"></button>
   </div>
-  <button class="home-video__scroll js-scroll-to" data-target=".home-featured"></button>
-</section>
+{{/blocks/common/section-background}}

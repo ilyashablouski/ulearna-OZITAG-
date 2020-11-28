@@ -1,0 +1,47 @@
+.section {
+
+  &--up {
+    margin-top: -100px;
+    @include tablet-and-mobile {
+      margin-top: -80px;
+    }
+  }
+
+  &--background {
+    position: relative;
+
+    &:before {
+      content: '';
+      background: $color-blue-light;
+      z-index: -1;
+      @include fill;
+    }
+  }
+
+  &__background {
+    @include fill;
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &--shape{
+      @include no-smallTablet {
+        &:before {
+          content: '';
+          @include fill;
+          z-index: 2;
+          background: url($images_dir + 'home/video-bg-mask.png');
+          background-size: 100% 100%;
+        }
+      }
+    }
+  }
+
+  &__inner {
+    position: relative;
+  }
+}

@@ -1,5 +1,8 @@
 .footer {
-  box-shadow: inset 0px 1px 0px #DAE4ED;
+  border-top: 1px solid $color-gray;
+  &--no-border{
+    border-top: 0 none;
+  }
 
   &__main {
     padding: 50px 0 58px;
