@@ -68,6 +68,8 @@
   }
 
   &--button {
+    text-align: center;
+
     .form-checkbox__label {
       padding-left: 0;
     }
@@ -85,12 +87,19 @@
       &:before, &:after {
         display: none;
       }
+
+      &:hover{
+        color: $color-dark-hover;
+      }
     }
 
     input:checked + .form-checkbox__inner {
       background: $color-blue;
       color: $color-white;
       border-color: $color-blue;
+      &:hover{
+        color: $color-white;
+      }
     }
   }
 }

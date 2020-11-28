@@ -1,6 +1,10 @@
 <div class="catalog-main">
   <div class="catalog-main__search">
-    {{> widgets/search-input placeholder="Search for courses, skills, instructor" value="Graphic Design" big=true}}
+    {{#if search}}
+      {{> widgets/search-input placeholder="Search for courses, skills, instructor" value="Graphic Design" big=true }}
+    {{else}}
+      {{> widgets/search-input placeholder="Search for courses, skills, instructor" big=true }}
+    {{/if}}
   </div>
 
   <div class="js-catalog-filter js-accord">
