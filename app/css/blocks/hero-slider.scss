@@ -2,8 +2,21 @@
   padding-top: 31.25%;
   position: relative;
   overflow: hidden;
-  text-align: center;
+
+  @include no-mobile {
+    text-align: center;
+  }
+
   color: $color-white;
+
+  @include tablet {
+    height: 450px;
+    padding-top: 0;
+  }
+
+  @include mobile {
+    padding-top: 120%;
+  }
 
   &__inner {
     @include fill;
@@ -11,6 +24,7 @@
 
   &__slide {
     height: 100%;
+    padding: 50px 0;
 
     /*
       &:before {
@@ -37,6 +51,10 @@
     @include circle(60px, transparent);
     @include align(false, true);
     z-index: 1;
+
+    @include smallTablet-and-mobile {
+      display: none;
+    }
 
     @include transition;
 
@@ -88,9 +106,18 @@
     @include fill;
     z-index: -1;
 
+    @include mobile{
+      overflow: hidden;
+    }
+
     video {
       width: 100%;
       @include align(true, true);
+
+      @include mobile{
+        height: 100%;
+        width: auto;
+      }
     }
   }
 
@@ -100,6 +127,12 @@
     color: $color-orange;
     display: block;
     margin-bottom: 5px;
+
+    @include smallTablet-and-mobile {
+      font-size: 14px;
+      line-height: 21px;
+      margin-bottom: 8px;
+    }
   }
 
   &__title {
@@ -110,6 +143,17 @@
     margin: 0 auto;
     width: 615px;
     display: block;
+
+    @include smallTablet-and-mobile {
+      font-weight: bold;
+      font-size: 35px;
+      line-height: 52px;
+      width: auto;
+    }
+
+    @include mobile {
+      text-align: left;
+    }
   }
 
   &__text {
@@ -119,6 +163,19 @@
     margin-top: 30px;
     display: block;
     text-align: center;
+
+    @include smallTablet-and-mobile {
+      font-size: 14px;
+      line-height: 21px;
+      margin-top: 16px;
+    }
+    @include mobile {
+      text-align: left;
+    }
+
+    @include mobile {
+      text-align: left;
+    }
   }
 
   .swiper-pagination {
@@ -138,6 +195,13 @@
 
     &.hidden {
       opacity: 0;
+    }
+
+    @include mobile {
+      left: 16px;
+      right: 16px;
+      top: 16px;
+      justify-content: space-between;
     }
   }
 

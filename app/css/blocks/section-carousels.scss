@@ -3,12 +3,22 @@
   &__item {
     margin: 100px 0;
 
+    @include smallTablet-and-mobile {
+      margin: 40px 0;
+    }
+
     &:first-child {
       margin-top: 80px;
+      @include smallTablet-and-mobile {
+        margin-top: 30px;
+      }
     }
 
     &:last-child {
       margin-bottom: 40px;
+      @include smallTablet-and-mobile {
+        margin-bottom: 0;
+      }
     }
   }
 }

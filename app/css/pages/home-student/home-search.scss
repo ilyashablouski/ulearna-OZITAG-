@@ -1,16 +1,31 @@
 .home-search {
   padding: 60px 0;
 
+  @include smallTablet-and-mobile{
+    padding: 40px 0;
+  }
+
   &__title {
     font-weight: bold;
     font-size: 38px;
     line-height: 57px;
     text-align: center;
     display: block;
+
+    @include mobile{
+      font-size: 22px;
+      text-align: left;
+      line-height: 33px;
+    }
   }
 
   &__field {
     max-width: 840px;
     margin: 40px auto 0;
+
+    @include smallTablet-and-mobile{
+      max-width: 100%;
+      margin-top: 20px;
+    }
   }
 }

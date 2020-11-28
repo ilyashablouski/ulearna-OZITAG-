@@ -7,6 +7,13 @@
   padding-right: 18px;
   display: inline-block;
   position: relative;
+  white-space: nowrap;
+
+  @include mobile{
+    padding-right: 0;
+    font-size: 14px;
+    line-height: 21px;
+  }
 
   &:after {
     content: '';
@@ -14,6 +21,10 @@
     right: 0;
     @include align(false, true);
     @include transition;
+
+    @include mobile{
+      display: none;
+    }
   }
 
   &:hover {
