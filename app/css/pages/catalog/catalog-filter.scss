@@ -28,6 +28,10 @@
     padding: 15px 0;
     position: relative;
 
+    @include no-smallTablet{
+      display: none;
+    }
+
     @include tablet {
       padding-left: $tabletGutter;
       padding-right: $tabletGutter;
