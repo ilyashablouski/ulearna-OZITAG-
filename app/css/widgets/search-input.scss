@@ -42,6 +42,9 @@
     .search-input{
       &__input{
         height: 55px;
+        @include smallTablet-and-mobile{
+          height: 42px;
+        }
       }
     }
   }
