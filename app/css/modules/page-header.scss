@@ -1,7 +1,18 @@
 .page-header {
   background: linear-gradient(0deg, #33C2FF 0%, #7AD7FF 137.49%);
-  padding: 22px 0;
   color: $color-white;
+
+  padding: 50px 0 40px;
+  @include smallTablet-and-mobile {
+    padding: 22px 0 30px;
+  }
+
+  &--center {
+    padding: 22px 0;
+    @include smallTablet-and-mobile {
+      padding: 22px 0;
+    }
+  }
 
   &__wrapper {
     position: relative;
@@ -12,13 +23,10 @@
   }
 
   &__back {
-    position: absolute;
-    left: 0;
-    @include align(false, true);
 
     &-link {
       font-size: 15px;
-      line-height: 22px;
+      line-height: 23px;
       letter-spacing: 0.02em;
       color: $color-white;
       font-weight: bold;
@@ -41,33 +49,62 @@
       }
     }
 
-    @include mobile {
-      display: block;
-      position: static;
-      transform: none;
+    .page-header--center & {
+      position: absolute;
+      left: 0;
+      @include align(false, true);
+
+      @include mobile {
+        display: block;
+        position: static;
+        transform: none;
+        text-align: left;
+      }
     }
   }
 
   &__inner {
-    text-align: center;
+    margin: 30px 0 0 0;
+
+    .page-header--center & {
+      text-align: center;
+
+      @include mobile {
+        margin-top: 20px;
+        text-align: left;
+      }
+    }
 
     @include mobile {
       text-align: left;
-      padding-top: 20px;
     }
   }
 
   &__title {
-    font-weight: 600;
-    font-size: 29px;
-    line-height: 43px;
-    margin: 0;
     position: relative;
-    display: inline-block;
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 84px;
+    display: block;
+    margin: 0;
 
-    @include mobile {
-      font-size: 18px;
-      line-height: 27px;
+    @include smallTablet-and-mobile {
+      font-size: 28px;
+      line-height: 42px;
+    }
+
+    .page-header--center & {
+      margin: 0;
+      font-size: 29px;
+      line-height: 43px;
+      font-weight: 600;
+      display: inline-block;
+
+      @include smallTablet-and-mobile {
+        font-size: 18px;
+        line-height: 27px;
+        margin: 0;
+      }
     }
 
     &--success {
