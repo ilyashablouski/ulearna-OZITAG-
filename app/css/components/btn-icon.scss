@@ -1,0 +1,19 @@
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+
+  color: $color-gray-dark;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  font-weight: bold;
+  @include transition;
+
+  svg{
+    margin-right: 6px;
+  }
+
+  &:hover{
+    color: $color-gray-dark-hover;
+  }
+}

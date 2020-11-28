@@ -38,6 +38,9 @@
   {{#> core/ui-kit/widget title='.btn' width=200}}
     {{> ui/btn label="Logout" color="blue" icon="button-logout"}}
   {{/core/ui-kit/widget}}
+  {{#> core/ui-kit/widget title='.btn (Icon Right)' width=200}}
+    {{> ui/btn color="blue" button=true label="Filters" icon="button-arrow-down" icon-right=true}}
+  {{/core/ui-kit/widget}}
 {{/core/ui-kit/row}}
 
 {{#> core/ui-kit/row id=null title=null }}
@@ -48,3 +51,11 @@
     {{> ui/btn color="blue" size="large" label="Button" note="Note"}}
   {{/core/ui-kit/widget}}
 {{/core/ui-kit/row}}
+
+{{#> core/ui-kit/row id=null title=null }}
+  {{#> core/ui-kit/widget title='.btn-icon (Reset)' width=200}}
+    {{> ui/btn-icon icon="button-reset" label="Reset Filters"}}
+  {{/core/ui-kit/widget}}
+{{/core/ui-kit/row}}
+
+

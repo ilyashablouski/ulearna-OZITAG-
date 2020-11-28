@@ -15,6 +15,7 @@
   justify-content: center;
 
   svg {
+    @include transition;
     margin-right: 6px;
   }
 
@@ -104,5 +105,12 @@
     line-height: 140%;
     font-weight: normal;
     text-align: center;
+  }
+
+  &--icon-right{
+    flex-direction: row-reverse;
+    svg{
+      margin: 0 0 0 8px;
+    }
   }
 }

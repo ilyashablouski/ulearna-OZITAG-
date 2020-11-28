@@ -20,6 +20,24 @@
       &:first-child {
         margin-left: 0;
       }
+
+      .btn {
+        min-width: 174px;
+        font-size: 18px;
+        line-height: 27px;
+        letter-spacing: 0.01em;
+        padding: 10px;
+
+        svg{
+          font-size: 12px;
+        }
+      }
+
+      .opened & .btn {
+        svg {
+          transform: rotate(180deg);
+        }
+      }
     }
   }
 
@@ -37,6 +55,7 @@
     padding: 40px 0;
 
     display: none;
+
     .opened & {
       display: block;
     }
