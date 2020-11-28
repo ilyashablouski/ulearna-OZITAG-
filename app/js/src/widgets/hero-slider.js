@@ -100,6 +100,12 @@ class HeroSlider extends Widget {
   onSoundClick() {
     this.soundEnabled = !this.soundEnabled;
     this.drawSoundButton();
+
+    if (!this.currentVideo) {
+      return;
+    }
+
+    this.currentVideo.muted = !this.soundEnabled;
   }
 
   onPlayClick() {
@@ -158,6 +164,8 @@ class HeroSlider extends Widget {
     } else {
       this.currentVideo.pause();
     }
+
+    this.currentVideo.muted = !this.soundEnabled;
   }
 
   build() {
