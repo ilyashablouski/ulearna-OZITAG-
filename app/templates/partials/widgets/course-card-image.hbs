@@ -1,4 +1,5 @@
-<div class="course-card-image {{#if image}}{{else}}course-card-image--no-image{{/if}}">
+<div class="course-card-image {{#if image}}{{else}}course-card-image--no-image{{/if}} {{#if
+        added}}course-card-image--added{{/if}}">
   <div class="course-card-image__badges">
     {{#if free}}
       <span class="course-card-image__badge">Free</span>
@@ -15,6 +16,8 @@
   <button class="course-card-image__wish">
     {{> ui/svg name="course-wish"}}
   </button>
+
+  <span class="course-card-image__tip">Add to wish list</span>
 
   <i class="course-card-image__play"></i>
 
