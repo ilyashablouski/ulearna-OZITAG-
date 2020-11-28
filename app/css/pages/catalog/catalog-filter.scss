@@ -18,6 +18,10 @@
 
     &--row {
       display: flex;
+      @include tablet {
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
     }
   }
 
@@ -26,6 +30,11 @@
 
     .form-checkbox {
       margin-top: 17px;
+    }
+
+    @include tablet {
+      flex-basis: 50%;
+      margin-top: 20px;
     }
   }
 

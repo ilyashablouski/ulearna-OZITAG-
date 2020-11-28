@@ -4,14 +4,26 @@
     display: flex;
     justify-content: space-between;
 
+    @include smallTablet-and-mobile{
+      display: block;
+    }
+
     &-left {
       flex: 1 1 1px;
       margin-right: 30px;
+
+      @include smallTablet-and-mobile{
+        margin-right: 0;
+      }
     }
 
     &-right {
       display: flex;
       align-items: center;
+      @include smallTablet-and-mobile{
+        margin-top: 20px;
+        justify-content: space-between;
+      }
     }
 
     &-action {

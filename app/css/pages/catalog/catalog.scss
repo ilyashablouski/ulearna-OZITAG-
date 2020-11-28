@@ -5,6 +5,17 @@
     display: flex;
   }
 
+  &__left{
+    width: 307px;
+    flex-basis: 307px;
+
+    @include smallTablet{
+      width: 260px;
+      flex-basis: 260px;
+    }
+  }
+
+
   &__main{
     flex: 1 1 1px;
     margin-left: 38px;
