@@ -22,6 +22,14 @@
       @include sprite('catalog-categories-plus');
     }
 
+    &:hover {
+      color: $color-gray-dark-hover;
+
+      &:before {
+        opacity: .85;
+      }
+    }
+
     .opened &:before {
       @include sprite('catalog-categories-minus');
     }

@@ -1,0 +1,16 @@
+.catalog-results {
+
+  &__row {
+    margin-top: 60px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__more {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+}

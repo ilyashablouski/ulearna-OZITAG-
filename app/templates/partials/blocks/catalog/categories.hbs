@@ -1,13 +1,14 @@
 <div class="catalog-categories">
   <ul class="catalog-categories__list">
-    <li class="catalog-categories__cell js-accord">
+
+    <li class="catalog-categories__cell js-accord {{#if active}}opened{{/if}}">
       <span class="catalog-categories__item js-accord__toggle">Create</span>
       <ul class="catalog-categories__subtree js-accord__body">
         <li class="catalog-categories__subtree-item">
           <a href="#" class="catalog-categories__subtree-link">Animation</a>
         </li>
         <li class="catalog-categories__subtree-item">
-          <a href="#" class="catalog-categories__subtree-link active">Creative Writing</a>
+          <a href="#" class="catalog-categories__subtree-link{{#if active}} active{{/if}}">Creative Writing</a>
         </li>
         <li class="catalog-categories__subtree-item">
           <a href="#" class="catalog-categories__subtree-link">Film & Video</a>

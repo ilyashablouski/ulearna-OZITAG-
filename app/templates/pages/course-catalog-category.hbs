@@ -1,4 +1,4 @@
-{{!Course Catalog - Search}}
+{{!Course Catalog - Category}}
 {{> layout/head}}
 {{> layout/header authenticated=true }}
 
@@ -8,10 +8,10 @@
   <div class="container">
     <div class="catalog__inner">
       <aside class="catalog__left">
-        {{> blocks/catalog/sidebar }}
+        {{> blocks/catalog/sidebar active=true }}
       </aside>
       <div class="catalog__main">
-        {{> blocks/catalog/main }}
+        {{> blocks/catalog/main search=false }}
       </div>
     </div>
   </div>

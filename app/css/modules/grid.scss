@@ -1,0 +1,22 @@
+.grid {
+  &__title {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 31px;
+    color: $color-black;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -40px -25px 0;
+  }
+
+  &__cell{
+    flex-basis: 33.333%;
+    padding: 0 25px;
+    margin-top: 40px;
+  }
+}

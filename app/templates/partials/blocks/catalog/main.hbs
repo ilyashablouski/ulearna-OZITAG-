@@ -1,12 +1,12 @@
 <div class="catalog-main">
   <div class="catalog-main__search">
-    {{> widgets/search-input placeholder="Search for courses, skills, instructor" big=true}}
+    {{> widgets/search-input placeholder="Search for courses, skills, instructor" value="Graphic Design" big=true}}
   </div>
 
   <div class="js-catalog-filter js-accord">
     <div class="catalog-main__header">
       <div class="catalog-main__header-left">
-        <span class="catalog-main__title">Creative Writing</span>
+        <span class="catalog-main__title">{{#if search}}Results{{else}}Creative Writing{{/if}}</span>
       </div>
       <div class="catalog-main__header-right">
         <div class="catalog-main__header-action">
@@ -24,6 +24,10 @@
   </div>
 
   <div class="catalog-main__results">
-    {{> blocks/catalog/results }}
+    {{#if search}}
+      {{> blocks/catalog/results-search }}
+    {{else}}
+      {{> blocks/catalog/results-category }}
+    {{/if}}
   </div>
 </div>
