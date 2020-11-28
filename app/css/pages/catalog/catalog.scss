@@ -1,23 +1,44 @@
 .catalog {
   margin-top: 40px;
 
-  &__inner {
-    display: flex;
+  @include smallTablet-and-mobile {
+    margin-top: 0;
   }
 
-  &__left{
-    width: 307px;
-    flex-basis: 307px;
+  &__inner {
+    display: flex;
 
-    @include smallTablet{
-      width: 260px;
-      flex-basis: 260px;
+    @include smallTablet-and-mobile {
+      display: block;
     }
   }
 
+  &__left {
+    width: 307px;
+    flex-basis: 307px;
 
-  &__main{
+    @include smallTablet-and-mobile {
+      width: auto;
+    }
+
+    @include smallTablet {
+      width: auto;
+      margin-left: -$tabletGutter;
+      margin-right: -$tabletGutter;
+    }
+
+    @include mobile {
+      width: auto;
+      margin-left: -$mobileGutter;
+      margin-right: -$mobileGutter;
+    }
+  }
+
+  &__main {
     flex: 1 1 1px;
     margin-left: 38px;
+    @include smallTablet-and-mobile {
+      margin: 20px 0 0 0;
+    }
   }
 }

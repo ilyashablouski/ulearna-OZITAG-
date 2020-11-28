@@ -6,6 +6,7 @@
 
     @include smallTablet-and-mobile{
       display: block;
+      margin-top: 20px;
     }
 
     &-left {
@@ -22,7 +23,7 @@
       align-items: center;
       @include smallTablet-and-mobile{
         margin-top: 20px;
-        justify-content: space-between;
+        justify-content: flex-start;
       }
     }
 
@@ -55,6 +56,10 @@
 
   &__results {
     margin-top: 40px;
+
+    @include smallTablet{
+      margin-top: 20px;
+    }
   }
 
   &__filter {
@@ -87,5 +92,9 @@
     line-height: 57px;
     color: $color-black;
     margin: 0;
+
+    @include smallTablet-and-mobile{
+      display: none;
+    }
   }
 }

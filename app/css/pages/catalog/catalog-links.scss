@@ -15,6 +15,16 @@
     letter-spacing: 0.02em;
     color: $color-black;
 
+    @include smallTablet {
+      padding-left: $tabletGutter;
+      padding-right: $tabletGutter;
+    }
+
+    @include mobile {
+      padding-left: $mobileGutter;
+      padding-right: $mobileGutter;
+    }
+
     &:hover {
       color: $color-blue;
     }

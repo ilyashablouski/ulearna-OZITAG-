@@ -1,4 +1,7 @@
-<div class="catalog-sidebar">
-  {{> blocks/catalog/links}}
-  {{> blocks/catalog/categories active=active}}
+<div class="catalog-sidebar js-accord">
+  <button class="catalog-sidebar__title js-accord__toggle">{{#if active}}Creative Writing{{else}}Results{{/if}}</button>
+  <div class="catalog-sidebar__body js-accord__body">
+    {{> blocks/catalog/links}}
+    {{> blocks/catalog/categories active=active}}
+  </div>
 </div>
