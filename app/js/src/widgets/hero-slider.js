@@ -1,3 +1,5 @@
+let initialized = false;
+
 class HeroSlider extends Widget {
   constructor(node) {
     super(node, '.js-hero-slider');
@@ -16,12 +18,12 @@ class HeroSlider extends Widget {
     this.soundEnabled = false;
     this.playEnabled = false;
 
+    this.currentVideo = null;
+
     this.onSoundClick = this.onSoundClick.bind(this);
     this.onPlayClick = this.onPlayClick.bind(this);
 
-    if (this.$slides.length) {
-      this.init();
-    }
+    this.init();
   }
 
   initSwiper() {
@@ -92,14 +94,22 @@ class HeroSlider extends Widget {
 
   onSoundClick() {
     this.soundEnabled = !this.soundEnabled;
-
     this.drawSoundButton();
   }
 
   onPlayClick() {
     this.playEnabled = !this.playEnabled;
-
     this.drawPlayButton();
+
+    if (!this.currentVideo) {
+      return;
+    }
+
+    if (this.playEnabled) {
+      this.currentVideo.play();
+    } else {
+      this.currentVideo.pause();
+    }
   }
 
   drawPlayButton() {
@@ -121,33 +131,36 @@ class HeroSlider extends Widget {
   }
 
   initializeSlide($slide) {
-    if (!$slide.dataset.video) {
+    if (this.currentVideo) {
+      this.currentVideo.stop();
+    }
+
+    this.currentVideo = $slide.querySelector('video');
+
+    if (!this.currentVideo) {
       return;
     }
-  }
 
-  resetSlide($slide) {
-    if (!$slide.dataset.video) {
-      return;
+    if (this.playEnabled) {
+      this.currentVideo.play();
+    } else {
+      this.currentVideo.pause();
     }
   }
-
 
   build() {
-    if (this.initialized) return;
-
-    if (this.$slides.length > 1) {
-      this.createSliderElements();
-      this.initSwiper();
-    }
-
     this.createVideoElements();
     this.drawPlayButton();
     this.drawSoundButton();
 
-    this.initializeSlide(this.$slides[0]);
+    if (this.$slides.length > 1) {
+      this.createSliderElements();
+      this.initSwiper();
 
-    this.initialized = true;
+      this.initializeSlide(this.$slides[this.swiper.activeIndex]);
+    } else {
+      this.initializeSlide(this.$slides[0]);
+    }
   }
 
   static init(el) {

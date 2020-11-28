@@ -1,11 +1,11 @@
-<div class="hero-slider__slide js-hero-slider__slide" {{#if video}}data-video="1"{{/if}}>
+<div class="hero-slider__slide js-hero-slider__slide">
   <div class="hero-slider__bg">
     {{> components/image img=image img-mobile=(concat image '-mobile') ext="jpg"}}
   </div>
 
   {{#if video}}
     <div class="hero-slider__video">
-      <video src="../assets/video/{{video}}.mp4" loop muted></video>
+      <video src="../assets/video/{{video}}.mp4" loop muted controls></video>
     </div>
   {{/if}}
 
