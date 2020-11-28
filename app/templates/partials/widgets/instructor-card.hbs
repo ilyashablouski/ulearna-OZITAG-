@@ -1,0 +1,26 @@
+<div class="instructor-card">
+  <a href="#" class="instructor-card__link"></a>
+  <div class="instructor-card__inner">
+
+    <div class="instructor-card__header">
+      <div class="instructor-card__header-image">
+        {{>components/image img=image ext="jpg"}}
+      </div>
+      <div class="instructor-card__header-content">
+        <span class="instructor-card__header-title">{{ name }}</span>
+        <span class="instructor-card__header-text">{{ position }}</span>
+      </div>
+    </div>
+
+    <div class="instructor-card__image">
+      {{> widgets/course-card-image image=course-image free=free original=original plus=plus}}
+    </div>
+
+    <div class="instructor-card__content">
+      <span class="instructor-card__title">{{ course-title }}</span>
+      <div class="instructor-card__content-bottom">
+        <a href="#" class="instructor-card__btn">+ {{other-count}} Other Courses</a>
+      </div>
+    </div>
+  </div>
+</div>

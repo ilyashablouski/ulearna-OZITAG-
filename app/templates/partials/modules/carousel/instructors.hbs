@@ -1,31 +1,32 @@
 {{#> modules/carousel/_component title=title see-all=true}}
   {{#times 3}}
     <div class="carousel__slide swiper-slide js-carousel__item">
-      {{> widgets/course-card original=true
-              image="home/featured/01"
-              title="Customizing Type with Draplin: Creating Wordmarks That Work"
-              author="by Leo Workman"
+      {{> widgets/instructor-card
+              image="carousel/instructor_01" name="Jaydon Dorwart" position="Senior developer"
+              course-title="Customizing Type with Draplin: Creating Wordmarks That Work"
+              other-count=8
       }}
     </div>
     <div class="carousel__slide swiper-slide js-carousel__item">
-      {{> widgets/course-card original=true
-              image="home/featured/02"
-              title="Productivity Masterclass: Create a Custom System that Works"
-              author="by Makenna Baptista"
+      {{> widgets/instructor-card
+              image="carousel/instructor_02" name="Zaire Saris" position="Senior developer"
+              course-title="Productivity Masterclass: Create a Custom System that Works"
+              other-count=12
       }}
     </div>
     <div class="carousel__slide swiper-slide js-carousel__item">
-      {{> widgets/course-card original=true
-              image="home/featured/03"
-              title="ODD BODIES: Illustrating Expressive, Stylized People"
-              author="by Leo Workman"
+      {{> widgets/instructor-card
+              image="carousel/instructor_03" name="Marilyn Lubin" position="Senior developer"
+              course-image="home/featured/01"
+              course-title="ODD BODIES: Illustrating Expressive, Stylized People"
+              other-count=3
       }}
     </div>
     <div class="carousel__slide swiper-slide js-carousel__item">
-      {{> widgets/course-card original=true
-              image="home/featured/04"
-              title="Fundamentals of DSLR Photography"
-              author="by Marley Torff"
+      {{> widgets/instructor-card
+              image="carousel/instructor_04" name="Charlie Levin" position="Senior developer"
+              course-title="Fundamentals of DSLR Photography"
+              other-count=6
       }}
     </div>
   {{/times}}

@@ -1,0 +1,24 @@
+<div class="course-card-image {{#if image}}{{else}}course-card-image--no-image{{/if}}">
+  <div class="course-card-image__badges">
+    {{#if free}}
+      <span class="course-card-image__badge">Free</span>
+    {{/if}}
+    {{#if original}}
+      <span class="course-card-image__badge course-card-image__badge--original"></span>
+    {{/if}}
+  </div>
+
+  {{#if plus}}
+    <span class="course-card-image__plus">UlearnaPlus</span>
+  {{/if}}
+
+  <button class="course-card-image__wish">
+    {{> ui/svg name="course-wish"}}
+  </button>
+
+  <i class="course-card-image__play"></i>
+
+  {{#if image}}
+    {{>components/image img=image ext="jpg"}}
+  {{/if}}
+</div>
