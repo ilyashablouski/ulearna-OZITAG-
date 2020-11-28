@@ -8,8 +8,11 @@ class HeroSlider extends Widget {
     this.$navPrev = null;
     this.$navNext = null;
     this.$pagination = null;
+    this.initialized = false;
 
-    this.init();
+    if (this.$slides.length) {
+      this.init();
+    }
   }
 
   initSwiper() {
@@ -35,7 +38,7 @@ class HeroSlider extends Widget {
   createSliderElements() {
     this.$navPrev = document.createElement('button');
     this.$navPrev.classList.add('hero-slider__nav');
-    this.$navPrev.classList.add('hero-slider__nav--prev')
+    this.$navPrev.classList.add('hero-slider__nav--prev');
     this.$node.appendChild(this.$navPrev);
 
     this.$navNext = document.createElement('button');
@@ -48,11 +51,48 @@ class HeroSlider extends Widget {
     this.$node.appendChild(this.$pagination);
   }
 
+  createVideoElements() {
+    this.$slides.forEach($slide => {
+      if (!$slide.dataset.video) {
+        return;
+      }
+
+      const $buttons = document.createElement('div');
+      $buttons.classList.add('hero-slider__buttons');
+
+      const $toggleButton = document.createElement('button');
+      $toggleButton.classList.add('hero-slider__button');
+      $toggleButton.classList.add('hero-slider__button--toggle');
+      $toggleButton.classList.add('js-hero-slider__slide-toggle');
+      $buttons.appendChild($toggleButton);
+
+      const $soundButton = document.createElement('button');
+      $soundButton.innerText = 'Sound On';
+      $soundButton.classList.add('hero-slider__button');
+      $soundButton.classList.add('hero-slider__button--sound');
+      $soundButton.classList.add('js-hero-slider__slide-sound');
+      $buttons.appendChild($soundButton);
+
+      $slide.appendChild($buttons);
+    });
+  }
+
+  initializeSlide($slide) {
+
+  }
+
+
   build() {
+    if (this.initialized) return;
     if (this.$slides.length > 1) {
+      this.createVideoElements();
       this.createSliderElements();
       this.initSwiper();
     }
+
+    this.initializeSlide(this.$slides[0]);
+
+    this.initialized = true;
   }
 
   static init(el) {

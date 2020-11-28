@@ -53,7 +53,7 @@
     &--next {
       right: 10px;
 
-      &:before{
+      &:before {
         transform: translateY(-50%) rotate(180deg);
         margin-left: -5px;
       }
@@ -121,9 +121,70 @@
     text-align: center;
   }
 
-  .swiper-pagination{
+  .swiper-pagination {
     @include align(true, false);
     bottom: 27px;
     z-index: 1;
+  }
+
+  &__buttons {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    display: flex;
+    z-index: 2;
+  }
+
+  &__button {
+    background: $color-gray-dark-20;
+    backdrop-filter: blur(44px);
+    border-radius: 8px;
+    display: inline-block;
+    height: 42px;
+    color: $color-white;
+    margin-left: 19px;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    @include transition;
+
+    &:hover {
+      background: $color-gray-dark;
+    }
+
+    &--toggle {
+      width: 48px;
+      height: 42px;
+
+      &:before {
+        content: '';
+        @include align(true, true);
+        @include sprite('hero-video-play');
+      }
+
+      &.active:before{
+        @include sprite('hero-video-pause');
+      }
+    }
+
+    &--sound {
+      padding: 0 16px 0 38px;
+
+      &:before {
+        content: '';
+        left: 16px;
+        @include align(false, true);
+        @include sprite('hero-video-sound-off');
+      }
+
+      &.active:before{
+        @include sprite('hero-video-sound-on');
+      }
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
   }
 }
