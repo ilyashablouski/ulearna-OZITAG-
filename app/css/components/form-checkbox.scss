@@ -19,9 +19,9 @@
   &__inner {
     font-size: 18px;
     line-height: 150%;
-    color: $color-black;
+    color: $color-gray-dark-hover;
 
-    @include mobile{
+    @include mobile {
       font-size: 14px;
       line-height: 21px;
     }
@@ -55,6 +55,8 @@
   }
 
   input:checked + .form-checkbox__inner {
+    color: $color-black;
+
     &:before {
       background: $color-blue;
       border-color: $color-blue;
@@ -62,6 +64,33 @@
 
     &:after {
       opacity: 1;
+    }
+  }
+
+  &--button {
+    .form-checkbox__label {
+      padding-left: 0;
+    }
+
+    .form-checkbox__inner {
+      padding: 8px 16px;
+      border: 1px solid $color-dark;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px;
+      color: $color-dark;
+      display: block;
+
+      &:before, &:after {
+        display: none;
+      }
+    }
+
+    input:checked + .form-checkbox__inner {
+      background: $color-blue;
+      color: $color-white;
+      border-color: $color-blue;
     }
   }
 }

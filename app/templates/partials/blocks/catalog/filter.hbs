@@ -1,9 +1,52 @@
 <div class="catalog-filter">
-  <p>11</p>
-  <p>11</p>
-  <p>11</p>
-  <p>11</p>
-  <p>11</p>
-  <p>11</p>
-  <p>11</p>
+  <div class="catalog-filter__row">
+    {{> ui/checkbox id="checkbox_01" label="Show free courses" }}
+  </div>
+  <div class="catalog-filter__row">
+    <span class="catalog-filter__title">Skills</span>
+    <ul class="catalog-filter__skills">
+      {{# times 14}}
+        <li class="catalog-filter__skills-item">
+          {{> ui/checkbox button=true id=(concat 'skill' this) label="Skill Name"}}
+        </li>
+      {{/times}}
+    </ul>
+  </div>
+  <div class="catalog-filter__row catalog-filter__row--row">
+    <div class="catalog-filter__cell">
+      <span class="catalog-filter__title">Language</span>
+      <div class="catalog-filter__items">
+        {{> ui/checkbox id="checkbox_01" label="English" }}
+        {{> ui/checkbox id="checkbox_02" label="Language 1" }}
+        {{> ui/checkbox id="checkbox_03" label="Language 2" }}
+        {{> ui/checkbox id="checkbox_04" label="Language 3" }}
+      </div>
+    </div>
+    <div class="catalog-filter__cell">
+      <span class="catalog-filter__title">Course level</span>
+      <div class="catalog-filter__items">
+        {{> ui/checkbox id="checkbox_05" label="Beginner" }}
+        {{> ui/checkbox id="checkbox_06" label="Intermediate" }}
+        {{> ui/checkbox id="checkbox_07" label="Advanced" }}
+        {{> ui/checkbox id="checkbox_08" label="Mixed" }}
+      </div>
+    </div>
+    <div class="catalog-filter__cell">
+      <span class="catalog-filter__title">Course length</span>
+      <div class="catalog-filter__items">
+        {{> ui/checkbox id="checkbox_09" label=">1h" }}
+        {{> ui/checkbox id="checkbox_10" label="1-3h" }}
+        {{> ui/checkbox id="checkbox_11" label="3-50h" }}
+      </div>
+    </div>
+    <div class="catalog-filter__cell">
+      <span class="catalog-filter__title">Taught by</span>
+      <div class="catalog-filter__items">
+        {{> ui/checkbox id="checkbox_12" label="University" }}
+        {{> ui/checkbox id="checkbox_13" label="Institution" }}
+        {{> ui/checkbox id="checkbox_14" label="Individual teacher" }}
+        {{> ui/checkbox id="checkbox_15" label="Ulearna Original" }}
+      </div>
+    </div>
+  </div>
 </div>

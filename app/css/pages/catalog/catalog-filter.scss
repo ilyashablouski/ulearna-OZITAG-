@@ -1,3 +1,42 @@
-.catalog-filter{
+.catalog-filter {
+  &__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: $color-gray-dark;
+    display: block;
+    margin-bottom: 17px;
+  }
 
+  &__row {
+    margin-top: 30px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &--row {
+      display: flex;
+    }
+  }
+
+  &__cell {
+    flex: 1 1 1px;
+
+    .form-checkbox {
+      margin-top: 17px;
+    }
+  }
+
+  &__skills {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px -10px 0 -10px;
+
+    &-item {
+      margin-top: 10px;
+      padding: 0 10px;
+    }
+  }
 }
