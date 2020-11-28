@@ -10,6 +10,15 @@ class HeroSlider extends Widget {
     this.$pagination = null;
     this.initialized = false;
 
+    this.$soundButton = null;
+    this.$playButton = null;
+
+    this.soundEnabled = false;
+    this.playEnabled = false;
+
+    this.onSoundClick = this.onSoundClick.bind(this);
+    this.onPlayClick = this.onPlayClick.bind(this);
+
     if (this.$slides.length) {
       this.init();
     }
@@ -52,43 +61,89 @@ class HeroSlider extends Widget {
   }
 
   createVideoElements() {
-    this.$slides.forEach($slide => {
-      if (!$slide.dataset.video) {
-        return;
-      }
+    const $buttons = document.createElement('div');
+    $buttons.classList.add('hero-slider__buttons');
 
-      const $buttons = document.createElement('div');
-      $buttons.classList.add('hero-slider__buttons');
+    this.$playButton = document.createElement('button');
+    this.$playButton.classList.add('hero-slider__button');
+    this.$playButton.classList.add('hero-slider__button--toggle');
+    this.$playButton.classList.add('js-hero-slider__slide-toggle');
+    $buttons.appendChild(this.$playButton);
 
-      const $toggleButton = document.createElement('button');
-      $toggleButton.classList.add('hero-slider__button');
-      $toggleButton.classList.add('hero-slider__button--toggle');
-      $toggleButton.classList.add('js-hero-slider__slide-toggle');
-      $buttons.appendChild($toggleButton);
+    this.$soundButton = document.createElement('button');
+    this.$soundButton.innerText = 'Sound On';
+    this.$soundButton.classList.add('hero-slider__button');
+    this.$soundButton.classList.add('hero-slider__button--sound');
+    this.$soundButton.classList.add('js-hero-slider__slide-sound');
+    $buttons.appendChild(this.$soundButton);
 
-      const $soundButton = document.createElement('button');
-      $soundButton.innerText = 'Sound On';
-      $soundButton.classList.add('hero-slider__button');
-      $soundButton.classList.add('hero-slider__button--sound');
-      $soundButton.classList.add('js-hero-slider__slide-sound');
-      $buttons.appendChild($soundButton);
-
-      $slide.appendChild($buttons);
+    this.$soundButton.addEventListener('click', e => {
+      e.preventDefault();
+      this.onSoundClick();
     });
+
+    this.$playButton.addEventListener('click', e => {
+      e.preventDefault();
+      this.onPlayClick();
+    });
+
+    this.$node.appendChild($buttons);
+  }
+
+  onSoundClick() {
+    this.soundEnabled = !this.soundEnabled;
+
+    this.drawSoundButton();
+  }
+
+  onPlayClick() {
+    this.playEnabled = !this.playEnabled;
+
+    this.drawPlayButton();
+  }
+
+  drawPlayButton() {
+    if (this.playEnabled) {
+      this.$playButton.classList.remove('_paused');
+    } else {
+      this.$playButton.classList.add('_paused');
+    }
+  }
+
+  drawSoundButton() {
+    if (this.soundEnabled) {
+      this.$soundButton.classList.remove('_off');
+      this.$soundButton.innerText = 'Sound On';
+    } else {
+      this.$soundButton.classList.add('_off');
+      this.$soundButton.innerText = 'Sound Off';
+    }
   }
 
   initializeSlide($slide) {
+    if (!$slide.dataset.video) {
+      return;
+    }
+  }
 
+  resetSlide($slide) {
+    if (!$slide.dataset.video) {
+      return;
+    }
   }
 
 
   build() {
     if (this.initialized) return;
+
     if (this.$slides.length > 1) {
-      this.createVideoElements();
       this.createSliderElements();
       this.initSwiper();
     }
+
+    this.createVideoElements();
+    this.drawPlayButton();
+    this.drawSoundButton();
 
     this.initializeSlide(this.$slides[0]);
 

@@ -148,6 +148,7 @@
     line-height: 22px;
     letter-spacing: 0.02em;
     @include transition;
+    text-align: left;
 
     &:hover {
       background: $color-gray-dark;
@@ -160,26 +161,27 @@
       &:before {
         content: '';
         @include align(true, true);
-        @include sprite('hero-video-play');
+        @include sprite('hero-video-pause');
       }
 
-      &.active:before{
-        @include sprite('hero-video-pause');
+      &._paused:before{
+        @include sprite('hero-video-play');
       }
     }
 
     &--sound {
-      padding: 0 16px 0 38px;
+      padding: 0 4px 0 38px;
+      min-width: 132px;
 
       &:before {
         content: '';
-        left: 16px;
+        left: 14px;
         @include align(false, true);
-        @include sprite('hero-video-sound-off');
+        @include sprite('hero-video-sound-on');
       }
 
-      &.active:before{
-        @include sprite('hero-video-sound-on');
+      &._off:before{
+        @include sprite('hero-video-sound-off');
       }
     }
 
