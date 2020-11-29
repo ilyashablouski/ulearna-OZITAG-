@@ -84,45 +84,7 @@
         }
       }
     }
-
-    @include mobile {
-      .submit-input__input {
-        padding-right: 40px;
-        font-size: 14px;
-
-        &:focus {
-          border-color: $color-blue;
-        }
-      }
-      .submit-input__button {
-        top: 0;
-        bottom: 0;
-        width: 50px;
-        height: auto;
-
-        .btn {
-          position: absolute;
-          font-size: 0;
-          background: transparent;
-          right: 0;
-          width: 50px;
-          bottom: 0;
-          height: auto;
-          top: 0;
-          padding: 0;
-
-          &:before {
-            content: '';
-            @include sprite('search-mobile-submit');
-            @include align(true, true);
-            right: 12px;
-            height: 12px;
-            padding: 0;
-          }
-        }
-      }
-    }
-
+    
     @include smallTablet-and-mobile {
       margin-top: 30px;
     }

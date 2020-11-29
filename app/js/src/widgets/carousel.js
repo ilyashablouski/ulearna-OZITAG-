@@ -1,6 +1,6 @@
 class Carousel extends Widget {
   constructor(node) {
-    super(node, '.js-carousel', 'desktop');
+    super(node, '.js-carousel');
 
     this.swiper = null;
     this.activeFilter = null;
@@ -13,7 +13,36 @@ class Carousel extends Widget {
 
     this.isBig = !!this.$node.dataset.carouselBig;
 
+    this.onLayoutChange = this.onLayoutChange.bind(this);
+
     this.init();
+  }
+
+  build() {
+    this.events();
+    this.default();
+
+    this.onLayoutChange();
+  }
+
+
+  onLayoutChange() {
+    if (Layout.isDesktopLayout()) {
+      this.initDesktop();
+    } else {
+      this.initMobile();
+    }
+  }
+
+  initDesktop() {
+    this.initSwiper();
+  }
+
+  initMobile() {
+    if (this.swiper) {
+      this.swiper.destroy(true, true);
+      this.swiper = null;
+    }
   }
 
   initSwiper() {
@@ -39,6 +68,8 @@ class Carousel extends Widget {
       e.preventDefault();
       this.setActiveFilter($tab.dataset.filter);
     }));
+
+    Layout.addListener(this.onLayoutChange);
   }
 
   setActiveFilter(filter) {
@@ -47,7 +78,6 @@ class Carousel extends Widget {
 
     this.processFilter();
   }
-
 
   showNode(node) {
     node.classList.add('swiper-slide');
@@ -83,9 +113,10 @@ class Carousel extends Widget {
 
     this.$node.classList.toggle('no-navigation', visibleCount <= 4);
 
-    this.swiper.destroy(true, true);
-
-    this.initSwiper();
+    if(this.swiper) {
+      this.swiper.destroy(true, true);
+      this.initSwiper();
+    }
   }
 
   default() {
@@ -103,17 +134,6 @@ class Carousel extends Widget {
     }
   }
 
-  build() {
-    this.initSwiper();
-
-    this.events();
-
-    this.default();
-  }
-
-  destroy() {
-    this.swiper.destroy(true, true);
-  }
 
   static init(el) {
     el && new Carousel(el);
