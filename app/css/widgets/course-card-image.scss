@@ -19,8 +19,9 @@
   }
 
   img {
-    @include fill;
-    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    @include align;
   }
 
   &__play {

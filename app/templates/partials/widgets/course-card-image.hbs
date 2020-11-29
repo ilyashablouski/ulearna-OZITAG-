@@ -22,6 +22,10 @@
   <i class="course-card-image__play"></i>
 
   {{#if image}}
-    {{>components/image img=image ext="jpg"}}
+    {{#if big}}
+      {{>components/image img=image img-tablet=(concat image '-mobile') ext="jpg"}}
+    {{else}}
+      {{>components/image img=image ext="jpg"}}
+    {{/if}}
   {{/if}}
 </div>

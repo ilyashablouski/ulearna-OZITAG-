@@ -47,7 +47,9 @@
     padding-top: 73.75%;
 
     .course-card--big & {
-      padding-top: 33.82%;
+      @include desktop {
+        padding-top: 33.82%;
+      }
     }
   }
 
