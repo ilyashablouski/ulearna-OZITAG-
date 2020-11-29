@@ -1,39 +1,39 @@
-const MOBILE_WIDTH = 767;
-const TABLET_WIDTH = 1259;
-const LAPTOP_WIDTH = 1259;
-
 const Layout = {
   _listeners: [],
   _documentClickListeners: [],
 
-  is_mobile: 0,
-  is_tablet: 0,
-  is_laptop: 0,
+  current: null,
 
   isMobileLayout: function() {
-    return $(window).width() <= MOBILE_WIDTH;
+    return $(window).width() <= 767;
   },
 
   isTabletLayout: function() {
-    return $(window).width() <= TABLET_WIDTH;
+    return $(window).width() >= 767 && $(window).width() <= 1259;
   },
 
   isBigTabletLayout: function() {
-    return $(window).width() > TABLET_WIDTH && $(window).width() <= LAPTOP_WIDTH;
-  },
-
-  isLaptopLayout: function() {
-    return $(window).width() <= LAPTOP_WIDTH;
+    return $(window).width() >= 1024 && $(window).width() <= 1259;
   },
 
   isDesktopLayout: function() {
-    return this.isMobileLayout() === false
-      && this.isTabletLayout() === false
-      && this.isLaptopLayout() === false;
+    return $(window).width() >= 1260;
   },
 
   addListener: function(func) {
     this._listeners.push(func);
+  },
+
+  getCurrentLayout() {
+    if (this.isDesktopLayout()) {
+      return 'DESKTOP';
+    }
+    if (this.isTabletLayout()) {
+      return 'TABLET';
+    }
+    if (this.isMobileLayout()) {
+      return 'MOBILE';
+    }
   },
 
   _fireChangeMode: function() {
@@ -61,21 +61,12 @@ const Layout = {
   },
 
   init: function() {
-    this.is_mobile = this.isMobileLayout();
+    this.current = this.getCurrentLayout();
 
     $(window).on('resize', function() {
-      const isMobile = Layout.isMobileLayout();
-      const isTablet = Layout.isTabletLayout();
-      const isLaptop = Layout.isLaptopLayout();
-
-      if (isMobile !== Layout.is_mobile) {
-        Layout.is_mobile = isMobile;
-        Layout._fireChangeMode();
-      } else if (isTablet !== Layout.is_tablet) {
-        Layout.is_tablet = isTablet;
-        Layout._fireChangeMode();
-      } else if (isLaptop !== Layout.is_laptop) {
-        Layout.is_laptop = isLaptop;
+      const layout = Layout.getCurrentLayout();
+      if (layout !== Layout.current) {
+        Layout.current = layout;
         Layout._fireChangeMode();
       }
     });

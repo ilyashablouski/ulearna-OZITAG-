@@ -65,39 +65,59 @@
       }
     }
 
-    .submit-input__button {
+    .btn {
+      height: 59px;
+      line-height: 59px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &:not(.submit-input--mobile-button){
+    .submit-input__button{
       @include mobile {
         top: 0;
         bottom: 0;
         width: 50px;
         height: auto;
       }
-    }
 
-    .btn {
-      height: 59px;
-      line-height: 59px;
-      padding-top: 0;
-      padding-bottom: 0;
-
-      @include mobile {
-        position: absolute;
-        font-size: 0;
-        background: transparent;
-        right: 0;
-        width: 50px;
-        bottom: 0;
-        height: auto;
-        top: 0;
-        padding: 0;
-
-        &:before {
-          content: '';
-          @include sprite('search-mobile-submit');
-          @include align(true, true);
-          right: 12px;
-          height: 12px;
+      .btn {
+        @include mobile {
+          position: absolute;
+          font-size: 0;
+          background: transparent;
+          right: 0;
+          width: 50px;
+          bottom: 0;
+          height: auto;
+          top: 0;
           padding: 0;
+
+          &:before {
+            content: '';
+            @include sprite('search-mobile-submit');
+            @include align(true, true);
+            right: 12px;
+            height: 12px;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &--mobile-button {
+    @include mobile {
+      .submit-input__button {
+        position: static;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin-top: 16px;
+
+        .btn {
+          width: 100%;
         }
       }
     }

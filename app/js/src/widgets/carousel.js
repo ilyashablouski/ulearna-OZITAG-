@@ -77,6 +77,8 @@ class Carousel extends Widget {
     this.$tabs.forEach($tab => $tab.classList.toggle('active', $tab.dataset.filter === filter));
 
     this.processFilter();
+
+    this.$slider.scrollLeft = 0;
   }
 
   showNode(node) {
