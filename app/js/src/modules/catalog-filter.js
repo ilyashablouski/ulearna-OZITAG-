@@ -22,7 +22,7 @@ class CatalogFilter extends Widget {
       this.mobileOpened = true;
       hideScrollbar();
       this.$node.classList.add('mobile-opened');
-    } else{
+    } else {
       this.mobileOpened = false;
       showScrollbar();
       this.$node.classList.remove('mobile-opened');

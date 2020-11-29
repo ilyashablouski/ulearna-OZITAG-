@@ -16,6 +16,10 @@
     height: 55px;
     text-overflow: ellipsis;
 
+    &:focus{
+      border-color: $color-blue;
+    }
+
     @include mobile {
       height: 50px;
       font-size: 16px;
