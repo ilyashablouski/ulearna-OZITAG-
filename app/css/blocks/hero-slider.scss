@@ -25,15 +25,6 @@
   &__slide {
     height: 100%;
     padding: 50px 0;
-
-    /*
-      &:before {
-        content: '';
-        @include fill;
-        z-index: 1;
-        background: linear-gradient(0deg, rgba(1, 19, 64, 0.5), rgba(1, 19, 64, 0.5));
-      }
-    */
   }
 
   &:not(.swiper-container-initialized) {
@@ -106,7 +97,7 @@
     @include fill;
     z-index: -1;
 
-    @include mobile{
+    @include mobile {
       overflow: hidden;
     }
 
@@ -114,7 +105,7 @@
       width: 100%;
       @include align(true, true);
 
-      @include mobile{
+      @include mobile {
         height: 100%;
         width: auto;
       }
@@ -219,6 +210,7 @@
     letter-spacing: 0.02em;
     @include transition;
     text-align: left;
+    position: relative;
 
     &:hover {
       background: $color-gray-dark;
