@@ -14,6 +14,9 @@
   {{#> core/ui-kit/widget title='.btn.btn--outline' width=200}}
     {{> ui/btn outline=true label="Button"}}
   {{/core/ui-kit/widget}}
+{{/core/ui-kit/row}}
+
+{{#> core/ui-kit/row id=null title=null }}
   {{#> core/ui-kit/widget title='.btn.btn--blue.btn--large' width=200}}
     {{> ui/btn color="blue" size="large" label="Button"}}
   {{/core/ui-kit/widget}}
@@ -23,41 +26,59 @@
   {{#> core/ui-kit/widget title='.btn.btn--purple.btn--large' width=200}}
     {{> ui/btn color="purple" size="large" label="Button"}}
   {{/core/ui-kit/widget}}
+  {{#> core/ui-kit/widget title='.btn.btn--gray.btn--large' width=200}}
+    {{> ui/btn color="gray" size="large" label="Button"}}
+  {{/core/ui-kit/widget}}
   {{#> core/ui-kit/widget title='.btn.btn--outline.btn--large' width=200}}
     {{> ui/btn outline=true size="large" label="Button"}}
   {{/core/ui-kit/widget}}
 {{/core/ui-kit/row}}
 
+
 {{#> core/ui-kit/row id=null title=null }}
-  {{#> core/ui-kit/widget title='.btn' width=200}}
-    {{> ui/btn label="Logout" outline=true icon="button-logout"}}
+  {{#> core/ui-kit/widget title='.btn.btn--blue.btn--note' width=200}}
+    {{> ui/btn color="blue" label="Button" note="Note"}}
   {{/core/ui-kit/widget}}
+  {{#> core/ui-kit/widget title='.btn.btn--orange.btn--note' width=200}}
+    {{> ui/btn color="orange" label="Button" note="Note"}}
+  {{/core/ui-kit/widget}}
+  {{#> core/ui-kit/widget title='.btn.btn--purple.btn--note' width=200}}
+    {{> ui/btn color="purple" label="Button" note="Note"}}
+  {{/core/ui-kit/widget}}
+  {{#> core/ui-kit/widget title='.btn.btn--gray.btn--note' width=200}}
+    {{> ui/btn color="gray" label="Button" note="Note"}}
+  {{/core/ui-kit/widget}}
+  {{#> core/ui-kit/widget title='.btn.btn--outline.btn--note' width=200}}
+    {{> ui/btn outline=true label="Button" note="Note"}}
+  {{/core/ui-kit/widget}}
+{{/core/ui-kit/row}}
+
+
+{{#> core/ui-kit/row id=null title=null }}
   {{#> core/ui-kit/widget title='.btn' width=200}}
     {{> ui/btn label="Logout" outline=true color="blue" icon="button-logout"}}
   {{/core/ui-kit/widget}}
   {{#> core/ui-kit/widget title='.btn' width=200}}
-    {{> ui/btn label="Logout" outline=true color="purple" icon="button-logout"}}
+    {{> ui/btn label="Logout" outline=true color="orange" icon="button-logout"}}
   {{/core/ui-kit/widget}}
   {{#> core/ui-kit/widget title='.btn' width=200}}
-    {{> ui/btn label="Logout" color="blue" icon="button-logout"}}
+    {{> ui/btn label="Logout" color="purple" icon="button-logout"}}
   {{/core/ui-kit/widget}}
   {{#> core/ui-kit/widget title='.btn (Icon Right)' width=200}}
     {{> ui/btn color="blue" button=true label="Filters" icon="button-arrow-down" icon-right=true}}
   {{/core/ui-kit/widget}}
+  {{#> core/ui-kit/widget title='.btn' width=200}}
+    {{> ui/btn label="Logout" outline=true icon="button-logout"}}
+  {{/core/ui-kit/widget}}
 {{/core/ui-kit/row}}
 
-{{#> core/ui-kit/row id=null title=null }}
-  {{#> core/ui-kit/widget title='.btn.btn--outline.btn--note' width=200}}
-    {{> ui/btn outline=true size="large" label="Button" note="Note"}}
-  {{/core/ui-kit/widget}}
-  {{#> core/ui-kit/widget title='.btn.btn--blue.btn--note' width=200}}
-    {{> ui/btn color="blue" size="large" label="Button" note="Note"}}
-  {{/core/ui-kit/widget}}
-{{/core/ui-kit/row}}
 
 {{#> core/ui-kit/row id=null title=null }}
   {{#> core/ui-kit/widget title='.btn-icon (Reset)' width=200}}
     {{> ui/btn-icon icon="button-reset" label="Reset Filters"}}
+  {{/core/ui-kit/widget}}
+  {{#> core/ui-kit/widget title='.btn-arrow' width=200}}
+    {{> ui/btn-arrow label="Link"}}
   {{/core/ui-kit/widget}}
 {{/core/ui-kit/row}}
 

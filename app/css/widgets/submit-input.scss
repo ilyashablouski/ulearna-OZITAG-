@@ -15,9 +15,14 @@
     padding: 0 16px;
     height: 55px;
     text-overflow: ellipsis;
+    @include transition(border, 0.3s);
 
     &:focus{
       border-color: $color-blue;
+
+      + .submit-input__icon{
+        @include sprite('search-big-blue');
+      }
     }
 
     @include mobile {
@@ -40,23 +45,23 @@
   }
 
   &--search {
-    &:before {
-      content: '';
-      @include sprite('search-big');
-      @include align(false, true);
-      left: 17px;
-      margin-top: -2px;
-
-      @include mobile {
-        left: 15px;
-      }
-    }
-
     .submit-input__input {
       padding-left: 48px;
       @include mobile {
         padding-left: 45px;
       }
+    }
+  }
+
+  &__icon{
+    content: '';
+    @include sprite('search-big');
+    @include align(false, true);
+    left: 17px;
+    margin-top: -2px;
+
+    @include mobile {
+      left: 15px;
     }
   }
 

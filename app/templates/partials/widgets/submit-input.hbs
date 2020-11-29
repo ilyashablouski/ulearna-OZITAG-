@@ -1,5 +1,8 @@
 <div class="submit-input {{#if search}}submit-input--search{{/if}} {{#if big}}submit-input--big{{/if}} {{#if mobile-button}}submit-input--mobile-button{{/if}}">
   <input type="text" class="submit-input__input" placeholder="{{placeholder}}">
+  {{#if search}}
+    <i class="submit-input__icon"></i>
+  {{/if}}
   <div class="submit-input__button">
     {{#if label}}
       {{#if big}}

@@ -4,7 +4,7 @@
   overflow: hidden;
   width: 100%;
 
-  &:before {
+  &__icon {
     content: '';
     @include sprite('search-big');
     @include align(false, true);
@@ -24,7 +24,7 @@
     border-radius: 12px;
     @include transition;
 
-    @include mobile{
+    @include mobile {
       height: 50px;
       font-size: 16px;
     }
@@ -33,16 +33,20 @@
       color: rgba(5, 36, 51, 0.2);
     }
 
-    &:focus{
+    &:focus {
       border-color: $color-blue;
+
+      + .search-input__icon {
+        @include sprite('search-big-blue');
+      }
     }
   }
 
-  &--big{
-    .search-input{
-      &__input{
+  &--big {
+    .search-input {
+      &__input {
         height: 55px;
-        @include smallTablet-and-mobile{
+        @include smallTablet-and-mobile {
           height: 42px;
         }
       }
