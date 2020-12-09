@@ -10,6 +10,8 @@ class Accord extends Widget {
     this.opened = this.$node.classList.contains('opened');
     this.busy = false;
 
+    this.eventHandlers = {};
+
     this.onToggleClick = this.onToggleClick.bind(this);
   }
 
@@ -21,20 +23,42 @@ class Accord extends Widget {
     this.$toggle.removeEventListener('click', this.onToggleClick);
   }
 
+  on(event, handler) {
+    if (!(event in this.eventHandlers)) {
+      this.eventHandlers[event] = [];
+    }
+    this.eventHandlers[event].push(handler);
+  }
+
+  trigger(event) {
+    if (event in this.eventHandlers) {
+      this.eventHandlers[event].forEach(eventHandler => eventHandler());
+    }
+  }
+
+  scrollToView() {
+    startScrollTo(this.$node);
+  }
+
+  open() {
+    this.$node.classList.add('opened');
+    this.expand();
+    this.trigger('opening');
+
+    setTimeout(() => this.scrollToView(), 300);
+  }
+
+  close() {
+    this.collapse();
+    this.$node.classList.remove('opened');
+  }
+
   onToggleClick(e) {
     e.preventDefault();
     if (this.busy) return;
     this.busy = true;
 
-    if (this.opened === false) {
-      this.$node.classList.add('opened');
-      this.expand();
-    } else {
-      this.collapse();
-      this.$node.classList.remove('opened');
-    }
-
-    this.opened = !this.opened;
+    !this.$node.classList.contains('opened') ? this.open() : this.close();
   }
 
   collapse() {
@@ -86,9 +110,8 @@ class Accord extends Widget {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const accords = document.querySelectorAll('.js-accord');
-  accords.forEach(item => {
-    Accord.init(item);
+  document.querySelectorAll('.js-accord').forEach((element) => {
+    Accord.init(element);
   });
 });
 

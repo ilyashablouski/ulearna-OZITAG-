@@ -1,5 +1,8 @@
 import './src/core/widget';
 import './src/core/observer';
+import './src/core/uikit/uikit-drawer';
+import './src/core/uikit/uikit-scroll-header';
+import './src/core/uikit/uikit-autogenerator';
 
 import './src/utils/device';
 import './src/utils/helpers';
@@ -27,6 +30,8 @@ import './src/widgets/mobile-slider';
 import './src/widgets/link-select';
 import './src/widgets/video-link';
 import './src/widgets/plan-select';
+
+import './src/widgets/copied-to-clipboard';
 
 import './src/modules/header/header-burger';
 import './src/modules/header/header-fixed';
