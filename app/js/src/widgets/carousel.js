@@ -49,8 +49,10 @@ class Carousel extends Widget {
     this.swiper = new Swiper(this.$slider, {
       slidesPerView: this.isBig ? 2 : 4,
       spaceBetween: 0,
-      1440: {
-        spaceBetween: 15,
+      breakpoints: {
+        1440: {
+          spaceBetween: 13.25,
+        },
       },
       navigation: {
         prevEl: this.$navPrev,
@@ -115,7 +117,7 @@ class Carousel extends Widget {
 
     this.$node.classList.toggle('no-navigation', visibleCount <= 4);
 
-    if(this.swiper) {
+    if (this.swiper) {
       this.swiper.destroy(true, true);
       this.initSwiper();
     }
