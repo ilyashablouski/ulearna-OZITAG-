@@ -51,6 +51,7 @@
     z-index: 2;
     display: flex;
     align-items: center;
+    letter-spacing: 0.02em;
 
     @include tablet-and-mobile {
       top: 15px;
