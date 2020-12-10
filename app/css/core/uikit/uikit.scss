@@ -172,9 +172,27 @@
     }
 
     background-color: #fff;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $color-white;
+      z-index: -6;
+    }
 
     &.animate {
-      animation: animateWidget 1.5s ease-in 0.6s;
+      .uikit-section__header, .uikit-section__content-container {
+        position: relative;
+      }
+
+      &:before {
+        animation: animateWidget 1.5s ease-in 0.6s;
+      }
     }
 
     &.inactive {
@@ -317,21 +335,6 @@
       @include media(mobile) {
         justify-content: center;
       }
-
-      &--btn {
-        .uikit-widget {
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-
-          &__content {
-            flex: 1 1 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-        }
-      }
     }
 
     &__title {
@@ -348,6 +351,10 @@
     display: flex;
     width: 100%;
     padding-left: 1px;
+    @include mobile {
+      display: block;
+      padding-left: 0;
+    }
   }
 
   &-cell {
@@ -367,6 +374,14 @@
 
   &-widget {
     border: 1px solid #ddd;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &--contain {
+      height: auto;
+    }
+
 
     &__title {
       padding: 5px 10px;
@@ -381,6 +396,10 @@
 
     &__content {
       padding: 5px;
+      flex: 1 1 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       &-inner {
         margin: 5px;
@@ -510,6 +529,11 @@
 @keyframes animateWidget {
   0% {
     transform: scale(1) translate3d(0, 0, 0);
+    z-index: -6;
+  }
+
+  1% {
+    z-index: 0;
   }
 
   50% {
@@ -517,8 +541,13 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
 
+  99% {
+    z-index: 0;
+  }
+
   100% {
     transform: scale(1) translate3d(0, 0, 0);
+    z-index: -6;
   }
 }
 
