@@ -74,7 +74,7 @@
     display: block;
     position: absolute;
     @include align(true, false);
-    bottom: 0px;
+    bottom: 29px;
     @include circle(54px);
     z-index: 2;
 
@@ -141,7 +141,7 @@
   }
 
   &__cta {
-    margin-top: 61px;
+    margin-top: 58px;
     display: flex;
     justify-content: center;
 

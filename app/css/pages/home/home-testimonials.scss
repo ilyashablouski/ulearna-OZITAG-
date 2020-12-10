@@ -56,8 +56,8 @@
         height: 28px;
         border-radius: 100%;
         background: $color-orange;
-        left: -160px;
-        top: -10px;
+        left: -170px;
+        top: -4px;
       }
 
       &:after {
@@ -65,7 +65,7 @@
         width: 21px;
         height: 21px;
         background: $color-blue;
-        left: -140px;
+        left: -142px;
         top: 30px;
       }
     }
@@ -108,15 +108,15 @@
 
     &--1 {
       @include square(28px, $color-purple, 6px);
-      right: 21px;
-      bottom: 111px;
+      right: 30px;
+      bottom: 113px;
     }
 
     &--2 {
       @include square(21px, $color-purple-30, 6px);
       border-radius: 6px;
-      bottom: 76px;
-      right: 78px;
+      bottom: 86px;
+      right: 71px;
     }
 
     &--plus {
