@@ -2,7 +2,10 @@
         added}}course-card-image--added{{/if}}">
   <div class="course-card-image__badges">
     {{#if free}}
-      <span class="course-card-image__badge">Free</span>
+      <span class="course-card-image__badge course-card-image__badge--free">Free</span>
+    {{/if}}
+    {{#if sale}}
+      <span class="course-card-image__badge course-card-image__badge--sale">Sale -20%</span>
     {{/if}}
     {{#if original}}
       <span class="course-card-image__badge course-card-image__badge--original"></span>

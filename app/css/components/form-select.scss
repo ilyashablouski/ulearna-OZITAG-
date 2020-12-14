@@ -17,6 +17,10 @@
       }
     }
 
+    &-container{
+      z-index: 1;
+    }
+
     &-selection__rendered {
       width: 100%;
       display: flex;

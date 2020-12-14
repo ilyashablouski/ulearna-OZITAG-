@@ -97,6 +97,14 @@
       margin-left: 0;
     }
 
+    &--sale{
+      background: $color-orange;
+    }
+
+    &--free{
+      background: $color-green;
+    }
+
     &--original {
       background-color: transparent;
       padding: 0;

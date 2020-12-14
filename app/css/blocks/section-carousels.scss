@@ -15,10 +15,7 @@
     }
 
     &:last-child {
-      margin-bottom: 40px;
-      @include smallTablet-and-mobile {
-        margin-bottom: 0;
-      }
+      margin-bottom: 0;
     }
   }
 }
