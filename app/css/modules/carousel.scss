@@ -111,9 +111,11 @@
     }
 
     @include mobile {
+      width: 262px + 15px;
+
       &:last-child {
         padding-right: 15px;
-        width: calc(282px + 15px);
+        width: calc(262px + 15px);
       }
     }
   }

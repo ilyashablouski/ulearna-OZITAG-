@@ -15,7 +15,7 @@
     @include fill;
     background: rgba(0, 0, 0, 0.06);
     @include transition(0.3s);
-    opacity: 0;
+    opacity: 1;
   }
 
   img {

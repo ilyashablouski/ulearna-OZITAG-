@@ -12,6 +12,16 @@
     height: 64px;
   }
 
+  @include mobile{
+    width: 56px;
+    height: 56px;
+
+    img{
+      max-width: 38px;
+      max-height: 38px;
+    }
+  }
+
   &.icon--orange{
     background: $color-orange;
   }

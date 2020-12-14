@@ -49,6 +49,11 @@
     .testimonial-card--purple & {
       border: 11px solid rgba(198, 104, 255, 0.08);
     }
+
+    @include mobile{
+      width: 106px;
+      height: 106px;
+    }
   }
 
   &__author {

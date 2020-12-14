@@ -1,13 +1,6 @@
 .home-students {
   overflow: hidden;
-
   padding-bottom: 117px;
-  @include smallTablet-and-mobile {
-    padding-bottom: 50px;
-  }
-  @include mobile {
-    padding-bottom: 0;
-  }
 
   margin: 120px 0;
   @include tablet {
@@ -17,8 +10,15 @@
     margin: 60px 0;
   }
 
-  &__inner {
+  @include smallTablet-and-mobile{
     position: relative;
+    padding-bottom: 100px;
+  }
+
+  &__inner {
+    @include no-smallTablet {
+      position: relative;
+    }
   }
 
   &__prev {
@@ -61,7 +61,9 @@
 
   &__scene {
     margin-left: -40px;
-    position: relative;
+    @include no-smallTablet {
+      position: relative;
+    }
 
     @include tablet {
       margin-left: -100px;
@@ -95,7 +97,7 @@
   &__scene-slider {
     margin-left: -50px;
 
-    .home-students__slide{
+    .home-students__slide {
       padding-left: 50px;
       @include mobile {
         padding: 0;
@@ -217,16 +219,11 @@
   &__item {
     display: flex;
 
-    @include smallTablet {
-      padding-bottom: 50px;
-    }
-
     @include mobile {
       flex-direction: column-reverse;
       align-items: flex-start;
-      padding-bottom: 50px;
-      position: relative;
     }
+
 
     &-image {
       position: relative;
@@ -292,7 +289,7 @@
         padding-top: 100px;
       }
 
-      @include smallTablet{
+      @include smallTablet {
         padding-top: 50px;
       }
 
@@ -356,7 +353,7 @@
 
   .swiper-pagination {
     @include mobile {
-      margin-top: 30px;
+      margin-top: 45px;
     }
   }
 }
