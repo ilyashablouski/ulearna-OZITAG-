@@ -10,7 +10,17 @@
   </div>
 
   {{#if plus}}
-    <span class="course-card-image__plus">UlearnaPlus</span>
+    <div class="course-card-image__plus">
+      {{#if plus-price}}
+        <span class="course-card-image__plus-price">
+          {{ plus-price}}
+          {{#if plus-price-old}}
+            <span>{{plus-price-old}}</span>
+          {{/if}}
+        </span>
+      {{/if}}
+      UlearnaPlus
+    </div>
   {{/if}}
 
   <button class="course-card-image__wish">

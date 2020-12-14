@@ -5,7 +5,10 @@
 
 {{> blocks/home-plus/01_hero }}
 
-<section class="section home-featured home-featured--background">
+<section class="section section--background home-featured home-featured--background">
+  <div class="section__background">
+    {{> components/image img="home-plus/featured-bg" img-mobile="home-plus/featured-bg-mobile" ext="jpg" no-2x=true}}
+  </div>
   <div class="container">
     {{> modules/carousel/home-plus }}
   </div>

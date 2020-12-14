@@ -61,11 +61,24 @@
     bottom: 0;
     background: $color-purple;
     font-weight: 600;
-    font-size: 14px;
-    line-height: 38px;
     color: $color-white;
-    padding: 0 20px;
+    padding: 10px 20px;
     border-radius: 0 25px 0 0;
+    font-size: 14px;
+    line-height: 21px;
+
+    &-price{
+      display: block;
+      font-size: 25px;
+      line-height: 37px;
+
+      span{
+        font-size: 14px;
+        line-height: 21px;
+        opacity: .75;
+        text-decoration: line-through;
+      }
+    }
   }
 
   &__badge {

@@ -5,6 +5,7 @@
   overflow: hidden;
   @include transition;
   position: relative;
+  background: $color-white;
 
 
   &__link {

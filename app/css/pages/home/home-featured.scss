@@ -1,11 +1,11 @@
 .home-featured {
   margin: 65px 0 120px;
 
-  @include tablet{
+  @include tablet {
     margin: 60px 0 80px;
   }
 
-  @include mobile{
+  @include mobile {
     margin: 20px 0 0 0;
   }
 
@@ -13,9 +13,19 @@
     background: linear-gradient(355.57deg, rgba(242, 251, 255, 0) 3.65%, #F9F5FF 96.49%);
     padding-top: 80px;
     margin-top: 0;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
 
-    @include mobile{
+    @include tablet {
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+    }
+
+    @include mobile {
       padding-top: 20px;
+      background: linear-gradient(321.85deg, #F9F5FF 26.04%, rgba(242, 251, 255, 0) 85.88%);
+      padding-bottom: 60px;
+      margin-bottom: 0;
     }
   }
 
@@ -26,7 +36,7 @@
     color: $color-black;
     display: block;
 
-    @include mobile{
+    @include mobile {
       font-size: 22px;
       line-height: 33px;
     }
@@ -35,7 +45,7 @@
   &__slider {
     margin-top: 30px;
 
-    @include mobile{
+    @include mobile {
       margin-top: 16px;
     }
   }
