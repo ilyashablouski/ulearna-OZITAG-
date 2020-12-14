@@ -216,7 +216,6 @@
 
   &__item {
     display: flex;
-    align-items: center;
 
     @include smallTablet {
       padding-bottom: 50px;
@@ -281,13 +280,20 @@
     &-content {
       margin-left: 87px;
       flex: 1 1 1px;
+      padding-top: 105px;
 
       @include small-desktop {
         margin-left: 50px;
+        padding-top: 80px;
       }
 
       @include tablet {
         margin-left: 50px;
+        padding-top: 100px;
+      }
+
+      @include smallTablet{
+        padding-top: 50px;
       }
 
       @include mobile {
