@@ -64,7 +64,9 @@
   }
 
   &__main {
+
     @include smallTablet-and-mobile {
+      padding-top: 1px;
       position: fixed;
       top: 80px;
       bottom: 80px;
