@@ -1,22 +1,28 @@
 .home-video {
-  padding-top: 111px;
-  min-height: 580px;
+  position: relative;
 
-  @include smallTablet-and-mobile {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding-bottom: 44px;
+  &__wrapper {
+    @include smallTablet-and-mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-bottom: 44px;
+    }
+
+    @include smallTablet {
+      min-height: 0;
+      padding-top: 27%;
+      padding-bottom: 0;
+    }
+
+    @include mobile {
+      padding-top: 56%;
+    }
   }
 
-  @include smallTablet {
-    min-height: 0;
-    padding-top: 27%;
-    padding-bottom: 0;
-  }
-
-  @include mobile {
-    padding-top: 56%;
+  &__inner{
+    padding-top: 111px;
+    min-height: 500px;
   }
 
   &__bg {
@@ -32,6 +38,16 @@
     &-image {
       @include fill;
       z-index: 1;
+    }
+
+    @include no-smallTablet {
+      &:before {
+        content: '';
+        @include fill;
+        z-index: 2;
+        background: url($images_dir + 'home/video-bg-mask.png');
+        background-size: 100% 100%;
+      }
     }
   }
 
@@ -70,13 +86,19 @@
     }
   }
 
+  &__button{
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    height: 54px;
+  }
+
   &__scroll {
     display: block;
-    position: absolute;
-    @include align(true, false);
-    bottom: 29px;
     @include circle(54px);
     z-index: 2;
+    position: relative;
+    margin-top: -5px;
 
     &:before {
       content: '';
@@ -99,7 +121,7 @@
   &__inner {
     position: relative;
     padding-top: 111px;
-    min-height: 580px;
+    min-height: 500px;
 
     @include smallTablet-and-mobile {
       display: flex;

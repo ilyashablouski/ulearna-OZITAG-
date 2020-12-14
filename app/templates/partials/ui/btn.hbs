@@ -1,6 +1,6 @@
 {{#if button}}
   <button type="{{#if type}}{{type}}{{else}}button{{/if}}"
-          class="btn{{#if size}} btn--{{size}}{{/if}}{{#if color}} btn--{{color}}{{/if}}{{#if
+          class="btn{{#if size}} btn--{{size}}{{/if}} {{#if transparent}}btn--transparent{{/if}}{{#if color}} btn--{{color}}{{/if}}{{#if
                   outline}} btn--outline{{/if}}{{#if icon}} btn--icon{{#if icon-right}} btn--icon-right{{/if}}{{/if}} {{#if
                   btn-mode}} btn--{{btn-mode}}{{/if}}{{#if popup}} js-popup-open{{/if}} {{#if note}}btn--note{{/if}} {{mod}}" {{{dataset}}}
     {{#if popup}} data-popup="{{popup}}"{{/if}}
@@ -9,7 +9,7 @@
     {{{attr}}}>{{#if icon}} {{>ui/svg name=icon}}{{/if}}{{label}}{{#if note}}<span class="btn__note">{{note}}</span>{{/if}}</button>
 {{else}}
   <a href="{{#if href}}{{href}}{{else}}#{{/if}}"
-     class="btn{{#if size}} btn--{{size}}{{/if}}{{#if color}} btn--{{color}}{{/if}}{{#if
+     class="btn{{#if size}}  btn--{{size}}{{/if}} {{#if transparent}}btn--transparent{{/if}} {{#if color}} btn--{{color}}{{/if}}{{#if
              outline}} btn--outline{{/if}}{{#if icon}} btn--icon {{#if icon-right}}btn--icon-right{{/if}}{{/if}}{{#if
              btn-mode}} btn--{{btn-mode}}{{/if}}{{#if popup}} js-popup-open{{/if}} {{#if note}}btn--note{{/if}} {{mod}}"  {{{dataset}}}
     {{#if popup}} data-popup="{{popup}}"{{/if}}

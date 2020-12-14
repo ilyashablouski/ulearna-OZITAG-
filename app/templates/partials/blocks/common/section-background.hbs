@@ -1,5 +1,5 @@
-<section class="section section--background{{#if up}} section--up{{/if}}">
-  <div class="section__background {{#if shape}}section__background--shape{{/if}}">
+<section class="section section--background{{#if up}} section--up{{/if}} {{#if overflow}}section--overflow{{/if}}">
+  <div class="section__background">
     {{> components/image img=image img-mobile=(concat image '-mobile')  ext="jpg" no-2x=true}}
   </div>
   <div class="section__inner">

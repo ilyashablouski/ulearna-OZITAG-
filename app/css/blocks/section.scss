@@ -30,18 +30,6 @@
       height: 100%;
       object-fit: cover;
     }
-
-    &--shape {
-      @include no-smallTablet {
-        &:before {
-          content: '';
-          @include fill;
-          z-index: 2;
-          background: url($images_dir + 'home/video-bg-mask.png');
-          background-size: 100% 100%;
-        }
-      }
-    }
   }
 
   &__inner {

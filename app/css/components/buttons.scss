@@ -98,6 +98,17 @@
     }
   }
 
+  &--transparent {
+    border: 1px solid $color-black;
+    color: $color-black;
+    background: transparent;
+
+    &:hover {
+      background: $color-black;
+      color: $color-white;
+    }
+  }
+
   &--note {
     padding: 12px 50px;
     font-size: 18px;
