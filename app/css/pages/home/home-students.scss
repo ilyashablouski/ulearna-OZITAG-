@@ -260,18 +260,6 @@
           max-height: 265px;
         }
       }
-
-      &:before {
-        content: '';
-        @include fill;
-        z-index: -1;
-        background: url($images_dir + 'home/students/background.png');
-        background-size: cover;
-
-        @include smallTablet-and-mobile {
-          display: none;
-        }
-      }
     }
 
     &-content {
