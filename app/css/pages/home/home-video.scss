@@ -6,23 +6,7 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      padding-bottom: 44px;
     }
-
-    @include smallTablet {
-      min-height: 0;
-      padding-top: 27%;
-      padding-bottom: 0;
-    }
-
-    @include mobile {
-      padding-top: 56%;
-    }
-  }
-
-  &__inner{
-    padding-top: 111px;
-    min-height: 500px;
   }
 
   &__bg {
@@ -121,13 +105,25 @@
   &__inner {
     position: relative;
     padding-top: 111px;
-    min-height: 500px;
+
+    @include no-smallTablet {
+      min-height: 500px;
+    }
+
+    @include tablet{
+      padding-left: $tabletGutter;
+      padding-right: $tabletGutter;
+    }
+
+    @include mobile{
+      padding-left: $mobileGutter;
+      padding-right: $mobileGutter;
+    }
 
     @include smallTablet-and-mobile {
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      padding-bottom: 44px;
     }
 
     @include smallTablet {
