@@ -333,6 +333,8 @@
 
       @include mobile {
         margin-top: 20px;
+        min-height: 42px;
+        display: block;
       }
     }
 
