@@ -118,12 +118,18 @@
 
     @include tablet {
       margin: 0 -30px;
-      padding: 8px 30px 16px;
+      padding: 0 $tabletGutter;
     }
 
     @include mobile {
       margin: 0 -15px;
-      padding: 8px 15px 16px;
+      padding: 0 $mobileGutter;
+    }
+
+    &-list{
+      @include tablet-and-mobile{
+        padding: 8px 0 16px;
+      }
     }
 
     @include tablet-and-mobile {
