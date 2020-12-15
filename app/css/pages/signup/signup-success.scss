@@ -15,7 +15,7 @@
       border-radius: 12px;
       padding: 74px 0 30px;
       position: relative;
-      margin-top: 90px;
+      margin-top: 98px;
 
       @include mobile {
         margin-top: 16px;
@@ -28,7 +28,7 @@
       &:before {
         content: '';
         @include circle(116px, $color-orange);
-        top: -58px;
+        top: -61px;
         @include align(true, false);
 
         @include mobile {
@@ -43,7 +43,7 @@
         content: '';
         @include sprite('signup-success');
         @include align(true, false);
-        top: -30px;
+        top: -34px;
 
         @include mobile {
           @include sprite('signup-success-mobile');
@@ -123,7 +123,7 @@
     line-height: 150%;
     display: block;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 25px;
 
     @include mobile {
       font-size: 14px;
