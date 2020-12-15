@@ -1,0 +1,17 @@
+<div class="language-overlay">
+  <button class="language-overlay__close"></button>
+  <div class="language-overlay__main">
+    <div class="language-overlay__icon">
+      {{> svg/language-overlay-icon}}
+    </div>
+    <div class="language-overlay__content">
+      <span class="language-overlay__title">Welcome to Ulearna</span>
+      <p class="language-overlay__text">To check out courses designed specifically for you in your language, please,
+        visit the [region] site.</p>
+    </div>
+  </div>
+  <div class="language-overlay__footer">
+    {{> ui/btn button=true outline=true size="small" label="Continue in English" }}
+    {{> ui/btn color="blue" size="small" label="Visit the [region] site" }}
+  </div>
+</div>

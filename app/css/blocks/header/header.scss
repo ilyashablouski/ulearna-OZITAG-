@@ -5,6 +5,19 @@
     display: none;
   }
 
+  &__language {
+    position: relative;
+
+    .language-overlay {
+      @include no-smallTablet {
+        position: absolute;
+        right: 40px;
+        top: 100%;
+        margin-top: 5px;
+      }
+    }
+  }
+
   &__logo {
     @include sprite('logo');
     @include tablet {
@@ -78,7 +91,7 @@
     @include tablet {
       margin-left: 45px;
     }
-    @include mobile{
+    @include mobile {
       margin-left: 40px;
     }
   }

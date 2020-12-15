@@ -21,7 +21,7 @@
 
   &--large {
     font-size: 18px;
-    padding: 18.5px 28px;
+    padding: 18px 28px;
 
     @include mobile {
       padding: 16px 28px;
@@ -71,6 +71,17 @@
     border: 1px solid $color-black;
     color: $color-black;
     background: $color-white;
+    padding-top: 13px;
+    padding-bottom: 13px;
+
+    &.btn--large {
+      padding-top: 17px;
+      padding-bottom: 17px;
+      @include mobile{
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+    }
 
     &:hover {
       background: $color-black;

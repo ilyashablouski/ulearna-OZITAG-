@@ -47,6 +47,9 @@
           {{/if}}
           <div class="header__language">
             {{> blocks/header/header-language }}
+            {{#if language-overlay}}
+              {{> blocks/header/language-overlay }}
+            {{/if}}
           </div>
           <div class="header__actions">
             {{#if authenticated}}
