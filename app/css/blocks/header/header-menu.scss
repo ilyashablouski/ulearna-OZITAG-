@@ -72,6 +72,7 @@
       width: 500px;
       transition: 0.5s transform ease, 0.3s opacity ease;
       transform: translateY(15px);
+      z-index: 2;
 
       left: -10000px;
       visibility: hidden;
