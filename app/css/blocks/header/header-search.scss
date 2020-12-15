@@ -1,5 +1,19 @@
 .header-search{
   display: none;
+  position: relative;
+
+  .search-overlay{
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: none;
+  }
+
+  &.active{
+    .search-overlay{
+      display: block;
+    }
+  }
 
   .fixed &{
     display: block;

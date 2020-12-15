@@ -33,11 +33,13 @@ import './src/widgets/mobile-slider';
 import './src/widgets/link-select';
 import './src/widgets/video-link';
 import './src/widgets/plan-select';
+import './src/widgets/plan-select';
 
 import './src/modules/header/header-burger';
 import './src/modules/header/header-fixed';
 import './src/modules/header/header-menu';
 import './src/modules/header/header-search';
+import './src/modules/header/header-desktop-search';
 import './src/modules/header/header';
 
 import './src/modules/home-students';
