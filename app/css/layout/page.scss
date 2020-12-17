@@ -16,7 +16,7 @@
   &__content {
     flex: 1 0 auto;
     min-height: 1px;
-    
+
     padding-bottom: 100px;
     @include smallTablet-and-mobile {
       padding-bottom: 60px;
@@ -25,5 +25,10 @@
 
   &__footer {
     flex-shrink: 0;
+  }
+
+  &__wrapper {
+    background: #f4f7fa;
+    margin-bottom: -100px;
   }
 }

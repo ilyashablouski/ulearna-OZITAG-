@@ -1,0 +1,15 @@
+.sidebar-counter {
+  font-size: 14px;
+  &__number {
+    font-weight: 600;
+    color: #2197ff;
+  }
+
+  &__text {
+    font-weight: normal;
+  }
+
+  &:not(:last-child) {
+    margin-right: 13px;
+  }
+}

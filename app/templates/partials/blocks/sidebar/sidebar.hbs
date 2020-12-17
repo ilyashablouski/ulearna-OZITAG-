@@ -1,0 +1,46 @@
+<div class="sidebar">
+  <div class="sidebar__wrapper">
+    <div class="sidebar__user">
+      <div class="sidebar__user-img">
+        {{> components/image img="header/avatar" ext="jpg"}}
+      </div>
+      <div class="sidebar__user-info">
+        <div class="sidebar__user-name">Ali Kazal</div>
+        <div class="sidebar__user-email">
+          <a href="mailto:Ali_Kazal@email.com" class="sidebar__user-email-link">Ali_Kazal@email.com</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sidebar__socials">
+      <div class="sidebar__counter">
+        {{> blocks/sidebar/sidebar-counter number="168" text="Folowers"}}
+        {{> blocks/sidebar/sidebar-counter number="10" text="Followings" }}
+      </div>
+
+      <a href="#" class="sidebar__socials-link">Website//alikazal.org.com</a>
+
+      <div class="sidebar__socials-links">
+        <a href="#" class="sidebar__social-link sidebar__social-link--twitter"></a>
+        <a href="#" class="sidebar__social-link sidebar__social-link--facebook"></a>
+        <a href="#" class="sidebar__social-link sidebar__social-link--instagram"></a>
+        <a href="#" class="sidebar__social-link sidebar__social-link--youtube"></a>
+      </div>
+    </div>
+
+    <div class="sidebar__counter-strip">
+      {{> blocks/sidebar/sidebar-counter-strip number="12" text="Active Courses"}}
+      {{> blocks/sidebar/sidebar-counter-strip number="4" text="Certificates" }}
+    </div>
+
+    <div class="sidebar__nav">
+      {{> blocks/sidebar/sidebar-nav-link url='#' imgSrc='dashboard' title='Dashboard'}}
+      {{> blocks/sidebar/sidebar-nav-link url='#' imgSrc='courses' title='My Courses'}}
+      {{> blocks/sidebar/sidebar-nav-link url='#' imgSrc='certificates' title='Certificates'}}
+      {{> blocks/sidebar/sidebar-nav-link url='#' imgSrc='messages' title='Messages'}}
+      {{> blocks/sidebar/sidebar-nav-link url='#' imgSrc='notifiсation' title='Notifications'}}
+      {{> blocks/sidebar/sidebar-nav-link url='#' imgSrc='settings' title='Settings'}}
+    </div>
+  </div>
+</div>

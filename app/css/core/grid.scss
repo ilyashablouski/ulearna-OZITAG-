@@ -30,6 +30,10 @@ html {
     padding-left: 16px;
     padding-right: 16px;
   }
+
+  &__inner {
+    position: relative;
+  }
 }
 
 .container-small {
@@ -48,7 +52,6 @@ html {
     padding-right: $mobileGutter;
   }
 }
-
 
 //
 //.container, .container-fluid {

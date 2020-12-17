@@ -1,0 +1,25 @@
+.sidebar-counter-strip {
+  &__number {
+    display: flex;
+    align-items: center;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 15px;
+      background: $color-green;
+      border-radius: 3px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: normal;
+    color: $color-gray-dark;
+  }
+
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+}
