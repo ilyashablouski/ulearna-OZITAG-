@@ -35,12 +35,14 @@
     </div>
 
     <div class="sidebar__nav">
-      {{> blocks/sidebar/sidebar-nav-link url='#' imgSrc='dashboard' title='Dashboard'}}
-      {{> blocks/sidebar/sidebar-nav-link url='#' imgSrc='courses' title='My Courses'}}
-      {{> blocks/sidebar/sidebar-nav-link url='#' imgSrc='certificates' title='Certificates'}}
-      {{> blocks/sidebar/sidebar-nav-link url='#' imgSrc='messages' title='Messages'}}
-      {{> blocks/sidebar/sidebar-nav-link url='#' imgSrc='notifiсation' title='Notifications'}}
-      {{> blocks/sidebar/sidebar-nav-link url='#' imgSrc='settings' title='Settings'}}
+      {{> blocks/sidebar/sidebar-nav-item url='#' imgName='dashboard' label='Dashboard'}}
+      {{> blocks/sidebar/sidebar-nav-item url='#' imgName='courses' label='My Courses'}}
+      {{> blocks/sidebar/sidebar-nav-item url='#' imgName='certificates' label='Certificates'}}
+      {{> blocks/sidebar/sidebar-nav-item url='#' imgName='messages' label='Messages'}}
+      {{> blocks/sidebar/sidebar-nav-item url='#' imgName='notifiсation' label='Notifications'}}
+      {{> blocks/sidebar/sidebar-nav-item url='#' imgName='settings' label='Settings'}}
     </div>
+
+    {{> widgets/notify-card}}
   </div>
 </div>
