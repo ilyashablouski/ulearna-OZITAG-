@@ -1,30 +1,11 @@
 <div class="course-stats">
   <div class="course-stats__item">
-    <div class="course-stats__value">
-      <span class="course-stats__views">168</span>
-    </div>
-    <span class="course-stats__label">Student watched</span>
+    {{> widgets/rating-card small=true views=168 label="Student watched"}}
   </div>
   <div class="course-stats__item">
-    <div class="course-stats__value">
-      <div class="course-stats__level">
-        <i class="_active"></i>
-        <i class="_active"></i>
-        <i></i>
-      </div>
-    </div>
-    <span class="course-stats__label">Level <b>Intermediate</b></span>
+    {{> widgets/rating-card small=true energy=true label="Level" label-bold="Intermediate"}}
   </div>
   <div class="course-stats__item">
-    <div class="course-stats__value">
-      <div class="course-stats__stars">
-        <i class="_active"></i>
-        <i class="_active"></i>
-        <i class="_active"></i>
-        <i></i>
-        <i></i>
-      </div>
-    </div>
-    <span class="course-stats__label">Course rating <b>3/5</b></span>
+    {{> widgets/rating-card small=true stars=true label="Course rating" label-bold="3/5"}}
   </div>
 </div>

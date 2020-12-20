@@ -1,0 +1,78 @@
+.rating-card {
+
+  &__value {
+    height: 28px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__label {
+    font-size: 14px;
+    line-height: 140%;
+    color: $color-black;
+    margin-top: 8px;
+    display: block;
+
+    b {
+      font-weight: 600;
+    }
+  }
+
+  &__views{
+    padding-left: 28px;
+    position: relative;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: $color-dark;
+
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      @include sprite('rating-eye');
+      @include align(false, true);
+    }
+  }
+
+  &__item {
+    margin-left: 8px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    .rating-card--stars & {
+      @include sprite('rating-star-big');
+
+      &.rating-card__item--active {
+        @include sprite('rating-star-big--fill');
+      }
+    }
+
+    .rating-card--stars.rating-card--small & {
+      @include sprite('rating-star');
+
+      &.rating-card__item--active {
+        @include sprite('rating-star--fill');
+      }
+    }
+
+    .rating-card--energy & {
+      @include sprite('rating-energy-big');
+
+      &.rating-card__item--active {
+        @include sprite('rating-energy-big--fill');
+      }
+    }
+
+    .rating-card--energy.rating-card--small & {
+      @include sprite('rating-energy');
+
+      &.rating-card__item--active {
+        @include sprite('rating-energy--fill');
+      }
+    }
+  }
+}
