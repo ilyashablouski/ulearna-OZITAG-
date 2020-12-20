@@ -1,0 +1,24 @@
+<div class="comment">
+  {{#if form}}{{else}}
+    <div class="comment__reply">
+      {{> ui/btn-icon icon="button-reply" label="Reply"}}
+    </div>
+  {{/if}}
+  <div class="comment__user">
+    {{> components/image img=image ext="jpg"}}
+  </div>
+  <div class="comment__right">
+    <div class="comment__header">
+      <span class="comment__name">{{ name }}</span>
+      {{#if date}}
+        <time class="comment__date">{{date}}</time>{{/if}}
+    </div>
+    <div class="comment__main">
+      {{#if form}}
+        {{> ui/textarea placeholder="Your message"}}
+      {{else}}
+        {{ message}}
+      {{/if}}
+    </div>
+  </div>
+</div>

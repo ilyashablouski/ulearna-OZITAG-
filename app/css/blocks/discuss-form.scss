@@ -1,0 +1,28 @@
+.discuss-form {
+  font-weight: 600;
+  font-size: 29px;
+  line-height: 43px;
+  margin-top: 20px;
+
+  .form-field{
+    padding-bottom: 0;
+  }
+
+  &__title{
+    font-weight: 600;
+    font-size: 29px;
+    line-height: 43px;
+    color: $color-black;
+    display: block;
+  }
+
+  &__inner{
+    margin-top: 20px;
+  }
+
+  &__button{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+  }
+}

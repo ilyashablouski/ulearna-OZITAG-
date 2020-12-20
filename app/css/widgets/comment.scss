@@ -1,0 +1,65 @@
+.comment {
+  display: flex;
+  width: 100%;
+  position: relative;
+
+  &:hover{
+    .comment__reply{
+      opacity: 1;
+    }
+  }
+
+  &__reply{
+    position: absolute;
+    right: 16px;
+    top: 14px;
+    opacity: 0;
+    @include transition;
+  }
+
+  &__user {
+    width: 64px;
+    height: 64px;
+    display: block;
+    border-radius: 50%;
+
+    img {
+      width: 64px;
+      height: 64px;
+      display: block;
+      border-radius: 50%;
+    }
+  }
+
+  &__right {
+    flex: 1 1 1px;
+    background: $color-gray-30;
+    border-radius: 12px;
+    margin-left: 16px;
+    padding: 15px 15px 30px;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    display: block;
+  }
+
+  &__main {
+    margin-top: 10px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+  }
+
+  &__date{
+    font-size: 14px;
+    line-height: 140%;
+    color: $color-gray-dark;
+    margin-left: 6px;
+  }
+}

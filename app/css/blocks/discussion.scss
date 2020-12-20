@@ -1,0 +1,35 @@
+.discussion {
+  margin-top: -20px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-left {
+      width: 504px;
+    }
+
+    &-right {
+
+    }
+  }
+
+  &__list {
+    margin-top: 30px;
+  }
+
+  &__message {
+    margin-top: 20px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__pagination {
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
