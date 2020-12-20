@@ -2,7 +2,7 @@
   <div class="container">
     <header class="course-intro__header">
       <div class="course-intro__left">
-        {{> ui/btn-arrow back=true label="Back To Catalog"}}
+        {{> ui/btn-arrow back=true href="course-catalog-search.html" label="Back To Catalog"}}
       </div>
       <div class="course-intro__right">
         {{> ui/btn label="Share" color="dark" icon="button-share"}}
@@ -21,7 +21,11 @@
 
     <h1 class="course-intro__title">Customizing Type with Draplin: Creating Wordmarks That Work</h1>
     <div class="course-intro__description">
-      By Instructor, Senior developer <span class="course-intro__author">Murvin Murphy</span>
+      By Instructor, Senior developer
+      <span class="course-intro__author">Murvin Murphy</span>
+      <div class="course-intro__follow">
+        {{> ui/btn-icon icon="button-plus" label="Follow"}}
+      </div>
     </div>
   </div>
 </section>

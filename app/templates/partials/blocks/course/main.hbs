@@ -61,7 +61,9 @@
           </div>
         </div>
         <div class="course-main__content">
-          Content
+          {{#ifCond tab 1}}
+            {{> blocks/course/tab-about}}
+          {{/ifCond}}
         </div>
       </div>
     </div>

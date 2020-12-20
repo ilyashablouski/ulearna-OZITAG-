@@ -45,7 +45,7 @@ class Accord extends Widget {
     this.expand();
     this.trigger('opening');
 
-    setTimeout(() => this.scrollToView(), 300);
+    // setTimeout(() => this.scrollToView(), 300);
   }
 
   close() {
