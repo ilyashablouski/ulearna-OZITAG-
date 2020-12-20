@@ -73,7 +73,11 @@
 
           {{/ifCond}}
           {{#ifCond tab 4}}
-
+            {{#if completed}}
+              {{>blocks/course/exam-completed }}
+            {{else}}
+              {{>blocks/course/exam }}
+            {{/if}}
           {{/ifCond}}
         </div>
       </div>

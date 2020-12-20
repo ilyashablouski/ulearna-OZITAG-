@@ -1,0 +1,33 @@
+.course-exam {
+  &__title {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 31px;
+    display: block;
+    color: $color-black;
+  }
+
+  &__progress {
+    margin-top: 20px;
+  }
+
+  &__question {
+    margin-top: 20px;
+  }
+
+  &__button {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+
+    .btn{
+      min-width: 155px;
+    }
+  }
+}
+
+.question{
+  padding: 20px 30px 30px;
+  background: $color-gray-30;
+  border-radius: 12px;
+}

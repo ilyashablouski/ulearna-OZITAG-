@@ -1,0 +1,50 @@
+.question {
+  padding: 20px 30px 30px;
+  background: $color-gray-30;
+  border-radius: 12px;
+
+  &__label {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    display: block;
+    color: $color-gray-dark;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    margin-top: 8px;
+    display: block;
+    color: $color-black;
+  }
+
+  &__text {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 146%;
+    color: $color-dark;
+  }
+
+  &__options {
+    margin-top: 15px;
+
+    &-item {
+      padding: 15px 0;
+      box-shadow: inset 0px -1px 0px #DAE4ED;
+      cursor: pointer;
+
+      &:hover{
+        background: rgba(218, 228, 237, 0.22);
+      }
+
+      &._active{
+        background: $color-blue-12;
+        color: $color-blue2;
+      }
+    }
+  }
+}

@@ -32,6 +32,21 @@
   {{/core/ui-kit/blocks/widget}}
 {{/core/ui-kit/blocks/subsection}}
 
+{{#> core/ui-kit/blocks/subsection id="question" title="Question" }}
+  {{#> core/ui-kit/blocks/widget title='.question' width=700}}
+    {{> widgets/question }}
+  {{/core/ui-kit/blocks/widget}}
+{{/core/ui-kit/blocks/subsection}}
+
+{{#> core/ui-kit/blocks/subsection id="exam-progress" title="Exam Progress" }}
+  {{#> core/ui-kit/blocks/widget title='.exam-progress' width=300}}
+    {{> widgets/exam-progress value=1 }}
+  {{/core/ui-kit/blocks/widget}}
+  {{#> core/ui-kit/blocks/widget title='.exam-progress' width=300}}
+    {{> widgets/exam-progress value=2 }}
+  {{/core/ui-kit/blocks/widget}}
+{{/core/ui-kit/blocks/subsection}}
+
 {{#> core/ui-kit/blocks/subsection id="rating-card" title="Rating Card" }}
   {{> ui-kit/widgets/rating-card  }}
 {{/core/ui-kit/blocks/subsection}}
