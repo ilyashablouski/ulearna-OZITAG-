@@ -2,7 +2,10 @@
   &__wrapper {
     margin-left: -80px;
     padding: 20px 40px 40px 80px;
+    display: flex;
+    flex-direction: column;
     max-width: 363px;
+    height: 1135px;
     background: #fff;
     box-shadow: 5px 0px 16px rgba(1, 64, 139, 0.08);
   }
@@ -103,5 +106,13 @@
     margin-left: -8px;
     margin-right: -8px;
     margin-bottom: 20px;
+  }
+
+  &__notify-card {
+    margin-top: -8px;
+  }
+
+  &__btn-bottom {
+    margin-top: auto;
   }
 }

@@ -1,10 +1,13 @@
 .sidebar-counter-strip {
   &__number {
-    display: flex;
+    margin-top: 8px;
+    display: inline-flex;
     align-items: center;
+    line-height: 15px;
 
     &:before {
       content: '';
+      margin-right: 7px;
       display: block;
       width: 4px;
       height: 15px;

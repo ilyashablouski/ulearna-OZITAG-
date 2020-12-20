@@ -1,0 +1,19 @@
+.notify-card {
+  padding: 20px;
+  background: rgba(32, 183, 247, 0.12);
+  color: $color-blue;
+  border-radius: 10px;
+
+  &__title {
+    padding-bottom: 10px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  &__text {
+    padding-bottom: 25px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

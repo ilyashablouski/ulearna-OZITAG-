@@ -1,6 +1,8 @@
 .sidebar-nav-item {
   &__inner {
-    padding: 0 8px 8px;
+    margin-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
   }
 
   &__link {
@@ -16,9 +18,28 @@
     color: $color-gray-dark;
     border-radius: 10px;
 
+    &.active {
+      background: $color-blue;
+      color: $color-white;
+
+      &:hover {
+        svg {
+          color: $color-white;
+        }
+      }
+    }
+
+    &:hover {
+      svg {
+        color: $color-blue;
+      }
+    }
+
     svg {
       height: 24px;
       width: 24px;
+
+      @include transition;
     }
   }
 

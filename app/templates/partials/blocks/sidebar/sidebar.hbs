@@ -35,7 +35,7 @@
     </div>
 
     <div class="sidebar__nav">
-      {{> blocks/sidebar/sidebar-nav-item url='#' imgName='dashboard' label='Dashboard'}}
+      {{> blocks/sidebar/sidebar-nav-item url='#' imgName='dashboard' label='Dashboard' active=true}}
       {{> blocks/sidebar/sidebar-nav-item url='#' imgName='courses' label='My Courses'}}
       {{> blocks/sidebar/sidebar-nav-item url='#' imgName='certificates' label='Certificates'}}
       {{> blocks/sidebar/sidebar-nav-item url='#' imgName='messages' label='Messages'}}
@@ -43,6 +43,20 @@
       {{> blocks/sidebar/sidebar-nav-item url='#' imgName='settings' label='Settings'}}
     </div>
 
-    {{> widgets/notify-card}}
+    <div class="sidebar__notify-card">
+      {{> widgets/notify-card
+      title='Upgrade to student'
+      text='Upgrade for x$ to have access to Ulearna in all languages'
+    }}
+    </div>
+
+    <div class="sidebar__btn-bottom">
+      {{> ui/btn 
+      outline=true label='Sign Out' 
+      icon='button-logout'
+      stretched=true
+      icon-right=true
+      }}
+    </div>
   </div>
 </div>
