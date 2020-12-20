@@ -1,0 +1,94 @@
+.review {
+  display: flex;
+
+  &__image {
+    width: 80px;
+    height: 80px;
+  }
+
+  &__main {
+    flex: 1 1 1px;
+    box-shadow: inset 0px -1px 0px #DAE4ED;
+    padding-bottom: 30px;
+    padding-top: 8px;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    display: block;
+  }
+
+  &__position {
+    font-size: 14px;
+    line-height: 140%;
+    color: $color-gray-dark;
+    margin-top: 7px;
+    display: block;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 146%;
+    color: $color-dark;
+    margin-top: 24px;
+  }
+
+  &__summary {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    color: $color-black;
+  }
+
+  &__mark {
+    margin-left: 5px;
+
+    &--positive {
+      color: $color-green;
+    }
+
+    &--negative {
+      color: $color-red;
+    }
+  }
+
+  &__stats {
+    display: flex;
+
+    &-item {
+      margin-left: 30px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__improved {
+    margin-top: 20px;
+
+    &-title {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 140%;
+      color: $color-black;
+    }
+
+    &-note {
+      color: $color-gray-dark;
+      font-weight: 400;
+    }
+
+    &-value {
+      font-size: 16px;
+      line-height: 146%;
+      color: $color-dark;
+      margin-top: 8px;
+      display: block;
+    }
+  }
+}
