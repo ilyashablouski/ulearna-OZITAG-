@@ -1,0 +1,137 @@
+.reviews-intro {
+  &__title {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 31px;
+    color: $color-black;
+    display: block;
+  }
+
+  &__row {
+    display: flex;
+    margin: 16px -25px 0;
+  }
+
+  &__cell {
+    flex-basis: 33.3333%;
+    padding: 0 25px;
+  }
+
+  &__item {
+    background: $color-gray-30;
+    border-radius: 12px;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 30px;
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  &__name {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    line-height: 146%;
+    margin-top: 16px;
+  }
+
+  &__note {
+    color: $color-gray-dark;
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 146%;
+  }
+
+  &__value {
+    height: 56px;
+    border-radius: 8px;
+    background: $color-white;
+    width: auto;
+    padding: 0 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &-wrapper {
+
+    }
+  }
+
+  &__star {
+    @include sprite('reviews-intro-star--empty');
+    margin: 0 3px;
+
+    &._active {
+      @include sprite('reviews-intro-star');
+    }
+  }
+
+  &__rating {
+    @include sprite('reviews-intro-energy--empty');
+    margin: 0 3px;
+
+    &._active {
+      @include sprite('reviews-intro-energy');
+    }
+  }
+
+  &__inner {
+    flex: 1 1 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__bottom {
+    padding-top: 8px;
+    margin-top: auto;
+  }
+
+  &__progress {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    &-bar {
+      flex: 1 1 1px;
+      margin: 0 14px;
+      border-radius: 8px;
+      background: $color-gray;
+      position: relative;
+      overflow: hidden;
+      height: 13px;
+
+      i {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background: $color-orange;
+        border-radius: 8px;
+      }
+    }
+
+    span {
+      font-size: 16px;
+      line-height: 146%;
+      color: $color-dark;
+
+      &:last-child {
+        color: $color-gray-dark;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -64,6 +64,17 @@
           {{#ifCond tab 1}}
             {{> blocks/course/tab-about}}
           {{/ifCond}}
+          {{#ifCond tab 2}}
+            {{> blocks/course/reviews/intro }}
+            {{> blocks/course/reviews/list }}
+            {{> blocks/course/reviews/form }}
+          {{/ifCond}}
+          {{#ifCond tab 3}}
+            {{> blocks/course/reviews/rated }}
+          {{/ifCond}}
+          {{#ifCond tab 4}}
+            {{> blocks/course/reviews/rated }}
+          {{/ifCond}}
         </div>
       </div>
     </div>
