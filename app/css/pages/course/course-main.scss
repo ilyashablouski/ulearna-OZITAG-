@@ -1,0 +1,17 @@
+.course-main {
+  padding-top: 40px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  &__sidebar {
+    width: 282px;
+  }
+
+  &__inner {
+    margin-right: 50px;
+    flex: 1 1 1px;
+  }
+}

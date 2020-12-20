@@ -59,9 +59,19 @@
     }
   }
 
+  &--light {
+    background: $color-blue-light;
+    color: $color-blue;
+
+    &:hover {
+      background: $color-blue-light;
+    }
+  }
+
+
   &--dark {
     background: $color-gray-dark-20;
-    color: $color-blue;
+    color: $color-blue-dark;
 
     &:hover {
       background: $color-gray-dark-40;
@@ -153,5 +163,11 @@
     svg {
       margin: 0 0 0 8px;
     }
+  }
+
+
+  &.btn--w100{
+    text-align: center;
+    width: 100%;
   }
 }

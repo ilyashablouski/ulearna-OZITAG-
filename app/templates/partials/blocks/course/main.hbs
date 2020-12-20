@@ -1,0 +1,42 @@
+<section class="course-main">
+  <div class="container">
+    <div class="course-main__wrapper">
+      <aside class="course-main__sidebar">
+        <div class="course-sidebar">
+          {{#if price}}
+            {{> blocks/course/sidebar/price }}
+          {{/if}}
+          <div class="course-sidebar__blocks">
+            <div class="course-sidebar__block">
+              {{> blocks/course/sidebar/stats }}
+            </div>
+
+            <div class="course-sidebar__block">
+              <span class="course-sidebar__title">Course skills</span>
+              <div class="course-sidebar__skills">
+                <span>Skill Name</span>, <span>Skill Name</span>, <span>Skill Name</span>
+              </div>
+            </div>
+
+            <div class="course-sidebar__block">
+              <span class="course-sidebar__title">Instructor</span>
+              {{> blocks/course/sidebar/instructor }}
+            </div>
+
+            <div class="course-sidebar__actions">
+              {{> ui/btn color="gray" label="Report On Course" w100=true}}
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div class="course-main__inner">
+        <div class="course-tabs">
+          Tabs
+        </div>
+        <div class="course-main__content">
+          Content
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

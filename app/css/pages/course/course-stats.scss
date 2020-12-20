@@ -1,0 +1,82 @@
+.course-stats {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -18px;
+
+  &__item {
+    flex-basis: 50%;
+    margin-top: 18px;
+  }
+
+  &__value {
+    height: 24px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__label {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 140%;
+    white-space: nowrap;
+    display: block;
+
+    b {
+      font-weight: 600;
+    }
+  }
+
+  &__views {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: $color-dark;
+    padding-left: 28px;
+    position: relative;
+
+    &:before {
+      content: '';
+      @include sprite('course-eyes');
+      left: 0;
+      @include align(false, true);
+      position: absolute;
+    }
+  }
+
+  &__level {
+    display: flex;
+
+    i {
+      @include sprite('course-stats-level');
+
+      margin-left: 10px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &._active {
+        @include sprite('course-stats-level--fill');
+      }
+    }
+  }
+
+  &__stars {
+    display: flex;
+
+    i {
+      @include sprite('course-stats-star');
+
+      margin-left: 10px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &._active {
+        @include sprite('course-stats-star--fill');
+      }
+    }
+  }
+}

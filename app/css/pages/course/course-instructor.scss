@@ -1,0 +1,106 @@
+.course-instructor {
+  &__main {
+    display: flex;
+    align-items: center;
+  }
+
+  &__image {
+    width: 64px;
+    height: 64px;
+
+    img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: block;
+    }
+  }
+
+  &__info {
+    margin-left: 14px;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    display: block;
+  }
+
+  &__actions {
+    margin-top: 16px;
+
+    .btn {
+      margin-top: 13px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__stats {
+    margin-top: 7px;
+    display: flex;
+
+    &-item {
+      margin-left: 7px;
+      font-size: 14px;
+      line-height: 140%;
+      color: $color-dark;
+
+      b {
+        color: $color-blue;
+        font-weight: 600;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__params {
+    margin-top: 16px;
+
+    &-item {
+      margin-top: 10px;
+      padding-left: 25px;
+      font-size: 14px;
+      line-height: 140%;
+      position: relative;
+
+      b {
+        font-weight: 600;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        @include align(false, true);
+      }
+
+      &--job:before {
+        @include sprite('course-instructor-job');
+      }
+
+      &--education:before {
+        @include sprite('course-instructor-education');
+      }
+
+      &--languages:before {
+        @include sprite('course-instructor-languages');
+      }
+
+      &--country:before {
+        @include sprite('course-instructor-country');
+      }
+    }
+  }
+}
