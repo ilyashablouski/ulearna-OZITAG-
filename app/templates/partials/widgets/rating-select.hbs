@@ -1,0 +1,29 @@
+<div class="rating-select {{#if stars}}rating-select--stars{{/if}} {{#if
+        level}}rating-select--level{{/if}} js-rating-select"
+     data-mode="{{#if stars}}stars{{/if}}{{#if level}}level{{/if}}">
+  <input type="hidden" value="">
+  <div class="rating-select__value">
+    {{#if stars}}
+      <i class="rating-select__icon"></i>
+      <i class="rating-select__icon"></i>
+      <i class="rating-select__icon"></i>
+      <i class="rating-select__icon"></i>
+      <i class="rating-select__icon"></i>
+    {{/if}}
+
+    {{#if level}}
+      <i class="rating-select__icon"></i>
+      <i class="rating-select__icon"></i>
+      <i class="rating-select__icon"></i>
+      <i class="rating-select__icon rating-select__icon--all"></i>
+    {{/if}}
+  </div>
+  <div class="rating-select__label">
+    {{#if stars}}
+      Your rating: <span class="rating-select__result js-rating-select__result">3/5</span>
+    {{/if}}
+    {{#if level}}
+      The best for: <span class="rating-select__result js-rating-select__result">Mixed</span>
+    {{/if}}
+  </div>
+</div>
