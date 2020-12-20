@@ -1,0 +1,24 @@
+<div class="course-playlist">
+  <div class="course-playlist__header">
+    <span class="course-playlist__title">10 Lessons</span>
+    <span class="course-playlist__time">43:50</span>
+  </div>
+  <ul class="course-playlist__list">
+    <li class="course-playlist__item course-playlist__item--active">
+      <span class="course-playlist__name">1. Course introduction about course</span>
+      <i class="course-playlist__pause"></i>
+      <span class="course-playlist__time">1:10</span>
+    </li>
+    <li class="course-playlist__item">
+      <span class="course-playlist__name">2. Lesson name</span>
+      <span class="course-playlist__time">1:10</span>
+    </li>
+    {{#times 15}}
+      <li class="course-playlist__item course-playlist__item--locked">
+        <span class="course-playlist__name">3. Lesson name</span>
+        <i class="course-playlist__lock"></i>
+        <span class="course-playlist__time">1:10</span>
+      </li>
+    {{/times}}
+  </ul>
+</div>

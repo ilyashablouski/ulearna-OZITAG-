@@ -59,6 +59,15 @@
     }
   }
 
+  &--dark {
+    background: $color-gray-dark-20;
+    color: $color-blue;
+
+    &:hover {
+      background: $color-gray-dark-40;
+    }
+  }
+
   &--blue {
     background: $color-blue;
 
@@ -77,7 +86,7 @@
     &.btn--large {
       padding-top: 17px;
       padding-bottom: 17px;
-      @include mobile{
+      @include mobile {
         padding-top: 15px;
         padding-bottom: 15px;
       }

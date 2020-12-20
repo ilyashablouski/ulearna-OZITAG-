@@ -75,6 +75,15 @@
   {{/core/ui-kit/blocks/widget}}
 {{/core/ui-kit/blocks/row}}
 
+{{#> core/ui-kit/blocks/row id=null title=null }}
+  {{#> core/ui-kit/blocks/widget title='.btn--dark' width=200}}
+    {{> ui/btn label="Share" color="dark" icon="button-share"}}
+  {{/core/ui-kit/blocks/widget}}
+  {{#> core/ui-kit/blocks/widget title='.btn--dark' width=200}}
+    {{> ui/btn label="Add to wish list" color="dark" icon="button-wish"}}
+  {{/core/ui-kit/blocks/widget}}
+{{/core/ui-kit/blocks/row}}
+
 
 {{#> core/ui-kit/blocks/row id=null title=null }}
   {{#> core/ui-kit/blocks/widget title='.btn-icon (Reset)' width=200}}
@@ -82,6 +91,9 @@
   {{/core/ui-kit/blocks/widget}}
   {{#> core/ui-kit/blocks/widget title='.btn-arrow' width=200}}
     {{> ui/btn-arrow label="Link"}}
+  {{/core/ui-kit/blocks/widget}}
+  {{#> core/ui-kit/blocks/widget title='.btn-arrow--back' width=200}}
+    {{> ui/btn-arrow label="Link" back=true}}
   {{/core/ui-kit/blocks/widget}}
 {{/core/ui-kit/blocks/row}}
 

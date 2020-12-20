@@ -1,0 +1,27 @@
+<section class="course-intro">
+  <div class="container">
+    <header class="course-intro__header">
+      <div class="course-intro__left">
+        {{> ui/btn-arrow back=true label="Back To Catalog"}}
+      </div>
+      <div class="course-intro__right">
+        {{> ui/btn label="Share" color="dark" icon="button-share"}}
+        {{> ui/btn label="Add to wish list" color="dark" icon="button-wish"}}
+      </div>
+    </header>
+
+    <div class="course-intro__row">
+      <div class="course-intro__left">
+        {{> blocks/course/player}}
+      </div>
+      <div class="course-intro__right">
+        {{> blocks/course/playlist}}
+      </div>
+    </div>
+
+    <h1 class="course-intro__title">Customizing Type with Draplin: Creating Wordmarks That Work</h1>
+    <div class="course-intro__description">
+      By Instructor, Senior developer <span class="course-intro__author">Murvin Murphy</span>
+    </div>
+  </div>
+</section>

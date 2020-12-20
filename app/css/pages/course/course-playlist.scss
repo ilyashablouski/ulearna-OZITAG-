@@ -1,0 +1,88 @@
+.course-playlist {
+  height: 533px;
+  background: #33414F;
+  border-radius: 10px;
+  width: 100%;
+  color: $color-gray-dark;
+  font-size: 18px;
+  line-height: 25px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 34px;
+
+  &__header {
+    padding: 16px 16px 8px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__row {
+
+  }
+
+  &__title {
+    font-weight: 800;
+  }
+
+  &__time {
+    width: 50px;
+    text-align: right;
+  }
+
+  &__list {
+    margin-left: 16px;
+    padding-right: 16px;
+    overflow: auto;
+  }
+
+  &__name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    flex: 1 1 1px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    color: #fff;
+    box-shadow: inset 0px -1px 0px rgba(130, 154, 178, 0.4);
+    cursor: pointer;
+
+    &--locked {
+      color: $color-gray-dark;
+    }
+
+    &--active {
+      color: $color-blue;
+
+      .course-playlist__time {
+        color: $color-white;
+      }
+    }
+
+    &:hover{
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.06)), #33414F;
+    }
+  }
+
+  &__lock {
+    @include sprite('course-playlist-lock');
+    margin-left: 9px;
+  }
+
+  &__pause {
+    @include circle(24px, $color-blue-dark);
+    margin-left: 9px;
+    position: relative;
+
+    &:before{
+      content: '';
+      @include align(true, true);
+      @include sprite('course-playlist-pause');
+    }
+  }
+}
