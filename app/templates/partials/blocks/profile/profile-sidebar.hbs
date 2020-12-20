@@ -1,0 +1,60 @@
+<div class="profile-sidebar">
+  <div class="profile-sidebar__user">
+    <div class="profile-sidebar__user-img">
+      {{> components/image img="header/avatar" ext="jpg"}}
+    </div>
+    <div class="profile-sidebar__user-info">
+      <div class="profile-sidebar__user-name">Ali Kazal</div>
+      <div class="profile-sidebar__user-email">
+        <a href="mailto:Ali_Kazal@email.com" class="profile-sidebar__user-email-link">Ali_Kazal@email.com</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="profile-sidebar__socials">
+    <div class="profile-sidebar__counter">
+      {{> blocks/profile/profile-sidebar-counter number="168" text="Folowers"}}
+      {{> blocks/profile/profile-sidebar-counter number="10" text="Followings" }}
+    </div>
+
+    <a href="#" class="profile-sidebar__socials-link">Website//alikazal.org.com</a>
+
+    <div class="profile-sidebar__socials-links">
+      <a href="#" class="profile-sidebar__social-link profile-sidebar__social-link--twitter"></a>
+      <a href="#" class="profile-sidebar__social-link profile-sidebar__social-link--facebook"></a>
+      <a href="#" class="profile-sidebar__social-link profile-sidebar__social-link--instagram"></a>
+      <a href="#" class="profile-sidebar__social-link profile-sidebar__social-link--youtube"></a>
+    </div>
+  </div>
+
+  <div class="profile-sidebar__counter-strip">
+    {{> blocks/profile/profile-sidebar-counter-strip number="12" text="Active Courses"}}
+    {{> blocks/profile/profile-sidebar-counter-strip number="4" text="Certificates" }}
+  </div>
+
+  <div class="profile-sidebar__nav">
+    {{> blocks/profile/profile-sidebar-nav-item url='#' imgName='dashboard' label='Dashboard' active=true}}
+    {{> blocks/profile/profile-sidebar-nav-item url='#' imgName='courses' label='My Courses'}}
+    {{> blocks/profile/profile-sidebar-nav-item url='#' imgName='certificates' label='Certificates'}}
+    {{> blocks/profile/profile-sidebar-nav-item url='#' imgName='messages' label='Messages'}}
+    {{> blocks/profile/profile-sidebar-nav-item url='#' imgName='notifiсation' label='Notifications'}}
+    {{> blocks/profile/profile-sidebar-nav-item url='#' imgName='settings' label='Settings'}}
+  </div>
+
+  <div class="profile-sidebar__notify-card">
+    {{> widgets/notify-card
+      title='Upgrade to student'
+      text='Upgrade for x$ to have access to Ulearna in all languages'
+    }}
+  </div>
+
+  <div class="profile-sidebar__btn-bottom">
+    {{> ui/btn 
+      outline=true label='Sign Out' 
+      icon='button-logout'
+      stretched=true
+      icon-right=true
+      }}
+  </div>
+</div>
