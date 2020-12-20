@@ -27,9 +27,13 @@
     flex-shrink: 0;
   }
 
-  &__wrapper {
+  &__container {
     padding-top: 24px;
     background: #f4f7fa;
     margin-bottom: -100px;
+  }
+
+  &__wrapper {
+    display: flex;
   }
 }

@@ -1,14 +1,14 @@
 .sidebar {
-  &__wrapper {
-    margin-left: -80px;
-    padding: 20px 40px 40px 80px;
-    display: flex;
-    flex-direction: column;
-    max-width: 363px;
-    height: 1135px;
-    background: #fff;
-    box-shadow: 5px 0px 16px rgba(1, 64, 139, 0.08);
-  }
+  margin-left: -80px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 20px 40px 40px 80px;
+  flex: 0 0 363px;
+  max-width: 363px;
+  min-height: 1135px;
+  border-radius: 0 12px 0 0;
+  box-shadow: 5px 0px 16px rgba(1, 64, 139, 0.08);
 
   &__user {
     margin-bottom: 14px;

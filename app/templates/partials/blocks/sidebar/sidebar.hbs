@@ -1,62 +1,60 @@
 <div class="sidebar">
-  <div class="sidebar__wrapper">
-    <div class="sidebar__user">
-      <div class="sidebar__user-img">
-        {{> components/image img="header/avatar" ext="jpg"}}
-      </div>
-      <div class="sidebar__user-info">
-        <div class="sidebar__user-name">Ali Kazal</div>
-        <div class="sidebar__user-email">
-          <a href="mailto:Ali_Kazal@email.com" class="sidebar__user-email-link">Ali_Kazal@email.com</a>
-        </div>
-      </div>
-
+  <div class="sidebar__user">
+    <div class="sidebar__user-img">
+      {{> components/image img="header/avatar" ext="jpg"}}
     </div>
-
-    <div class="sidebar__socials">
-      <div class="sidebar__counter">
-        {{> blocks/sidebar/sidebar-counter number="168" text="Folowers"}}
-        {{> blocks/sidebar/sidebar-counter number="10" text="Followings" }}
-      </div>
-
-      <a href="#" class="sidebar__socials-link">Website//alikazal.org.com</a>
-
-      <div class="sidebar__socials-links">
-        <a href="#" class="sidebar__social-link sidebar__social-link--twitter"></a>
-        <a href="#" class="sidebar__social-link sidebar__social-link--facebook"></a>
-        <a href="#" class="sidebar__social-link sidebar__social-link--instagram"></a>
-        <a href="#" class="sidebar__social-link sidebar__social-link--youtube"></a>
+    <div class="sidebar__user-info">
+      <div class="sidebar__user-name">Ali Kazal</div>
+      <div class="sidebar__user-email">
+        <a href="mailto:Ali_Kazal@email.com" class="sidebar__user-email-link">Ali_Kazal@email.com</a>
       </div>
     </div>
 
-    <div class="sidebar__counter-strip">
-      {{> blocks/sidebar/sidebar-counter-strip number="12" text="Active Courses"}}
-      {{> blocks/sidebar/sidebar-counter-strip number="4" text="Certificates" }}
+  </div>
+
+  <div class="sidebar__socials">
+    <div class="sidebar__counter">
+      {{> blocks/sidebar/sidebar-counter number="168" text="Folowers"}}
+      {{> blocks/sidebar/sidebar-counter number="10" text="Followings" }}
     </div>
 
-    <div class="sidebar__nav">
-      {{> blocks/sidebar/sidebar-nav-item url='#' imgName='dashboard' label='Dashboard' active=true}}
-      {{> blocks/sidebar/sidebar-nav-item url='#' imgName='courses' label='My Courses'}}
-      {{> blocks/sidebar/sidebar-nav-item url='#' imgName='certificates' label='Certificates'}}
-      {{> blocks/sidebar/sidebar-nav-item url='#' imgName='messages' label='Messages'}}
-      {{> blocks/sidebar/sidebar-nav-item url='#' imgName='notifiсation' label='Notifications'}}
-      {{> blocks/sidebar/sidebar-nav-item url='#' imgName='settings' label='Settings'}}
-    </div>
+    <a href="#" class="sidebar__socials-link">Website//alikazal.org.com</a>
 
-    <div class="sidebar__notify-card">
-      {{> widgets/notify-card
+    <div class="sidebar__socials-links">
+      <a href="#" class="sidebar__social-link sidebar__social-link--twitter"></a>
+      <a href="#" class="sidebar__social-link sidebar__social-link--facebook"></a>
+      <a href="#" class="sidebar__social-link sidebar__social-link--instagram"></a>
+      <a href="#" class="sidebar__social-link sidebar__social-link--youtube"></a>
+    </div>
+  </div>
+
+  <div class="sidebar__counter-strip">
+    {{> blocks/sidebar/sidebar-counter-strip number="12" text="Active Courses"}}
+    {{> blocks/sidebar/sidebar-counter-strip number="4" text="Certificates" }}
+  </div>
+
+  <div class="sidebar__nav">
+    {{> blocks/sidebar/sidebar-nav-item url='#' imgName='dashboard' label='Dashboard' active=true}}
+    {{> blocks/sidebar/sidebar-nav-item url='#' imgName='courses' label='My Courses'}}
+    {{> blocks/sidebar/sidebar-nav-item url='#' imgName='certificates' label='Certificates'}}
+    {{> blocks/sidebar/sidebar-nav-item url='#' imgName='messages' label='Messages'}}
+    {{> blocks/sidebar/sidebar-nav-item url='#' imgName='notifiсation' label='Notifications'}}
+    {{> blocks/sidebar/sidebar-nav-item url='#' imgName='settings' label='Settings'}}
+  </div>
+
+  <div class="sidebar__notify-card">
+    {{> widgets/notify-card
       title='Upgrade to student'
       text='Upgrade for x$ to have access to Ulearna in all languages'
     }}
-    </div>
+  </div>
 
-    <div class="sidebar__btn-bottom">
-      {{> ui/btn 
+  <div class="sidebar__btn-bottom">
+    {{> ui/btn 
       outline=true label='Sign Out' 
       icon='button-logout'
       stretched=true
       icon-right=true
       }}
-    </div>
   </div>
 </div>
