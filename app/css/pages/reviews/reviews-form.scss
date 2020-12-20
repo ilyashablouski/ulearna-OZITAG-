@@ -1,7 +1,11 @@
-.reviews-form{
+.reviews-form {
   margin-top: 40px;
 
-  &__title{
+  textarea {
+    height: 188px;
+  }
+
+  &__title {
     font-weight: 600;
     font-size: 29px;
     line-height: 43px;
@@ -9,16 +13,86 @@
     display: block;
   }
 
-  &__inner{
+  &__inner {
     background: $color-gray-30;
     border-radius: 12px;
     margin-top: 14px;
     padding: 20px 30px 30px;
   }
 
-  &__submit{
+  &__submit {
     display: flex;
     justify-content: flex-end;
     margin-top: 30px;
+  }
+
+  &__section {
+    background: #F4F7FA;
+    box-shadow: inset 0px -1px 0px #DAE4ED;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+
+    &--row {
+      display: flex;
+    }
+
+    &:last-child {
+      box-shadow: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__text {
+    margin-top: 8px;
+    display: block;
+    font-size: 14px;
+    line-height: 140%;
+    color: $color-black;
+  }
+
+  &__rating {
+    margin-top: 18px;
+  }
+
+  &__cell {
+    padding-left: 60px;
+    margin-left: 60px;
+    border-left: 1px solid $color-gray;
+
+    &:first-child {
+      margin-left: 0;
+      padding-left: 0;
+      border-left: 0 none;
+    }
+  }
+
+  &__label {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: $color-black;
+    display: block;
+  }
+
+  &__checkboxes {
+    margin-top: 8px;
+    margin-left: -10px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item{
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+  }
+
+  &__select {
+    margin-top: 18px;
+  }
+
+  &__input {
+    margin-top: 7px;
   }
 }

@@ -1,0 +1,60 @@
+.form-radio-simple {
+  display: flex;
+
+  input {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border: 0 none;
+  }
+
+  &__label {
+    margin-left: 20px;
+    display: inline-block;
+    cursor: pointer;
+
+    &:first-child{
+      margin-left: 0;
+    }
+  }
+
+  &__text{
+    position: relative;
+    padding-left: 34px;
+    min-height: 23px;
+
+    &:before, &:after {
+      @include transition;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      @include circle(24px);
+      border: 3px solid $color-gray;
+      @include align(false, true);
+      left: 0;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      opacity: 0;
+      @include circle(12px);
+      left: 6px;
+      top: 6px;
+    }
+  }
+
+  input:checked + .form-radio-simple__text {
+    &:before {
+      background: $color-blue;
+      border-color: $color-blue;
+    }
+
+    &:after {
+      opacity: 1;
+    }
+  }
+}
