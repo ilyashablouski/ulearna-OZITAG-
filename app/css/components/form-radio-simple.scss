@@ -11,8 +11,10 @@
 
   &__label {
     margin-left: 20px;
-    display: inline-block;
     cursor: pointer;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
 
     &:first-child{
       margin-left: 0;
@@ -22,7 +24,8 @@
   &__text{
     position: relative;
     padding-left: 34px;
-    min-height: 23px;
+    min-height: 24px;
+    line-height: 24px;
 
     &:before, &:after {
       @include transition;

@@ -40,8 +40,12 @@
         @include sprite('faq-accordion-plus');
       }
 
-      &:hover:after, .opened &:after{
+      &:hover:after{
         @include sprite('faq-accordion-plus-active');
+      }
+
+      .opened &:after{
+        @include sprite('faq-accordion-minus');
       }
     }
 
