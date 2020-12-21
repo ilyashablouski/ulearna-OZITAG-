@@ -1,0 +1,20 @@
+<main class="dashboard-main">
+  <div class="dashboard-main__header">
+    <h4 class="dashboard-main__title">Hello, Ali, this is your Dahboard</h4>
+    {{> ui/btn
+    outline=true
+    label='Edit Profile'
+    icon='button-edit'
+    transparent=true
+    }}
+  </div>
+
+  <div class="dashboard-main__about">
+    <h6 class="dashboard-main__about-title">About me</h6>
+    <span class="dashboard-main__about-text">Hello, I’m Ali...</span>
+  </div>
+
+  <div class="dashboard-main__progress">
+    {{> blocks/profile-dashboard/student-progress}}
+  </div>
+</main>

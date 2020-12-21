@@ -1,0 +1,31 @@
+.dashboard-main {
+  &__header {
+    padding-top: 18px;
+    padding-bottom: 13px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid $color-gray;
+  }
+  &__title {
+    margin-right: auto;
+    padding-right: 15px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 29px;
+  }
+
+  &__about {
+    &-title {
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    &-text {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}

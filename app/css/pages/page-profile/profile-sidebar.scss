@@ -11,17 +11,13 @@
   box-shadow: 5px 0px 16px rgba(1, 64, 139, 0.08);
 
   &__user {
-    margin-bottom: 14px;
     padding-bottom: 16px;
     display: flex;
     align-items: center;
     border-bottom: 1px solid #dae4ed;
 
-    &-info {
-      padding-left: 14px;
-    }
-
     &-img {
+      margin-right: 14px;
       height: 72px;
       width: 72px;
       border-radius: 50%;
@@ -29,87 +25,79 @@
       filter: drop-shadow(0px 4px 14px rgba(1, 64, 139, 0.14));
     }
     &-name {
-      margin-bottom: 6px;
       font-size: 16px;
       font-weight: 600;
     }
 
     &-email {
+      margin-top: 6px;
       color: $color-gray-dark;
       font-size: 14px;
+      &-link {
+        &:hover {
+          color: $color-black;
+        }
+      }
     }
   }
 
   &__socials {
-    margin-bottom: 14px;
+    margin-top: 14px;
     padding-bottom: 17px;
     border-bottom: 1px solid #dae4ed;
 
     &-link {
-      display: block;
-      margin-bottom: 13px;
+      margin-top: 8px;
+      display: inline-block;
       color: $color-gray-dark;
       font-size: 14px;
+
+      &:hover {
+        color: $color-black;
+      }
     }
   }
 
-  &__counter {
-    margin-bottom: 8px;
+  &__counters {
     display: flex;
   }
 
-  &__counter-strip {
-    margin-bottom: 20px;
+  &__counters-strip {
+    margin-top: 14px;
     display: flex;
   }
 
-  &__socials-links {
+  &__socials-networks {
+    margin-top: 13px;
     display: flex;
   }
 
   &__social-link {
-    &::after {
-      content: '';
-    }
-    &--twitter {
-      &::after {
-        @include sprite('social-twitter-sm');
-      }
-    }
-
-    &--facebook {
-      &::after {
-        @include sprite('social-facebook-sm');
-      }
-    }
-
-    &--instagram {
-      &::after {
-        @include sprite('social-instagram-sm');
-      }
-    }
-
-    &--youtube {
-      &::after {
-        @include sprite('social-youtube-sm');
-      }
-    }
-
     &:not(:last-child) {
       margin-right: 14px;
+    }
+
+    &:hover {
+      opacity: 0.8;
     }
   }
 
   &__nav {
+    margin-top: 20px;
+    margin-right: -8px;
+    margin-left: -8px;
     display: flex;
     flex-wrap: wrap;
-    margin-left: -8px;
-    margin-right: -8px;
-    margin-bottom: 20px;
+
+    &-item {
+      margin-bottom: 8px;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
   }
 
   &__notify-card {
-    margin-top: -8px;
+    margin-top: 12px;
   }
 
   &__btn-bottom {

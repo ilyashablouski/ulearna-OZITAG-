@@ -13,48 +13,70 @@
   </div>
 
   <div class="profile-sidebar__socials">
-    <div class="profile-sidebar__counter">
-      {{> blocks/profile/profile-sidebar-counter number="168" text="Folowers"}}
-      {{> blocks/profile/profile-sidebar-counter number="10" text="Followings" }}
+    <div class="profile-sidebar__counters">
+      {{> blocks/profile/sidebar-counter number="168" text="Folowers"}}
+      {{> blocks/profile/sidebar-counter number="10" text="Followings" }}
     </div>
 
     <a href="#" class="profile-sidebar__socials-link">Website//alikazal.org.com</a>
 
-    <div class="profile-sidebar__socials-links">
-      <a href="#" class="profile-sidebar__social-link profile-sidebar__social-link--twitter"></a>
-      <a href="#" class="profile-sidebar__social-link profile-sidebar__social-link--facebook"></a>
-      <a href="#" class="profile-sidebar__social-link profile-sidebar__social-link--instagram"></a>
-      <a href="#" class="profile-sidebar__social-link profile-sidebar__social-link--youtube"></a>
+    <div class="profile-sidebar__socials-networks">
+      <a href="#" class="profile-sidebar__social-link"> 
+        {{> ui/svg name="social-twitter-sm"}}
+      </a>
+      <a href="#" class="profile-sidebar__social-link"> 
+        {{> ui/svg name="social-facebook-sm"}}
+      </a>
+      <a href="#" class="profile-sidebar__social-link"> 
+        {{> ui/svg name="social-instagram-sm"}}
+      </a>
+      <a href="#" class="profile-sidebar__social-link"> 
+        {{> ui/svg name="social-youtube-sm"}}
+      </a>
     </div>
   </div>
 
-  <div class="profile-sidebar__counter-strip">
-    {{> blocks/profile/profile-sidebar-counter-strip number="12" text="Active Courses"}}
-    {{> blocks/profile/profile-sidebar-counter-strip number="4" text="Certificates" }}
+  <div class="profile-sidebar__counters-strip">
+    {{> blocks/profile/sidebar-counter-strip number="12" text="Active Courses"}}
+    {{> blocks/profile/sidebar-counter-strip number="4" text="Certificates" }}
   </div>
 
   <div class="profile-sidebar__nav">
-    {{> blocks/profile/profile-sidebar-nav-item url='#' imgName='dashboard' label='Dashboard' active=true}}
-    {{> blocks/profile/profile-sidebar-nav-item url='#' imgName='courses' label='My Courses'}}
-    {{> blocks/profile/profile-sidebar-nav-item url='#' imgName='certificates' label='Certificates'}}
-    {{> blocks/profile/profile-sidebar-nav-item url='#' imgName='messages' label='Messages'}}
-    {{> blocks/profile/profile-sidebar-nav-item url='#' imgName='notifiсation' label='Notifications'}}
-    {{> blocks/profile/profile-sidebar-nav-item url='#' imgName='settings' label='Settings'}}
+    <div class="profile-sidebar__nav-item">
+      {{> blocks/profile/profile-sidebar-btn url='#' imgName='dashboard' label='Dashboard' active=true}}
+    </div>
+    <div class="profile-sidebar__nav-item">
+      {{> blocks/profile/profile-sidebar-btn url='#' imgName='courses' label='My Courses'}}
+    </div>
+    <div class="profile-sidebar__nav-item">
+      {{> blocks/profile/profile-sidebar-btn url='#' imgName='certificates' label='Certificates'}}
+    </div>
+    <div class="profile-sidebar__nav-item">
+      {{> blocks/profile/profile-sidebar-btn url='#' imgName='messages' label='Messages'}}
+    </div>
+    <div class="profile-sidebar__nav-item">
+      {{> blocks/profile/profile-sidebar-btn url='#' imgName='notifiсation' label='Notifications'}}
+    </div>
+    <div class="profile-sidebar__nav-item">
+      {{> blocks/profile/profile-sidebar-btn url='#' imgName='settings' label='Settings'}}
+
+    </div>
   </div>
 
   <div class="profile-sidebar__notify-card">
     {{> widgets/notify-card
-      title='Upgrade to student'
-      text='Upgrade for x$ to have access to Ulearna in all languages'
+    title='Upgrade to student'
+    text='Upgrade for x$ to have access to Ulearna in all languages'
     }}
   </div>
 
   <div class="profile-sidebar__btn-bottom">
-    {{> ui/btn 
-      outline=true label='Sign Out' 
-      icon='button-logout'
-      mod='btn--stretched'
-      icon-right=true
-      }}
+    {{> ui/btn
+    outline=true
+    label='Sign Out'
+    icon='button-logout'
+    mod='btn--stretched'
+    icon-right=true
+    }}
   </div>
 </div>
