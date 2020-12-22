@@ -3,6 +3,18 @@
 {{> layout/head}}
 {{> layout/header }}
 
-{{> blocks/profile/page-profile}}
+<div class="page-profile">
+  <div class="container">
+    <div class="page-profile__inner">
+      <div class="page-profile__left">
+        {{> blocks/page-profile/profile-sidebar}}
+      </div>
+
+      <div class="page-profile__main">
+        {{> blocks/page-profile/dashboard}}
+      </div>
+    </div>
+  </div>
+</div>
 
 {{> layout/footer }}

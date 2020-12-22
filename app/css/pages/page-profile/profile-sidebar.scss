@@ -1,106 +1,42 @@
 .profile-sidebar {
-  margin-left: -80px;
   display: flex;
   flex-direction: column;
   background: #fff;
   padding: 20px 40px 40px 80px;
-  flex: 0 0 363px;
-  max-width: 363px;
   min-height: 1135px;
   border-radius: 0 12px 0 0;
   box-shadow: 5px 0px 16px rgba(1, 64, 139, 0.08);
 
-  &__user {
-    padding-bottom: 16px;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #dae4ed;
+  &__block {
+    padding: 20px 0;
+    border-top: 1px solid #dae4ed;
 
-    &-img {
-      margin-right: 14px;
-      height: 72px;
-      width: 72px;
-      border-radius: 50%;
-      overflow: hidden;
-      filter: drop-shadow(0px 4px 14px rgba(1, 64, 139, 0.14));
-    }
-    &-name {
-      font-size: 16px;
-      font-weight: 600;
-    }
-
-    &-email {
-      margin-top: 6px;
-      color: $color-gray-dark;
-      font-size: 14px;
-      &-link {
-        &:hover {
-          color: $color-black;
-        }
-      }
-    }
-  }
-
-  &__socials {
-    margin-top: 14px;
-    padding-bottom: 17px;
-    border-bottom: 1px solid #dae4ed;
-
-    &-link {
-      margin-top: 8px;
-      display: inline-block;
-      color: $color-gray-dark;
-      font-size: 14px;
-
-      &:hover {
-        color: $color-black;
-      }
-    }
-  }
-
-  &__counters {
-    display: flex;
-  }
-
-  &__counters-strip {
-    margin-top: 14px;
-    display: flex;
-  }
-
-  &__socials-networks {
-    margin-top: 13px;
-    display: flex;
-  }
-
-  &__social-link {
-    &:not(:last-child) {
-      margin-right: 14px;
-    }
-
-    &:hover {
-      opacity: 0.8;
+    &:first-child {
+      padding-top: 0;
+      border-top: 0 none;
     }
   }
 
   &__nav {
-    margin-top: 20px;
+    margin-top: -8px;
     margin-right: -8px;
     margin-left: -8px;
     display: flex;
     flex-wrap: wrap;
 
     &-item {
-      margin-bottom: 8px;
+      margin-top: 8px;
       padding-left: 8px;
       padding-right: 8px;
     }
   }
 
   &__notify-card {
-    margin-top: 12px;
+    margin-top: 20px;
   }
 
-  &__btn-bottom {
+  &__bottom {
     margin-top: auto;
+    padding-top: 20px;
   }
 }

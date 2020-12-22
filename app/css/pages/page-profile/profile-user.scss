@@ -1,0 +1,28 @@
+.profile-user {
+  display: flex;
+  align-items: center;
+
+  &__img {
+    margin-right: 14px;
+    height: 72px;
+    width: 72px;
+    border-radius: 50%;
+    overflow: hidden;
+    filter: drop-shadow(0px 4px 14px rgba(1, 64, 139, 0.14));
+  }
+  &__name {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__email {
+    margin-top: 6px;
+    display: inline-block;
+    color: $color-gray-dark;
+    font-size: 14px;
+
+    &:hover {
+      color: $color-black;
+    }
+  }
+}

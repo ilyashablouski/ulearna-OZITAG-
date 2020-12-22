@@ -1,0 +1,47 @@
+.profile-socials {
+  &__counters {
+    display: flex;
+  }
+
+  &__counter {
+    font-size: 14px;
+    &-number {
+      font-weight: 600;
+      color: $color-blue;
+    }
+
+    &-text {
+      font-weight: normal;
+    }
+
+    &:not(:last-child) {
+      margin-right: 13px;
+    }
+  }
+
+  &__networks {
+    margin-top: 13px;
+    display: flex;
+  }
+
+  &__network {
+    &:not(:last-child) {
+      margin-right: 14px;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__link {
+    margin-top: 8px;
+    display: inline-block;
+    color: $color-gray-dark;
+    font-size: 14px;
+
+    &:hover {
+      color: $color-black;
+    }
+  }
+}

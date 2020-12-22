@@ -7,8 +7,14 @@
     display: flex;
   }
 
+  &__left {
+    margin-right: 50px;
+    margin-left: -80px;
+    flex: 0 0 363px;
+    max-width: 363px;
+  }
+
   &__main {
-    margin-left: 50px;
     flex: 1 0 auto;
   }
 }
