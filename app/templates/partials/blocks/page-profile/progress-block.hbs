@@ -1,0 +1,27 @@
+<div class="progress-block">
+  <div class="progress-block__course">
+    <div class="progress-block__course-name">
+      Customizing Type with Draplin: Creating Wordmarks That Work
+    </div>
+
+    {{> widgets/round-bar value='100%'}}
+  </div>
+
+  <div class="progress-block__counters">
+    <span class="progress-block__counter-text">Lessons</span>
+    <span class="progress-block__counter-passed">{{passed}}</span>
+    <span style="color:#20B7F7">/</span>
+    <span class="progress-block__counter-total">{{total}}</span>
+  </div>
+
+  <div class="progress-block__btn">
+    {{#if button}}
+    {{> ui/btn
+    outline=true
+    label='View Certificate'
+    transparent=true
+    }}
+    {{/if}}
+  </div>
+
+</div>

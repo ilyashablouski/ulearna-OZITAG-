@@ -1,0 +1,30 @@
+<div class="student-block">
+  <div class="student-block__info">
+    <h6 class="student-block__info-title">
+      About me
+    </h6>
+    <div class="student-block__info-text">
+      Hello, I’m Ali...
+    </div>
+  </div>
+
+
+  <div class="student-block__header">
+    <h6 class="student-block__header-title">Course Progress</h6>
+    <a href="#" class="student-block__header-link">See All</a>
+  </div>
+
+  <div class="student-block__list">
+    {{> blocks/page-profile/progress-block passed='10' total='10' button=true}}
+    {{> blocks/page-profile/progress-block passed='8' total='10' button=true}}
+
+    {{> blocks/page-profile/progress-block passed='2' total='10' button=false}}
+    {{> blocks/page-profile/progress-block passed='2' total='10' button=false}}
+    {{> blocks/page-profile/progress-block passed='2' total='10' button=false}}
+    {{> blocks/page-profile/progress-block passed='0' total='10' button=false}}
+    {{> blocks/page-profile/progress-block passed='0' total='10' button=false}}
+    {{> blocks/page-profile/progress-block passed='0' total='10' button=false}}
+
+
+  </div>
+</div>

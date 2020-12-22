@@ -1,0 +1,16 @@
+.profile-dashboard {
+  display: flex;
+  border-top: 1px solid $color-gray;
+
+  &__left {
+    flex: 0 0 614px;
+    max-width: 614px;
+    margin-right: 50px;
+    margin-top: 20px;
+  }
+
+  &__right {
+    margin-top: 20px;
+    flex-grow: 1;
+  }
+}

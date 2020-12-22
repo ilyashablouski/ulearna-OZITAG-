@@ -18,16 +18,18 @@
   }
 
   &__nav {
-    margin-top: -8px;
+    margin-top: -16px;
     margin-right: -8px;
     margin-left: -8px;
     display: flex;
     flex-wrap: wrap;
 
     &-item {
-      margin-top: 8px;
+      margin-top: 16px;
       padding-left: 8px;
       padding-right: 8px;
+      flex: 1 0 50%;
+      max-width: 50%;
     }
   }
 

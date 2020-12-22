@@ -1,40 +1,38 @@
 .btn-category {
-  &__link {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 113px;
-    height: 95px;
-    font-size: 14px;
-    font-weight: 600;
-    background: rgba(218, 228, 237, 0.22);
-    color: $color-gray-dark;
-    border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 95px;
+  font-size: 14px;
+  font-weight: 600;
+  background: rgba(218, 228, 237, 0.22);
+  color: $color-gray-dark;
+  border-radius: 10px;
 
-    &.active {
-      background: $color-blue;
-      color: $color-white;
-
-      &:hover {
-        svg {
-          color: $color-white;
-        }
-      }
-    }
+  &.active {
+    background: $color-blue;
+    color: $color-white;
 
     &:hover {
       svg {
-        color: $color-blue;
+        color: $color-white;
       }
     }
+  }
 
+  &:hover {
     svg {
-      height: 24px;
-      width: 24px;
-
-      @include transition;
+      color: $color-blue;
     }
+  }
+
+  svg {
+    height: 24px;
+    width: 24px;
+
+    @include transition;
   }
 
   &__label {

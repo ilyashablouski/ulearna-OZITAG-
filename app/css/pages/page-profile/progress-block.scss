@@ -1,0 +1,44 @@
+.progress-block {
+  padding: 10px 8px 15px 10px;
+  border-top: 1px solid $color-gray;
+  cursor: pointer;
+  @include transition;
+
+  &:hover {
+    background: #e9eff5;
+  }
+
+  &:first-child {
+    padding-top: 0;
+    border-top: 0 none;
+  }
+
+  &__course {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+  }
+  &__course-name {
+    margin-right: auto;
+    padding-right: 10px;
+    font-weight: normal;
+    font-size: 16px;
+  }
+  &__counters {
+    display: flex;
+  }
+  &__counter-text {
+    margin-right: 5px;
+    color: $color-gray-dark;
+  }
+  &__counter-passed {
+    color: $color-blue;
+  }
+  &__counter-total {
+    color: $color-blue;
+  }
+
+  &__btn {
+    margin-top: 10px;
+  }
+}
