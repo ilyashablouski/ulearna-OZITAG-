@@ -3,7 +3,7 @@
   padding: 40px 0;
 
   @include smallTablet-and-mobile {
-    padding: 12px 0;
+    padding:0;
   }
 
   &__buttons {
@@ -22,6 +22,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include smallTablet-and-mobile{
+      padding: 12px 0;
+    }
   }
 
   &__right {
@@ -30,8 +33,22 @@
     display: flex;
     justify-content: space-between;
 
-    @include smallTablet-and-mobile {
-      width: auto;
+    .course-intro__row & {
+      @include smallTablet-and-mobile {
+        width: auto;
+        margin-left: 0;
+        margin-top: 20px;
+      }
+
+      @include smallTablet {
+        margin-left: -$tabletGutter;
+        margin-right: -$tabletGutter;
+      }
+
+      @include mobile {
+        margin-left: -$mobileGutter;
+        margin-right: -$mobileGutter;
+      }
     }
   }
 
@@ -44,7 +61,7 @@
     margin-top: 20px;
 
     @include smallTablet-and-mobile {
-      margin-top: 12px;
+      margin: 0;
       display: block;
     }
   }
