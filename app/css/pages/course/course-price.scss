@@ -4,8 +4,11 @@
   border-radius: 0 12px 12px 12px;
   overflow: hidden;
   margin-bottom: 40px;
-  margin-top: -80px;
-  margin-left: -17px;
+
+  @include no-smallTablet {
+    margin-top: -80px;
+    margin-left: -17px;
+  }
 
   &__inner {
     padding: 23px 16px 18px;

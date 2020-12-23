@@ -10,6 +10,14 @@
   flex-direction: column;
   padding-bottom: 34px;
 
+  @include tablet{
+    height: 353px;
+  }
+
+  @include smallTablet-and-mobile {
+    display: none;
+  }
+
   &__header {
     padding: 16px 16px 8px;
     display: flex;
@@ -64,7 +72,7 @@
       }
     }
 
-    &:hover{
+    &:hover {
       background: linear-gradient(0deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.06)), #33414F;
     }
   }
@@ -79,7 +87,7 @@
     margin-left: 9px;
     position: relative;
 
-    &:before{
+    &:before {
       content: '';
       @include align(true, true);
       @include sprite('course-playlist-pause');

@@ -1,5 +1,19 @@
-.course-player{
-  height: 533px;
+.course-player {
   background: #33414F;
   border-radius: 10px;
+
+  padding-top: 56.25%;
+
+  @include smallTablet {
+    margin-left: -$tabletGutter;
+    margin-right: -$tabletGutter;
+    border-radius: 0;
+    height: auto;
+  }
+
+  @include mobile{
+    border-radius: 0;
+    margin-left: -$mobileGutter;
+    margin-right: -$mobileGutter;
+  }
 }

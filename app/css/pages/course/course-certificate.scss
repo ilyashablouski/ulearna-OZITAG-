@@ -1,6 +1,10 @@
 .course-certificate {
   padding-top: 51px;
 
+  @include smallTablet-and-mobile{
+    padding-top: 80px;
+  }
+
   &__inner {
     background: rgba(218, 228, 237, 0.3);
     border-radius: 12px;
@@ -14,6 +18,13 @@
       @include sprite('certificate-left');
       top: 62px;
       left: 89px;
+
+      @include smallTablet{
+        left: 20px;
+      }
+      @include mobile{
+        display: none;
+      }
     }
 
     &:after {
@@ -22,6 +33,14 @@
       @include sprite('certificate-right');
       top: 74px;
       right: 110px;
+
+      @include smallTablet{
+        right: 20px;
+      }
+
+      @include mobile{
+        display: none;
+      }
     }
   }
 

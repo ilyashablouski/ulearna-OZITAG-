@@ -2,9 +2,25 @@
   background: $color-background-dark;
   padding: 40px 0;
 
+  @include smallTablet-and-mobile {
+    padding: 12px 0;
+  }
+
+  &__buttons {
+    display: flex;
+
+    .btn {
+      margin-left: 16px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
   &__header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -13,6 +29,10 @@
     margin-left: 35px;
     display: flex;
     justify-content: space-between;
+
+    @include smallTablet-and-mobile {
+      width: auto;
+    }
   }
 
   &__left {
@@ -22,6 +42,11 @@
   &__row {
     display: flex;
     margin-top: 20px;
+
+    @include smallTablet-and-mobile {
+      margin-top: 12px;
+      display: block;
+    }
   }
 
   &__title {
@@ -32,6 +57,12 @@
     margin-top: 30px;
     color: $color-white;
     margin-bottom: 0;
+
+    @include smallTablet-and-mobile {
+      font-size: 18px;
+      line-height: 27px;
+      margin-top: 16px;
+    }
   }
 
   &__description {
@@ -46,7 +77,8 @@
   &__follow {
     margin-left: 8px;
     display: flex;
-    .btn-icon{
+
+    .btn-icon {
       color: $color-blue;
     }
   }

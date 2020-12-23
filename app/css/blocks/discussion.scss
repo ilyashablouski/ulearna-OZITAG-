@@ -1,6 +1,10 @@
 .discussion {
   margin-top: -20px;
 
+  @include smallTablet-and-mobile{
+    margin-top: 0;
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;
