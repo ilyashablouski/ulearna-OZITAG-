@@ -1,6 +1,10 @@
 .course-main {
   padding-top: 40px;
 
+  @include desktop{
+    margin-bottom: -34px;
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: row-reverse;

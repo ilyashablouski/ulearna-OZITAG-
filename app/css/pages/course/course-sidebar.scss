@@ -1,6 +1,6 @@
 .course-sidebar {
   &__block {
-    padding: 16px 0;
+    padding: 15px 0;
     border-top: 1px solid $color-gray;
 
     &:first-child {
@@ -16,7 +16,7 @@
     letter-spacing: 0.02em;
     color: $color-gray-dark;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
 
   &__skills {

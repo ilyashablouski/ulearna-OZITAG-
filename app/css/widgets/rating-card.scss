@@ -10,7 +10,7 @@
     font-size: 14px;
     line-height: 140%;
     color: $color-black;
-    margin-top: 8px;
+    margin-top: 3px;
     display: block;
 
     b {
@@ -38,6 +38,10 @@
 
   &__item {
     margin-left: 8px;
+
+    .rating-card--stars &{
+      margin-left: 4px;
+    }
 
     &:first-child {
       margin-left: 0;
