@@ -33,9 +33,13 @@
     margin-top: 15px;
 
     &-item {
-      padding: 15px 10px;
+      padding: 14px 10px 15px;
       box-shadow: inset 0px -1px 0px #DAE4ED;
       cursor: pointer;
+      font-size: 18px;
+      line-height: 150%;
+      font-weight: 600;
+      letter-spacing: -0.01em;
 
       &:hover{
         background: rgba(218, 228, 237, 0.22);
@@ -44,6 +48,11 @@
       &._active{
         background: $color-blue-12;
         color: $color-blue2;
+      }
+
+      b{
+        display: inline-block;
+        margin-right: 10px;
       }
     }
   }

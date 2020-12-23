@@ -1,5 +1,5 @@
 .course-certificate {
-  padding-top: 50px;
+  padding-top: 51px;
 
   &__inner {
     background: rgba(218, 228, 237, 0.3);
@@ -29,9 +29,9 @@
     background: $color-white;
     box-sizing: border-box;
     border-radius: 10px;
-    margin: -100px auto 0;
+    margin: -90px auto 0;
     width: 300px;
-    padding: 35px 20px;
+    padding: 35px 20px 25px;
     box-shadow: 0px 4px 44px rgba(1, 64, 139, 0.24);
     text-align: center;
     position: relative;
@@ -72,6 +72,8 @@
 
     &-lines {
       margin-top: 10px;
+      margin: 10px auto;
+      width: 208px;
 
       i {
         width: 100%;
@@ -104,6 +106,8 @@
     font-size: 21px;
     line-height: 31px;
     color: $color-black;
+    display: block;
+    margin-top: 16px;
   }
 
   &__stats {
@@ -116,6 +120,7 @@
     display: inline-flex;
     align-items: center;
     color: $color-gray-dark;
+    margin-left: 20px;
 
     &-badge {
       margin-left: 8px;
@@ -130,7 +135,9 @@
   }
 
   &__text {
-    margin-top: 16px;
+    margin-top: 18px;
+    font-size: 16px;
+    line-height: 146%;
   }
 
   &__button {
