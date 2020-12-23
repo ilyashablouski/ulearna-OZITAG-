@@ -1,16 +1,22 @@
 .profile-dashboard {
+  margin-top: 13px;
+  padding-top: 20px;
   display: flex;
   border-top: 1px solid $color-gray;
 
   &__left {
-    flex: 0 0 614px;
-    max-width: 614px;
-    margin-right: 50px;
-    margin-top: 20px;
+    flex: 1 1 auto;
   }
 
   &__right {
-    margin-top: 20px;
-    flex-grow: 1;
+    margin-left: 50px;
+    flex: 0 0 283px;
+    max-width: 283px;
+  }
+
+  &__block {
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
   }
 }

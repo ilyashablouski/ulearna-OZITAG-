@@ -1,11 +1,14 @@
 <div class="profile-header">
-  <h4 class="profile-header__title">Hello, Ali, this is your Dahboard</h4>
+  <span class="profile-header__title">Hello, Ali, this is your Dahboard</span>
+
   {{#if button}}
-  {{> ui/btn
-  outline=true
-  label='Edit Profile'
-  icon='button-edit'
-  transparent=true
-  }}
+  <div class="profile-header__btn">
+    {{> ui/btn
+      outline=true
+      label='Edit Profile'
+      icon='button-edit'
+      transparent=true
+    }}
+  </div>
   {{/if}}
 </div>

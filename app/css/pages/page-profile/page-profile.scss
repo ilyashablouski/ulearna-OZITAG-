@@ -8,14 +8,14 @@
   }
 
   &__left {
-    margin-right: 50px;
     margin-left: -80px;
     flex: 0 0 363px;
     max-width: 363px;
   }
 
   &__main {
-    padding-bottom: 20px;
+    margin-left: 50px;
+    padding-bottom: 130px;
     flex-grow: 1;
   }
 }

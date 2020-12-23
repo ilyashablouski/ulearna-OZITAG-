@@ -1,5 +1,6 @@
 .progress-block {
-  padding: 10px 8px 15px 10px;
+  position: relative;
+  padding: 15px 8px 15px 10px;
   border-top: 1px solid $color-gray;
   cursor: pointer;
   @include transition;
@@ -9,31 +10,39 @@
   }
 
   &:first-child {
-    padding-top: 0;
     border-top: 0 none;
   }
 
-  &__course {
-    padding-top: 10px;
-    display: flex;
-    align-items: center;
+  &__inner  {
+    padding-right: 50px;
   }
+
   &__course-name {
-    margin-right: auto;
-    padding-right: 10px;
+    display: inline-block;
     font-weight: normal;
     font-size: 16px;
   }
-  &__counters {
-    display: flex;
+
+  &__round-bar {
+    position: absolute;
+    top: 10px;
+    right: 0;
   }
+
+  &__counters {
+    margin-top: 15px;
+    display: inline-flex;
+  }
+
   &__counter-text {
     margin-right: 5px;
     color: $color-gray-dark;
   }
+
   &__counter-passed {
     color: $color-blue;
   }
+
   &__counter-total {
     color: $color-blue;
   }

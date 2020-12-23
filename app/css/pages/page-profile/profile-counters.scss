@@ -1,8 +1,8 @@
 .profile-counters {
   display: flex;
   &__counter {
-    &:not(:last-child) {
-      margin-right: 16px;
+    &:not(:first-child) {
+      margin-left: 16px;
     }
 
     &-number {

@@ -5,6 +5,7 @@
 
   &__counter {
     font-size: 14px;
+
     &-number {
       font-weight: 600;
       color: $color-blue;
@@ -14,24 +15,14 @@
       font-weight: normal;
     }
 
-    &:not(:last-child) {
-      margin-right: 13px;
+    &:not(:first-child) {
+      margin-left: 13px;
     }
   }
 
   &__networks {
     margin-top: 13px;
     display: flex;
-  }
-
-  &__network {
-    &:not(:last-child) {
-      margin-right: 14px;
-    }
-
-    &:hover {
-      opacity: 0.8;
-    }
   }
 
   &__link {
@@ -44,4 +35,37 @@
       color: $color-black;
     }
   }
+
+  &__network {
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:not(:first-child) {
+      margin-left: 14px;
+    }
+
+    &--twitter {
+      @include sprite('social-twitter-sm');
+    }
+
+    &--facebook {
+      @include sprite('social-facebook-sm');
+
+    }
+
+    &--instagram {
+      @include sprite('social-instagram-sm');
+
+    }
+
+    &--youtube {
+      @include sprite('social-youtube-sm');
+
+    }
+  }
+
+
 }
+
+

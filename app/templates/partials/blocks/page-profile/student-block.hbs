@@ -1,27 +1,77 @@
 <div class="student-block">
   <div class="student-block__info">
-    <h6 class="student-block__info-title">
+    <span class="student-block__info-title">
       About me
-    </h6>
-    <div class="student-block__info-text">
+    </span>
+    <p class="student-block__info-text">
       Hello, I’m Ali...
-    </div>
+    </p>
   </div>
 
 
   <div class="student-block__header">
-    <h6 class="student-block__header-title">Course Progress</h6>
+    <span class="student-block__header-title">Course Progress</span>
     <a href="#" class="student-block__header-link">See All</a>
   </div>
 
   <div class="student-block__list">
-    {{> blocks/page-profile/progress-block passed='10' total='10' progress-100=true button=true}}
-    {{> blocks/page-profile/progress-block passed='8' total='10' progress-60=true button=true}}
-    {{> blocks/page-profile/progress-block passed='2' total='10' progress-20=true button=false}}
-    {{> blocks/page-profile/progress-block passed='2' total='10' progress-20=true button=false}}
-    {{> blocks/page-profile/progress-block passed='2' total='10' progress-20=true button=false}}
-    {{> blocks/page-profile/progress-block passed='0' total='10' progress-0=true button=false}}
-    {{> blocks/page-profile/progress-block passed='0' total='10' progress-0=true button=false}}
-    {{> blocks/page-profile/progress-block passed='0' total='10' progress-0=true button=false}}
+    {{> blocks/page-profile/progress-block
+      course-name='Customizing Type with Draplin: Creating Wordmarks That Work'
+      passed='10'
+      total='10'
+      progress-100=true
+      button-label='View Certificate'
+    }}
+
+    {{> blocks/page-profile/progress-block
+      course-name='Customizing Type with Draplin: Creating Wordmarks That Work'
+      passed='8'
+      total='10'
+      progress-60=true
+      button-label='Start exam'
+    }}
+
+    {{> blocks/page-profile/progress-block
+      course-name='Customizing Type with Draplin: Creating Wordmarks That Work'
+      passed='2'
+      total='10'
+      progress-20=true
+    }}
+
+    {{> blocks/page-profile/progress-block
+      course-name='Fundamentals of DSLR Photography'
+      passed='2'
+      total='10'
+      progress-20=true
+    }}
+
+    {{> blocks/page-profile/progress-block
+      course-name='Productivity Masterclass: Create a Custom System that Works'
+      passed='2'
+      total='10'
+      progress-20=true
+    }}
+
+    {{> blocks/page-profile/progress-block
+      course-name='ODD BODIES: Illustrating Expressive, Stylized People'
+      passed='0'
+      total='10'
+      progress-0=true
+    }}
+
+    {{> blocks/page-profile/progress-block
+      course-name='Fundamentals of DSLR Photography'
+      passed='0'
+      total='10'
+      progress-0=true
+    }}
+
+    {{> blocks/page-profile/progress-block
+      course-name='Productivity Masterclass: Create a Custom System that Works'
+      passed='0'
+      total='10'
+      progress-0=true
+    }}
+
   </div>
 </div>

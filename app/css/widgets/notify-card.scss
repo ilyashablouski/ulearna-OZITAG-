@@ -5,15 +5,19 @@
   border-radius: 10px;
 
   &__title {
-    padding-bottom: 10px;
     font-weight: 600;
     font-size: 16px;
   }
 
   &__text {
-    padding-bottom: 25px;
+    margin-top: 10px;
     font-weight: normal;
     font-size: 14px;
     line-height: 20px;
   }
+
+  &__btn {
+    margin-top: 25px;
+  }
+
 }
