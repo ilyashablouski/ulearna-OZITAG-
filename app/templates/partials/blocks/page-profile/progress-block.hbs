@@ -4,7 +4,36 @@
       Customizing Type with Draplin: Creating Wordmarks That Work
     </div>
 
-    {{> widgets/round-bar value='100%'}}
+    {{#if progress-100}}
+      {{> widgets/round-bar
+        label='100%'
+        progress='100 0'
+        mod='green'
+      }}
+    {{/if}}
+
+    {{#if progress-60}}
+      {{> widgets/round-bar
+        label='60%'
+        progress='60 40'
+        mod='green'
+      }}
+    {{/if}}
+
+    {{#if progress-20}}
+      {{> widgets/round-bar
+        label='20%'
+        progress='20 80'
+        mod='orange'
+      }}
+    {{/if}}
+
+    {{#if progress-0}}
+      {{> widgets/round-bar
+        label='0%'
+        progress='0 0'
+      }}
+    {{/if}}
   </div>
 
   <div class="progress-block__counters">
@@ -16,12 +45,12 @@
 
   <div class="progress-block__btn">
     {{#if button}}
-    {{> ui/btn
-    outline=true
-    label='View Certificate'
-    transparent=true
-    }}
+      {{> ui/btn
+        outline=true
+        label='View Certificate'
+        transparent=true
+      }}
     {{/if}}
   </div>
-
 </div>
+

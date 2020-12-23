@@ -1,8 +1,15 @@
 <div class="round-bar">
-  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle r="21" transform="matrix(-1 0 0 1 24 24)" stroke="#42DB92" stroke-width="6" />
-  </svg>
+  <div class="round-bar__circle {{#if mod}}round-bar__circle--{{mod}}{{/if}}">
+    <svg width="100%" height="100%" viewBox="0 0 38 38">
+      <circle cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke="#EAEAEA" stroke-width="6"></circle>
+      <circle cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke="currentColor" stroke-width="6"
+              stroke-dasharray='{{progress}}'
+              stroke-dashoffset="25"
+              stroke-linecap="round">
+      </circle>
+    </svg>
+  </div>
   <span class="round-bar__value">
-    {{value}}
+    {{label}}
   </span>
 </div>

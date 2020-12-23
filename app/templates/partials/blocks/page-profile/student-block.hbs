@@ -15,16 +15,13 @@
   </div>
 
   <div class="student-block__list">
-    {{> blocks/page-profile/progress-block passed='10' total='10' button=true}}
-    {{> blocks/page-profile/progress-block passed='8' total='10' button=true}}
-
-    {{> blocks/page-profile/progress-block passed='2' total='10' button=false}}
-    {{> blocks/page-profile/progress-block passed='2' total='10' button=false}}
-    {{> blocks/page-profile/progress-block passed='2' total='10' button=false}}
-    {{> blocks/page-profile/progress-block passed='0' total='10' button=false}}
-    {{> blocks/page-profile/progress-block passed='0' total='10' button=false}}
-    {{> blocks/page-profile/progress-block passed='0' total='10' button=false}}
-
-
+    {{> blocks/page-profile/progress-block passed='10' total='10' progress-100=true button=true}}
+    {{> blocks/page-profile/progress-block passed='8' total='10' progress-60=true button=true}}
+    {{> blocks/page-profile/progress-block passed='2' total='10' progress-20=true button=false}}
+    {{> blocks/page-profile/progress-block passed='2' total='10' progress-20=true button=false}}
+    {{> blocks/page-profile/progress-block passed='2' total='10' progress-20=true button=false}}
+    {{> blocks/page-profile/progress-block passed='0' total='10' progress-0=true button=false}}
+    {{> blocks/page-profile/progress-block passed='0' total='10' progress-0=true button=false}}
+    {{> blocks/page-profile/progress-block passed='0' total='10' progress-0=true button=false}}
   </div>
 </div>
