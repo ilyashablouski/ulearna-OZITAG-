@@ -4,6 +4,10 @@
   color: $color-white;
   padding: 90px 0 83px;
 
+  @include desktop-small-height{
+    padding: 50px 0;
+  }
+
   @include mobile{
     padding: 56px 0 150px;
   }
@@ -32,6 +36,11 @@
     line-height: 99px;
     margin: 0;
     display: block;
+
+    @include desktop-small-height{
+      font-size: 50px;
+      line-height: 70px;
+    }
 
     @include tablet{
       font-size: 57px;

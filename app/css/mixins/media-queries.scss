@@ -251,7 +251,7 @@
 }
 
 @mixin desktop-small-height {
-  @media(max-height: 750px) and (min-width: $tabletMedia + 1) {
+  @media(max-height: 649px) and (min-width: $tabletMedia + 1) {
     @content;
   }
 }
