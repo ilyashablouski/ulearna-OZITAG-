@@ -1,0 +1,11 @@
+.informer-diagram {
+  position: relative;
+  margin: auto;
+
+
+  &__circle {
+    max-width: 205px;
+    max-height: 205px;
+    margin: auto;
+  }
+}

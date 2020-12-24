@@ -27,7 +27,6 @@ window.dateHelper = {
   format: dateFormat,
 };
 
-
 lazySizes.cfg.lazyClass = 'lazy';
 lazySizes.cfg.srcAttr = 'data-original';
 lazySizes.cfg.loadMode = 1;

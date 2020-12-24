@@ -7,7 +7,7 @@
 
   &:hover {
     background: #e9eff5;
-  }
+  }/**/
 
   &:first-child {
     border-top: 0 none;
@@ -18,9 +18,10 @@
   }
 
   &__course-name {
-    display: inline-block;
+    display: block;
     font-weight: normal;
     font-size: 16px;
+    line-height: 23px;
   }
 
   &__round-bar {

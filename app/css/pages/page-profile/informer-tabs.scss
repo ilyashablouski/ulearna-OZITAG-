@@ -1,0 +1,33 @@
+.informer-tabs {
+  display: flex;
+  box-shadow: inset 0px -1px 0px #DAE4ED;
+  &__item {
+    margin-left: 18px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__link {
+    padding: 10px 0;
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+
+    &.active {
+      position: relative;
+
+      &:after {
+        content: "";
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 3px;
+        background: $color-blue-dark;
+        position: absolute;
+      }
+    }
+  }
+}
