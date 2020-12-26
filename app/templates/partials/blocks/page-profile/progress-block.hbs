@@ -21,36 +21,27 @@
     {{/if}}
 
     <div class="progress-block__round-bar">
-      {{#if progress-100}}
+      {{#when progress-value '>' 20}}
         {{> widgets/round-bar
-          label='100%'
-          progress='100 0'
+          progress=progress-value
           mod='green'
         }}
-      {{/if}}
+      {{/when}}
 
-      {{#if progress-60}}
-        {{> widgets/round-bar
-          label='60%'
-          progress='60 40'
-          mod='green'
-        }}
-      {{/if}}
 
-      {{#if progress-20}}
+      {{#when progress-value '==' 20}}
         {{> widgets/round-bar
-          label='20%'
-          progress='20 80'
+          progress=progress-value
           mod='orange'
         }}
-      {{/if}}
+      {{/when}}
 
-      {{#if progress-0}}
+      {{#when progress-value '==' 0}}
         {{> widgets/round-bar
-          label='0%'
-          progress='0 0'
+          progress=progress-value
         }}
-      {{/if}}
+      {{/when}}
+
     </div>
 
   </div>

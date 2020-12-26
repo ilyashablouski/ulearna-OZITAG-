@@ -1,12 +1,139 @@
 .informer {
   &__content {
     margin-top: 8px;
+    display: none;
 
-    &-item {
-      display: none;
-      &.active {
-        display: block;
-      }
+    &.active {
+      display: block;
     }
   }
+
+  &__tabs {
+    display: flex;
+    box-shadow: inset 0px -1px 0px #DAE4ED;
+  }
+
+  &__tab {
+    margin-left: 18px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &-link {
+      padding: 10px 0;
+      display: block;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 20px;
+      color: $color-gray-light;
+      cursor: pointer;
+      @include transition;
+
+      &:hover {
+        color: $color-black;
+      }
+
+      &.active {
+        position: relative;
+        color: $color-black;
+
+        &:after {
+          content: "";
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 3px;
+          background: $color-blue-dark;
+          position: absolute;
+        }
+      }
+
+    }
+  }
+
+  &__hint {
+    position: relative;
+    padding: 10px 10px 10px 44px;
+    background: rgba(66, 219, 146, 0.1);
+    border-radius: 10px;
+
+    &:before {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      content: '';
+      @include sprite('point-info');
+    }
+
+    &-text {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      color: $color-green;
+    }
+  }
+
+  &__diagram {
+    position: relative;
+    margin: auto;
+    margin-top: 10px;
+
+
+    &-circle {
+      max-width: 205px;
+      max-height: 205px;
+      margin: auto;
+    }
+  }
+
+  &__list {
+    margin-top: 10px;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      line-height: 23px;
+      margin-top: 9px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &-marker {
+      display: block;
+      width: 16px;
+      height: 16px;
+      border-radius: 100%;
+
+      &--blue {
+        background: $color-blue;
+      }
+
+      &--orange {
+        background: $color-orange;
+      }
+
+      &--green {
+        background: $color-green;
+      }
+    }
+
+    &-name {
+      margin-left: 10px;
+      font-weight: normal;
+      font-size: 16px;
+      color: $color-dark;
+    }
+
+    &-time {
+      margin-left: auto;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 0.02em;
+      color: $color-dark;
+    }
+  }
+
 }

@@ -1,32 +1,52 @@
 <div class="informer">
-  {{> blocks/page-profile/informer-tabs}}
-  <div class="informer__content">
+  <div class="informer__tabs">
+    <div class="informer__tab">
+      <span class="informer__tab-link active">Week</span>
+    </div>
 
-    <div class="informer__content-item active js-tab-content">
-      <div class="informer-week">
-        <!--        FIXME: merge partials and styles-->
-        {{> blocks/page-profile/informer-hint}}
-        {{> blocks/page-profile/informer-diagram}}
-        {{> blocks/page-profile/informer-list}}
+    <div class="informer__tab ">
+      <span class="informer__tab-link">Month</span>
+    </div>
+
+    <div class="informer__tab ">
+      <span class="informer__tab-link">Year</span>
+    </div>
+
+    <div class="informer__tab ">
+      <span class="informer__tab-link">All Time</span>
+    </div>
+  </div>
+
+  <div class="informer__content active">
+    <div class="informer__hint">
+      <span class="informer__hint-text">You're learning very well, keep it that way!</span>
+    </div>
+
+    <div class="informer__diagram">
+      <div class="informer__diagram-circle">
+        {{> components/image img="page-profile/diagram-circle" ext="png" no-2x=true}}
       </div>
     </div>
 
-    <div class="informer__content-item js-tab-content">
-      <div class="informer-month">
-        Month stats
+    <div class="informer__list">
+      <div class="informer__list-item">
+        <i class="informer__list-marker informer__list-marker--blue"></i>
+        <span class="informer__list-name">Technology</span>
+        <span class="informer__list-time">5h</span>
+      </div>
+
+      <div class="informer__list-item">
+        <i class="informer__list-marker informer__list-marker--orange"></i>
+        <span class="informer__list-name">Social Networking</span>
+        <span class="informer__list-time">5h</span>
+      </div>
+
+      <div class="informer__list-item">
+        <i class="informer__list-marker informer__list-marker--green"></i>
+        <span class="informer__list-name">Java</span>
+        <span class="informer__list-time">5h</span>
       </div>
     </div>
 
-    <div class="informer__content-item js-tab-content">
-      <div class="informer-year">
-        Year stats
-      </div>
-    </div>
-
-    <div class="informer__content-item js-tab-content">
-      <div class="informer-allTime">
-        All time stats
-      </div>
-    </div>
   </div>
 </div>

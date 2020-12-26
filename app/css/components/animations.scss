@@ -14,3 +14,10 @@
     transform: rotate(360deg) translatez(0);
   }
 }
+
+//For tabs content
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
