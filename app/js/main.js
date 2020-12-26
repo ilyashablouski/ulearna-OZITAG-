@@ -22,6 +22,7 @@ import './src/utils/input-filter';
 
 import './src/widgets/popups';
 import './src/widgets/accord';
+import './src/widgets/tabs';
 
 import './src/widgets/inputs/numeric-input';
 import './src/widgets/inputs/masked-input';

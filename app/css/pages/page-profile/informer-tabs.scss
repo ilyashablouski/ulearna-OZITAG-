@@ -1,23 +1,27 @@
 .informer-tabs {
   display: flex;
   box-shadow: inset 0px -1px 0px #DAE4ED;
-  &__item {
+
+  &__tab {
     margin-left: 18px;
-
-    &:first-child {
-      margin-left: 0;
-    }
-  }
-
-  &__link {
     padding: 10px 0;
     display: block;
     font-weight: normal;
     font-size: 14px;
     line-height: 20px;
+    color: $color-gray-light;
+    cursor: default;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
 
     &.active {
       position: relative;
+      font-weight: 600;
+      font-size: 14px;
+      color: $color-black;
 
       &:after {
         content: "";

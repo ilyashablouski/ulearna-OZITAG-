@@ -1,5 +1,12 @@
 .informer {
-  &__block {
+  &__content {
     margin-top: 8px;
+
+    &-item {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
   }
 }

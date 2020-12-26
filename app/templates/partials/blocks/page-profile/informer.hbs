@@ -1,15 +1,32 @@
 <div class="informer">
   {{> blocks/page-profile/informer-tabs}}
+  <div class="informer__content">
 
-  <div class="informer__block">
-    {{> blocks/page-profile/informer-hint}}
-  </div>
+    <div class="informer__content-item active js-tab-content">
+      <div class="informer-week">
+        <!--        FIXME: merge partials and styles-->
+        {{> blocks/page-profile/informer-hint}}
+        {{> blocks/page-profile/informer-diagram}}
+        {{> blocks/page-profile/informer-list}}
+      </div>
+    </div>
 
-  <div class="informer__block">
-    {{> blocks/page-profile/informer-diagram}}
-  </div>
+    <div class="informer__content-item js-tab-content">
+      <div class="informer-month">
+        Month stats
+      </div>
+    </div>
 
-  <div class="informer__block">
-    {{> blocks/page-profile/informer-list}}
+    <div class="informer__content-item js-tab-content">
+      <div class="informer-year">
+        Year stats
+      </div>
+    </div>
+
+    <div class="informer__content-item js-tab-content">
+      <div class="informer-allTime">
+        All time stats
+      </div>
+    </div>
   </div>
 </div>
