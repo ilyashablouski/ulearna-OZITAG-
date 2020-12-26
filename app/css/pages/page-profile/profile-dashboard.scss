@@ -4,14 +4,31 @@
   display: flex;
   border-top: 1px solid $color-gray;
 
+  @include smallTablet-and-mobile {
+    flex-wrap: wrap;
+  }
+
   &__left {
     flex: 1 1 auto;
+
+    @include smallTablet-and-mobile {
+      order: 2;
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
   }
 
   &__right {
     margin-left: 50px;
     flex: 0 0 283px;
     max-width: 283px;
+
+    @include smallTablet-and-mobile {
+      order: 1;
+      margin-left: 0;
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
   }
 
   &__widget {

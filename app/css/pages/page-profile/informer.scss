@@ -1,10 +1,19 @@
 .informer {
+  height: 420px;
   &__content {
     margin-top: 8px;
     display: none;
+    opacity: 0;
 
-    &.active {
+    &--active {
       display: block;
+      opacity: 1;
+      animation: 150ms ease-in-out fadeIn;
+
+      @keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+      }
     }
   }
 
@@ -34,7 +43,7 @@
         color: $color-black;
       }
 
-      &.active {
+      &--active {
         position: relative;
         color: $color-black;
 

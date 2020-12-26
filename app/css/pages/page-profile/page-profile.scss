@@ -5,17 +5,30 @@
 
   &__inner {
     display: flex;
+
+    @include smallTablet-and-mobile {
+      display: block;
+    }
   }
 
   &__left {
     margin-left: -80px;
     flex: 0 0 363px;
     max-width: 363px;
+
+    @include smallTablet-and-mobile {
+      margin-left: 0;
+      max-width: none;
+    }
   }
 
   &__main {
     margin-left: 50px;
     padding-bottom: 130px;
     flex-grow: 1;
+
+    @include smallTablet-and-mobile {
+      margin-left: 0;
+    }
   }
 }

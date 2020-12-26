@@ -7,6 +7,11 @@
   border-radius: 0 12px 0 0;
   box-shadow: 5px 0 16px rgba(1, 64, 139, 0.08);
 
+  @include smallTablet {
+    padding: 20px 40px 40px;
+    border-radius: 0;
+  }
+
   &__block {
     padding: 20px 0;
     border-top: 1px solid #dae4ed;

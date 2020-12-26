@@ -1,0 +1,43 @@
+<div class="profile-widget">
+  <span class="profile-widget__title">{{title}}</span>
+  <div class="profile-widget__content">
+    {{#ifCond title 'Credential and Highlights'}}
+      <div class="profile-widget__info">
+        <span class="profile-widget__info-feature profile-widget__info-feature--stand">Senior Developer</span>
+        <span class="profile-widget__info-feature profile-widget__info-feature--hat">Education Title</span>
+        <span class="profile-widget__info-feature profile-widget__info-feature--globe">Language, Language</span>
+        <span class="profile-widget__info-feature profile-widget__info-feature--mark">Country</span>
+      </div>
+      <div class="profile-widget__btn">
+        {{> ui/btn
+          outline=true
+          label='Edit'
+          transparent=true
+        }}
+      </div>
+    {{/ifCond}}
+
+    {{#ifCond title 'Interests'}}
+      <div class="profile-widget__info">
+        <span class="profile-widget__info-tag">Technology</span>,
+        <span class="profile-widget__info-tag">Social network</span>,
+        <span class="profile-widget__info-tag">Java</span>,
+        <span class="profile-widget__info-tag">Web Developing</span>
+      </div>
+
+      <div class="profile-widget__btn">
+        {{> ui/btn
+          outline=true
+          label='Edit'
+          transparent=true
+        }}
+      </div>
+    {{/ifCond}}
+
+    {{#ifCond title 'learning Time'}}
+      {{> blocks/page-profile/informer}}
+    {{/ifCond}}
+  </div>
+
+</div>
+
