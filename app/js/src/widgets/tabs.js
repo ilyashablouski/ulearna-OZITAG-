@@ -1,159 +1,66 @@
-// class Tabs {
-//   constructor(nodeElement) {
-//     this.nodeElement = nodeElement;
-//     this.activeTab = null;
-//     this.tabs = [];
-//
-//     this.initTabs();
-//
-//     if (this.tabs.length > 0) {
-//       this.init();
-//     }
-//   }
-//
-//   initTabs() {
-//     this.findTabs().forEach(tabItem => {
-//       const targetSelector = tabItem.dataset.target;
-//       if (!targetSelector) {
-//         console.error(`Tab "${tabItem.innerText}" does not have data-target attribute`);
-//         return;
-//       }
-//
-//       const tabContent = this.nodeElement.querySelector(targetSelector);
-//       if (!tabContent) {
-//         console.error(`Tab content with selector "${targetSelector}" not found`);
-//       }
-//
-//       const isActive = this.activeTab === null && tabItem.classList.contains('active');
-//
-//       const tabModel = {
-//         isActive: isActive,
-//         tabElement: tabItem,
-//         tabContentElement: tabContent
-//       };
-//
-//       if (isActive) {
-//         this.activeTab = tabModel;
-//       }
-//
-//       this.tabs.push(tabModel);
-//     });
-//   }
-//
-//   findTabs() {
-//     const result = [];
-//
-//     this.nodeElement.querySelectorAll('.js-tab').forEach(item => {
-//       if (item.closest('.js-tabs') === this.nodeElement) {
-//         result.push(item);
-//       }
-//     });
-//
-//     return result;
-//   }
-//
-//   hideTab(model) {
-//     model.tabElement.classList.remove('active');
-//
-//     if (model.tabContentElement) {
-//       model.tabContentElement.classList.remove('active');
-//     }
-//
-//     model.isActive = false;
-//   }
-//
-//   showTab(model) {
-//     model.tabElement.classList.add('active');
-//
-//     if (model.tabContentElement) {
-//       model.tabContentElement.classList.add('active');
-//     }
-//
-//     model.isActive = true;
-//   }
-//
-//   setActiveTab(model) {
-//     if (!model.isActive) {
-//       this.tabs.forEach(this.hideTab);
-//     }
-//
-//     this.showTab(model);
-//   }
-//
-//   onTabClick(e, model) {
-//     e.preventDefault();
-//
-//     this.setActiveTab(model);
-//   }
-//
-//   setDefaults() {
-//     if (!this.activeTab) {
-//       this.setActiveTab(this.tabs[0]);
-//     } else {
-//       this.setActiveTab(this.activeTab);
-//     }
-//   }
-//
-//   init() {
-//     this.setDefaults();
-//
-//     this.tabs.forEach(tabModel => {
-//       tabModel.tabElement.addEventListener('click', e => this.onTabClick(e, tabModel));
-//     });
-//   }
-// }
-//
-// class TabsUI {
-//   static init() {
-//     document.querySelectorAll('.js-tabs').forEach(element => new Tabs(element));
-//   }
-// }
-//
-// document.addEventListener('DOMContentLoaded', () => {
-//   TabsUI.init();
-// });
-// window.TabsUI = TabsUI;
+const tabItemSelector = '.informer__tab-link';
+const contentItemSelector = '.informer__content';
 
-class Tabs{
-  constructor(){
-    this.tabList = document.querySelectorAll('.js-tab');
-    this.contentList = document.querySelectorAll('.js-tab-content');
-    let rootContainer= document.querySelector('.js-tabs');
+const activeTabHeaderClass = 'informer__tab-link--active';
+const activeTabContentClass = 'informer__content--active';
 
-    rootContainer.addEventListener('click', e => this.show(e));
+class TabsWidget extends Widget{
+  constructor(nodeElement){
+    super(nodeElement, '.js-tabsWidget')
+    this.tabs = [];
+    this.activeTab = null;
 
-    this.setIndex();
+    this.initFromHtml(nodeElement);
+    this.activateTab(this.tabs[0]);
   }
 
-  show(e){
-    let t = e.target;
-    if (!t.classList.contains('js-tab')) return;
-    this.removePrev();
+  initFromHtml (nodeElement) {
+    const headers  = nodeElement.querySelectorAll(tabItemSelector);
+    const contents = nodeElement.querySelectorAll(contentItemSelector);
 
-    let index = t.getAttribute('data-index');
-    let content = document.querySelector('.js-tab-content[data-index="'+index+'"]');
-
-    t.classList.add('active');
-    content.classList.add('active');
-  }
-
-  setIndex(){
-    for (let i = 0; i < this.tabList.length; i++){
-      this.tabList[i].setAttribute('data-index', i);
-      this.contentList[i].setAttribute('data-index', i);
+    for (let i = 0; i < headers.length; i++) {
+      this.registerTab(headers[i], contents[i]);
     }
   }
 
-  removePrev(){
-    for (let i = 0; i < this.tabList.length; i++){
-      this.tabList[i].classList.remove('active');
-      this.contentList[i].classList.remove('active');
-    }
+  registerTab (header, content) {
+    const tab = new TabItem(header, content);
+    tab.onActivate(() => this.activateTab(tab));
+    this.tabs.push(tab);
   }
 
+  activateTab (tabItem) {
+    if (this.activeTab) {
+      this.activeTab.setActive(false);
+    }
+
+    this.activeTab = tabItem;
+    this.activeTab.setActive(true);
+  }
+
+  static init(elem) {
+    return new TabsWidget(elem)
+  }
+}
+
+class TabItem {
+  constructor (header, content) {
+    this.header  = header;
+    this.content = content;
+  }
+  onActivate (action) {
+    this.header.addEventListener('click', () => action(this));
+  }
+  setActive(value) {
+    this.header.classList.toggle(activeTabHeaderClass, value);
+    this.content.classList.toggle(activeTabContentClass, value);
+  }
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{
-  let tabs = new Tabs();
-})
+  document.querySelectorAll('.js-tabsWidget').forEach((element) => {
+    TabsWidget.init(element);
+  });
+});
 
+window.TabsWidget = TabsWidget;
