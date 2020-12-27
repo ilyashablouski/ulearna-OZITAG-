@@ -7,14 +7,30 @@
   border-radius: 0 12px 0 0;
   box-shadow: 5px 0 16px rgba(1, 64, 139, 0.08);
 
-  @include smallTablet {
-    padding: 20px 40px 40px;
+  @include smallTablet-and-mobile {
     border-radius: 0;
   }
+
+  @include smallTablet {
+    padding: 20px 40px 40px;
+  }
+
+
 
   &__block {
     padding: 20px 0;
     border-top: 1px solid #dae4ed;
+
+    @include smallTablet-and-mobile {
+      margin: 0 auto;
+      padding: 0;
+      text-align: center;
+      border-top: 0 none;
+
+      &:not(:first-child) {
+          margin-top: 16px;
+      }
+    }
 
     &:first-child {
       padding-top: 0;

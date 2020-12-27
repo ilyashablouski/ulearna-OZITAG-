@@ -3,6 +3,10 @@
   background: #f4f7fa;
   margin-bottom: -100px;
 
+  @include smallTablet-and-mobile {
+    margin-bottom: -60px;
+  }
+
   &__inner {
     display: flex;
 
@@ -31,4 +35,5 @@
       margin-left: 0;
     }
   }
+
 }

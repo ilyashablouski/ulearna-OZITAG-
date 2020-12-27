@@ -1,9 +1,9 @@
 <div class="profile-dashboard">
-  <div class="profile-dashboard__left">
-    {{> blocks/page-profile/student-block}}
+  <div class="profile-dashboard__header">
+    <span class="profile-dashboard__header-title">Hello, Ali, this is your Dahboard</span>
   </div>
 
-  <div class="profile-dashboard__right">
+  <div class="profile-dashboard__widgets">
     <div class="profile-dashboard__widget">
       {{> blocks/page-profile/profile-widget  title="Credential and Highlights"}}
     </div>
@@ -16,4 +16,26 @@
       {{> blocks/page-profile/profile-widget title="learning Time"}}
     </div>
   </div>
+
+  <div class="profile-dashboard__info">
+    <span class="profile-dashboard__info-title">About me</span>
+    <p class="profile-dashboard__info-text">
+      Hello, I’m Ali...
+    </p>
+  </div>
+
+  <div class="profile-dashboard__btn">
+    {{> ui/btn
+      outline=true
+      label='Edit Profile'
+      icon='button-edit'
+      transparent=true
+    }}
+  </div>
+
+  {{> blocks/page-profile/student-block}}
+
 </div>
+
+
+

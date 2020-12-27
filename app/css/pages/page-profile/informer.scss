@@ -43,18 +43,24 @@
         color: $color-black;
       }
 
+      &:after {
+        content: "";
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 3px;
+        background: $color-blue-dark;
+        opacity: 0;
+        position: absolute;
+      }
+
       &--active {
         position: relative;
         color: $color-black;
 
         &:after {
-          content: "";
-          left: 0;
-          right: 0;
-          bottom: 0;
-          height: 3px;
-          background: $color-blue-dark;
-          position: absolute;
+          opacity: 1;
+          animation: 150ms ease-in-out fadeIn;
         }
       }
 

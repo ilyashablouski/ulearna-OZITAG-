@@ -28,11 +28,12 @@
     }
   }
 
-  svg {
-    height: 24px;
-    width: 24px;
-
-    @include transition;
+  &__img {
+    svg {
+      height: 24px;
+      width: 24px;
+      @include transition;
+    }
   }
 
   &__label {

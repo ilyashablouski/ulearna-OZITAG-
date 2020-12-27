@@ -1,32 +1,39 @@
 .profile-counters {
   display: flex;
+
   &__counter {
     &:not(:first-child) {
       margin-left: 16px;
     }
 
-    &-number {
-      margin-top: 8px;
-      display: inline-flex;
-      align-items: center;
-      line-height: 15px;
-    }
 
     &-text {
       font-size: 14px;
       font-weight: normal;
       color: $color-gray-dark;
     }
+  }
 
-    &-strip {
+  &__item {
+    margin-top: 8px;
+    display: inline-flex;
+
+    &-number {
+      margin-left: 7px;
+      font-weight: normal;
+      font-size: 16px;
+    }
+
+    &-icon {
       &--green {
         color: $color-green;
       }
+
+      svg {
+        width: 5px;
+      }
     }
 
-    svg {
-      margin-right: 7px;
-      width: 5px;
-    }
+
   }
 }

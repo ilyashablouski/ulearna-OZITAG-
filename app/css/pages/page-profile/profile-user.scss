@@ -2,6 +2,10 @@
   display: flex;
   align-items: center;
 
+  @include smallTablet-and-mobile {
+    flex-direction: column;
+  }
+
   &__img {
     height: 72px;
     width: 72px;
@@ -12,6 +16,11 @@
 
   &__info {
     margin-left: 14px;
+
+    @include smallTablet-and-mobile {
+      margin-left: 0;
+      margin-top: 10px;
+    }
   }
 
   &__name {
@@ -21,7 +30,7 @@
   }
 
   &__email {
-    margin-top: 6px;
+    margin-top: 10px;
     display: block;
     color: $color-gray-dark;
     font-size: 14px;
