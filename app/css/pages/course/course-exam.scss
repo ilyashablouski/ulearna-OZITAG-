@@ -5,6 +5,11 @@
     line-height: 31px;
     display: block;
     color: $color-black;
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &__progress {
@@ -13,6 +18,10 @@
 
   &__question {
     margin-top: 25px;
+    @include mobile {
+      margin-left: -$mobileGutter;
+      margin-right: -$mobileGutter;
+    }
   }
 
   &__button {
@@ -20,13 +29,21 @@
     display: flex;
     justify-content: flex-end;
 
-    .btn{
+    .btn {
       min-width: 155px;
+    }
+
+    @include mobile{
+      margin-top: 30px;
+      display: block;
+      .btn{
+        width: 100%;
+      }
     }
   }
 }
 
-.question{
+.question {
   padding: 20px 30px 30px;
   background: $color-gray-30;
   border-radius: 12px;
