@@ -6,7 +6,7 @@
     {{#if popup}} data-popup="{{popup}}"{{/if}}
     {{#if aria-label}} aria-label="{{aria-label}}"{{/if}}
     {{#if disabled}} disabled aria-disabled="true"{{/if}}
-    {{{attr}}}>{{#if icon}} {{>ui/svg name=icon}}{{/if}}{{label}}{{#if note}}<span class="btn__note">{{note}}</span>{{/if}}</button>
+    {{{attr}}}>{{#if icon}} {{>ui/svg name=icon}}{{/if}}{{#if icon}}<span>{{/if}}{{label}}{{#if icon}}</span>{{/if}}{{#if note}}<span class="btn__note">{{note}}</span>{{/if}}</button>
 {{else}}
   <a href="{{#if href}}{{href}}{{else}}#{{/if}}"
      class="btn{{#if size}}  btn--{{size}}{{/if}} {{#if transparent}}btn--transparent{{/if}} {{#if color}} btn--{{color}}{{/if}}{{#if
@@ -15,5 +15,5 @@
     {{#if popup}} data-popup="{{popup}}"{{/if}}
     {{#if aria-label}} aria-label="{{aria-label}}"{{/if}}
     {{#if disabled}} disabled aria-disabled="true"{{/if}}
-    {{{attr}}}>{{#if icon}} {{>ui/svg name=icon}}{{/if}}{{label}}{{#if note}}<span class="btn__note">{{note}}</span>{{/if}}</a>
+    {{{attr}}}>{{#if icon}} {{>ui/svg name=icon}}{{/if}}{{#if icon}}<span>{{/if}}{{label}}{{#if icon}}</span>{{/if}}{{#if note}}<span class="btn__note">{{note}}</span>{{/if}}</a>
 {{/if}}

@@ -155,14 +155,18 @@
 
   &--no-mobile-text {
     @include mobile {
-      font-size: 0;
-      width: 36px;
-      height: 36px;
       text-align: center;
+      padding: 10px 12px;
+
+      span {
+        font-size: 0;
+        display: none;
+      }
 
       svg {
-        font-size: 100px;
         margin-right: 0;
+        display: block;
+        font-size: 120%;
       }
     }
   }

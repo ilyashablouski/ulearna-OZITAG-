@@ -9,6 +9,10 @@
   position: relative;
   white-space: nowrap;
 
+  @include mobile{
+    font-size: 14px;
+  }
+
   &--no-mobile-arrow {
     @include mobile {
       padding-right: 0;
