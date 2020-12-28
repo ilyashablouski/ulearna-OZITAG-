@@ -1,12 +1,14 @@
 <div class="review">
-  <div class="review__left">
-    <div class="review__image">
+  <div class="review__user">
+    <div class="review__user-image">
       {{> components/image img=image ext="jpg"}}
+    </div>
+    <div class="review__user-name">
+      <span class="review__name">{{ name }}</span>
+      <div class="review__position">Student</div>
     </div>
   </div>
   <div class="review__main">
-    <span class="review__name">{{ name }}</span>
-    <div class="review__position">Student</div>
     <div class="review__stats">
       <div class="review__stats-item">
         {{> widgets/rating-card stars=true label="Rated" label-bold="3/5"}}

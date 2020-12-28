@@ -21,6 +21,11 @@
     margin-top: 10px;
     display: block;
 
+    @include mobile{
+      font-size: 12px;
+      line-height: 150%;
+    }
+
     .rating-card--small & {
       margin-top: 3px;
     }

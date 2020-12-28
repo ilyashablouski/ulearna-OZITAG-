@@ -7,6 +7,8 @@
   &__image {
     width: 64px;
     height: 64px;
+    flex-basis: 64px;
+    min-width: 64px;
 
     img {
       width: 64px;
@@ -18,6 +20,7 @@
 
   &__info {
     margin-left: 14px;
+    flex: 1 1 1px;
   }
 
   &__name {

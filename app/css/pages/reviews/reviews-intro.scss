@@ -5,6 +5,11 @@
     line-height: 31px;
     color: $color-black;
     display: block;
+
+    @include mobile{
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &__row {
