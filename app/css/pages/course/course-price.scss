@@ -5,6 +5,10 @@
   overflow: hidden;
   margin-bottom: 40px;
 
+  @include mobile{
+    margin-bottom: 20px;
+  }
+
   @include no-smallTablet {
     margin-top: -80px;
     margin-left: -17px;
@@ -12,6 +16,10 @@
 
   &__inner {
     padding: 23px 16px 18px;
+
+    @include mobile{
+      padding: 20px 16px;
+    }
   }
 
   &__title {
@@ -81,6 +89,11 @@
     margin-top: 22px;
     color: $color-blue;
 
+    @include mobile{
+      font-size: 14px;
+      line-height: 21px;
+    }
+
     &:hover {
       color: $color-blue-hover;
     }
@@ -99,6 +112,12 @@
     letter-spacing: 0.02em;
     color: $color-white;
     width: 100%;
+
+    @include mobile{
+      height: 63px;
+      font-size: 14px;
+      line-height: 21px;
+    }
 
     &:hover {
       background: $color-purple-hover;
