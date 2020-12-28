@@ -38,6 +38,7 @@
   @include no-smallTablet {
     &__sidebar {
       width: 282px;
+      min-width: 282px;
       margin-top: -52px;
     }
 
