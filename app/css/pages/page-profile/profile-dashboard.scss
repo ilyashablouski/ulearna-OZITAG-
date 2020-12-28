@@ -1,14 +1,38 @@
 .profile-dashboard {
   position: relative;
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__header {
     margin-top: 12px;
     padding-bottom: 16px;
-    line-height: 43px;
     box-shadow: inset 0px -1px 0px #DAE4ED;
+
+    @include smallTablet-and-mobile {
+      margin-top: 20px;
+    }
+
+    @include mobile {
+      order: 0;
+      padding-bottom: 0;
+      padding-right: 16px;
+      padding-left: 16px;
+      box-shadow: none;
+    }
+
 
     &-title {
       font-weight: 600;
       font-size: 29px;
+      line-height: 43px;
+
+      @include mobile {
+        font-size: 18px;
+        line-height: 27px;
+      }
     }
   }
 
@@ -16,6 +40,7 @@
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+
     &-title {
       font-weight: 600;
       font-size: 16px;
@@ -29,6 +54,16 @@
       line-height: 20px;
       word-wrap: break-word;
       color: $color-gray-dark;
+      @include mobile320 {
+        font-size: 12px;
+      }
+    }
+
+    @include mobile {
+      order: 1;
+      margin-top: 11px;
+      padding-right: 16px;
+      padding-left: 16px;
     }
   }
 
@@ -36,6 +71,23 @@
     position: absolute;
     top: 0;
     right: 0;
+
+    @include mobile {
+      order: 2;
+      position: static;
+      margin-top: 16px;
+      padding-right: 16px;
+      padding-left: 16px;
+      width: 100%;
+
+      .btn {
+        width: 100%;
+      }
+
+      .icon {
+        display: none;
+      }
+    }
   }
 
   &__widgets {
@@ -43,11 +95,64 @@
     float: right;
     margin-left: 50px;
     max-width: 283px;
+
+    @include mobile {
+      order: 3;
+      margin-top: 0;
+      padding-top: 16px;
+      padding-bottom: 30px;
+      padding-right: 16px;
+      padding-left: 16px;
+      margin-left: 0;
+      display: flex;
+      max-width: none;
+      overflow-x: scroll;
+    }
   }
 
   &__widget {
     &:not(:first-child) {
       margin-top: 15px;
     }
+
+    &:nth-child(3) {
+      order: 1;
+      @include mobile {
+        margin-top: 0;
+      }
+    }
+
+    &:nth-child(2) {
+      order:2;
+      @include mobile {
+        margin-top: 0;
+        margin-left: 16px;
+      }
+    }
+
+    &:nth-child(1) {
+      order: 3;
+      @include mobile {
+        margin-top: 0;
+        margin-left: 16px;
+      }
+
+    }
+
+    @include mobile {
+      margin-top: 0;
+      flex: 0 0 272px;
+      max-width: 272px;
+    }
   }
+
+  &__student-block {
+    display: flex;
+    @include mobile {
+      order: 4;
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+  }
+
 }

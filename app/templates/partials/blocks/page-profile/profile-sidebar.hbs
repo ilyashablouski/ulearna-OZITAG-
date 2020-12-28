@@ -1,53 +1,55 @@
 <div class="profile-sidebar">
-  <div class="profile-sidebar__block">
-    {{> blocks/page-profile/profile-user}}
-  </div>
-
-  <div class="profile-sidebar__block">
-    {{> blocks/page-profile/profile-socials}}
-  </div>
-
-  <div class="profile-sidebar__block">
-    {{> blocks/page-profile/profile-counters}}
-
-  </div>
-
-  <div class="profile-sidebar__nav">
-    <div class="profile-sidebar__nav-item">
-      {{> ui/btn-category url='#' imgName='dashboard' label='Dashboard' active=true}}
+  <div class="profile-sidebar__inner">
+    <div class="profile-sidebar__block">
+      {{> blocks/page-profile/profile-user}}
     </div>
-    <div class="profile-sidebar__nav-item">
-      {{> ui/btn-category url='#' imgName='courses' label='My Courses'}}
-    </div>
-    <div class="profile-sidebar__nav-item">
-      {{> ui/btn-category url='#' imgName='certificates' label='Certificates'}}
-    </div>
-    <div class="profile-sidebar__nav-item">
-      {{> ui/btn-category url='#' imgName='messages' label='Messages'}}
-    </div>
-    <div class="profile-sidebar__nav-item">
-      {{> ui/btn-category url='#' imgName='notifiсation' label='Notifications'}}
-    </div>
-    <div class="profile-sidebar__nav-item">
-      {{> ui/btn-category url='#' imgName='settings' label='Settings'}}
 
+    <div class="profile-sidebar__block">
+      {{> blocks/page-profile/profile-socials}}
+    </div>
+
+    <div class="profile-sidebar__block">
+      {{> blocks/page-profile/profile-counters}}
+
+    </div>
+
+    <div class="profile-sidebar__nav">
+      <div class="profile-sidebar__nav-item">
+        {{> ui/btn-category url='#' imgName='dashboard' label='Dashboard' active=true}}
+      </div>
+      <div class="profile-sidebar__nav-item">
+        {{> ui/btn-category url='#' imgName='courses' label='My Courses'}}
+      </div>
+      <div class="profile-sidebar__nav-item">
+        {{> ui/btn-category url='#' imgName='certificates' label='Certificates'}}
+      </div>
+      <div class="profile-sidebar__nav-item">
+        {{> ui/btn-category url='#' imgName='messages' label='Messages' message=true}}
+      </div>
+      <div class="profile-sidebar__nav-item">
+        {{> ui/btn-category url='#' imgName='notifiсation' label='Notifications'}}
+      </div>
+      <div class="profile-sidebar__nav-item">
+        {{> ui/btn-category url='#' imgName='settings' label='Settings'}}
+
+      </div>
     </div>
   </div>
 
   <div class="profile-sidebar__notify-card">
     {{> widgets/notify-card
-    title='Upgrade to student'
-    text='Upgrade for x$ to have access to Ulearna in all languages'
+      title='Upgrade to student'
+      text='Upgrade for x$ to have access to Ulearna in all languages'
     }}
   </div>
 
   <div class="profile-sidebar__bottom">
     {{> ui/btn
-    outline=true
-    label='Sign Out'
-    icon='button-logout'
-    btn-mode='w100'
-    icon-right=true
+      outline=true
+      label='Sign Out'
+      icon='button-logout'
+      btn-mode='w100'
+      icon-right=true
     }}
   </div>
 </div>

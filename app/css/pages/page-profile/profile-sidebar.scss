@@ -8,14 +8,20 @@
   box-shadow: 5px 0 16px rgba(1, 64, 139, 0.08);
 
   @include smallTablet-and-mobile {
+    padding: 20px 40px 40px;
     border-radius: 0;
   }
 
-  @include smallTablet {
-    padding: 20px 40px 40px;
+  @include mobile {
+    padding: 0;
+    box-shadow: none;
   }
 
-
+  &__inner {
+    @include mobile {
+      box-shadow: 0 4px 14px rgba(1, 64, 139, .14);
+    }
+  }
 
   &__block {
     padding: 20px 0;
@@ -28,7 +34,11 @@
       border-top: 0 none;
 
       &:not(:first-child) {
-          margin-top: 16px;
+        margin-top: 16px;
+      }
+
+      &:nth-child(3) {
+        width: 100%;
       }
     }
 
@@ -45,21 +55,64 @@
     display: flex;
     flex-wrap: wrap;
 
+    @include smallTablet-and-mobile {
+      margin-top: 16px;
+      margin-right: -5px;
+      margin-left: -5px;
+    }
+
+    @include mobile {
+      margin-right: 0;
+      margin-left: 0;
+      padding-left: 16px;
+      padding-right: 16px;
+      background: rgba(243, 246, 249, 1);
+    }
+
     &-item {
       margin-top: 16px;
       padding-left: 8px;
       padding-right: 8px;
       flex: 1 0 50%;
       max-width: 50%;
+
+      @include smallTablet-and-mobile {
+        margin-top: 0;
+        padding-left: 5px;
+        padding-right: 5px;
+        flex: 1 0 16.66%;
+        max-width: 16.66%;
+      }
+
+      @include mobile {
+        margin-left: 5px;
+        padding: 0;
+        flex: 1 0 calc(16.66% - 5px);
+        max-width: calc(16.66% - 5px);
+
+        &:first-child {
+          margin-left: 0;
+          flex: 1 0 16.66%;
+          max-width: 16.66%;
+        }
+      }
     }
   }
 
   &__notify-card {
     margin-top: 20px;
+
+    @include mobile {
+      margin-top: 0;
+    }
   }
 
   &__bottom {
     margin-top: auto;
     padding-top: 20px;
+
+    @include mobile {
+      display: none;
+    }
   }
 }

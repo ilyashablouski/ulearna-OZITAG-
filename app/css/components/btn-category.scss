@@ -11,6 +11,12 @@
   color: $color-gray-dark;
   border-radius: 10px;
 
+  @include mobile {
+    border-radius: 0;
+    background: transparent;
+    height: 44px;
+  }
+
   &.active {
     background: $color-blue;
     color: $color-white;
@@ -29,14 +35,39 @@
   }
 
   &__img {
+    position: relative;
+    display: inline-flex;
+    font-size: 24px;
+
     svg {
-      height: 24px;
-      width: 24px;
       @include transition;
+    }
+
+    @include mobile {
+      font-size: 16px;
+    }
+
+    &--message {
+      &:after {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        background: #42db92;
+        border-radius: 50%;
+        top: -5px;
+        right: -5px;
+        border: 2px solid #e4f6fe;
+      }
     }
   }
 
   &__label {
     padding-top: 13px;
+
+    @include mobile {
+      display: none;
+    }
   }
 }

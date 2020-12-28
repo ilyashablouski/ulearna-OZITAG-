@@ -4,6 +4,11 @@
   color: $color-blue;
   border-radius: 10px;
 
+  @include mobile {
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 14px rgba(1, 64, 139, 0.14);
+  }
+
   &__title {
     font-weight: 600;
     font-size: 16px;
@@ -14,6 +19,10 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 20px;
+
+    @include mobile320 {
+      font-size: 12px;
+    }
   }
 
   &__btn {

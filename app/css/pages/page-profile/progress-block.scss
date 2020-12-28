@@ -5,6 +5,10 @@
   cursor: pointer;
   @include transition;
 
+  @include mobile {
+    padding: 12px 16px 15px;
+  }
+
   &:hover {
     background: #e9eff5;
   }/**/
@@ -15,6 +19,13 @@
 
   &__inner  {
     padding-right: 55px;
+
+    @include mobile {
+      padding-right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   &__course-name {
@@ -22,17 +33,35 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 23px;
+
+    @include mobile {
+      font-size: 14px;
+    }
+    @include mobile320 {
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
 
   &__round-bar {
     position: absolute;
     top: 10px;
     right: 8px;
+    display: inline-flex;
+
+    @include mobile {
+      position: static;
+      margin-left: 20px;
+    }
   }
 
   &__counters {
     margin-top: 15px;
     display: inline-flex;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__counter-text {
@@ -50,5 +79,9 @@
 
   &__btn {
     margin-top: 10px;
+
+    @include mobile {
+      display: none;
+    }
   }
 }

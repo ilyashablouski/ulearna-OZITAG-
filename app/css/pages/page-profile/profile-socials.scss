@@ -1,11 +1,14 @@
 .profile-socials {
   &__counters {
     display: flex;
+
+    @include smallTablet-and-mobile {
+      justify-content: center;
+    }
   }
 
   &__counter {
     font-size: 14px;
-
     &-number {
       font-weight: 600;
       color: $color-blue;
@@ -13,6 +16,10 @@
 
     &-text {
       font-weight: normal;
+
+      @include mobile320 {
+        font-size: 12px;
+      }
     }
 
     &:not(:first-child) {
@@ -34,6 +41,10 @@
     display: inline-block;
     color: $color-gray-dark;
     font-size: 14px;
+
+    @include mobile320 {
+      font-size: 12px;
+    }
 
     &:hover {
       color: $color-black;

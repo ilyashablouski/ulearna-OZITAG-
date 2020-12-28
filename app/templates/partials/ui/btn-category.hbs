@@ -1,5 +1,5 @@
-<a href="{{url}}" class="btn-category {{#if active}}active{{/if}}">
-  <span class="btn-category__img">
+<a href="{{url}}" class="btn-category {{#if active}}active{{/if}} ">
+  <span class="btn-category__img {{#if message}}btn-category__img--message{{/if}}">
     {{> ui/svg name=imgName}}
   </span>
   <span class="btn-category__label">{{label}}</span>

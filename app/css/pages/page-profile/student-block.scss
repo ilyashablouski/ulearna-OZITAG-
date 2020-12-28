@@ -1,10 +1,13 @@
 .student-block {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
   &__header {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
+
+    @include mobile {
+      margin-top: 0;
+    }
 
     &-title {
       font-weight: 600;
@@ -19,6 +22,10 @@
       letter-spacing: 0.02em;
       @include transition;
 
+      @include mobile {
+        font-size: 14px;
+      }
+
       &:hover {
         opacity: 0.8;
       }
@@ -27,5 +34,10 @@
 
   &__list {
     margin-top: 10px;
+
+    @include mobile {
+      margin-left: -16px;
+      margin-right: -16px;
+    }
   }
 }
