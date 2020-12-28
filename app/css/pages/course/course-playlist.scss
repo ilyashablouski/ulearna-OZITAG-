@@ -73,13 +73,12 @@
     margin-left: 16px;
     padding-right: 16px;
     overflow: auto;
-    max-height: 234px;
-
 
     @include smallTablet-and-mobile {
       margin-left: 0;
       display: none;
       padding-bottom: 8px;
+      max-height: 234px;
 
       .opened & {
         display: block;
