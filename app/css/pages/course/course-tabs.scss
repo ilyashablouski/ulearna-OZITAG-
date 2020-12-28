@@ -1,9 +1,19 @@
 .course-tabs {
-  box-shadow: inset 0px -1px 0px #DAE4ED;
-  display: flex;
+
+  @include reset-slider-container-mobile;
+
+  &__inner {
+    box-shadow: inset 0px -1px 0px #DAE4ED;
+    display: flex;
+    white-space: nowrap;
+  }
 
   &__item {
     margin-left: 31px;
+
+    @include mobile {
+      margin-left: 16px;
+    }
 
     &:first-child {
       margin-left: 0;
@@ -20,6 +30,13 @@
     position: relative;
     color: $color-gray-light;
 
+    @include mobile {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      padding: 12px 0;
+    }
+
     &:hover {
       color: $color-dark;
     }
@@ -28,7 +45,7 @@
       color: $color-dark;
       position: relative;
 
-      &:after{
+      &:after {
         content: '';
         left: 0;
         right: 0;

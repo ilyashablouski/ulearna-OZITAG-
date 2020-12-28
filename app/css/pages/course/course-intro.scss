@@ -33,6 +33,11 @@
     display: flex;
     justify-content: space-between;
 
+    @include mobile{
+      width: auto;
+      margin-left: 10px;
+    }
+
     .course-intro__row & {
       @include smallTablet-and-mobile {
         width: auto;
@@ -50,6 +55,7 @@
         margin-right: -$mobileGutter;
       }
     }
+
   }
 
   &__left {
@@ -86,14 +92,12 @@
     font-size: 16px;
     line-height: 146%;
     color: $color-gray-dark;
-    display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     margin-top: 8px;
   }
 
   &__follow {
-    margin-left: 8px;
-    display: flex;
+    display: inline-flex;
 
     .btn-icon {
       color: $color-blue;
@@ -103,6 +107,6 @@
   &__author {
     color: $color-blue;
     font-weight: 600;
-    margin-left: 5px;
+    margin-right: 5px;
   }
 }
