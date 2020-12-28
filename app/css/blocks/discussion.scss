@@ -1,7 +1,7 @@
 .discussion {
   margin-top: -20px;
 
-  @include smallTablet-and-mobile{
+  @include smallTablet-and-mobile {
     margin-top: 0;
   }
 
@@ -12,6 +12,14 @@
 
     &-left {
       width: 504px;
+
+      @include mobile {
+        width: auto;
+
+        .search-input {
+          display: none;
+        }
+      }
     }
 
     &-right {
@@ -25,6 +33,10 @@
 
   &__message {
     margin-top: 20px;
+
+    @include mobile {
+      margin-top: 40px;
+    }
 
     &:first-child {
       margin-top: 0;
