@@ -12,6 +12,7 @@
     &-title {
       font-weight: 600;
       font-size: 16px;
+      line-height: 24px;
       letter-spacing: 0.02em;
     }
 
@@ -19,7 +20,9 @@
       font-weight: bold;
       font-size: 15px;
       color: $color-blue;
+      line-height: 22px;
       letter-spacing: 0.02em;
+
       @include transition;
 
       @include mobile {

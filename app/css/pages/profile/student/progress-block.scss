@@ -32,7 +32,7 @@
     display: block;
     font-weight: normal;
     font-size: 16px;
-    line-height: 23px;
+    line-height: 146%;
 
     @include mobile {
       font-size: 14px;
@@ -56,8 +56,9 @@
   }
 
   &__counters {
-    margin-top: 15px;
+    margin-top: 9px;
     display: inline-flex;
+    line-height: 140%;
 
     @include mobile {
       display: none;

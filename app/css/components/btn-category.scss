@@ -64,7 +64,8 @@
   }
 
   &__label {
-    padding-top: 13px;
+    padding-top: 12px;
+    line-height: 140%;
 
     @include mobile {
       display: none;

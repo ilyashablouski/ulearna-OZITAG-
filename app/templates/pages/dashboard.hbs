@@ -2,19 +2,9 @@
 
 {{> layout/head}}
 {{> layout/header shadow=true}}
+{{> layout/profile}}
 
-<div class="page-profile">
-  <div class="container">
-    <div class="page-profile__inner">
-      <div class="page-profile__left">
-        {{> blocks/page-profile/profile-sidebar}}
-      </div>
+{{> blocks/profile/student/student-dashboard}}
 
-      <div class="page-profile__main">
-      {{> blocks/page-profile/profile-dashboard}}
-      </div>
-    </div>
-  </div>
-</div>
-
+{{> layout/profile-bottom}}
 {{> layout/footer }}

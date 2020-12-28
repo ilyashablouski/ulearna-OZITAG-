@@ -1,4 +1,4 @@
-.profile-dashboard {
+.student-dashboard {
   position: relative;
 
   @include mobile {
@@ -44,14 +44,16 @@
     &-title {
       font-weight: 600;
       font-size: 16px;
+      line-height: 24px;
       letter-spacing: 0.02em;
+
     }
 
     &-text {
       margin-top: 8px;
       font-weight: normal;
       font-size: 14px;
-      line-height: 20px;
+      line-height: 140%;
       word-wrap: break-word;
       color: $color-gray-dark;
       @include mobile320 {

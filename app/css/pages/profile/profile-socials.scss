@@ -3,12 +3,14 @@
     display: flex;
 
     @include smallTablet-and-mobile {
+      margin-top: 6px;
       justify-content: center;
     }
   }
 
   &__counter {
     font-size: 14px;
+    line-height: 140%;
     &-number {
       font-weight: 600;
       color: $color-blue;
@@ -28,7 +30,7 @@
   }
 
   &__networks {
-    margin-top: 16px;
+    margin-top: 13px;
     display: flex;
 
     @include smallTablet-and-mobile {
@@ -37,7 +39,7 @@
   }
 
   &__link {
-    margin-top: 16px;
+    margin-top: 8px;
     display: inline-block;
     color: $color-gray-dark;
     font-size: 14px;
