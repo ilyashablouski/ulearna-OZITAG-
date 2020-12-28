@@ -103,7 +103,6 @@
       margin-top: 0;
       padding-top: 16px;
       padding-bottom: 30px;
-      padding-right: 16px;
       padding-left: 16px;
       margin-left: 0;
       display: flex;
@@ -137,6 +136,7 @@
       @include mobile {
         margin-top: 0;
         margin-left: 16px;
+        padding-right: 16px;
       }
 
     }
