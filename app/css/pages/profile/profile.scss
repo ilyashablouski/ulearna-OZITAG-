@@ -17,6 +17,11 @@
     @include smallTablet-and-mobile {
       display: block;
     }
+
+    @include mobile {
+      margin-left: -16px;
+      margin-right: -16px;
+    }
   }
 
   &__left {

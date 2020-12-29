@@ -5,6 +5,7 @@
   border-radius: 10px;
 
   @include mobile {
+    padding: 16px;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 4px 14px rgba(1, 64, 139, 0.14);
   }
