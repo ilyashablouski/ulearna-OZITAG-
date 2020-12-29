@@ -11,6 +11,10 @@
     color: #333;
     position: relative;
 
+    @include desktop-small-height{
+      padding: 150px 0 50px;
+    }
+
     @include tablet {
       padding-top: 185px;
       padding-bottom: 80px;
@@ -30,6 +34,11 @@
     line-height: 99px;
     display: block;
     margin: 0;
+
+    @include desktop-small-height{
+      font-size: 56px;
+      line-height: 84px;
+    }
 
     @include tablet {
       font-size: 56px;
@@ -84,7 +93,7 @@
         }
       }
     }
-    
+
     @include smallTablet-and-mobile {
       margin-top: 30px;
     }

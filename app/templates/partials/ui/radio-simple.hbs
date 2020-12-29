@@ -1,0 +1,13 @@
+<div class="form-radio-simple">
+  <label class="form-radio-simple__label" for="{{name}}_1">
+    <input type="radio" {{#if checked}}checked{{/if}} id="{{name}}_1" checked name="{{name}}" value="1"/>
+    <span class="form-radio-simple__text">{{option-1}}</span>
+  </label>
+
+  {{#if option-2}}
+    <label class="form-radio-simple__label" for="{{name}}_2">
+      <input type="radio" {{#if checked}}checked{{/if}} id="{{name}}_2" name="{{name}}" value="2"/>
+      <span class="form-radio-simple__text">{{option-2}}</span>
+    </label>
+  {{/if}}
+</div>

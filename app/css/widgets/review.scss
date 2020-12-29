@@ -1,0 +1,155 @@
+.review {
+
+  &__user {
+    display: flex;
+    align-items: center;
+
+    &-image {
+      width: 80px;
+
+      @include mobile {
+        width: 60px;
+        filter: drop-shadow(0px 4px 14px rgba(0, 29, 72, 0.12));
+
+        img {
+          width: 48px;
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+
+
+  &__main {
+    flex: 1 1 1px;
+    box-shadow: inset 0px -1px 0px #DAE4ED;
+    padding-bottom: 30px;
+    margin-left: 80px;
+
+    @include mobile {
+      margin-left: 0;
+      margin-top: 20px;
+      padding-bottom: 16px;
+    }
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    display: block;
+  }
+
+  &__position {
+    font-size: 14px;
+    line-height: 140%;
+    color: $color-gray-dark;
+    margin-top: 7px;
+    display: block;
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 150%;
+      margin-top: 4px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 146%;
+    color: $color-dark;
+    margin-top: 24px;
+
+    @include mobile{
+      font-size: 14px;
+      line-height: 21px;
+      margin-top: 18px;
+    }
+  }
+
+  &__summary {
+    margin-top: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    color: $color-black;
+
+    @include mobile{
+      margin-top: 16px;
+      font-size: 12px;
+      line-height: 150%;
+    }
+  }
+
+  &__mark {
+    margin-left: 5px;
+
+    &--positive {
+      color: $color-green;
+    }
+
+    &--negative {
+      color: $color-red;
+    }
+  }
+
+  &__stats {
+    display: flex;
+    margin-top: 10px;
+
+    @include mobile{
+      margin-top: 0;
+      display: block;
+    }
+
+    &-item {
+      margin-left: 30px;
+
+      @include mobile{
+        margin: 20px 0 0 0;
+        &:first-child{
+          margin-top: 0;
+        }
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__improved {
+    margin-top: 20px;
+
+    &-title {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 140%;
+      color: $color-black;
+
+      @include mobile{
+        font-size: 12px;
+        line-height: 150%;
+      }
+    }
+
+    &-note {
+      color: $color-gray-dark;
+      font-weight: 400;
+    }
+
+    &-value {
+      font-size: 16px;
+      line-height: 146%;
+      color: $color-dark;
+      margin-top: 8px;
+      display: block;
+
+      @include mobile{
+        font-size: 12px;
+        line-height: 21px;
+      }
+    }
+  }
+}

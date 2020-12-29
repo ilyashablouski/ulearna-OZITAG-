@@ -1,0 +1,131 @@
+.reviews-form {
+  margin-top: 40px;
+
+  textarea {
+    height: 188px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 29px;
+    line-height: 43px;
+    color: $color-black;
+    display: block;
+
+    @include mobile{
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+
+  &__inner {
+    background: $color-gray-30;
+    border-radius: 12px;
+    margin-top: 14px;
+    padding: 20px 30px 30px;
+
+    @include mobile{
+      padding: 16px;
+      margin-left: -$mobileGutter;
+      margin-right: -$mobileGutter;
+    }
+  }
+
+  &__submit {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+  }
+
+  &__section {
+    background: #F4F7FA;
+    box-shadow: inset 0px -1px 0px #DAE4ED;
+    padding-bottom: 39px;
+    margin-bottom: 20px;
+
+    @include mobile{
+      padding-bottom: 16px;
+    }
+
+    &--row {
+      display: flex;
+      padding-bottom: 33px;
+
+      @include mobile{
+        display: block;
+        padding-bottom: 16px;
+      }
+    }
+
+    &:last-child {
+      box-shadow: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__text {
+    margin-top: 8px;
+    display: block;
+    font-size: 14px;
+    line-height: 140%;
+    color: $color-black;
+  }
+
+  &__rating {
+    margin-top: 18px;
+  }
+
+  &__cell {
+    border-left: 1px solid $color-gray;
+    padding-left: 50px;
+    margin-left: 65px;
+
+    @include mobile{
+      padding-top: 20px;
+      margin-top: 20px;
+      padding-left: 0;
+      margin-left: 0;
+      border-left: 0 none;
+      border-top: 1px solid $color-gray;
+    }
+
+    &:first-child {
+      margin-left: 0;
+      padding-left: 0;
+      border-left: 0 none;
+      border-top: 0 none;
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+
+  &__label {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: $color-black;
+    display: block;
+  }
+
+  &__checkboxes {
+    margin-top: 8px;
+    margin-left: -10px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item{
+      margin-left: 7px;
+      margin-top: 8px;
+    }
+  }
+
+  &__select {
+    margin-top: 18px;
+  }
+
+  &__input {
+    margin-top: 7px;
+  }
+}

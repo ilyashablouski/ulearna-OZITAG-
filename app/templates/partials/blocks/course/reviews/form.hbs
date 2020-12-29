@@ -1,0 +1,63 @@
+<div class="reviews-form">
+  <span class="reviews-form__title">Write a review</span>
+  <div class="reviews-form__inner">
+    <div class="reviews-form__section reviews-form__section--row">
+      <div class="reviews-form__cell">
+        <span class="reviews-form__label">Add a course rating</span>
+        <div class="reviews-form__rating">
+          {{> widgets/rating-select stars=true}}
+        </div>
+      </div>
+      <div class="reviews-form__cell">
+        <span class="reviews-form__label">What do you think the course level is?</span>
+        <div class="reviews-form__rating">
+          {{> widgets/rating-select level=true}}
+        </div>
+      </div>
+    </div>
+    <div class="reviews-form__section">
+      <span class="reviews-form__label">What could be improved</span>
+      <p class="reviews-form__text">Your selection are shared privately with the teacher</p>
+      <div class="reviews-form__checkboxes">
+        <div class="reviews-form__checkboxes-item">
+          {{> ui/checkbox button=true checked=true id="skill_01" label="Organization of levels"}}
+        </div>
+        <div class="reviews-form__checkboxes-item">
+          {{> ui/checkbox button=true id="skill_02" label="Clarity of insitution"}}
+        </div>
+        <div class="reviews-form__checkboxes-item">
+          {{> ui/checkbox button=true checked=true id="skill_03" label="More actionable"}}
+        </div>
+        <div class="reviews-form__checkboxes-item">
+          {{> ui/checkbox button=true id="skill_04" label="More examples & tips"}}
+        </div>
+        <div class="reviews-form__checkboxes-item">
+          {{> ui/checkbox button=true id="skill_05" label="Audio quality"}}
+        </div>
+        <div class="reviews-form__checkboxes-item">
+          {{> ui/checkbox button=true id="skill_06" label="Video quality"}}
+        </div>
+        <div class="reviews-form__checkboxes-item">
+          {{> ui/checkbox button=true id="skill_07" label="Item"}}
+        </div>
+      </div>
+    </div>
+    <div class="reviews-form__section">
+      <span class="reviews-form__label">Would you recommend this course?</span>
+      <div class="reviews-form__select">
+        {{> ui/radio-simple name="recommend" option-1="Yes" option-2="No"}}
+      </div>
+    </div>
+    <div class="reviews-form__section">
+      <label for="" class="reviews-form__label">Anything else? (Public review)</label>
+      <div class="reviews-form__input">
+        {{#> ui/field id="text_01" note="Help text / Max 1200 s."}}
+          {{> ui/textarea id="text_01" placeholder="Add text"}}
+        {{/ui/field}}
+      </div>
+    </div>
+  </div>
+  <div class="reviews-form__submit">
+    {{> ui/btn color="blue" label="Send review"}}
+  </div>
+</div>

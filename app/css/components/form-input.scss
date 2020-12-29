@@ -1,14 +1,17 @@
 .form-input {
-  input {
+  input, textarea{
     background: #FFFFFF;
     border: 2px solid #DAE4ED;
     border-radius: 12px;
-    padding: 0 16px;
-    height: 57px;
     font-weight: 500;
     font-size: 18px;
     line-height: 150%;
     width: 100%;
+    display: block;
+
+    @include placeholder {
+      color: rgba(5, 36, 51, 0.2);
+    }
 
     @include mobile {
       height: 50px;
@@ -17,10 +20,17 @@
       font-size: 16px;
       line-height: 150%;
     }
+  }
 
-    @include placeholder {
-      color: rgba(5, 36, 51, 0.2);
-    }
+  input {
+    padding: 0 16px;
+    height: 57px;
+  }
+
+  textarea{
+    padding: 14px 16px;
+    resize: none;
+    height: 186px;
   }
 
   &--icon {

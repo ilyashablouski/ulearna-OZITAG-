@@ -1,0 +1,32 @@
+.sort-select {
+  display: flex;
+
+  &__item {
+    margin-left: 8px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__button {
+    padding: 0 16px;
+    height: 37px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    @include transition;
+
+    color: $color-gray-dark;
+
+    &:hover {
+      color: $color-dark-hover;
+    }
+
+    &.active {
+      background: $color-blue-light;
+      color: $color-blue;
+    }
+  }
+}

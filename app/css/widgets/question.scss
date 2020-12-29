@@ -1,0 +1,78 @@
+.question {
+  padding: 20px 30px 30px;
+  background: $color-gray-30;
+  border-radius: 12px;
+
+  @include mobile{
+    padding: 16px;
+  }
+
+  &__label {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    display: block;
+    color: $color-gray-dark;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    margin-top: 8px;
+    display: block;
+    color: $color-black;
+  }
+
+  &__text {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 146%;
+    color: $color-dark;
+
+    @include mobile{
+      margin-top: 8px;
+    }
+  }
+
+  &__options {
+    margin-top: 15px;
+
+    @include mobile{
+      margin-top: 10px;
+    }
+
+    &-item {
+      padding: 14px 10px 15px;
+      box-shadow: inset 0px -1px 0px #DAE4ED;
+      cursor: pointer;
+      font-size: 18px;
+      line-height: 150%;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+
+      @include mobile{
+        font-size: 14px;
+        line-height: 21px;
+        padding: 12px 10px;
+        font-weight: normal;
+      }
+
+      &:hover{
+        background: rgba(218, 228, 237, 0.22);
+      }
+
+      &._active{
+        background: $color-blue-12;
+        color: $color-blue2;
+      }
+
+      b{
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+  }
+}

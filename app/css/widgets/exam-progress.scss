@@ -1,0 +1,21 @@
+.exam-progress {
+  display: flex;
+
+  &__item {
+    background: #DAE4ED;
+    border-radius: 12px;
+    width: 16px;
+    height: 6px;
+    margin-left: 6px;
+    display: block;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &.filled {
+      width: 40px;
+      background: $color-green;
+    }
+  }
+}

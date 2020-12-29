@@ -1,0 +1,43 @@
+.course-sidebar {
+  &__block {
+    padding: 15px 0;
+    border-top: 1px solid $color-gray;
+
+    &:first-child {
+      border-top: 0 none;
+      padding-top: 0;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: $color-gray-dark;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__skills {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+
+    span{
+      color: $color-blue;
+    }
+  }
+
+  &__actions{
+    margin-top: 16px;
+
+    @include mobile{
+      margin-top: 0;
+    }
+  }
+
+  @include mobile{
+    margin-bottom: 30px;
+  }
+}

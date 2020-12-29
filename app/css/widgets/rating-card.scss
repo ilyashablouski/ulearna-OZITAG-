@@ -1,0 +1,107 @@
+.rating-card {
+
+  &__value {
+    height: 28px;
+    display: flex;
+    align-items: center;
+
+    .rating-card--energy & {
+      padding-left: 7px;
+    }
+    .rating-card--energy.rating-card--small & {
+      padding-left: 0;
+    }
+
+  }
+
+  &__label {
+    font-size: 14px;
+    line-height: 140%;
+    color: $color-black;
+    margin-top: 10px;
+    display: block;
+
+    @include mobile{
+      font-size: 12px;
+      line-height: 150%;
+    }
+
+    .rating-card--small & {
+      margin-top: 3px;
+    }
+
+    b {
+      font-weight: 600;
+    }
+  }
+
+  &__views {
+    padding-left: 28px;
+    position: relative;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: $color-dark;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      @include sprite('rating-eye');
+      @include align(false, true);
+    }
+  }
+
+  &__item {
+    margin-left: 8px;
+
+    .rating-card--stars.rating-card--small & {
+      margin-left: 4px;
+    }
+
+    .rating-card--energy & {
+      margin-left: 12px;
+    }
+
+    .rating-card--energy.rating-card--small & {
+      margin-left: 9px;
+    }
+
+    &:first-child {
+      margin-left: 0 !important;
+    }
+
+    .rating-card--stars & {
+      @include sprite('rating-star-big');
+
+      &.rating-card__item--active {
+        @include sprite('rating-star-big--fill');
+      }
+    }
+
+    .rating-card--stars.rating-card--small & {
+      @include sprite('rating-star');
+
+      &.rating-card__item--active {
+        @include sprite('rating-star--fill');
+      }
+    }
+
+    .rating-card--energy & {
+      @include sprite('rating-energy-big');
+
+      &.rating-card__item--active {
+        @include sprite('rating-energy-big--fill');
+      }
+    }
+
+    .rating-card--energy.rating-card--small & {
+      @include sprite('rating-energy');
+
+      &.rating-card__item--active {
+        @include sprite('rating-energy--fill');
+      }
+    }
+  }
+}

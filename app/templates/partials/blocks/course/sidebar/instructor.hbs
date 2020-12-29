@@ -1,0 +1,27 @@
+<div class="course-instructor">
+  <div class="course-instructor__main">
+    <div class="course-instructor__image">
+      {{> components/image img="course/instructor" ext="jpg"}}
+    </div>
+
+    <div class="course-instructor__info">
+      <span class="course-instructor__name">Murvin Murphy</span>
+      <div class="course-instructor__stats">
+        <span class="course-instructor__stats-item"><b>168</b> Followers</span>
+        <span class="course-instructor__stats-item"><b>10</b> Courses</span>
+      </div>
+    </div>
+  </div>
+
+  <ul class="course-instructor__params">
+    <li class="course-instructor__params-item course-instructor__params-item--job"><b>Job</b> Senior Developer</li>
+    <li class="course-instructor__params-item course-instructor__params-item--education"><b>Education</b> Education Title</li>
+    <li class="course-instructor__params-item course-instructor__params-item--languages"><b>Languages</b> Language, Language</li>
+    <li class="course-instructor__params-item course-instructor__params-item--country"><b>Country</b> Country</li>
+  </ul>
+
+  <div class="course-instructor__actions">
+    {{> ui/btn color="blue" size="small" w100=true label="Follow" icon="button-plus"}}
+    {{> ui/btn color="light" size="small" w100=true label="Send Message" icon="button-message"}}
+  </div>
+</div>

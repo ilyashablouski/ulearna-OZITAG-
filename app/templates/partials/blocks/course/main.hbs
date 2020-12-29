@@ -1,0 +1,93 @@
+<section class="course-main">
+  <div class="container">
+
+    <div class="course-main__tabs">
+      <div class="course-tabs">
+        <div class="course-tabs__inner">
+          <div class="course-tabs__item">
+            {{#ifCond tab 1}}
+              <span class="course-tabs__link active">About Course</span>
+            {{else}}
+              <a href="course-overview.html" class="course-tabs__link">About Course</a>
+            {{/ifCond}}
+          </div>
+          <div class="course-tabs__item">
+            {{#ifCond tab 2}}
+              <span class="course-tabs__link active">Reviews</span>
+            {{else}}
+              <a href="course-reviews.html" class="course-tabs__link">Reviews</a>
+            {{/ifCond}}
+          </div>
+          <div class="course-tabs__item">
+            {{#ifCond tab 3}}
+              <span class="course-tabs__link active">Discussion</span>
+            {{else}}
+              <a href="course-discussion.html" class="course-tabs__link">Discussion</a>
+            {{/ifCond}}
+          </div>
+          <div class="course-tabs__item">
+            {{#ifCond tab 4}}
+              <span class="course-tabs__link active">Exam & Certificate</span>
+            {{else}}
+              <a href="course-certificate.html" class="course-tabs__link">Exam & Certificate</a>
+            {{/ifCond}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-main__wrapper">
+      <aside class="course-main__sidebar  {{#ifCond tab 1}}{{else}}course-main__sidebar--no-mobile{{/ifCond}}">
+        <div class="course-sidebar">
+          {{#if price}}
+            {{> blocks/course/sidebar/price }}
+          {{/if}}
+          <div class="course-sidebar__blocks">
+            <div class="course-sidebar__block">
+              {{> blocks/course/sidebar/stats }}
+            </div>
+
+            <div class="course-sidebar__block">
+              <span class="course-sidebar__title">Course skills</span>
+              <div class="course-sidebar__skills">
+                <span>Skill Name</span>, <span>Skill Name</span>, <span>Skill Name</span>
+              </div>
+            </div>
+
+            <div class="course-sidebar__block">
+              <span class="course-sidebar__title">Instructor</span>
+              {{> blocks/course/sidebar/instructor }}
+            </div>
+
+            <div class="course-sidebar__actions">
+              {{> ui/btn size="small" color="gray" label="Report On Course" w100=true}}
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div class="course-main__inner">
+        <div class="course-main__content">
+          {{#ifCond tab 1}}
+            {{> blocks/course/tab-about}}
+          {{/ifCond}}
+          {{#ifCond tab 2}}
+            {{> blocks/course/reviews/intro }}
+            {{> blocks/course/reviews/list }}
+            {{> blocks/course/reviews/form }}
+          {{/ifCond}}
+          {{#ifCond tab 3}}
+            {{> blocks/course/discussion/discussion }}
+            {{> blocks/course/discussion/form }}
+          {{/ifCond}}
+          {{#ifCond tab 4}}
+            {{#if completed}}
+              {{>blocks/course/exam-completed }}
+            {{else}}
+              {{>blocks/course/exam }}
+            {{/if}}
+          {{/ifCond}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

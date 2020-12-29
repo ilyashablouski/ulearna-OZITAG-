@@ -1,0 +1,174 @@
+.course-playlist {
+  height: 533px;
+  background: #33414F;
+  border-radius: 10px;
+  width: 100%;
+  color: $color-gray-dark;
+  font-size: 18px;
+  line-height: 25px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 34px;
+
+  @include tablet{
+    height: 353px;
+  }
+
+  @include smallTablet-and-mobile {
+    height: auto;
+    padding-bottom: 0;
+  }
+
+  &__header {
+    padding: 10px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include smallTablet {
+      padding-left: $tabletGutter;
+      padding-right: $tabletGutter;
+    }
+
+    @include mobile {
+      padding-left: $mobileGutter;
+      padding-right: $mobileGutter;
+    }
+  }
+
+  &__toggle {
+    @include sprite('playlist-toggle');
+
+    .opened &{
+      @include sprite('playlist-toggle--fill');
+    }
+
+    margin-left: 16px;
+
+    display: none;
+    @include smallTablet-and-mobile {
+      display: block;
+    }
+  }
+
+  &__title {
+    font-weight: 800;
+    display: block;
+
+    @include smallTablet-and-mobile {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      flex: 1 1 1px;
+      display: block;
+    }
+  }
+
+  &__time {
+    width: 50px;
+    text-align: right;
+  }
+
+  &__list {
+    margin-left: 16px;
+    padding-right: 16px;
+    overflow: auto;
+
+    @include smallTablet-and-mobile {
+      margin-left: 0;
+      display: none;
+      padding-bottom: 8px;
+      max-height: 234px;
+
+      .opened & {
+        display: block;
+      }
+
+      &.animate {
+        position: relative;
+        display: block;
+        height: 0;
+        overflow: hidden;
+        transition: height .32s ease;
+      }
+    }
+
+    @include smallTablet {
+      padding-left: $tabletGutter;
+      padding-right: $tabletGutter;
+    }
+
+    @include mobile {
+      padding-left: $mobileGutter;
+      padding-right: $mobileGutter;
+    }
+  }
+
+  &__name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    flex: 1 1 1px;
+
+    @include smallTablet-and-mobile {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px 16px;
+    color: #fff;
+    box-shadow: inset 0px -1px 0px rgba(130, 154, 178, 0.4);
+    cursor: pointer;
+
+    @include smallTablet-and-mobile {
+      padding: 10px 0;
+      box-shadow: none;
+    }
+
+    &--locked {
+      color: $color-gray-dark;
+    }
+
+    &--active {
+      color: $color-blue;
+
+      .course-playlist__time {
+        color: $color-white;
+      }
+    }
+
+    &:hover {
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.06)), #33414F;
+
+      @include smallTablet-and-mobile {
+        margin: 0 -15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  &__lock {
+    @include sprite('course-playlist-lock');
+    margin-left: 9px;
+  }
+
+  &__pause {
+    @include circle(24px, $color-blue-dark);
+    margin-left: 9px;
+    position: relative;
+
+    &:before {
+      content: '';
+      @include align(true, true);
+      @include sprite('course-playlist-pause');
+    }
+  }
+}

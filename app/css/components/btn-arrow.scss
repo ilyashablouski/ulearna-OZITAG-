@@ -10,9 +10,19 @@
   white-space: nowrap;
 
   @include mobile{
-    padding-right: 0;
     font-size: 14px;
-    line-height: 21px;
+  }
+
+  &--no-mobile-arrow {
+    @include mobile {
+      padding-right: 0;
+      font-size: 14px;
+      line-height: 21px;
+
+      &:after {
+        display: none;
+      }
+    }
   }
 
   &:after {
@@ -21,17 +31,30 @@
     right: 0;
     @include align(false, true);
     @include transition;
-
-    @include mobile{
-      display: none;
-    }
   }
+
 
   &:hover {
     color: $color-blue-hover;
 
     &:after {
       transform: translateX(2px) translateY(-50%);
+    }
+  }
+
+  &--back {
+    padding: 0 0 0 18px;
+
+    &:after {
+      display: none;
+    }
+
+    &:before {
+      content: '';
+      @include sprite('link-arrow-arrow-back');
+      left: 0;
+      @include align(false, true);
+      @include transition;
     }
   }
 }

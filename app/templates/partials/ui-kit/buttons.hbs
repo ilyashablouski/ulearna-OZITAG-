@@ -11,11 +11,35 @@
   {{#> core/ui-kit/blocks/widget title='.btn.btn--gray' width=200}}
     {{> ui/btn color="gray" label="Button"}}
   {{/core/ui-kit/blocks/widget}}
+  {{#> core/ui-kit/blocks/widget title='.btn.btn--dark' width=200}}
+    {{> ui/btn color="dark" label="Button"}}
+  {{/core/ui-kit/blocks/widget}}
+  {{#> core/ui-kit/blocks/widget title='.btn.btn--light' width=200}}
+    {{> ui/btn color="light" label="Button"}}
+  {{/core/ui-kit/blocks/widget}}
   {{#> core/ui-kit/blocks/widget title='.btn.btn--outline' width=200}}
     {{> ui/btn outline=true label="Button"}}
   {{/core/ui-kit/blocks/widget}}
   {{#> core/ui-kit/blocks/widget title='.btn.btn--transparent' width=200}}
     {{> ui/btn transparent=true label="Button"}}
+  {{/core/ui-kit/blocks/widget}}
+{{/core/ui-kit/blocks/row}}
+
+{{#> core/ui-kit/blocks/row id=null title=null }}
+  {{#> core/ui-kit/blocks/widget title='.btn.btn--blue.btn--small' width=200}}
+    {{> ui/btn color="blue" size="small" label="Button"}}
+  {{/core/ui-kit/blocks/widget}}
+  {{#> core/ui-kit/blocks/widget title='.btn.btn--orange.btn--small' width=200}}
+    {{> ui/btn color="orange" size="small" label="Button"}}
+  {{/core/ui-kit/blocks/widget}}
+  {{#> core/ui-kit/blocks/widget title='.btn.btn--purple.btn--small' width=200}}
+    {{> ui/btn color="purple" size="small" label="Button"}}
+  {{/core/ui-kit/blocks/widget}}
+  {{#> core/ui-kit/blocks/widget title='.btn.btn--gray.btn--small' width=200}}
+    {{> ui/btn color="gray" size="small" label="Button"}}
+  {{/core/ui-kit/blocks/widget}}
+  {{#> core/ui-kit/blocks/widget title='.btn.btn--outline.btn--small' width=200}}
+    {{> ui/btn outline=true size="small" label="Button"}}
   {{/core/ui-kit/blocks/widget}}
 {{/core/ui-kit/blocks/row}}
 
@@ -70,9 +94,28 @@
   {{#> core/ui-kit/blocks/widget title='.btn (Icon Right)' width=200}}
     {{> ui/btn color="blue" button=true label="Filters" icon="button-arrow-down" icon-right=true}}
   {{/core/ui-kit/blocks/widget}}
+  {{#> core/ui-kit/blocks/widget title='.btn (Icon Right)' width=200}}
+    {{> ui/btn color="blue" button=true label="Filters" icon="button-arrow-next" icon-right=true}}
+  {{/core/ui-kit/blocks/widget}}
   {{#> core/ui-kit/blocks/widget title='.btn' width=200}}
     {{> ui/btn label="Logout" outline=true icon="button-logout"}}
   {{/core/ui-kit/blocks/widget}}
+{{/core/ui-kit/blocks/row}}
+
+{{#> core/ui-kit/blocks/row id=null title=null }}
+  {{#> core/ui-kit/blocks/widget title='.btn' width=200}}
+    {{> ui/btn label="Share" color="blue" icon="button-share"}}
+  {{/core/ui-kit/blocks/widget}}
+  {{#> core/ui-kit/blocks/widget title='.btn' width=200}}
+    {{> ui/btn label="Add to wish list" color="blue" icon="button-wish"}}
+  {{/core/ui-kit/blocks/widget}}
+  {{#> core/ui-kit/blocks/widget title='.btn' width=200}}
+    {{> ui/btn color="blue" label="Follow" icon="button-plus"}}
+  {{/core/ui-kit/blocks/widget}}
+  {{#> core/ui-kit/blocks/widget title='.btn' width=200}}
+    {{> ui/btn color="light" label="Send Message" icon="button-message"}}
+  {{/core/ui-kit/blocks/widget}}
+
 {{/core/ui-kit/blocks/row}}
 
 
@@ -80,8 +123,17 @@
   {{#> core/ui-kit/blocks/widget title='.btn-icon (Reset)' width=200}}
     {{> ui/btn-icon icon="button-reset" label="Reset Filters"}}
   {{/core/ui-kit/blocks/widget}}
+  {{#> core/ui-kit/blocks/widget title='.btn-icon (Plus)' width=200}}
+    {{> ui/btn-icon icon="button-plus" label="Follow"}}
+  {{/core/ui-kit/blocks/widget}}
+  {{#> core/ui-kit/blocks/widget title='.btn-reply (Reply)' width=200}}
+    {{> ui/btn-icon icon="button-reply" label="Reply"}}
+  {{/core/ui-kit/blocks/widget}}
   {{#> core/ui-kit/blocks/widget title='.btn-arrow' width=200}}
     {{> ui/btn-arrow label="Link"}}
+  {{/core/ui-kit/blocks/widget}}
+  {{#> core/ui-kit/blocks/widget title='.btn-arrow--back' width=200}}
+    {{> ui/btn-arrow label="Link" back=true}}
   {{/core/ui-kit/blocks/widget}}
 {{/core/ui-kit/blocks/row}}
 

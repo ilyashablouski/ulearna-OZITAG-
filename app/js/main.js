@@ -34,7 +34,7 @@ import './src/widgets/mobile-slider';
 import './src/widgets/link-select';
 import './src/widgets/video-link';
 import './src/widgets/plan-select';
-import './src/widgets/plan-select';
+import './src/widgets/playlist';
 
 import './src/modules/header/header-burger';
 import './src/modules/header/header-fixed';

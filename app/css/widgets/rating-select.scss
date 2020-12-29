@@ -1,0 +1,52 @@
+.rating-select {
+  &__label {
+    font-size: 14px;
+    line-height: 140%;
+    color: $color-dark;
+    display: block;
+    margin-top: 18px;
+  }
+
+  &__value {
+    height: 28px;
+    display: inline-flex;
+    cursor: pointer;
+  }
+
+  &__icon {
+    margin-left: 5px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    .rating-select--stars & {
+      @include sprite('rating-star-big');
+
+      &.fill {
+        @include sprite('rating-star-big--fill');
+      }
+    }
+
+    .rating-select--level & {
+      @include sprite('rating-energy-big');
+
+      &.fill {
+        @include sprite('rating-energy-big--fill');
+      }
+    }
+
+    &.rating-select__icon--all {
+      @include sprite('rating-energy-full');
+
+      &.fill {
+        @include sprite('rating-energy-full--fill');
+      }
+    }
+  }
+
+  &__result {
+    font-weight: 600;
+    color: $color-blue-dark;
+  }
+}

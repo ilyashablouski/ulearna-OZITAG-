@@ -1,0 +1,38 @@
+<div class="review">
+  <div class="review__user">
+    <div class="review__user-image">
+      {{> components/image img=image ext="jpg"}}
+    </div>
+    <div class="review__user-name">
+      <span class="review__name">{{ name }}</span>
+      <div class="review__position">Student</div>
+    </div>
+  </div>
+  <div class="review__main">
+    <div class="review__stats">
+      <div class="review__stats-item">
+        {{> widgets/rating-card stars=true label="Rated" label-bold="3/5"}}
+      </div>
+      <div class="review__stats-item">
+        {{> widgets/rating-card energy=true label="The best for" label-bold="Intermediate"}}
+      </div>
+    </div>
+    <div class="review__text">
+      Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit
+      mollit. Exercitation veniam consequat sunt nostrud amet.
+    </div>
+    {{#if improved}}
+      <div class="review__improved">
+        <span class="review__improved-title">
+          What could be improved <span class="review__improved-note">(Only you see this option)</span>
+        </span>
+        <div class="review__improved-value">Organization of levels, More actionable</div>
+      </div>
+    {{/if}}
+    <div class="review__summary">
+      Would you recommend this course? {{#if no-recommend}}
+      <span class="review__mark review__mark--negative">No</span>{{else}}
+      <span class="review__mark review__mark--positive">Yes</span>{{/if}}
+    </div>
+  </div>
+</div>

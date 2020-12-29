@@ -1,0 +1,21 @@
+<div class="reviews-list">
+  {{> widgets/sort-select }}
+
+  <div class="reviews-list__inner">
+    <div class="reviews-list__item">
+      {{> widgets/review image="course/review_01" name="Leslie Alexander" }}
+    </div>
+    <div class="reviews-list__item">
+      {{> widgets/review image="course/review_02" name="Gretchen Levin" }}
+    </div>
+    <div class="reviews-list__item">
+      {{> widgets/review image="course/review_03" name="Cheyenne Bergson" no-recommend=true }}
+    </div>
+    <div class="reviews-list__item">
+      {{> widgets/review image="course/review_04" name="Emerson Levin" improved="Organization of levels, More actionable"  }}
+    </div>
+  </div>
+  <div class="reviews-list__more">
+    {{> ui/btn outline=true size="small" label="Load More"}}
+  </div>
+</div>

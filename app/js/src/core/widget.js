@@ -27,6 +27,8 @@ class Widget {
         return isTabletLayout();
       case 'tablet-mobile':
         return isMobileLayout() || isTabletLayout();
+      case 'smallTablet-mobile':
+        return isMobileLayout() || (isTabletLayout() && !isBigTabletLayout());
       case 'laptop':
         return isLaptopLayout();
       case 'desktop':

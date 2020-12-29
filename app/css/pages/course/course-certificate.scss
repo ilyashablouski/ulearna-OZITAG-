@@ -1,0 +1,190 @@
+.course-certificate {
+  padding-top: 51px;
+
+  @include smallTablet-and-mobile{
+    padding-top: 80px;
+  }
+
+  &__inner {
+    background: rgba(218, 228, 237, 0.3);
+    border-radius: 12px;
+    padding: 40px 30px 40px;
+    text-align: center;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      @include sprite('certificate-left');
+      top: 62px;
+      left: 89px;
+
+      @include smallTablet{
+        left: 20px;
+      }
+      @include mobile{
+        display: none;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      @include sprite('certificate-right');
+      top: 74px;
+      right: 110px;
+
+      @include smallTablet{
+        right: 20px;
+      }
+
+      @include mobile{
+        display: none;
+      }
+    }
+  }
+
+  &__badge {
+    background: $color-white;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: -90px auto 0;
+    width: 300px;
+    padding: 35px 20px 25px;
+    box-shadow: 0px 4px 44px rgba(1, 64, 139, 0.24);
+    text-align: center;
+    position: relative;
+
+    &:before {
+      content: '';
+      @include sprite('certificate-logo');
+      top: 17px;
+      left: 20px;
+      position: absolute;
+    }
+
+    &-title {
+      font-weight: bold;
+      font-size: 19px;
+      line-height: 28px;
+      display: block;
+    }
+
+    &-label {
+      display: block;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 147.7%;
+      letter-spacing: -0.01em;
+      color: $color-gray-dark;
+      margin-top: 6px;
+    }
+
+    &-name {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+      color: $color-gray-dark;
+      margin-top: 5px;
+      display: block;
+    }
+
+    &-lines {
+      margin-top: 10px;
+      margin: 10px auto;
+      width: 208px;
+
+      i {
+        width: 100%;
+        display: block;
+        border-radius: 3px;
+        height: 6px;
+        background: $color-gray;
+
+        margin-top: 10px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 30px;
+    text-align: center;
+    display: block;
+    font-weight: 600;
+    font-size: 29px;
+    line-height: 43px;
+    color: $color-blue;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 31px;
+    color: $color-black;
+    display: block;
+    margin-top: 16px;
+  }
+
+  &__stats {
+    margin-top: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    display: inline-flex;
+    align-items: center;
+    color: $color-gray-dark;
+    margin-left: 20px;
+
+    &-badge {
+      margin-left: 8px;
+      color: $color-white;
+      background: $color-green;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px;
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+  }
+
+  &__text {
+    margin-top: 18px;
+    font-size: 16px;
+    line-height: 146%;
+  }
+
+  &__button {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__share {
+    margin-top: 18px;
+
+    &-title {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      color: $color-gray-dark;
+      letter-spacing: 0.02em;
+    }
+
+    &-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 18px;
+
+      .social-button {
+        margin: 0 6px;
+      }
+    }
+  }
+}

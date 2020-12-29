@@ -1,0 +1,31 @@
+<div class="comment">
+  <div class="comment__inner">
+    <div class="comment__user">
+      <div class="comment__user-image">
+        {{> components/image img=image ext="jpg"}}
+      </div>
+      <div class="comment__user-info">
+      <span class="comment__user-name">
+        {{ name }}
+      </span>
+        {{#if date}}
+          <time class="comment__user-date">{{date}}</time>
+        {{/if}}
+      </div>
+    </div>
+
+    <div class="comment__main">
+      {{#if form}}
+        {{> ui/textarea placeholder="Your message"}}
+      {{else}}
+        {{ message}}
+      {{/if}}
+    </div>
+
+    {{#if form}}{{else}}
+      <div class="comment__reply">
+        {{> ui/btn-icon icon="button-reply" label="Reply"}}
+      </div>
+    {{/if}}
+  </div>
+</div>

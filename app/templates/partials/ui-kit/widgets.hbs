@@ -22,3 +22,53 @@
   {{> ui-kit/widgets/plan-card  }}
 {{/core/ui-kit/blocks/subsection}}
 
+{{#> core/ui-kit/blocks/subsection id="review" title="Review" }}
+  {{> ui-kit/widgets/review  }}
+{{/core/ui-kit/blocks/subsection}}
+
+{{#> core/ui-kit/blocks/subsection id="sort-select" title="Sort Select" }}
+  {{#> core/ui-kit/blocks/widget title='.sort-select' width=400}}
+    {{> widgets/sort-select }}
+  {{/core/ui-kit/blocks/widget}}
+{{/core/ui-kit/blocks/subsection}}
+
+{{#> core/ui-kit/blocks/subsection id="question" title="Question" }}
+  {{#> core/ui-kit/blocks/widget title='.question' width=700}}
+    {{> widgets/question }}
+  {{/core/ui-kit/blocks/widget}}
+{{/core/ui-kit/blocks/subsection}}
+
+{{#> core/ui-kit/blocks/subsection id="exam-progress" title="Exam Progress" }}
+  {{#> core/ui-kit/blocks/widget title='.exam-progress' width=300}}
+    {{> widgets/exam-progress value=1 }}
+  {{/core/ui-kit/blocks/widget}}
+  {{#> core/ui-kit/blocks/widget title='.exam-progress' width=300}}
+    {{> widgets/exam-progress value=2 }}
+  {{/core/ui-kit/blocks/widget}}
+{{/core/ui-kit/blocks/subsection}}
+
+{{#> core/ui-kit/blocks/subsection id="rating-card" title="Rating Card" }}
+  {{> ui-kit/widgets/rating-card  }}
+{{/core/ui-kit/blocks/subsection}}
+
+{{#> core/ui-kit/blocks/subsection id="social-button" title="Social Button" }}
+  {{> ui-kit/widgets/social-button  }}
+{{/core/ui-kit/blocks/subsection}}
+
+{{#> core/ui-kit/blocks/subsection id="comments" title="Comments" }}
+  {{#> core/ui-kit/blocks/widget title='.comment' width=1000}}
+    {{> widgets/comment
+            image="avatars/03" name="Madelyn Kenter" date="1 day ago"
+            message="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+    }}
+  {{/core/ui-kit/blocks/widget}}
+  {{#> core/ui-kit/blocks/widget title='.comment' width=1000}}
+    {{> widgets/comment image="avatars/01" form=true name="You, Leslie Alexander"}}
+  {{/core/ui-kit/blocks/widget}}
+{{/core/ui-kit/blocks/subsection}}
+
+{{#> core/ui-kit/blocks/subsection id="pagination" title="Pagination" }}
+  {{#> core/ui-kit/blocks/widget title='.pagination' width=300}}
+    {{> widgets/pagination }}
+  {{/core/ui-kit/blocks/widget}}
+{{/core/ui-kit/blocks/subsection}}
