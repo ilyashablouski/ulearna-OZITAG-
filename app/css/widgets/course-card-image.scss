@@ -200,4 +200,12 @@
       background: #3d3e3e;
     }
   }
+
+  &__copyright {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    @include sprite('copyright');
+  }
 }

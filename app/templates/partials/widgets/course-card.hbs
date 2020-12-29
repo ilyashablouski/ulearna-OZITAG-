@@ -5,10 +5,12 @@
       {{> widgets/course-card-image image=image big=big free=free original=original plus=plus plus-price=plus-price plus-price-old=plus-price-old added=added delete=delete}}
     </div>
     <div class="course-card__content">
-      <span class="course-card__title">{{ title }}</span>
-      <span class="course-card__author">{{ author }}</span>
+      <div class="course-card__wrapper {{#if mod}}course-card__wrapper--h101px{{/if}}">
+        <span class="course-card__title">{{ title }}</span>
+        <span class="course-card__author">{{ author }}</span>
+      </div>
       {{#if progress}}
-        <div class="course-card__progress">
+        <div class="course-card__progress {{#if mod}}course-card__progress--mt7px{{/if}}">
           <div class="course-card__progress-line">
             <i class="course-card__progress-value" style="width: {{progress}}%"></i>
           </div>

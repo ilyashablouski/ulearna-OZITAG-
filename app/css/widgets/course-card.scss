@@ -116,4 +116,12 @@
       background: $color-green;
     }
   }
+
+  &__wrapper--h101px {
+    min-height: 101px;
+  }
+
+  &__progress--mt7px {
+    margin-top: 7px;
+  }
 }

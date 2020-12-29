@@ -11,6 +11,9 @@
       <span class="course-card-image__badge course-card-image__badge--original"></span>
     {{/if}}
   </div>
+  {{#if copyright}}
+    <i class="course-card-image__copyright"></i>
+  {{/if}}
 
   {{#if plus}}
     <div class="course-card-image__plus">
@@ -25,7 +28,6 @@
       UlearnaPlus
     </div>
   {{/if}}
-
 
   {{#if delete}}
     <button class="course-card-image__delete">
