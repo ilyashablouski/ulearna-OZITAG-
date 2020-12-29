@@ -232,6 +232,12 @@
   }
 }
 
+@mixin mobile576 {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+
 @mixin mobile414 {
   @media(min-width: 414px) and (max-width: $mobileMedia) {
     @content;

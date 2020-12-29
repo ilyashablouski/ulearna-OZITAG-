@@ -1,21 +1,19 @@
 {{!Active-courses}}
 
 {{> layout/head}}
-{{> layout/header }}
-{{> layout/profile}}
+{{> layout/header shadow=true}}
 
 <div class="profile">
   <div class="container">
     <div class="profile__inner">
       <div class="profile__left">
-        {{> blocks/profile/profile-sidebar}}
+        {{> blocks/profile/profile-sidebar courses=true}}
       </div>
-      <div class="profile__main">
-        {{> blocks/profile/student/student-courses}}
+      <div class="profile__courses">
+        {{> blocks/profile/student/student-courses tab=1}}
       </div>
     </div>
   </div>
 </div>
 
-{{> layout/profile-bottom}}
 {{> layout/footer }}

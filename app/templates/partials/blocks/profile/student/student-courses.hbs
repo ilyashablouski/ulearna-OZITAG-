@@ -2,55 +2,55 @@
   <div class="student-courses__header">
     <span class="student-courses__header-title">My Courses</span>
   </div>
-  <div class="student-courses__block">
-    <div class="student-courses__item">
-      {{> widgets/course-card
-        image="profile/student/course_01"
-        title="Customizing Type with Draplin: Creating Wordmarks That Work"
-        author="by Kaylynn Dorwart"
-        progress=75
-        delete=true
-      }}
-    </div>
+  <div class="student-courses__tabs">
+    <div class="profile-tabs">
+      <div class="profile-tabs__inner">
+        <div class="profile-tabs__item">
+          {{#ifCond tab 1}}
+            <span class="profile-tabs__link active">In progress</span>
+          {{else}}
+            <a href="#" class="profile-tabs__link">In progress</a>
+          {{/ifCond}}
+        </div>
 
-    <div class="student-courses__item">
-      {{> widgets/course-card
-        image="profile/student/course_02"
-        title="Customizing Type with Draplin: Creating Wordmarks That Work"
-        author="by Kaylynn Dorwart"
-        progress=75
-        delete=true
-      }}
-    </div>
+        <div class="profile-tabs__item">
+          {{#ifCond tab 2}}
+            <span class="profile-tabs__link active">Completed</span>
+          {{else}}
+            <a href="#" class="profile-tabs__link">Completed</a>
+          {{/ifCond}}
+        </div>
 
-    <div class="student-courses__item">
-      {{> widgets/course-card
-        image="profile/student/course_03"
-        title="Customizing Type with Draplin: Creating Wordmarks That Work"
-        author="by Kaylynn Dorwart"
-        progress=27.4
-        delete=true
-      }}
-    </div>
+        <div class="profile-tabs__item">
+          {{#ifCond tab 3}}
+            <span class="profile-tabs__link active">Wish list</span>
+          {{else}}
+            <a href="#" class="profile-tabs__link">Wish list</a>
+          {{/ifCond}}
+        </div>
 
-    <div class="student-courses__item">
-      {{> widgets/course-card
-        image="profile/student/course_04"
-        title="Customizing Type with Draplin: Creating Wordmarks That Work"
-        author="by Kaylynn Dorwart"
-        progress=27.4
-        delete=true
-      }}
-    </div>
+        <div class="profile-tabs__item">
+          {{#ifCond tab 4}}
+            <span class="profile-tabs__link active">Watch History</span>
+          {{else}}
+            <a href="#" class="profile-tabs__link">Watch History</a>
+          {{/ifCond}}
+        </div>
 
-    <div class="student-courses__item">
-      {{> widgets/course-card
-        image="profile/student/course_05"
-        title="Customizing Type with Draplin: Creating Wordmarks That Work"
-        author="by Kaylynn Dorwart"
-        progress=75
-        delete=true
-      }}
+        <div class="profile-tabs__item">
+          {{#ifCond tab 5}}
+            <span class="profile-tabs__link active">Watch History</span>
+          {{else}}
+            <a href="#" class="profile-tabs__link">Watch History</a>
+          {{/ifCond}}
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="student-courses__main">
+    {{#ifCond tab 1}}
+      {{> blocks/profile/student/in-progress-block}}
+    {{/ifCond}}
   </div>
 </div>

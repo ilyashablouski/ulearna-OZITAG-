@@ -35,7 +35,7 @@
     }
   }
 
-  &__main {
+  &__dashboard {
     margin-left: 50px;
     padding-bottom: 130px;
     flex-grow: 1;
@@ -46,4 +46,18 @@
     }
   }
 
+  &__courses {
+    margin-left: 50px;
+    padding-bottom: 160px;
+
+    @include smallTablet-and-mobile {
+      margin-left: 0;
+      padding-bottom: 60px;
+    }
+
+    @include mobile {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
 }
