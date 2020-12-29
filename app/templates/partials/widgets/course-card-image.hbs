@@ -1,5 +1,5 @@
 <div class="course-card-image {{#if image}}{{else}}course-card-image--no-image{{/if}} {{#if
-        added}}course-card-image--added{{/if}}">
+  added}}course-card-image--added{{/if}}">
   <div class="course-card-image__badges">
     {{#if free}}
       <span class="course-card-image__badge course-card-image__badge--free">Free</span>
@@ -26,12 +26,19 @@
     </div>
   {{/if}}
 
-  <button class="course-card-image__wish">
-    {{> ui/svg name="course-wish"}}
-  </button>
+
+  {{#if delete}}
+    <button class="course-card-image__delete">
+      {{> ui/svg name="course-delete"}}
+    </button>
+
+  {{else}}
+    <button class="course-card-image__wish">
+      {{> ui/svg name="course-wish"}}
+    </button>
+  {{/if}}
 
   <span class="course-card-image__tip">Add to wish list</span>
-
   <i class="course-card-image__play"></i>
 
   {{#if image}}

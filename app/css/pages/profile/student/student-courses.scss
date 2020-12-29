@@ -1,12 +1,23 @@
 .student-courses {
-  &__inner {
+
+  &__header {
+    &-title {
+      font-weight: 600;
+      font-size: 29px;
+      line-height: 43px;
+    }
+  }
+
+  &__block {
     display: flex;
     flex-wrap: wrap;
+    margin-top: -40px;
     margin-left: -25px;
     margin-right: -25px;
   }
 
   &__item {
+    margin-top: 40px;
     padding-left: 25px;
     padding-right: 25px;
     flex: 0 0 33.33%;
