@@ -1,14 +1,40 @@
 .instructor-page {
   display: flex;
 
+  @include smallTablet-and-mobile {
+    display: block;
+  }
+
   &__left {
     margin-top: 50px;
     flex: 0 0 287px;
     max-width: 287px;
+
+    @include smallTablet-and-mobile {
+      margin-top: 0;
+      padding-top: 22px;
+      flex: 0 0 auto;
+      max-width: none;
+    }
   }
 
   &__right {
     margin-top: 40px;
-    flex: 1 0 auto;
+    margin-left: 60px;
+    padding-bottom: 398px;
+
+    @include smallTablet-and-mobile {
+      margin-top: 20px;
+      margin-left: 0;
+      padding-bottom: 84px;
+    }
+  }
+
+  &__main {
+    margin-top: 29px;
+
+    @include mobile {
+      margin-top: 20px;
+    }
   }
 }

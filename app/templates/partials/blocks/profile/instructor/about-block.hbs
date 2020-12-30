@@ -17,32 +17,36 @@
 
   <div class="about-block__header">
     <span class="about-block__header-title">Courses</span>
-    <a href="#" class="about-block__header-link">{{> ui/btn-arrow label="See All"}}</a>
+    <div class="about-block__header-link">{{> ui/btn-arrow label="See All"}}</div>
   </div>
+  <div class="about-block__main">
+    <div class="about-block__cards">
+      <div class="about-block__cards-item">
+        {{> widgets/course-card
+          title="Customizing Type with Draplin: Creating Wordmarks That Work"
+          author="by Marvin Murphy"
+          copyright=true
+          middle-mobile=true
+        }}
+      </div>
 
-  <div class="about-block__cards">
-    <div class="about-block__cards-item">
-      {{> widgets/course-card
-        title="Customizing Type with Draplin: Creating Wordmarks That Work"
-        author="by Marvin Murphy"
-        copyright=true
-      }}
-    </div>
+      <div class="about-block__cards-item">
+        {{> widgets/course-card
+          title="ODD BODIES: Illustrating Expressive, Stylized People"
+          author="by Marvin Murphy"
+          copyright=true
+          middle-mobile=true
+        }}
+      </div>
 
-    <div class="about-block__cards-item">
-      {{> widgets/course-card
-        title="ODD BODIES: Illustrating Expressive, Stylized People"
-        author="by Marvin Murphy"
-        copyright=true
-      }}
-    </div>
-
-    <div class="about-block__cards-item">
-      {{> widgets/course-card
-        title="Fundamentals of DSLR Photography"
-        author="by Marvin Murphy"
-        copyright=true
-      }}
+      <div class="about-block__cards-item">
+        {{> widgets/course-card
+          title="Fundamentals of DSLR Photography"
+          author="by Marvin Murphy"
+          copyright=true
+          middle-mobile=true
+        }}
+      </div>
     </div>
   </div>
 </div>

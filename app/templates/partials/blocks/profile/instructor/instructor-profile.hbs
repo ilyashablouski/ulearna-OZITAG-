@@ -1,31 +1,52 @@
 <div class="instructor-profile">
-  <div class="instructor-profile__main">
-    <div class="instructor-profile__image">
-      {{> components/image img="course/instructor" ext="jpg"}}
+  <div class="instructor-profile__back-btn">{{> ui/btn-arrow label="Back to Course" back=true}}</div>
+  <div class="instructor-profile__inner">
+    <div class="instructor-profile__block">
+      <div class="instructor-profile__main">
+        <div class="instructor-profile__image">
+          {{> components/image img="profile/instructor/avatar" img-mobile="profile/instructor/avatar-mobile" ext="jpg" no-2x=true}}
+        </div>
+
+        <div class="instructor-profile__info">
+          <span class="instructor-profile__name">Murvin Murphy</span>
+          <span class="instructor-profile__position">Instructor, Senior developer</span>
+        </div>
+      </div>
+    </div>
+    <div class="instructor-profile__block">
+      <div class="instructor-profile__stats">
+        <span class="instructor-profile__stats-item"><b>168</b> Followers</span>
+        <span class="instructor-profile__stats-item"><b>200</b> Followings</span>
+        <span class="instructor-profile__stats-item"><b>10</b> Courses</span>
+      </div>
     </div>
 
-    <div class="instructor-profile__info">
-      <span class="instructor-profile__name">Murvin Murphy</span>
-      <span class="instructor-profile__position">Instructor, Senior developer</span>
+    <div class="instructor-profile__block">
+      <div class="instructor-profile__actions">
+        {{> ui/btn color="blue" size="small" w100=true label="Follow" icon="button-plus"}}
+        {{> ui/btn color="blue-sky" size="small" w100=true label="Send Message" icon="button-message"}}
+      </div>
     </div>
-  </div>
 
-  <div class="instructor-profile__stats">
-    <span class="instructor-profile__stats-item"><b>168</b> Followers</span>
-    <span class="instructor-profile__stats-item"><b>200</b> Followings</span>
-    <span class="instructor-profile__stats-item"><b>10</b> Courses</span>
-  </div>
+    <div class="instructor-profile__block">
+      <a href="#" class="instructor-profile__link">Website//marvin_murphy.com</a>
+      <div class="instructor-profile__networks">
+        <a href="#" class="instructor-profile__network profile-socials__network--twitter"></a>
+        <a href="#" class="instructor-profile__network profile-socials__network--facebook"></a>
+        <a href="#" class="instructor-profile__network profile-socials__network--instagram"></a>
+        <a href="#" class="instructor-profile__network profile-socials__network--youtube"></a>
+      </div>
+    </div>
 
 
-  <ul class="instructor-profile__params">
-    <li class="instructor-profile__params-item instructor-profile__params-item--job"><b>Job</b> Senior Developer</li>
-    <li class="instructor-profile__params-item instructor-profile__params-item--education"><b>Education</b> Education Title</li>
-    <li class="instructor-profile__params-item instructor-profile__params-item--languages"><b>Languages</b> Language, Language</li>
-    <li class="instructor-profile__params-item instructor-profile__params-item--country"><b>Country</b> Country</li>
-  </ul>
+    <div class="instructor-profile__params">
+      <span
+        class="instructor-profile__params-item instructor-profile__params-item--job"><b>Job</b> Senior Developer</span>
+      <span class="instructor-profile__params-item instructor-profile__params-item--education"><b>Education</b> Education Title</span>
+      <span class="instructor-profile__params-item instructor-profile__params-item--languages"><b>Languages</b> Language, Language</span>
+      <span
+        class="instructor-profile__params-item instructor-profile__params-item--country"><b>Country</b> Country</span>
+    </div>
 
-  <div class="instructor-profile__actions">
-    {{> ui/btn color="blue" size="small" w100=true label="Follow" icon="button-plus"}}
-    {{> ui/btn color="light" size="small" w100=true label="Send Message" icon="button-message"}}
   </div>
 </div>

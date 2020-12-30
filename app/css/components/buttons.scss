@@ -91,6 +91,15 @@
     }
   }
 
+  &--blue-sky {
+    background: $color-blue-sky;
+    color: $color-blue;
+
+    &:hover {
+      background: $color-blue-sky-hover;
+    }
+  }
+
   &--outline {
     border: 1px solid $color-black;
     color: $color-black;

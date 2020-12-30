@@ -1,34 +1,86 @@
 .instructor-profile {
-  &__main {
-    display: flex;
-    align-items: center;
-  }
-
-  &__image {
-    width: 64px;
-    height: 64px;
-    flex-basis: 64px;
-    min-width: 64px;
-
-    img {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
+  &__inner {
+    margin-top: 30px;
+    @include smallTablet-and-mobile {
       display: block;
     }
   }
 
+  &__main {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__block {
+    @include smallTablet-and-mobile {
+      text-align: center;
+    }
+
+    &:not(:first-child) {
+      margin-top: 20px;
+
+      @include mobile {
+        margin-top: 12px;
+      }
+    }
+
+    &:first-child {
+      @include smallTablet-and-mobile {
+        display: flex;
+        justify-content: center;
+        text-align: left;
+      }
+    }
+
+    &:nth-child(4) {
+      @include mobile {
+        margin-top: 16px;
+      }
+    }
+
+  }
+
+  &__image {
+    width: 72px;
+    height: 72px;
+    flex-basis: 72px;
+    min-width: 72px;
+    @include mobile {
+      width: 64px;
+      height: 64px;
+      flex-basis: 64px;
+      min-width: 64px;
+    }
+
+    img {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      display: block;
+
+      @include mobile {
+        width: 64px;
+        height: 64px;
+      }
+
+    }
+  }
+
   &__info {
-    margin-left: 14px;
+    margin-left: 16px;
     flex: 1 1 1px;
   }
 
   &__name {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.02em;
     display: block;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 31px;
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &__position {
@@ -38,11 +90,18 @@
     font-size: 14px;
     line-height: 140%;
     color: $color-gray-dark;
+
+    @include mobile {
+      margin-top: 4px;
+    }
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 150%;
+    }
   }
 
   &__actions {
-    margin-top: 16px;
-
     .btn {
       margin-top: 13px;
 
@@ -52,15 +111,78 @@
     }
   }
 
-  &__stats {
-    margin-top: 20px;
+  &__networks {
+    margin-top: 12px;
     display: flex;
+
+    @include smallTablet-and-mobile {
+      justify-content: center;
+    }
+
+    @include mobile {
+      margin-top: 8px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    color: $color-gray-dark;
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 150%;
+    }
+
+    &:hover {
+      color: $color-black;
+    }
+  }
+
+  &__network {
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:not(:first-child) {
+      margin-left: 14px;
+    }
+
+    &--twitter {
+      @include sprite('social-twitter-sm');
+    }
+
+    &--facebook {
+      @include sprite('social-facebook-sm');
+
+    }
+
+    &--instagram {
+      @include sprite('social-instagram-sm');
+
+    }
+
+    &--youtube {
+      @include sprite('social-youtube-sm');
+
+    }
+  }
+
+  &__stats {
+    display: inline-flex;
 
     &-item {
       margin-left: 8px;
       font-size: 14px;
       line-height: 140%;
       color: $color-dark;
+
+      @include mobile {
+        font-size: 12px;
+        line-height: 150%;
+      }
 
       b {
         color: $color-blue;
@@ -74,14 +196,24 @@
   }
 
   &__params {
-    margin-top: 16px;
+    margin-top: 20px;
+
+    @include mobile {
+      margin-top: 17px;
+    }
 
     &-item {
-      margin-top: 11px;
-      padding-left: 24px;
-      font-size: 14px;
-      line-height: 140%;
       position: relative;
+      display: block;
+      margin-top: 12px;
+      padding-left: 24px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      @include mobile {
+        font-size: 12px;
+        line-height: 150%;
+      }
 
       b {
         font-weight: 600;
@@ -94,8 +226,9 @@
       &:before {
         content: '';
         position: absolute;
+        top: 50%;
         left: 0;
-        @include align(false, true);
+        transform: translate(0, -50%);
       }
 
       &--job:before {
@@ -115,4 +248,11 @@
       }
     }
   }
+
 }
+
+
+
+
+
+
