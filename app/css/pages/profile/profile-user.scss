@@ -48,7 +48,7 @@
       margin-top: 4px;
     }
 
-    @include mobile320 {
+    @include mobile {
       font-size: 12px;
       line-height: 150%;
     }
