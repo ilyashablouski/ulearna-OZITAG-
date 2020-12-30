@@ -1,0 +1,14 @@
+.instructor-page {
+  display: flex;
+
+  &__left {
+    margin-top: 50px;
+    flex: 0 0 287px;
+    max-width: 287px;
+  }
+
+  &__right {
+    margin-top: 40px;
+    flex: 1 0 auto;
+  }
+}

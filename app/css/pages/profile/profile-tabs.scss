@@ -1,10 +1,14 @@
 .profile-tabs {
   @include reset-slider-container-mobile;
   &__inner {
-    margin-top: 16px;
     box-shadow: inset 0px -1px 0px #DAE4ED;
     display: flex;
     white-space: nowrap;
+
+    @include  mobile {
+      margin-left: 16px;
+      padding-left: 0;
+    }
   }
 
   &__item {

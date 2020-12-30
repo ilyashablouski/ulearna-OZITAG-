@@ -1,0 +1,33 @@
+<div class="instructor-page">
+  <div class="instructor-page__left">
+    {{> blocks/profile/instructor/instructor-sidebar}}
+  </div>
+  <div class="instructor-page__right">
+    <div class="profile-tabs">
+      <div class="profile-tabs__inner">
+        <div class="profile-tabs__item">
+          {{#ifCond tab 1}}
+            <span class="profile-tabs__link active">About me</span>
+          {{else}}
+            <a href="#" class="profile-tabs__link">About me</a>
+          {{/ifCond}}
+        </div>
+
+        <div class="profile-tabs__item">
+          {{#ifCond tab 2}}
+            <span class="profile-tabs__link active">Courses</span>
+          {{else}}
+            <a href="#" class="profile-tabs__link">Courses</a>
+          {{/ifCond}}
+        </div>
+      </div>
+    </div>
+
+    <div class="instructor-page__main">
+      {{#ifCond tab 1}}
+        {{> blocks/profile/instructor/about-block}}
+      {{/ifCond}}
+    </div>
+  </div>
+</div>
+

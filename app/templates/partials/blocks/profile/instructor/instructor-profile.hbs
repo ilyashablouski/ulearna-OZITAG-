@@ -1,0 +1,31 @@
+<div class="instructor-profile">
+  <div class="instructor-profile__main">
+    <div class="instructor-profile__image">
+      {{> components/image img="course/instructor" ext="jpg"}}
+    </div>
+
+    <div class="instructor-profile__info">
+      <span class="instructor-profile__name">Murvin Murphy</span>
+      <span class="instructor-profile__position">Instructor, Senior developer</span>
+    </div>
+  </div>
+
+  <div class="instructor-profile__stats">
+    <span class="instructor-profile__stats-item"><b>168</b> Followers</span>
+    <span class="instructor-profile__stats-item"><b>200</b> Followings</span>
+    <span class="instructor-profile__stats-item"><b>10</b> Courses</span>
+  </div>
+
+
+  <ul class="instructor-profile__params">
+    <li class="instructor-profile__params-item instructor-profile__params-item--job"><b>Job</b> Senior Developer</li>
+    <li class="instructor-profile__params-item instructor-profile__params-item--education"><b>Education</b> Education Title</li>
+    <li class="instructor-profile__params-item instructor-profile__params-item--languages"><b>Languages</b> Language, Language</li>
+    <li class="instructor-profile__params-item instructor-profile__params-item--country"><b>Country</b> Country</li>
+  </ul>
+
+  <div class="instructor-profile__actions">
+    {{> ui/btn color="blue" size="small" w100=true label="Follow" icon="button-plus"}}
+    {{> ui/btn color="light" size="small" w100=true label="Send Message" icon="button-message"}}
+  </div>
+</div>

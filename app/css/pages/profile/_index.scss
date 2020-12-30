@@ -6,6 +6,9 @@
 @import 'profile-widget';
 @import 'profile-tabs';
 
+@import "instructor/instructor-page";
+@import "instructor/instructor-profile";
+
 @import 'student/student-dashboard';
 @import 'student/student-block';
 @import 'student/progress-block';

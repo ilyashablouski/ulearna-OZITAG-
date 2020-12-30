@@ -43,9 +43,11 @@
     display: inline-block;
     color: $color-gray-dark;
     font-size: 14px;
+    line-height: 140%;
 
     @include mobile320 {
       font-size: 12px;
+      line-height: 150%;
     }
 
     &:hover {

@@ -58,6 +58,7 @@
       color: $color-gray-dark;
       @include mobile320 {
         font-size: 12px;
+        line-height: 150%;
       }
     }
 

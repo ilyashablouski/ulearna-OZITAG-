@@ -48,6 +48,7 @@
 
     @include mobile320 {
       font-size: 12px;
+      line-height: 150%;
     }
 
     &:hover {
