@@ -28,7 +28,7 @@
     }
 
     &:not(:first-child) {
-      margin-left: 16px;
+      margin-left: 25px;
 
       @include smallTablet-and-mobile {
         margin-left: 0;
@@ -55,8 +55,9 @@
   }
 
   &__item {
-    margin-top: 8px;
+    margin-top: 2px;
     display: inline-flex;
+    align-items: center;
 
     @include smallTablet-and-mobile {
       margin-top: 15px;
@@ -78,6 +79,7 @@
     }
 
     &-icon {
+      height: 15px;
       &--green {
         color: $color-green;
       }
@@ -88,6 +90,7 @@
 
       svg {
         width: 4px;
+        height: 15px;
       }
     }
 
