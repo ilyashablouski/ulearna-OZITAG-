@@ -5,7 +5,7 @@
     display: none;
     opacity: 0;
 
-    &--active {
+    &.active {
       display: block;
       opacity: 1;
       animation: 150ms ease-in-out fadeIn;
@@ -54,7 +54,7 @@
         position: absolute;
       }
 
-      &--active {
+      &.active {
         position: relative;
         font-weight: 600;
         color: $color-black;

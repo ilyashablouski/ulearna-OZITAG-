@@ -17,6 +17,12 @@
     height: 44px;
   }
 
+  &:hover {
+    svg {
+      color: $color-blue;
+    }
+  }
+
   &--active {
     background: $color-blue;
     color: $color-white;
@@ -25,12 +31,6 @@
       svg {
         color: $color-white;
       }
-    }
-  }
-
-  &:hover {
-    svg {
-      color: $color-blue;
     }
   }
 
@@ -49,16 +49,18 @@
 
     &--message {
       &:after {
-        content: "";
-        position: absolute;
-        width: 12px;
-        height: 12px;
-        display: inline-block;
-        background: #42db92;
-        border-radius: 50%;
-        top: -5px;
-        right: -5px;
-        border: 2px solid #e4f6fe;
+        @include mobile {
+          content: "";
+          position: absolute;
+          width: 12px;
+          height: 12px;
+          display: inline-block;
+          background: #42db92;
+          border-radius: 50%;
+          top: -5px;
+          right: -5px;
+          border: 2px solid #e4f6fe;
+        }
       }
     }
   }

@@ -1,8 +1,8 @@
-const tabItemSelector = '.informer__tab-link';
-const contentItemSelector = '.informer__content';
+const tabItemSelector = '.js-tab';
+const contentItemSelector = '.js-content';
 
-const activeTabHeaderClass = 'informer__tab-link--active';
-const activeTabContentClass = 'informer__content--active';
+const activeTabHeaderClass = 'active';
+const activeTabContentClass = 'active';
 
 class TabsWidget extends Widget{
   constructor(nodeElement){

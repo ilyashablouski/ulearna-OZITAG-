@@ -1,8 +1,19 @@
 {{!Conversations}}
 
 {{> layout/head}}
-{{> layout/header }}
+{{> layout/header shadow=true}}
 
-
+<div class="profile">
+  <div class="container">
+    <div class="profile__inner">
+      <div class="profile__left">
+        {{> blocks/profile/profile-sidebar messages=true}}
+      </div>
+      <div class="profile__chat">
+        {{> blocks/profile/profile-chat}}
+      </div>
+    </div>
+  </div>
+</div>
 
 {{> layout/footer }}
