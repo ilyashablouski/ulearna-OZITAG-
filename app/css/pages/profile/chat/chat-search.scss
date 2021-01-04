@@ -1,13 +1,13 @@
-.search-input {
-  background: #FFFFFF;
+.chat-search {
   position: relative;
   overflow: hidden;
   width: 100%;
+  max-width: 252px;
   border-radius: 12px;
 
   &__icon {
     content: '';
-    @include sprite('search-big');
+    @include sprite('search-mobile');
     @include align(false, true);
     left: 17px;
     margin-top: -1px;
@@ -15,20 +15,16 @@
 
   &__input {
     display: block;
-    height: 41px;
+    height: 46px;
     width: 100%;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 150%;
-    padding: 0 20px 0 50px;
+    padding: 0 40px 0 48px;
     border: 2px solid #DAE4ED;
+    background: transparent;
     border-radius: 12px;
     @include transition;
-
-    @include mobile {
-      height: 50px;
-      font-size: 16px;
-    }
 
     @include placeholder {
       color: rgba(5, 36, 51, 0.2);
@@ -36,22 +32,6 @@
 
     &:focus {
       border-color: $color-blue;
-
-      + .search-input__icon {
-        @include sprite('search-big-blue');
-      }
     }
   }
-
-  &--big {
-    .search-input {
-      &__input {
-        height: 55px;
-        @include smallTablet-and-mobile {
-          height: 42px;
-        }
-      }
-    }
-  }
-
 }

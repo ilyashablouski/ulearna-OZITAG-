@@ -1,0 +1,38 @@
+.chat-separator {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+
+  &:before, &:after {
+    display: block;
+    content: '';
+    height: 1px;
+    width: 100%;
+    background: #DAE4ED;
+  }
+
+  &:before {
+    margin-right: 12px;
+  }
+
+  &:after {
+    margin-left: 12px;
+  }
+
+  &__label {
+    padding: 2px 8px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    border-radius: 6px;
+    background: rgba(218, 228, 237, 0.52);
+    color: $color-gray-dark;
+
+    &--new {
+      background: transparent;
+      color: $color-green;
+      border: 1px solid $color-green;
+    }
+  }
+}
+

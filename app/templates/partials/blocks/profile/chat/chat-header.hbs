@@ -1,5 +1,9 @@
 <div class="chat-header">
   <div class="chat-header__img">
-    {{> components/image img="profile/chat/???" img-mobile="profile/chat/???" ext="jpg" no-2x=true}}
+    {{> components/image img=(concat 'profile/chat/' image) img-mobile=(concat 'profile/chat/' image '-mobile') ext="jpg" no-2x=true}}
+  </div>
+
+  <div class="chat-header__title">
+    {{title}}
   </div>
 </div>

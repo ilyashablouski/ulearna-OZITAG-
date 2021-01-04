@@ -1,0 +1,23 @@
+<div class="chat-user">
+  <div class="chat-user__item">
+    <div class="chat-user__img">
+      {{> components/image img=(concat 'profile/chat/' image) ext="jpg" no-2x=true}}
+      <span class="chat-user__counter">2</span>
+    </div>
+  </div>
+
+  <div class="chat-user__inner">
+    <span class="chat-user__title">{{title}}</span>
+    <span class="chat-user__text">
+      {{#if reply}}
+        <i
+          class="chat-user__reply-img">{{> components/image img=(concat 'profile/chat/' image '-mobile') ext="jpg" no-2x=true}}</i>
+      <b>You:&nbsp;</b>
+      {{/if}}
+      Amet minim mollit non deserunt ullamco est sit...
+    </span>
+    <span class="chat-user__time">1 day ago</span>
+  </div>
+</div>
+
+

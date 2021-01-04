@@ -1,0 +1,63 @@
+.chat-user {
+  display: flex;
+  padding: 16px 16px 13px 10px;
+
+  &__item {
+    position: relative;
+  }
+
+  &__img {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    overflow: hidden;
+
+    //img {
+    //  width: 48px;
+    //  height: 48px;
+    //}
+  }
+
+  &__counter {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 23px;
+    height: 23px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    background: $color-green;
+    color: $color-white;
+    border-radius: 100%;
+  }
+
+  &__inner {
+    margin-left: 12px;
+  }
+
+  &__title {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  &__text {
+    margin-top: 6px;
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  &__time {
+    margin-top: 6px;
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+    color: $color-gray-dark;
+  }
+}

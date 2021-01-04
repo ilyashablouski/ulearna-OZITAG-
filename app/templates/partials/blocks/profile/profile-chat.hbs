@@ -1,20 +1,31 @@
 <div class="profile-chat">
-  <div class="profile-chat__left">
-    <div class="profile-chat__header">
-      <span class="profile-chat__header-title">Messages</span>
-    </div>
-
-    <div class="profile-chat__search">
-
-    </div>
-
-    <div class="profile-chat__users">
-      {{> blocks/profile/chat/chat-user}}
-    </div>
+  <div class="profile-chat__header">
+    <span class="profile-chat__header-title">Messages</span>
   </div>
 
-  <div class="profile-chat__right">
-    {{> blocks/profile/chat/chat-header}}
-    {{> blocks/profile/chat/chat-dialog}}
+  <div class="profile-chat__inner">
+    <div class="profile-chat__left">
+      <div class="profile-chat__search">
+        {{> blocks/profile/chat/chat-search}}
+      </div>
+
+      <div class="profile-chat__users">
+        {{#times 7}}
+        {{> blocks/profile/chat/chat-user
+          image="user_01"
+          title="Leslie Alexander"
+        }}
+        {{/times}}
+      </div>
+    </div>
+
+    <div class="profile-chat__right">
+      {{> blocks/profile/chat/chat-header
+        image="user_02"
+        title="Omar Mango"
+      }}
+
+      {{> blocks/profile/chat/chat-window}}
+    </div>
   </div>
 </div>
