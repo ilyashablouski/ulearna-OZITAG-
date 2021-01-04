@@ -1,0 +1,10 @@
+<div class="file-input">
+  <input type="file" name="file" id="input__file" class="file-input__input" multiple>
+
+  <label for="input__file" class="file-input__button">
+    {{#if icon}}
+      {{> ui/svg name=icon}}
+    {{/if}}
+    <span class="file-input__button-text">{{ label }}</span>
+  </label>
+</div>

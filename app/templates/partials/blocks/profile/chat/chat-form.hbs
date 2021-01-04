@@ -1,0 +1,15 @@
+<form class="chat-form" action="#" method="post">
+  <div class="chat-form__input">
+    {{> ui/input placeholder="Type message"}}
+  </div>
+
+  <div class="chat-form__group">
+    <div class="chat-form__attach-btn">
+      {{> ui/file-input icon='button-attach' label='Attach file'}}
+    </div>
+
+    <div class="chat-form__submit">
+      {{> ui/btn color="blue" type="submit" label="Send" icon="arrow-right-small" icon-right=true }}
+    </div>
+  </div>
+</form>

@@ -1,7 +1,13 @@
-<div class="chat-message">
+<div class="chat-message {{#if incoming}}chat-message--incoming{{/if}} {{#if image}}chat-message--image{{/if}}">
   <span class="chat-message__title">{{title}}</span>
   <span class="span chat-message__time">{{time}}</span>
-  <p class="chat-message__text">
-    {{text}}
-  </p>
+  {{#if image}}
+    <div class="chat-message__img">
+      {{> components/image img=(concat 'profile/chat/' image) img-mobile=(concat image '-mobile') ext="jpg" no-2x=true}}
+    </div>
+  {{else}}
+    <p class="chat-message__text">
+      {{text}}
+    </p>
+  {{/if}}
 </div>

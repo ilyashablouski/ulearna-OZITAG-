@@ -1,0 +1,23 @@
+.file-input {
+  position: relative;
+  &__input {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: $color-gray-dark;
+    cursor: pointer;
+
+    &-text {
+      margin-left: 4px;
+    }
+  }
+}

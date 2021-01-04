@@ -10,12 +10,43 @@
       </div>
 
       <div class="profile-chat__users">
-        {{#times 7}}
         {{> blocks/profile/chat/chat-user
           image="user_01"
           title="Leslie Alexander"
+          messages=2
         }}
-        {{/times}}
+
+        {{> blocks/profile/chat/chat-user
+          image="user_02"
+          title="Omar Mango"
+          active=true
+        }}
+
+        {{> blocks/profile/chat/chat-user
+          image="user_03"
+          title="Kaiya Mango"
+          messages=2
+        }}
+
+        {{> blocks/profile/chat/chat-user
+          image="user_04"
+          title="Emerson Geidt"
+        }}
+
+        {{> blocks/profile/chat/chat-user
+          image="user_05"
+          title="Zaire Carder"
+        }}
+
+        {{> blocks/profile/chat/chat-user
+          image="user_06"
+          title="Lindsey Westervelt"
+        }}
+
+        {{> blocks/profile/chat/chat-user
+          image="user_01"
+          title="Gustavo Rosser"
+        }}
       </div>
     </div>
 
