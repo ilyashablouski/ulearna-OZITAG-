@@ -12,11 +12,15 @@
   }
 
   &__item {
-    margin-top: 40px;
+    margin-top: 39px;
     padding-left: 25px;
     padding-right: 25px;
     flex: 0 0 33.33%;
     max-width: 33.33%;
+
+    @include desktop {
+      max-height: 389px;
+    }
 
     @include tablet-and-mobile {
       flex: 0 0 50%;

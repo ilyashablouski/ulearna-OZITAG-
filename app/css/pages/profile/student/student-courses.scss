@@ -1,6 +1,6 @@
 .student-courses {
   &__header {
-    margin-top: 12px;
+    margin-top: 20px;
     @include smallTablet-and-mobile {
       margin-top: 20px;
     }
@@ -21,6 +21,6 @@
   }
 
   &__tabs {
-    margin-top: 11px;
+    margin-top: 16px;
   }
 }
