@@ -1,10 +1,9 @@
 .chat-author {
   position: relative;
+  background: #F4F7FA;
   box-shadow: inset 0px -1px 0px $color-gray;
 
   @include mobile {
-    margin-top: 22px;
-    background: #F4F7FA;
     box-shadow: inset 0px -1px 0px #DAE4ED;
   }
 

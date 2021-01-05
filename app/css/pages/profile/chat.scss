@@ -21,7 +21,7 @@
 
     @include mobile {
       padding-left: 16px;
-      padding-top: 47px;
+      padding-top: 27px;
       padding-bottom: 56px;
       flex: 0 0 100%;
       max-width: 100%;
@@ -31,6 +31,7 @@
 
   &__right {
     flex-grow: 1;
+    width: 100%;
 
     @include mobile {
       position: absolute;
@@ -68,7 +69,7 @@
     overflow-y: auto;
 
     @include mobile {
-      margin-top: 11px;
+      margin-top: 38px;
       min-height: 615px;
       max-height: 615px;
     }

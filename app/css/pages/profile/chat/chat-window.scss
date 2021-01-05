@@ -3,20 +3,33 @@
   background: rgba(218, 228, 237, 0.22);
   display: flex;
   flex-direction: column;
-  min-height: 961px;
+  //min-height: 961px;
+  height: 100%;
   @include mobile {
     padding-bottom: 0;
     min-height: auto;
   }
 
   &__wrapper {
+    flex: 1 0 auto;
+    display: none;
+    opacity: 0;
+    @include transition;
+
+    &.active {
+      display: block;
+      opacity: 1;
+    }
+
+  }
+
+  &__block {
     padding-top: 20px;
     padding-left: 21px;
     padding-right: 21px;
-    flex: 1 0 auto;
     max-height: 806px;
+    min-height: 806px;
     overflow-y: auto;
-
     @include mobile {
       padding: 8px 16px;
       background: #EEF3F7;
@@ -86,3 +99,4 @@
     }
   }
 }
+

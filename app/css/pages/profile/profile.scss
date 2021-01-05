@@ -75,6 +75,8 @@
   }
 
   &__chat {
-
+    @include mobile {
+      margin-top: 20px;
+    }
   }
 }
