@@ -80,4 +80,15 @@
       @include sprite('input-date');
     }
   }
+
+  &--no-scrollbar {
+    textarea {
+      height: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  }
 }

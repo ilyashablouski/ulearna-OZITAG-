@@ -5,10 +5,9 @@
 
     <div class="chat-message__img">
       {{> components/image img=(concat 'profile/chat/' image) img-mobile=(concat image '-mobile') ext="jpg" no-2x=true}}
-
-      <button class="chat-message__upload">
-        {{> ui/svg name="upload"}}
-      </button>
+      <a href="#" class="chat-message__download" download="">
+        {{> ui/svg name="download"}}
+      </a>
     </div>
   {{else}}
     <div class="chat-message__wrapper">
