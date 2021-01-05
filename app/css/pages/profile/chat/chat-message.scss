@@ -1,10 +1,9 @@
 .chat-message {
-  &:not(:first-child) {
-    margin-top: 10px;
+  &__wrapper {
+    padding: 12px 16px 14px;
+    background: $color-white;
+    border-radius: 0 12px 12px 12px;
   }
-  padding: 12px 16px 14px;
-  background: $color-white;
-  border-radius: 0 12px 12px 12px;
 
   &__title {
     font-weight: 600;
@@ -28,12 +27,39 @@
   }
 
   &__img {
+    position: relative;
+    padding-top: 72%;
     margin-top: 6px;
+    max-width: 215px;
+    min-width: 215px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: $color-white;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: $color-white;
+    &:before {
+      content: '';
+      @include sprite('upload');
+    }
   }
 
   &--incoming {
     margin-left: auto;
-    border-radius: 12px 0 12px 12px;
+
+    .chat-message__wrapper {
+      border-radius: 12px 0 12px 12px;
+    }
   }
 
   &--image {

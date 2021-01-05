@@ -5,18 +5,27 @@
   flex-direction: column;
   min-height: 961px;
 
-  &__message {
-    margin-top: 10px;
-    display: flex;
+  &__wrapper {
+    flex: 1 0 auto;
+    max-height: 786px;
+    overflow-y: auto;
   }
 
+  &__message {
+    display: flex;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
 
   &__footer {
     margin-top: auto;
-    padding-top: 20px;
+    flex: 0 0 auto;
   }
 
   &__notification {
+    margin-top: 19px;
     text-align: center;
 
     &-text {

@@ -5,10 +5,11 @@
 @import 'profile-user';
 @import 'profile-widget';
 @import 'profile-tabs';
-@import "profile-chat";
+@import "chat";
+
 
 @import "chat/chat-user";
-@import "chat/chat-header";
+@import "chat/chat-author";
 @import "chat/chat-search";
 @import "chat/chat-window";
 @import "chat/chat-message";

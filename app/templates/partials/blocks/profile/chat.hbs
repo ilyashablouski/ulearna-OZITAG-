@@ -1,15 +1,11 @@
-<div class="profile-chat">
-  <div class="profile-chat__header">
-    <span class="profile-chat__header-title">Messages</span>
-  </div>
-
-  <div class="profile-chat__inner">
-    <div class="profile-chat__left">
-      <div class="profile-chat__search">
+<div class="chat">
+  <div class="chat__inner">
+    <div class="chat__left">
+      <div class="chat__search">
         {{> blocks/profile/chat/chat-search}}
       </div>
 
-      <div class="profile-chat__users">
+      <div class="chat__users">
         {{> blocks/profile/chat/chat-user
           image="user_01"
           title="Leslie Alexander"
@@ -50,8 +46,8 @@
       </div>
     </div>
 
-    <div class="profile-chat__right">
-      {{> blocks/profile/chat/chat-header
+    <div class="chat__right">
+      {{> blocks/profile/chat/chat-author
         image="user_02"
         title="Omar Mango"
       }}

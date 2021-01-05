@@ -4,6 +4,10 @@
   border-radius: 3px 0 0 3px;
   @include transition;
 
+  &:hover {
+    background: #e9eff5;
+  }
+
   &.active {
     background: $color-white;
 
@@ -17,10 +21,6 @@
       background: $color-blue;
       border-radius: 3px 0 0 3px;
     }
-  }
-
-  &:hover {
-    background: #e9eff5;
   }
 
   &__wrapper {

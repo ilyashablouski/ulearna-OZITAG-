@@ -9,8 +9,11 @@
       <div class="profile__left">
         {{> blocks/profile/profile-sidebar messages=true}}
       </div>
-      <div class="profile__chat">
-        {{> blocks/profile/profile-chat}}
+      <div class="profile__right">
+        <div class="profile__header">
+          <span class="profile__header-title">Messages</span>
+        </div>
+        {{> blocks/profile/chat}}
       </div>
     </div>
   </div>

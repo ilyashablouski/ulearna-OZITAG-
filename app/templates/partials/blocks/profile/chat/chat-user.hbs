@@ -14,13 +14,12 @@
       <span class="chat-user__title">{{title}}</span>
       <span class="chat-user__text">
       {{#if reply}}
-        <i
-          class="chat-user__reply-img">{{> components/image img=(concat 'profile/chat/' image '-mobile') ext="jpg" no-2x=true}}</i>
+        <i class="chat-user__reply-img">{{> components/image img=(concat 'profile/chat/' image) ext="jpg" no-2x=true}}</i>
       <b>You:&nbsp;</b>
       {{/if}}
         Amet minim mollit non deserunt ullamco est sit...
     </span>
-      <span class="chat-user__time">1 day ago</span>
+      <time class="chat-user__time">1 day ago</time>
     </div>
   </div>
 </div>

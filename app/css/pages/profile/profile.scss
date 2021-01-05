@@ -6,6 +6,25 @@
     margin-bottom: -60px;
   }
 
+  &__header {
+    margin-top: 20px;
+    @include smallTablet-and-mobile {
+      margin-top: 20px;
+    }
+
+    &-title {
+      font-weight: 600;
+      font-size: 29px;
+      line-height: 43px;
+
+      @include mobile {
+        padding-left: 16px;
+        padding-right: 16px;
+        font-size: 18px;
+      }
+    }
+  }
+
   &__inner {
     padding-top: 24px;
     display: flex;
@@ -32,35 +51,12 @@
     }
   }
 
-  &__dashboard {
+  &__right {
     margin-left: 50px;
-    padding-bottom: 125px;
     flex-grow: 1;
 
     @include smallTablet-and-mobile {
       margin-left: 0;
-      padding-bottom: 60px;
     }
-  }
-
-  &__courses {
-    margin-left: 50px;
-    padding-bottom: 159px;
-
-    @include smallTablet-and-mobile {
-      margin-left: 0;
-      padding-bottom: 60px;
-    }
-
-    @include mobile {
-      padding-left: 16px;
-      padding-right: 16px;
-    }
-  }
-
-  &__chat {
-    margin-left: 50px;
-    padding-bottom: 23px;
-    width: 100%;
   }
 }
