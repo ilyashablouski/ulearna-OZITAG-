@@ -1,0 +1,14 @@
+<div class="chat-author">
+  <div class="chat-author__img">
+    {{> components/image img=(concat 'profile/chat/' image) img-mobile=(concat 'profile/chat/' image '-mobile') ext="jpg" no-2x=true}}
+  </div>
+
+  <div class="chat-author__title">
+    {{title}}
+  </div>
+
+  <div class="chat-author__more">
+    <button class="chat-author__more-btn"></button>
+    <button class="chat-author__block-btn">Block User</button>
+  </div>
+</div>
