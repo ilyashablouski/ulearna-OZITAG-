@@ -1,8 +1,35 @@
 .chat-form {
+  position: relative;
   &__group {
     margin-top: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include mobile {
+      margin-top: 0;
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      justify-content: initial;
+    }
+  }
+
+  &__submit {
+    @include mobile {
+      margin-left: 12px;
+      .btn {
+        padding: 12px 11px;
+        border-radius: 10px;
+      }
+
+      span {
+        display: none;
+      }
+
+      svg {
+        margin: 0;
+      }
+    }
   }
 }

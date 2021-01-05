@@ -3,7 +3,14 @@
   padding-bottom: 23px;
   border-top: 1px solid $color-gray;
 
+  @include mobile {
+    margin-top: 0;
+    padding-bottom: 0;
+    border-top: none;
+  }
+
   &__inner {
+    position: relative;
     display: flex;
   }
 
@@ -11,10 +18,26 @@
     flex: 0 0 282px;
     max-width: 282px;
     border-right: 1px solid $color-gray;
+
+    @include mobile {
+      padding-left: 16px;
+      padding-top: 47px;
+      padding-bottom: 56px;
+      flex: 0 0 100%;
+      max-width: 100%;
+      //display: none;
+    }
   }
 
   &__right {
     flex-grow: 1;
+
+    @include mobile {
+      position: absolute;
+      top: 0;
+      left: 0;
+      //display: none;
+    }
   }
 
   &__header {
@@ -32,6 +55,10 @@
   &__search {
     margin-top: 16px;
     margin-left: 10px;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__users {
@@ -39,5 +66,12 @@
     min-height: 961px;
     max-height: 961px;
     overflow-y: auto;
+
+    @include mobile {
+      margin-top: 11px;
+      min-height: 615px;
+      max-height: 615px;
+    }
+
   }
 }

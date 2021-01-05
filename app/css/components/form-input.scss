@@ -89,6 +89,11 @@
       }
       -ms-overflow-style: none;
       scrollbar-width: none;
+
+      @include mobile {
+        padding: 11px 6px 11px 14px;
+        font-size: 18px;
+      }
     }
   }
 }

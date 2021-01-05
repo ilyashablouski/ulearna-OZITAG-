@@ -9,6 +9,11 @@
     font-weight: 600;
     font-size: 14px;
     line-height: 140%;
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 150%;
+    }
   }
 
   &__time {
@@ -17,6 +22,11 @@
     font-size: 14px;
     line-height: 140%;
     color: $color-gray-dark;
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 150%;
+    }
   }
 
   &__text {
@@ -24,17 +34,27 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 146%;
+
+    @include mobile {
+      margin-top: 8px;
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
 
   &__img {
     position: relative;
     padding-top: 72%;
     margin-top: 6px;
-    max-width: 215px;
-    min-width: 215px;
+    max-width: 179px;
+    min-width: 179px;
     border-radius: 10px;
     overflow: hidden;
     background: $color-white;
+
+    @include mobile {
+      margin-top: 3px;
+    }
 
     img {
       position: absolute;
@@ -64,8 +84,17 @@
     opacity: 0;
     @include transition(all, 0.3s);
 
+    @include tablet-and-mobile {
+      visibility: visible;
+      opacity: 1;
+    }
+
     &:hover {
       background: #3d3e3e;
+
+      @include tablet-and-mobile {
+        background: initial;
+      }
     }
 
     &:before {
@@ -74,7 +103,7 @@
       left: 50%;
       top: 50%;
       @include sprite('download');
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
     }
   }
 
