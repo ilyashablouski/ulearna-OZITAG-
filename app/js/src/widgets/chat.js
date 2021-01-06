@@ -1,4 +1,3 @@
-//TODO: Refactoring code (смотреть uikit-accord. widget)
 class Chat extends Widget {
   constructor(nodeElement) {
     super(nodeElement, '.js-chat');
@@ -8,18 +7,25 @@ class Chat extends Widget {
     this.build();
   }
 
+  openChat() {
+    this.$chatWindow.classList.add('chat__right--opened');
+  }
+
+  closeChat() {
+    this.$chatWindow.classList.remove('chat__right--opened')
+  }
+
   build() {
     if (window.matchMedia('(max-width: 767px)').matches) {
-
       this.$chatUsers.forEach(($node) => {
         $node.addEventListener('click', () => {
-          this.$chatWindow.classList.add('chat__right--opened');
+          this.openChat();
         });
       });
 
       this.$backButton.addEventListener('click', (e) => {
         e.preventDefault();
-        this.$chatWindow.classList.remove('chat__right--opened');
+        this.closeChat();
       });
     }
   }
