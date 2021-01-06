@@ -13,19 +13,7 @@
     align-items: center;
 
     @include mobile {
-      margin-top: 15px;
-      padding: 11px 16px;
-    }
-  }
-
-  &__back-btn {
-    display: none;
-
-    @include mobile {
-      padding: 0 16px;
-      display: block;
-      flex: 0 0 100%;
-      max-width: 100%;
+      padding: 26px 16px 11px;
     }
   }
 

@@ -8,9 +8,6 @@
 
   &__header {
     margin-top: 20px;
-    @include smallTablet-and-mobile {
-      margin-top: 20px;
-    }
 
     @include mobile {
       position: absolute;
@@ -56,10 +53,6 @@
       margin-left: 0;
       max-width: none;
     }
-
-    @include mobile {
-      padding-top: 47px;
-    }
   }
 
   &__right {
@@ -67,16 +60,8 @@
     margin-left: 50px;
     flex-grow: 1;
 
-
-
     @include smallTablet-and-mobile {
       margin-left: 0;
-    }
-  }
-
-  &__chat {
-    @include mobile {
-      margin-top: 20px;
     }
   }
 }

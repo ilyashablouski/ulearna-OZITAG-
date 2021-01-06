@@ -1,5 +1,5 @@
 const tabItemSelector = '.js-tab';
-const contentItemSelector = '.js-content';
+const contentItemSelector = '.js-tab-content';
 
 const activeTabHeaderClass = 'active';
 const activeTabContentClass = 'active';

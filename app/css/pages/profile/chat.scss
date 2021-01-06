@@ -20,12 +20,12 @@
     border-right: 1px solid $color-gray;
 
     @include mobile {
+      margin-top: 58px;
       padding-left: 16px;
-      padding-top: 27px;
       padding-bottom: 56px;
       flex: 0 0 100%;
       max-width: 100%;
-      //display: none;
+
     }
   }
 
@@ -34,10 +34,16 @@
     width: 100%;
 
     @include mobile {
+      margin-left: 100%;
+      margin-top: 20px;
       position: absolute;
       top: 0;
       left: 0;
-      //display: none;
+      @include transition(margin-left, .2s)
+    }
+
+    &--opened {
+      margin-left: 0;
     }
   }
 
@@ -69,7 +75,7 @@
     overflow-y: auto;
 
     @include mobile {
-      margin-top: 38px;
+      margin-top: 0;
       min-height: 615px;
       max-height: 615px;
     }
