@@ -4,7 +4,8 @@
          placeholder="{{ placeholder }}"
          class=" {{#if mask}}js-masked-input{{/if}} {{#if numeric}}js-numeric-input{{/if}} {{#if
                  date}}js-datepicker{{/if}}"
-         {{#if maxlength}}maxlength="{{maxlength}}"{{/if}}  {{#if mask}}data-mask="{{mask}}"{{/if}}/>
+         {{#if maxlength}}maxlength="{{maxlength}}"{{/if}}  {{#if mask}}data-mask="{{mask}}"{{/if}}
+          {{#if value}}value="{{value}}"{{/if}}/>
 
   {{#if icon}}
     <i class="form-input__icon form-input__icon--{{icon}}"></i>

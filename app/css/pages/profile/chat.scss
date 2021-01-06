@@ -10,7 +10,6 @@
   }
 
   &__inner {
-    position: relative;
     display: flex;
   }
 
@@ -20,7 +19,7 @@
     border-right: 1px solid $color-gray;
 
     @include mobile {
-      margin-top: 58px;
+      margin-top: 11px;
       padding-left: 16px;
       padding-bottom: 56px;
       flex: 0 0 100%;
@@ -35,7 +34,6 @@
 
     @include mobile {
       margin-left: 100%;
-      margin-top: 20px;
       position: absolute;
       top: 0;
       left: 0;

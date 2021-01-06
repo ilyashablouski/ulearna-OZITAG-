@@ -1,0 +1,38 @@
+<div class="student-settings">
+  <div class="student-settings__tabs">
+    <div class="profile-tabs">
+      <div class="profile-tabs__inner">
+        <div class="profile-tabs__item">
+          {{#ifCond tab 1}}
+            <span class="profile-tabs__link active">Account</span>
+          {{else}}
+            <a href="#" class="profile-tabs__link">Account</a>
+          {{/ifCond}}
+        </div>
+
+        <div class="profile-tabs__item">
+          {{#ifCond tab 2}}
+            <span class="profile-tabs__link active">Subscription</span>
+          {{else}}
+            <a href="#" class="profile-tabs__link">Subscription</a>
+          {{/ifCond}}
+        </div>
+
+        <div class="profile-tabs__item">
+          {{#ifCond tab 3}}
+            <span class="profile-tabs__link active">Purchase History</span>
+          {{else}}
+            <a href="#" class="profile-tabs__link">Purchase History</a>
+          {{/ifCond}}
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="student-settings__main">
+    {{#ifCond tab 1}}
+      {{> blocks/profile/student/student-account}}
+    {{/ifCond}}
+  </div>
+</div>

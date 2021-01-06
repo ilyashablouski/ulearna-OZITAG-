@@ -3,6 +3,24 @@
 {{> layout/head}}
 {{> layout/header }}
 
+<div class="profile">
+  <div class="container">
+    <div class="profile__inner">
+      <div class="profile__left">
+        {{> blocks/profile/profile-sidebar courses=true}}
+      </div>
+      <div class="profile__right">
+        <div class="profile__header">
+          <span class="profile__header-title">Settings</span>
 
+          <div class="profile__header-btn">
+            {{> ui/btn color="blue" icon="check-mark" label="Save changes" }}
+          </div>
+        </div>
+        {{> blocks/profile/student/student-settings tab=1}}
+      </div>
+    </div>
+  </div>
+</div>
 
 {{> layout/footer }}

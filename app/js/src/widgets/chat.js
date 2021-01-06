@@ -26,7 +26,6 @@ class Chat extends Widget {
 
   static init(elem) {
     return new Chat(elem);
-
   }
 }
 

@@ -8,13 +8,7 @@
 
   &__header {
     margin-top: 20px;
-
-    @include mobile {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
+    display: flex;
     &-title {
       font-weight: 600;
       font-size: 29px;
@@ -26,6 +20,10 @@
         font-size: 18px;
         line-height: 27px;
       }
+    }
+
+    &-btn {
+      margin-left: auto;
     }
   }
 
