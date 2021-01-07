@@ -1,4 +1,4 @@
-<div class="form-input {{#if icon}}form-input--icon{{/if}} {{#if date}}form-input--icon-right{{/if}} {{#if
+<div class="form-input {{#if icon}}form-input--icon{{/if}} {{#when date '||' clipboard}}form-input--icon-right{{/when}} {{#if
         mod}}{{mod}}{{/if}}">
   <input type="{{#if type}}{{type}}{{else}}{{#if date}}date{{else}}{{/if}}text{{/if}}" autocomplete="off"
          placeholder="{{ placeholder }}"
@@ -13,5 +13,12 @@
 
   {{#if date}}
     <i class="form-input__icon form-input__icon--date"></i>
+  {{/if}}
+
+  {{#if clipboard}}
+    <div class="form-input__clipboard">
+      <i class="form-input__icon form-input__icon--clipboard"></i>
+      <span class="form-input__clipboard-tip">Copy link</span>
+    </div>
   {{/if}}
 </div>

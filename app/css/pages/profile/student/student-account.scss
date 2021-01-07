@@ -1,5 +1,6 @@
 .student-account {
   padding-bottom: 100px;
+
   .form-field {
     padding-bottom: 0;
   }
@@ -24,8 +25,12 @@
   }
 
   &__input {
-    margin-top: 13px;
     max-width: 504px;
+
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+
     &-note {
       position: relative;
       margin-top: 8px;
@@ -58,10 +63,27 @@
     &-btn {
       margin-top: 16px;
     }
+
+    &-radios {
+      margin-top: 17px;
+    }
+
+    &--note {
+      .form-field {
+        padding-bottom: 26px;
+      }
+    }
+
+    &--clipboard {
+      input {
+        color: $color-blue;
+      }
+    }
   }
 
   &__checkboxes {
-      margin-top: 28px;
+    margin-top: 28px;
+
     &:first-child {
       margin-top: 0;
     }
@@ -73,8 +95,9 @@
     }
   }
 
-  &__checkbox{
+  &__checkbox {
     margin-top: 14px;
+
     &-note {
       margin-top: 4px;
       padding-left: 34px;

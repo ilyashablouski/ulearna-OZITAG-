@@ -79,8 +79,42 @@
     &--date {
       @include sprite('input-date');
     }
+
+    &--clipboard {
+      @include sprite('input-clipboard');
+      pointer-events: initial;
+    }
   }
 
+  &__clipboard {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48px;
+    height: 57px;
+    cursor: pointer;
+    &:hover {
+      .form-input__clipboard-tip {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+    &-tip {
+      position: absolute;
+      top: 42px;
+      right: 35px;
+      padding: 8px 10px;
+      width: 84px;
+      font-size: 14px;
+      line-height: 140%;
+      background: #687787;
+      color: $color-white;
+      border-radius: 10px;
+      z-index: 2;
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
   &--no-scrollbar {
     textarea {
       height: auto;
