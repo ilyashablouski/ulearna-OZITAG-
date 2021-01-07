@@ -1,21 +1,14 @@
-class CopyToClipboard {
+class CopyToClipboardInput {
   constructor(item) {
-    this.copyText = item;
-
+    this.btnElement = item;
+    this.inputElement = item.parentElement.querySelector('input');
     this.message = document.querySelector('.js-copy-message');
-
     this.addEvents();
   }
 
   addEvents() {
-    this.copyText.addEventListener('click', () => {
-
-      if (this.copyText.querySelector('.uikit-colors__item')) {
-        this.textCopy(this.copyText.nextElementSibling.textContent);
-      } else {
-        this.textCopy(this.copyText.textContent);
-      }
-
+    this.btnElement.addEventListener('click', () => {
+      this.copyText(this.inputElement.value);
       this.setActive(this.message);
 
       setTimeout(() => this.removeActive(this.message), 800);
@@ -23,14 +16,15 @@ class CopyToClipboard {
     });
   }
 
-  textCopy(text) {
+  copyText(text) {
     const target = document.createElement('textarea');
+    target.setAttribute('readonly', '');
     target.style.position = 'absolute';
-    target.textContent = text;
-    this.copyText.appendChild(target);
-    target.focus();
+    target.style.left = '-9999px';
+    target.value = text;
+    document.body.append(target);
+    target.select();
     target.setSelectionRange(0, target.value.length);
-
     try {
       document.execCommand('copy');
       target.remove();
@@ -47,13 +41,13 @@ class CopyToClipboard {
   }
 
   static init(elem) {
-    new CopyToClipboard(elem);
+    new CopyToClipboardInput(elem);
   }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const copyText = document.querySelectorAll('.js-copy-to-clipboard');
-  copyText.forEach(item => {
-    CopyToClipboard.init(item);
+  const btnElement = document.querySelectorAll('.js-copy-to-clipboard-input');
+  btnElement.forEach(item => {
+    CopyToClipboardInput.init(item);
   });
 });

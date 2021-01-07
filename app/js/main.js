@@ -24,6 +24,7 @@ import './src/widgets/popups';
 import './src/widgets/accord';
 import './src/widgets/tabs';
 import './src/widgets/chat';
+import './src/widgets/copy-to-clipboard-input';
 
 import './src/widgets/inputs/numeric-input';
 import './src/widgets/inputs/masked-input';
