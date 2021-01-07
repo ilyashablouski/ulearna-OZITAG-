@@ -208,4 +208,9 @@
       width: 100%;
     }
   }
+
+  &--not-active {
+    background: $color-gray;
+    color: $color-white;
+  }
 }
