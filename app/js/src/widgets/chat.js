@@ -1,10 +1,10 @@
 class Chat extends Widget {
   constructor(nodeElement) {
-    super(nodeElement, '.js-chat');
+    super(nodeElement, '.js-chat', 'mobile');
     this.$backButton = this.queryElement('.btn-arrow--back');
     this.$chatUsers = document.querySelectorAll('.chat-user');
     this.$chatWindow = this.queryElement('.chat__right');
-    this.build();
+    this.init();
   }
 
   openChat() {
@@ -12,26 +12,24 @@ class Chat extends Widget {
   }
 
   closeChat() {
-    this.$chatWindow.classList.remove('chat__right--opened')
+    this.$chatWindow.classList.remove('chat__right--opened');
   }
 
   build() {
-    if (window.matchMedia('(max-width: 767px)').matches) {
-      this.$chatUsers.forEach(($node) => {
-        $node.addEventListener('click', () => {
-          this.openChat();
-        });
+    this.$chatUsers.forEach(($node) => {
+      $node.addEventListener('click', () => {
+        this.openChat();
       });
+    });
 
-      this.$backButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        this.closeChat();
-      });
-    }
+    this.$backButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      this.closeChat();
+    });
   }
 
   static init(elem) {
-    return new Chat(elem);
+    new Chat(elem);
   }
 }
 
