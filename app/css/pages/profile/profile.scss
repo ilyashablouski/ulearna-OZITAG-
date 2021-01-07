@@ -28,9 +28,10 @@
       &--bottom {
         @include mobile {
           position: absolute;
-          bottom: 0;
+          bottom: 60px;
           padding-left: 16px;
           padding-right: 16px;
+          width: 100%;
         }
       }
     }

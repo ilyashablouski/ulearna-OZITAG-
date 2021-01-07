@@ -2,6 +2,7 @@
   padding-bottom: 100px;
 
   @include mobile {
+    padding-bottom: 130px;
     display: flex;
     flex-direction: column;
   }
@@ -13,9 +14,28 @@
   &__group {
     margin-top: 30px;
     padding-bottom: 40px;
-
     @include mobile {
       margin-left: 16px;
+      margin-top: 20px;
+      padding-bottom: 30px;
+
+      &:nth-child(3) {
+        order: 1;
+        box-shadow: none !important;
+      }
+
+      &:nth-child(1) {
+        order: 2;
+        margin-top: 0;
+      }
+
+      &:nth-child(2) {
+        order: 3;
+      }
+
+      &:nth-child(4) {
+        order: 4;
+      }
     }
 
     &:not(:last-child) {
@@ -33,25 +53,10 @@
 
       @include mobile {
         padding-right: 16px;
+        font-size: 16px;
+        line-height: 24px;
       }
     }
-
-    &:nth-child(3) {
-      order: 1;
-    }
-
-    &:nth-child(1) {
-      order: 2;
-    }
-
-    &:nth-child(2) {
-      order: 3;
-    }
-
-    &:nth-child(4) {
-      order: 4;
-    }
-
   }
 
   &__input {
@@ -63,6 +68,16 @@
 
     &:not(:first-child) {
       margin-top: 30px;
+
+      @include mobile {
+        margin-top: 25px;
+      }
+
+      &:nth-child(2) {
+        @include mobile {
+          margin-top: 17px;
+        }
+      }
     }
 
     &-note {
@@ -73,6 +88,10 @@
       font-size: 15px;
       line-height: 22px;
       letter-spacing: 0.02em;
+
+      .form-field {
+        padding-bottom: 26px;
+      }
 
       @include mobile {
         font-size: 14px;
@@ -86,6 +105,11 @@
         content: '';
         transform: translate(0, -50%);
         @include sprite('attention');
+
+        @include mobile {
+          top: 2px;
+          transform: translate(0, 0);
+        }
       }
 
       b {
@@ -97,6 +121,11 @@
       font-weight: 600;
       font-size: 21px;
       line-height: 31px;
+
+      @include mobile {
+        font-size: 16px;
+        line-height: 150%;
+      }
     }
 
     &-btn {
@@ -126,6 +155,7 @@
     @include mobile {
       padding-right: 16px;
     }
+
     &:first-child {
       margin-top: 0;
     }
