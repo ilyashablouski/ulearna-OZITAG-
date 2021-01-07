@@ -1,0 +1,7 @@
+.student-settings {
+  &__tabs {
+    @include mobile {
+      padding-left: 16px;
+    }
+  }
+}

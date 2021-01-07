@@ -1,5 +1,6 @@
 .file-input {
   position: relative;
+  display: inline-flex;
   &__input {
     opacity: 0;
     visibility: hidden;
