@@ -3,14 +3,16 @@
     <i class="pay-item__icon"></i>
     <div class="pay-item__info">
       <span class="pay-item__info-title">{{title}}</span>
-      <span class="pay-item__info-label"><time>{{date}}</time>{{label}}</span>
+      <span class="pay-item__info-label">
+        <time>{{date}}</time><span class="pay-item__info-meta">{{label}}</span>
+      </span>
     </div>
 
     <div class="pay-item__btn-check {{#if active}}pay-item__btn-check--active{{/if}}">
       {{#if active}}
         {{> ui/btn-icon icon="check-mark" label="General"}}
         {{else}}
-        {{> ui/btn-text label="Set as general"}}
+        {{> ui/btn-text label="Set As General"}}
       {{/if}}
     </div>
   </div>
