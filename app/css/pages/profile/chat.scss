@@ -35,7 +35,7 @@
     @include mobile {
       margin-left: 100%;
       position: absolute;
-      top: 0;
+      top: 20px;
       left: 0;
       @include transition(margin-left, .2s)
     }
