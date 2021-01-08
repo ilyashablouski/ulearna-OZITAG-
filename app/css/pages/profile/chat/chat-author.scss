@@ -8,7 +8,7 @@
   }
 
   &__inner {
-    padding: 12px 20px;
+    padding: 12px 18px 12px 23px;
     display: flex;
     align-items: center;
 
@@ -30,7 +30,8 @@
   }
 
   &__title {
-    margin-left: 15px;
+    margin-top: 3px;
+    margin-left: 23px;
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
@@ -63,7 +64,7 @@
 
   &__block-btn {
     position: absolute;
-    top: 51px;
+    top: 53px;
     right: 21px;
     padding: 10px 35px 10px 40px;
     font-weight: 600;

@@ -34,6 +34,7 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 146%;
+    min-width: 183px;
 
     @include mobile {
       margin-top: 8px;
@@ -45,15 +46,17 @@
   &__img {
     position: relative;
     padding-top: 72%;
-    margin-top: 6px;
-    max-width: 179px;
-    min-width: 179px;
+    margin-top: 9px;
+    max-width: 215px;
+    min-width: 215px;
     border-radius: 10px;
     overflow: hidden;
     background: $color-white;
 
     @include mobile {
       margin-top: 3px;
+      max-width: 179px;
+      min-width: 179px;
     }
 
     img {
