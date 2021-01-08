@@ -9,6 +9,7 @@
   &__header {
     margin-top: 20px;
     display: flex;
+
     &-title {
       font-weight: 600;
       font-size: 29px;
@@ -23,6 +24,7 @@
     }
 
     &-btn {
+      margin-top: 3px;
       margin-left: auto;
 
       &--bottom {
