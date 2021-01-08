@@ -1,0 +1,93 @@
+.pay-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex: 0 0 93.66%;
+    max-width: 93.66%;
+    padding: 20px 8px 20px 47px;
+    box-shadow: inset 0px -1px 0px #DAE4ED;
+
+    @include mobile576 {
+      padding: 12px 8px 18px 47px;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__icon {
+    @include sprite('credit-card');
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+
+    @include mobile576 {
+      left: 0;
+      top: 12px;
+      transform: translate(0, 0);
+    }
+  }
+
+  &__info {
+    &-title {
+      display: block;
+      font-weight: 800;
+      font-size: 18px;
+      line-height: 25px;
+
+      @include mobile {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    &-label {
+      margin-top: 5px;
+      display: block;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 146%;
+      color: $color-gray-dark;
+
+    }
+  }
+
+  &__btn-check {
+    margin-left: auto;
+    &--active {
+      .btn-icon {
+        color: $color-blue;
+        cursor: default;
+      }
+    }
+
+    @include mobile576 {
+      margin-top: 16px;
+      flex: 1 0 100%;
+      max-width: 100%;
+    }
+  }
+  &__btn-delete {
+    @include sprite('button-delete');
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    @include transition;
+    @include mobile576 {
+      top: auto;
+      right: 0;
+      bottom: 17px;
+      transform: translate(0, 0);
+    }
+
+    &:hover {
+      opacity: 0.8;
+      color: #728da8;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+.program-card {
+  position: relative;
+  padding: 16px 20px 20px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(1, 64, 139, 0.14);
+  border-radius: 12px;
+  color: $color-dark;
+
+  @include mobile {
+    padding: 16px;
+  }
+
+  &__title {
+    display: block;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 146%;
+    color: $color-gray-dark;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  &__text {
+    margin-top: 4px;
+    display: block;
+    font-weight: 600;
+    font-size: 29px;
+    line-height: 43px;
+    color: $color-black;
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+
+  &__label {
+    margin-top: 6px;
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+
+    @include mobile {
+      margin-top: 4px;
+      font-size: 12px;
+      line-height: 150%;
+    }
+  }
+
+  &__btn {
+    margin-top: 20px;
+
+    @include mobile {
+      margin-top: 16px;
+    }
+  }
+
+
+  &--not-upgrade {
+    background: $color-blue;
+    color: #FFFFFF;
+
+    .program-card__title {
+      color: #FFFFFF;
+    }
+
+    .program-card__text {
+      color: #FFFFFF;
+    }
+  }
+
+  &__bage {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    &-icon {
+      width: 48px;
+      height: 48px;
+      display: block;
+      background: #51C7F9;
+      border-radius: 10px;
+        &:before {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          content:'';
+          @include sprite('writing');
+        }
+    }
+
+    &-tip {
+      padding: 2px 8px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px;
+      background: $color-green;
+      color: #FFFFFF;
+      border-radius: 6px;
+
+      @include mobile {
+        font-size: 12px;
+        line-height: 150%;
+      }
+    }
+  }
+}

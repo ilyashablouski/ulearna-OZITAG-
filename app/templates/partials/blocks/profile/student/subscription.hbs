@@ -2,9 +2,58 @@
   <div class="subscription__group">
     <span class="subscription__group-title">Subscription Program</span>
     <span class="subscription__group-period">Free trial period up to <time>10/28/12</time></span>
+
+    <div class="subscription__cards">
+      <div class="subscription__card">
+        {{> blocks/profile/student/program-card
+          not-upgrade=true
+          title="Current learning plan"
+          text="Learner"
+          label="Upgrade for x$ to have access to Ulearna in all languages"
+          btn-label="Upgrade to student"
+        }}
+      </div>
+
+      <div class="subscription__card">
+        {{> blocks/profile/student/program-card
+          title="Paid program"
+          text="US $8 / month"
+          label="Billed annualy US $125; Free trial 3 days"
+          btn-label="Change program"
+        }}
+      </div>
+
+    </div>
   </div>
 
-  <div class="subscription__cards">
-    {{> blocks/profile/student/program-card}}
+  <div class="subscription__group">
+    <span class="subscription__group-title">Payment Method</span>
+
+    <div class="subscription__pay-items">
+      {{> blocks/profile/student/pay-item
+        active=true
+        title="MasterCard ****.... 1234"
+        date="02/2022"
+        label="ALI KAZAL"
+      }}
+
+      {{> blocks/profile/student/pay-item
+        title="MasterCard ****.... 5678"
+        date="02/2022"
+        label="ALI KAZAL"
+      }}
+    </div>
+
+    <div class="subscription__group-btn">
+      {{> ui/btn
+        button=true
+        outline=true
+        transparent=true
+        icon="button-plus"
+        label="New payment method"
+        mod="btn--w100-mobile"
+      }}
+    </div>
   </div>
+
 </div>

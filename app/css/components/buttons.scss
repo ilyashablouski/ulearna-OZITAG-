@@ -101,8 +101,8 @@
   }
 
   &--outline {
-    border: 1px solid $color-black;
-    color: $color-black;
+    border: 1px solid $color-dark;
+    color: $color-dark;
     background: $color-white;
     padding-top: 13px;
     padding-bottom: 13px;
@@ -117,7 +117,7 @@
     }
 
     &:hover {
-      background: $color-black;
+      background: $color-dark;
       color: $color-white;
     }
 
@@ -143,12 +143,12 @@
   }
 
   &--transparent {
-    border: 1px solid $color-black;
-    color: $color-black;
+    border: 1px solid $color-dark;
+    color: $color-dark;
     background: transparent;
 
     &:hover {
-      background: $color-black;
+      background: $color-dark;
       color: $color-white;
     }
   }
@@ -204,7 +204,7 @@
   }
 
   &.btn--w100-mobile {
-    @include mobile {
+    @include mobile576 {
       width: 100%;
     }
   }
@@ -212,5 +212,20 @@
   &--not-active {
     background: $color-gray;
     color: $color-white;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &--no-border {
+    color: $color-dark;
+    background: $color-white;
+    border: none;
+
+    &:hover {
+      background: $color-dark;
+      color: $color-white;
+    }
   }
 }
