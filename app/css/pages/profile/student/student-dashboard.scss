@@ -110,6 +110,7 @@
       display: flex;
       max-width: none;
       overflow-x: scroll;
+      @include hide-scrollbar;
     }
   }
 
@@ -126,7 +127,7 @@
     }
 
     &:nth-child(2) {
-      order:2;
+      order: 2;
       @include mobile {
         margin-top: 0;
         margin-left: 16px;

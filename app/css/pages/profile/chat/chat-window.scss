@@ -40,6 +40,24 @@
     max-height: 806px;
     min-height: 806px;
     overflow-y: auto;
+    /* Works on Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #DAE4ED transparent;
+    /* Works on Chrome, Edge, and Safari */
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 66px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #DAE4ED;
+      border-radius: 5px;
+    }
+
     @include mobile {
       padding: 8px 16px;
       background: #EEF3F7;
