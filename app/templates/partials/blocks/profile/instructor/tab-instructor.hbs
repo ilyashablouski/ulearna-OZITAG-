@@ -1,0 +1,81 @@
+<div class="tab-instructor">
+  <div class="tab-instructor__main">
+    <div class="tab-instructor__block">
+      <div class="tab-instructor__header">
+        <span class="tab-instructor__header-title">Popular Courses</span>
+        <div class="tab-instructor__header-link">
+          {{> ui/btn-text color="blue" label="See All"}}
+        </div>
+      </div>
+      <div class="tab-instructor__courses">
+        <div class="tab-instructor__course-block">
+          {{> blocks/profile/instructor/course-block
+            image="course_01"
+            copyright=true
+            active-stars=5
+            text="Customizing Type with Draplin: Creating Wordmarks That Work"
+            label="Ulearna Premium"
+            views="1k"
+          }}
+        </div>
+
+        <div class="tab-instructor__course-block">
+          {{> blocks/profile/instructor/course-block
+            image="course_02"
+            copyright=true
+            active-stars=4
+            not-active-stars=1
+            text="Customizing Type with Draplin: Creating Wordmarks That Work"
+            label="Ulearna Premium"
+            views="500"
+          }}
+        </div>
+
+        <div class="tab-instructor__course-block">
+          {{> blocks/profile/instructor/course-block
+            image="course_03"
+            copyright=true
+            active-stars=3
+            not-active-stars=2
+            text="Customizing Type with Draplin: Creating Wordmarks That Work"
+            label="Ulearna Premium"
+            views="250"
+          }}
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-instructor__block">
+      <div class="tab-instructor__header">
+        <span class="tab-instructor__header-title">New Students</span>
+        <button class="tab-instructor__header-btn">Weekly</button>
+      </div>
+      <div class="tab-instructor__students">
+        {{#times 6}}
+          {{> blocks/profile/instructor/student-info
+            image="student_01"
+            student-name="Marvin Murphy"
+            course-name="ODD BODIES: Illustrating Expressive, Stylized People"
+            passed=10
+            progress-value=60
+          }}
+        {{/times}}
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-instructor__widgets">
+    <div class="tab-instructor__widget">
+      {{> blocks/profile/profile-widget highlights=true  title="Credential and Highlights"}}
+    </div>
+
+    <div class="tab-instructor__widget">
+      {{> blocks/profile/profile-widget tags=true title="Professional categories"}}
+    </div>
+
+    <div class="tab-instructor__widget">
+      {{> blocks/profile/profile-widget followers=true  title="Followers"}}
+    </div>
+  </div>
+</div>
+

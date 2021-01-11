@@ -1,0 +1,110 @@
+.tab-instructor {
+  display: flex;
+  &__main {
+    width: 100%;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-title {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+    }
+
+    &-btn {
+      display: inline-flex;
+      align-items: center;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+      color: $color-gray-dark;
+
+      &:after {
+        margin-left: 6px;
+        content: '';
+        @include sprite('arrow-down-small');
+      }
+    }
+  }
+
+  &__block {
+    &:not(first-child) {
+      margin-top: 30px;
+    }
+  }
+
+  &__courses {
+    margin-top: 16px;
+  }
+
+  &__course-block {
+    &:not(first-child) {
+      margin-top: 8px;
+    }
+  }
+
+  &__students {
+    margin-top: 8px;
+  }
+
+  &__widgets {
+    margin-left: 50px;
+    max-width: 283px;
+
+    @include mobile {
+      order: 3;
+      padding-top: 16px;
+      padding-bottom: 30px;
+      padding-left: 16px;
+      margin-left: 0;
+      display: flex;
+      max-width: none;
+      overflow-x: scroll;
+      @include hide-scrollbar;
+    }
+  }
+
+  &__widget {
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
+
+    &:nth-child(3) {
+      order: 1;
+      @include mobile {
+        margin-top: 0;
+      }
+    }
+
+    &:nth-child(2) {
+      order: 2;
+      @include mobile {
+        margin-top: 0;
+        margin-left: 16px;
+      }
+    }
+
+    &:nth-child(1) {
+      order: 3;
+      @include mobile {
+        margin-top: 0;
+        margin-left: 16px;
+        padding-right: 16px;
+      }
+
+    }
+
+    @include mobile {
+      margin-top: 0;
+      flex: 0 0 272px;
+      max-width: 272px;
+    }
+  }
+
+}

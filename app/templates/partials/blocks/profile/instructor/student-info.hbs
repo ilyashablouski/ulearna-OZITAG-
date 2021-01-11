@@ -1,0 +1,34 @@
+<div class="student-info">
+  <div class="student-info__img">
+    {{> components/image img=(concat 'profile/instructor/' image) img-mobile=(concat 'profile/instructor/' image '-mobile') ext="jpg" no-2x=true}}
+  </div>
+  <div class="student-info__course">
+    <span class="student-info__course-student">{{student-name}}</span>
+
+    <div class="student-info__inner">
+      <span class="student-info__course-name">{{course-name}}</span>
+      <div class="student-info__counters">
+        <span class="student-info__counter-passed">{{passed}}</span>
+        <span style="color:#20B7F7">/</span>
+        <span class="student-info__counter-total">10</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="student-info__progress">
+    {{#when progress-value '>' 20}}
+      {{> widgets/round-bar
+        progress=progress-value
+        mod='green'
+      }}
+    {{/when}}
+
+
+    {{#when progress-value '==' 20}}
+      {{> widgets/round-bar
+        progress=progress-value
+        mod='orange'
+      }}
+    {{/when}}
+  </div>
+</div>

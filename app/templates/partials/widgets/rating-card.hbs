@@ -1,13 +1,16 @@
 <div class="rating-card {{#if small}}rating-card--small{{/if}} {{#if stars}}rating-card--stars{{/if}} {{#if
-        energy}}rating-card--energy{{/if}}">
+  energy}}rating-card--energy{{/if}}">
   <div class="rating-card__value">
     {{#if stars}}
-      <i class="rating-card__item rating-card__item--active"></i>
-      <i class="rating-card__item rating-card__item--active"></i>
-      <i class="rating-card__item rating-card__item--active"></i>
-      <i class="rating-card__item"></i>
-      <i class="rating-card__item"></i>
+      {{#times active-stars}}
+        <i class="rating-card__item rating-card__item--active"></i>
+      {{/times}}
+
+      {{#times not-active-stars}}
+        <i class="rating-card__item"></i>
+      {{/times}}
     {{/if}}
+
     {{#if energy}}
       <i class="rating-card__item rating-card__item--active"></i>
       <i class="rating-card__item rating-card__item--active"></i>

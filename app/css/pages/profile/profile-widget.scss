@@ -8,6 +8,10 @@
     box-shadow: 0 4px 14px rgba(1, 64, 139, 0.14);
   }
 
+  &__inner {
+    display: flex;
+  }
+
   &__content {
     margin-top: 6px;
   }
@@ -19,9 +23,28 @@
     letter-spacing: 0.02em;
   }
 
+
   &__btn {
     margin-top: 16px;
     display: inline-flex;
+  }
+
+  &__btn-icon {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: $color-gray-dark;
+
+    &:after {
+      margin-left: 6px;
+      content: '';
+      @include sprite('arrow-down-small');
+    }
+
   }
 
   &__info {

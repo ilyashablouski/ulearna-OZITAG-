@@ -1,3 +1,9 @@
-<button class="btn-text {{#if color}} btn-text--{{color}}{{/if}}">
-  {{ label }}
-</button>
+{{#if button}}
+  <button class="btn-text {{#if color}} btn-text--{{color}}{{/if}}">
+    {{ label }}
+  </button>
+{{else}}
+  <a href="{{#if href}}{{href}}{{else}}#{{/if}}" class="btn-text {{#if color}} btn-text--{{color}}{{/if}}">
+    {{ label }}
+  </a>
+{{/if}}

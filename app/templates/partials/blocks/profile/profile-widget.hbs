@@ -1,7 +1,12 @@
 <div class="profile-widget">
-  <span class="profile-widget__title">{{title}}</span>
+  <div class="profile-widget__inner">
+    <span class="profile-widget__title">{{title}}</span>
+    {{#if followers}}
+      <button class="profile-widget__btn-icon">Monthly</button>
+    {{/if}}
+  </div>
   <div class="profile-widget__content">
-    {{#ifCond title 'Credential and Highlights'}}
+    {{#if highlights}}
       <div class="profile-widget__info">
         <span class="profile-widget__info-feature profile-widget__info-feature--stand">Senior Developer</span>
         <span class="profile-widget__info-feature profile-widget__info-feature--hat">Education Title</span>
@@ -15,9 +20,9 @@
           transparent=true
         }}
       </div>
-    {{/ifCond}}
+    {{/if}}
 
-    {{#ifCond title 'Interests'}}
+    {{#if tags}}
       <div class="profile-widget__info">
         <span class="profile-widget__info-tag">Technology</span>,
         <span class="profile-widget__info-tag">Social network</span>,
@@ -32,11 +37,15 @@
           transparent=true
         }}
       </div>
-    {{/ifCond}}
+    {{/if}}
 
-    {{#ifCond title 'learning Time'}}
+    {{#if learning}}
       {{> blocks/profile/student/informer}}
-    {{/ifCond}}
+    {{/if}}
+
+    {{#if followers}}
+      {{> blocks/profile/instructor/followers-informer}}
+    {{/if}}
   </div>
 
 </div>

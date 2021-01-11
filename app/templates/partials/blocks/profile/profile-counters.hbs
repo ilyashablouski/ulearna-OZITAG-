@@ -14,4 +14,14 @@
       <span class="profile-counters__item-number">4</span>
     </div>
   </div>
+
+  {{#if balance}}
+    <div class="profile-counters__counter">
+      <div class="profile-counters__counter-text">My Balance</div>
+      <div class="profile-counters__item">
+        <i class="profile-counters__item-icon profile-counters__item-icon--purple">{{> ui/svg name='strip'}}</i>
+        <span class="profile-counters__item-number">$168</span>
+      </div>
+    </div>
+  {{/if}}
 </div>

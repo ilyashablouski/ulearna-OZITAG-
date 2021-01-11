@@ -1,11 +1,15 @@
-  <div class="profile-user">
-    <div class="profile-user__img">
+<div class="profile-user">
+  <div class="profile-user__img">
+    {{#if student}}
       {{> components/image img="profile/student/avatar" img-mobile="profile/student/avatar-mobile" ext="jpg" no-2x=true}}
-    </div>
-    <div class="profile-user__info">
-      <span class="profile-user__name">Ali Kazal</span>
-        <a href="mailto:Ali_Kazal@mail.com" class="profile-user__email">Ali_Kazal@email.com</a>
-    </div>
+    {{/if}}
 
-    <button class="profile-user__more-btn"></button>
+
   </div>
+  <div class="profile-user__info">
+    <span class="profile-user__name">Ali Kazal</span>
+    <a href="mailto:Ali_Kazal@mail.com" class="profile-user__email">Ali_Kazal@email.com</a>
+  </div>
+
+  <button class="profile-user__more-btn"></button>
+</div>

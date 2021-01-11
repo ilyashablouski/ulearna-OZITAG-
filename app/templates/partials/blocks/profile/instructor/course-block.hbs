@@ -1,0 +1,15 @@
+<div class="course-block">
+  <div class="course-block__img">
+    {{> components/image img=(concat 'profile/instructor/' image) img-mobile=(concat 'profile/instructor/' image '-mobile') ext="jpg" no-2x=true}}
+
+    {{#if copyright}}
+      <i class="course-card-image__copyright"></i>
+    {{/if}}
+  </div>
+  <div class="course-block__info">
+    <div class="course-block__info-rating">{{> widgets/rating-card small=true stars=true views=false label=false active-stars=active-stars}}</div>
+    <div class="course-block__info-views">{{> widgets/rating-card label=false views=views}}</div>
+    <p class="course-block__info-text">{{text}}</p>
+    <div class="course-block__info-label">{{label}}</div>
+  </div>
+</div>

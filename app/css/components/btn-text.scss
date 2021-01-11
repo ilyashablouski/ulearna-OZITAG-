@@ -7,7 +7,20 @@
   color: $color-gray-dark;
   @include transition;
 
-  &:hover{
+  @include mobile {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  &:hover {
     color: $color-gray-dark-hover;
+  }
+
+  &--blue {
+    color: $color-blue;
+
+    &:hover {
+      color: #09aef5;
+    }
   }
 }

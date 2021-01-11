@@ -3,6 +3,17 @@
 {{> layout/head}}
 {{> layout/header }}
 
-
+<div class="profile">
+  <div class="container">
+    <div class="profile__inner">
+      <div class="profile__left">
+        {{> blocks/profile/profile-sidebar dashboard=true balance=true}}
+      </div>
+      <div class="profile__right">
+        {{> blocks/profile/instructor/instructor-dashboard tab=1}}
+      </div>
+    </div>
+  </div>
+</div>
 
 {{> layout/footer }}

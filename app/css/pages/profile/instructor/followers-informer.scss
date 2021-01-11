@@ -1,0 +1,21 @@
+.followers-informer {
+  &__title {
+    display: inline-flex;
+    align-items: flex-end;
+
+    &-number {
+      font-weight: bold;
+      font-size: 38px;
+      color: $color-dark;
+    }
+
+    &-link {
+      margin-left: 6px;
+    }
+  }
+
+  &__img {
+    margin-top: 13px;
+    padding-bottom: 33px;
+  }
+}

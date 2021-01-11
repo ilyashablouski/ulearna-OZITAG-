@@ -1,0 +1,47 @@
+.student-info {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &__img {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 100%;
+  }
+
+  &__inner {
+    margin-top: 4px;
+  }
+
+  &__course {
+    margin-left: 12px;
+    padding: 12px 0;
+    flex-grow: 1;
+    box-shadow: inset 0px -1px 0px #DAE4ED;
+
+    &-student {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 140%;
+    }
+
+    &-name {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 140%;
+      color: $color-gray-dark;
+    }
+  }
+
+  &__counters {
+    display: inline-flex;
+    color: $color-blue;
+  }
+
+  &__progress {
+    position: absolute;
+    top: 11px;
+    right: 5px;
+  }
+}

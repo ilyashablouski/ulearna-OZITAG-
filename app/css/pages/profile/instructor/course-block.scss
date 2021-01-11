@@ -1,0 +1,42 @@
+.course-block {
+  position: relative;
+  display: flex;
+
+  &__img {
+    width: 161px;
+    height: 119px;
+    background: rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  &__info {
+    margin-left: 20px;
+    padding-bottom: 19px;
+    flex-grow: 1;
+    box-shadow: inset 0px -1px 0px #DAE4ED;
+
+    &-text {
+      margin-top: 8px;
+      max-width: 293px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+    }
+
+    &-label {
+      margin-top: 6px;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 140%;
+      color: $color-orange;
+    }
+
+    &-views {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}

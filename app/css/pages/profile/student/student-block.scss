@@ -15,25 +15,6 @@
       line-height: 24px;
       letter-spacing: 0.02em;
     }
-
-    &-link {
-      font-weight: bold;
-      font-size: 15px;
-      color: $color-blue;
-      line-height: 22px;
-      letter-spacing: 0.02em;
-
-      @include transition;
-
-      @include mobile {
-        font-size: 14px;
-        line-height: 21px;
-      }
-
-      &:hover {
-        color: #09aef5;
-      }
-    }
   }
 
   &__list {

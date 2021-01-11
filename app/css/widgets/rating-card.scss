@@ -50,6 +50,7 @@
       left: 0;
       @include sprite('rating-eye');
       @include align(false, true);
+      height: 16px;
     }
   }
 

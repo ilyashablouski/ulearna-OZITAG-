@@ -1,0 +1,53 @@
+<div class="instructor-dashboard">
+  <div class="instructor-dashboard__header">
+    <span class="instructor-dashboard__header-title">Hello, Marvin, this is your Dahboard</span>
+  </div>
+
+  <div class="instructor-dashboard__info">
+    <span class="instructor-dashboard__info-title">About me</span>
+    <p class="instructor-dashboard__info-text">
+      Hello, I’m Ali...
+    </p>
+  </div>
+
+  <div class="instructor-dashboard__btn">
+    {{> ui/btn
+      outline=true
+      label='Edit Profile'
+      icon='button-edit'
+      transparent=true
+    }}
+  </div>
+
+  <div class="instructor-dashboard__tabs">
+    <div class="profile-tabs">
+      <div class="profile-tabs__inner">
+        <div class="profile-tabs__item">
+          {{#ifCond tab 1}}
+            <span class="profile-tabs__link active">Instructor’s dashbaord</span>
+          {{else}}
+            <a href="#" class="profile-tabs__link">Instructor’s dashbaord</a>
+          {{/ifCond}}
+        </div>
+
+        <div class="profile-tabs__item">
+          {{#ifCond tab 2}}
+            <span class="profile-tabs__link active">Student’s Dashbaord</span>
+          {{else}}
+            <a href="#" class="profile-tabs__link">Student’s Dashbaord</a>
+          {{/ifCond}}
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="instructor-dashboard__main">
+    {{#ifCond tab 1}}
+      {{> blocks/profile/instructor/tab-instructor}}
+    {{/ifCond}}
+  </div>
+
+</div>
+
+

@@ -1,5 +1,6 @@
 .profile-counters {
   display: flex;
+  flex-wrap: wrap;
 
   @include smallTablet-and-mobile {
     padding-top: 10px;
@@ -29,13 +30,16 @@
 
     &:not(:first-child) {
       margin-left: 25px;
-
       @include smallTablet-and-mobile {
         margin-left: 0;
         border-left: 1px solid #DAE4ED;
       }
     }
 
+    &:nth-child(3) {
+      margin-left: 0;
+      margin-top: 20px;
+    }
 
     &-text {
       font-size: 14px;
@@ -80,8 +84,13 @@
 
     &-icon {
       height: 15px;
+
       &--green {
         color: $color-green;
+      }
+
+      &--purple {
+        color: $color-purple;
       }
 
       @include smallTablet-and-mobile {

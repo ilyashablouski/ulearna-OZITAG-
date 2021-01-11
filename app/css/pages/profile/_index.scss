@@ -19,7 +19,12 @@
 
 @import "instructor/instructor-page";
 @import "instructor/instructor-profile";
-@import "instructor/about-block";
+@import "instructor/instructor-dashboard";
+@import "instructor/tab-instructor";
+@import "instructor/course-block";
+@import "instructor/student-info";
+@import "instructor/followers-informer";
+
 
 @import 'student/student-dashboard';
 @import 'student/student-block';
