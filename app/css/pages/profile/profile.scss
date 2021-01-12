@@ -1,4 +1,5 @@
 .profile {
+  position: relative;
   background: #f4f7fa;
   margin-bottom: -100px;
 
@@ -95,5 +96,30 @@
       overflow: visible;
       opacity: 1;
     }
+  }
+
+  &__more {
+    position: absolute;
+    top: 20px;
+    right: 16px;
+  }
+
+  &__more-btn {
+    @include mobile {
+      @include sprite('more-btn');
+      &:hover + .profile__overlay {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 23px;
+    right: 4px;
+    visibility: hidden;
+    opacity: 0;
+    @include transition;
   }
 }

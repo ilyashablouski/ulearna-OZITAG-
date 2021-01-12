@@ -59,13 +59,4 @@
       color: $color-black;
     }
   }
-
-  &__more-btn {
-    @include mobile {
-      position: absolute;
-      top: 20px;
-      right: 16px;
-      @include sprite('more-btn')
-    }
-  }
 }
