@@ -1,3 +1,5 @@
+const $chatScrollElements = document.querySelectorAll('.js-chat-scroll');
+
 class Chat extends Widget {
   constructor(nodeElement) {
     super(nodeElement, '.js-chat', 'mobile');
@@ -30,6 +32,15 @@ class Chat extends Widget {
 
   static init(elem) {
     new Chat(elem);
+
+    $chatScrollElements.forEach((element) => {
+      new PerfectScrollbar(element, {
+        wheelSpeed: 1,
+        wheelPropagation: true,
+        minScrollbarLength: 66,
+        suppressScrollX: true,
+      });
+    });
   }
 }
 
