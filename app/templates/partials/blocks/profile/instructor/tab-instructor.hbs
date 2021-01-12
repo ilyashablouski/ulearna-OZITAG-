@@ -51,7 +51,6 @@
         <button class="tab-instructor__header-btn">Weekly</button>
       </div>
       <div class="tab-instructor__students">
-        {{#times 6}}
           {{> blocks/profile/instructor/student-info
             image="student_01"
             student-name="Marvin Murphy"
@@ -59,7 +58,46 @@
             passed=10
             progress-value=60
           }}
-        {{/times}}
+
+        {{> blocks/profile/instructor/student-info
+          image="student_02"
+          student-name="Anika Vaccaro"
+          course-name="Customizing Type with Draplin: Creating Wordmarks That Work"
+          passed=8
+          progress-value=60
+        }}
+
+        {{> blocks/profile/instructor/student-info
+          image="student_03"
+          student-name="Madelyn Carder"
+          course-name="ODD BODIES: Illustrating Expressive, Stylized People"
+          passed=8
+          progress-value=60
+        }}
+
+        {{> blocks/profile/instructor/student-info
+          image="student_04"
+          student-name="Tiana Saris"
+          course-name="Customizing Type with Draplin: Creating Wordmarks That Work"
+          passed=8
+          progress-value=60
+        }}
+
+        {{> blocks/profile/instructor/student-info
+          image="student_05"
+          student-name="Mira Dorwart"
+          course-name="ODD BODIES: Illustrating Expressive, Stylized People"
+          passed=8
+          progress-value=60
+        }}
+
+        {{> blocks/profile/instructor/student-info
+          image="student_06"
+          student-name="Wilson Calzoni"
+          course-name="ODD BODIES: Illustrating Expressive, Stylized People"
+          passed=4
+          progress-value=20
+        }}
       </div>
     </div>
   </div>
