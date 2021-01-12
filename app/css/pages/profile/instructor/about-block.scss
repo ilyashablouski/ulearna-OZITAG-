@@ -22,6 +22,7 @@
       font-weight: 600;
       font-size: 16px;
       line-height: 24px;
+      letter-spacing: 0.02em;
 
       @include mobile {
         font-size: 16px;
@@ -91,6 +92,7 @@
       padding-bottom: 20px;
       padding-left: 16px;
       overflow-x: auto;
+      @include hide-scrollbar;
     }
 
     &-item {
