@@ -71,25 +71,25 @@
     margin-top: 10px;
     min-height: 961px;
     max-height: 961px;
-    //FIXME: Delete if not-use
-    //overflow-y: auto;
-    ///* Works on Firefox */
-    //scrollbar-width: thin;
-    //scrollbar-color: #DAE4ED transparent;
-    ///* Works on Chrome, Edge, and Safari */
-    //&::-webkit-scrollbar {
-    //  width: 5px;
-    //  height: 66px;
-    //}
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* Works on Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #DAE4ED transparent;
+    /* Works on Chrome, Edge, and Safari */
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 66px;
+    }
 
-    //&::-webkit-scrollbar-track {
-    //  background: transparent;
-    //}
-    //
-    //&::-webkit-scrollbar-thumb {
-    //  background: #DAE4ED;
-    //  border-radius: 5px;
-    //}
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #DAE4ED;
+      border-radius: 5px;
+    }
 
     @include mobile {
       margin-top: 0;
@@ -97,23 +97,11 @@
       max-height: 615px;
     }
 
-  }
-
-  .ps__thumb-y {
-    background-color: $color-gray!important;
-    border-radius: 5px;
-    opacity: 1;
-  }
-
-  .ps__rail-x, .ps__rail-y {
-    opacity: 1;
-
-    &:hover {
-      opacity: 1;
+    &:before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
     }
-  }
-
-  .ps:hover>.ps__rail-y {
-    opacity: 1;
   }
 }
