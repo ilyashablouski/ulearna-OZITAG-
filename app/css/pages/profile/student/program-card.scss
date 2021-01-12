@@ -45,7 +45,7 @@
     line-height: 140%;
 
     @include mobile {
-      margin-top: 4px;
+      margin-top: 8px;
       font-size: 12px;
       line-height: 150%;
     }
@@ -73,10 +73,16 @@
     }
   }
 
-  &__bage {
+  &__badge {
     position: absolute;
     top: 16px;
     right: 16px;
+
+    @include mobile {
+      margin-top: 4px;
+      position: static;
+    }
+
     &-icon {
       width: 48px;
       height: 48px;
