@@ -194,7 +194,7 @@
     color: $color-white;
     background: rgba(0, 0, 0, 0.22);
     backdrop-filter: blur(10px);
-    transition: all .4s ease-in-out;
+    transition: opacity .3s 150ms ease-in-out, background 150ms ease-in-out;
 
     &:hover {
       background: #3d3e3e;
