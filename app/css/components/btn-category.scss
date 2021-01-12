@@ -18,6 +18,7 @@
   }
 
   &:hover {
+    background: rgba(218, 228, 237, 0.62);
     svg {
       color: $color-blue;
     }
@@ -28,6 +29,7 @@
     color: $color-white;
 
     &:hover {
+      background: $color-blue;
       svg {
         color: $color-white;
       }
