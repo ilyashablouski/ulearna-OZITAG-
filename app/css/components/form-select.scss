@@ -146,7 +146,7 @@
   background: #FFFFFF;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0px 6px 44px rgba(1, 64, 139, 0.24);
+  box-shadow: 0 6px 44px rgba(1, 64, 139, 0.24);
   display: block;
 
   .select2-results__options {
@@ -166,7 +166,7 @@
     &:not(.select2-results__message) {
       cursor: pointer;
 
-      :hover {
+      &:hover {
         background: rgba(218, 228, 237, 0.22);
       }
     }
@@ -188,6 +188,10 @@
         @include align(false, true);
         right: 15px;
         @include sprite('select2-tick');
+      }
+
+      &:hover {
+        background: $color-blue-light;
       }
     }
   }

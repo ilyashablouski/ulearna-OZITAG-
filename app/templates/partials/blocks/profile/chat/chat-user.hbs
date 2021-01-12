@@ -12,7 +12,7 @@
 
     <div class="chat-user__inner">
       <span class="chat-user__title">{{title}}</span>
-      <span class="chat-user__text">
+      <p class="chat-user__text">
         {{#if reply}}
           <i
             class="chat-user__reply-img">{{>components/image img='profile/chat/user_01-small' ext="jpg" no-2x=true}}</i>
@@ -20,7 +20,7 @@
         {{else}}
           Amet minim mollit non deserunt ullamco est sit...
         {{/if}}
-      </span>
+      </p>
       <time class="chat-user__time">1 day ago</time>
     </div>
   </div>
