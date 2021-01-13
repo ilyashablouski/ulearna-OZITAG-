@@ -1,19 +1,21 @@
 <div class="program-card {{#if not-upgrade}}program-card--not-upgrade{{/if}}">
   <span class="program-card__title">{{title}}</span>
   <span class="program-card__text">{{text}}</span>
-  <div class="program-card__badge">
-    {{#if not-upgrade}}
+  {{#if not-upgrade}}
+    <div class="program-card__badge">
       <i class="program-card__badge-icon"></i>
-    {{else}}
+    </div>
+  {{else}}
+    <div class="program-card__badge program-card__badge--green">
       <span class="program-card__badge-tip">Best value - 20%</span>
-    {{/if}}
-  </div>
+    </div>
+  {{/if}}
   <div class="program-card__label">{{label}}</div>
   <div class="program-card__btn">
     {{#if not-upgrade}}
-      {{> ui/btn btn-mode="no-border" label=btn-label}}
+      {{> ui/btn btn-mode="no-border" mod="btn--w100-mobile" label=btn-label}}
     {{else}}
-      {{> ui/btn outline=true label=btn-label}}
+      {{> ui/btn outline=true mod="btn--w100-mobile" label=btn-label}}
     {{/if}}
   </div>
 </div>

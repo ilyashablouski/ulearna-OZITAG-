@@ -80,7 +80,6 @@
 
     @include mobile {
       margin-top: 4px;
-      position: static;
     }
 
     &-icon {
@@ -112,6 +111,10 @@
         font-size: 12px;
         line-height: 150%;
       }
+    }
+
+    &--green {
+      position: static;
     }
   }
 }
