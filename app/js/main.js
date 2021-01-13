@@ -50,4 +50,3 @@ import './src/modules/hero-slider';
 import './src/modules/catalog-filter';
 
 import './src/app';
-
