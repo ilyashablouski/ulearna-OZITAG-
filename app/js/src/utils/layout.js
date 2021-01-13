@@ -16,6 +16,10 @@ const Layout = {
     return $(window).width() >= 1024 && $(window).width() <= 1259;
   },
 
+  isLaptopLayout: function() {
+    return $(window).width() >= 1023;
+  },
+
   isDesktopLayout: function() {
     return $(window).width() >= 1260;
   },
