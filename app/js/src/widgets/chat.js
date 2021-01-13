@@ -1,10 +1,11 @@
+const $chatScrollElements = document.querySelectorAll('.js-chat-scroll');
+
 class Chat extends Widget {
   constructor(nodeElement) {
     super(nodeElement, '.js-chat', 'mobile');
     this.$backButton = this.queryElement('.btn-arrow--back');
     this.$chatUsers = document.querySelectorAll('.chat-user');
     this.$chatWindow = this.queryElement('.chat__right');
-    this.$chatScrollElements=this.queryElements('.js-chat-scroll')
     this.init();
   }
 
@@ -31,6 +32,14 @@ class Chat extends Widget {
 
   static init(elem) {
     new Chat(elem);
+
+    $chatScrollElements.forEach((element) => {
+      SmoothScrollbar.init((element),
+        {
+          alwaysShowTracks: true,
+          thumbMinSize: 66,
+        });
+    });
   }
 }
 

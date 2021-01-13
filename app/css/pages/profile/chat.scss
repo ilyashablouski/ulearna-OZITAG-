@@ -71,25 +71,7 @@
     margin-top: 10px;
     min-height: 961px;
     max-height: 961px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    /* Works on Firefox */
-    scrollbar-width: thin;
-    scrollbar-color: #DAE4ED transparent;
-    /* Works on Chrome, Edge, and Safari */
-    &::-webkit-scrollbar {
-      width: 5px;
-      height: 66px;
-    }
-
-    &::-webkit-scrollbar-track {
-      background: transparent;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background: #DAE4ED;
-      border-radius: 5px;
-    }
+    overflow: auto;
 
     @include mobile {
       margin-top: 0;
@@ -103,5 +85,15 @@
       width: 100%;
       height: 100%;
     }
+  }
+
+  .scrollbar-thumb {
+    width: 5px;
+    background: $color-gray;
+  }
+
+  .scrollbar-track-y {
+    width: 5px;
+    background: transparent;
   }
 }
