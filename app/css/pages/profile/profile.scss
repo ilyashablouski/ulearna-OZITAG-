@@ -71,6 +71,10 @@
     margin-left: 50px;
     flex-grow: 1;
 
+    @include no-desktop {
+      margin-left: 30px;
+    }
+
     @include smallTablet-and-mobile {
       overflow: hidden;
       margin-left: 0;

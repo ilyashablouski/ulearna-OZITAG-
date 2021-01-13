@@ -1,9 +1,9 @@
 {{#if button}}
-  <button class="btn-text {{#if color}} btn-text--{{color}}{{/if}}">
+  <button class="btn-text {{#if color}} btn-text--{{color}}{{/if}} {{#if mod}}{{mod}}{{/if}}">
     {{ label }}
   </button>
 {{else}}
-  <a href="{{#if href}}{{href}}{{else}}#{{/if}}" class="btn-text {{#if color}} btn-text--{{color}}{{/if}}">
+  <a href="{{#if href}}{{href}}{{else}}#{{/if}}" class="btn-text {{#if color}} btn-text--{{color}}{{/if}} {{#if mod}}{{mod}}{{/if}}">
     {{ label }}
   </a>
 {{/if}}

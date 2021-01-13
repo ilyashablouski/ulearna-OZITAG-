@@ -39,6 +39,10 @@
     letter-spacing: 0.02em;
     color: $color-gray-dark;
 
+    @include mobile {
+      display: none;
+    }
+
     &:after {
       margin-left: 6px;
       content: '';

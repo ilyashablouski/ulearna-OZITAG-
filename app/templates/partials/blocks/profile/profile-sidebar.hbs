@@ -1,11 +1,11 @@
 <div class="profile-sidebar">
   <div class="profile-sidebar__inner">
     <div class="profile-sidebar__block">
-      {{> blocks/profile/profile-user student=true}}
+      {{> blocks/profile/profile-user profile=profile name=name email=email}}
     </div>
 
     <div class="profile-sidebar__block">
-      {{> blocks/profile/profile-socials}}
+      {{> blocks/profile/profile-socials href=href}}
     </div>
 
     <div class="profile-sidebar__block">

@@ -16,11 +16,12 @@
   </div>
 
   {{#if balance}}
-    <div class="profile-counters__counter">
+    <div class="profile-counters__counter {{#if balance}}profile-counters__counter--balance{{/if}}">
       <div class="profile-counters__counter-text">My Balance</div>
       <div class="profile-counters__item">
         <i class="profile-counters__item-icon profile-counters__item-icon--purple">{{> ui/svg name='strip'}}</i>
         <span class="profile-counters__item-number">$168</span>
+        <span class="profile-counters__item-profit">+$30</span>
       </div>
     </div>
   {{/if}}

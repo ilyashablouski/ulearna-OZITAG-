@@ -2,12 +2,23 @@
   position: relative;
   display: flex;
 
+  @include mobile {
+    box-shadow: inset 0px -1px 0px #DAE4ED;
+  }
+
   &__img {
-    width: 161px;
+    flex: 0 0 161px;
+    max-width: 161px;
     height: 119px;
     background: rgba(0, 0, 0, 0.06);
     border-radius: 12px;
     overflow: hidden;
+
+    @include mobile {
+      flex: 0 0 101px;
+      max-width: 101px;
+      height: 75px;
+    }
   }
 
   &__info {
@@ -16,6 +27,12 @@
     flex-grow: 1;
     box-shadow: inset 0px -1px 0px #DAE4ED;
 
+    @include mobile {
+      margin-left: 13px;
+      padding-bottom: 10px;
+      box-shadow: none;
+    }
+
     &-text {
       margin-top: 8px;
       max-width: 293px;
@@ -23,6 +40,10 @@
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 0.02em;
+
+      @include mobile {
+        margin-top: 6px;
+      }
     }
 
     &-label {
@@ -37,6 +58,11 @@
       position: absolute;
       top: 0;
       right: 0;
+
+      @include mobile {
+        position: static;
+        margin-top: 6px;
+      }
     }
   }
 }

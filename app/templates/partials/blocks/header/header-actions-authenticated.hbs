@@ -9,6 +9,10 @@
     <div class="header-actions__item">
       <div class="header-actions__user">
         {{> components/image img="header/avatar" ext="jpg"}}
+
+        {{#if instructor}}
+          {{> components/image img="header/avatar-instructor" ext="jpg"}}
+        {{/if}}
       </div>
     </div>
   </div>

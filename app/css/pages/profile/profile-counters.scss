@@ -36,9 +36,26 @@
       }
     }
 
+    &:nth-child(1) {
+      @include smallTablet-and-mobile {
+        order: 1;
+      }
+    }
+
+    &:nth-child(2) {
+      @include smallTablet-and-mobile {
+        order: 2;
+      }
+    }
+
     &:nth-child(3) {
       margin-left: 0;
       margin-top: 20px;
+
+      @include smallTablet-and-mobile {
+        order: 0;
+        margin-top: 0;
+      }
     }
 
     &-text {
@@ -64,7 +81,7 @@
     align-items: center;
 
     @include smallTablet-and-mobile {
-      margin-top: 15px;
+      margin-top: 5px;
     }
 
     &-number {
@@ -103,6 +120,25 @@
       }
     }
 
+    &-profit {
+      display: none;
 
+      @include smallTablet-and-mobile {
+        margin-left: 4px;
+        padding: 1px 2px;
+        display: block;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 150%;
+        background: rgba(66, 219, 146, 0.22);
+        border-radius: 6px;
+        color: $color-green;
+      }
+    }
+  }
+
+  .profile-counters__counter--balance {
+    border-left: none;
+    border-right: 1px solid #dae4ed;
   }
 }

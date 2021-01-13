@@ -7,7 +7,14 @@
   <div class="container">
     <div class="profile__inner">
       <div class="profile__left">
-        {{> blocks/profile/profile-sidebar dashboard=true balance=true}}
+        {{> blocks/profile/profile-sidebar
+          profile="instructor"
+          dashboard=true
+          balance=true
+          name="Marvin Murphy"
+          email="M_Murphy@mail.com"
+          href="Website//Marvin.com"
+        }}
       </div>
       <div class="profile__right">
         {{> blocks/profile/instructor/instructor-dashboard tab=1}}
