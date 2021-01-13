@@ -114,7 +114,9 @@
     }
 
     &--green {
-      position: static;
+      @include mobile {
+        position: static;
+      }
     }
   }
 }
