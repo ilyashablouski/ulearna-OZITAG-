@@ -1,0 +1,66 @@
+.courses-instructor {
+  position: relative;
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    margin-top: 20px;
+    padding-right: 144px;
+    padding-bottom: 16px;
+
+    @include smallTablet-and-mobile {
+      margin-top: 20px;
+    }
+
+    @include mobile {
+      padding-bottom: 0;
+      padding-right: 16px;
+      padding-left: 16px;
+      box-shadow: none;
+    }
+
+
+    &-title {
+      font-weight: 600;
+      font-size: 29px;
+      line-height: 43px;
+
+      @include mobile {
+        font-size: 18px;
+        line-height: 27px;
+      }
+    }
+
+    &-btn {
+      @include mobile {
+        margin-top: 16px;
+        padding-right: 16px;
+        padding-left: 16px;
+        width: 100%;
+      }
+    }
+
+  }
+
+
+  &__tabs {
+    @include mobile {
+      order: 4;
+      margin-top: 20px;
+      margin-left: 16px;
+    }
+  }
+
+  &__main {
+    padding-bottom: 241px;
+
+    @include mobile {
+      order: 5;
+      margin-top: 0;
+      padding-bottom: 60px;
+    }
+  }
+}

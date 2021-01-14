@@ -1,19 +1,30 @@
 <div class="profile-counters">
-  <div class="profile-counters__counter">
-    <div class="profile-counters__counter-text">Active Courses</div>
-    <div class="profile-counters__item">
-      <i class="profile-counters__item-icon profile-counters__item-icon--green">{{> ui/svg name='strip'}}</i>
-      <span class="profile-counters__item-number">12</span>
+  {{#if only-balance}}
+    <div class="profile-counters__counter {{#if balance}}profile-counters__counter--balance{{/if}}">
+      <div class="profile-counters__counter-text">My Balance</div>
+      <div class="profile-counters__item">
+        <i class="profile-counters__item-icon profile-counters__item-icon--purple">{{> ui/svg name='strip'}}</i>
+        <span class="profile-counters__item-number">$168</span>
+        <span class="profile-counters__item-profit">+$30</span>
+      </div>
     </div>
-  </div>
+  {{else}}
+    <div class="profile-counters__counter">
+      <div class="profile-counters__counter-text">Active Courses</div>
+      <div class="profile-counters__item">
+        <i class="profile-counters__item-icon profile-counters__item-icon--green">{{> ui/svg name='strip'}}</i>
+        <span class="profile-counters__item-number">12</span>
+      </div>
+    </div>
 
-  <div class="profile-counters__counter">
-    <div class="profile-counters__counter-text">Certificates</div>
-    <div class="profile-counters__item">
-      <i class="profile-counters__item-icon profile-counters__item-icon--green">{{> ui/svg name='strip'}}</i>
-      <span class="profile-counters__item-number">4</span>
+    <div class="profile-counters__counter">
+      <div class="profile-counters__counter-text">Certificates</div>
+      <div class="profile-counters__item">
+        <i class="profile-counters__item-icon profile-counters__item-icon--green">{{> ui/svg name='strip'}}</i>
+        <span class="profile-counters__item-number">4</span>
+      </div>
     </div>
-  </div>
+  {{/if}}
 
   {{#if balance}}
     <div class="profile-counters__counter {{#if balance}}profile-counters__counter--balance{{/if}}">

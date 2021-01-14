@@ -1,7 +1,47 @@
 {{!Instructor-courses}}
 
 {{> layout/head}}
-{{> layout/header shadow=true}}
+{{> layout/header shadow=true authenticated=true}}
 
+<div class="profile">
+  <div class="container">
+    <div class="profile__inner">
+      <div class="profile__left">
+        {{> blocks/profile/profile-sidebar
+          profile="instructor"
+          dashboard=true
+          only-balance=true
+          name="Marvin Murphy"
+          email="M_Murphy@mail.com"
+          href="Website//Marvin.com"
+        }}
+      </div>
+      <div class="profile__right">
+        {{> blocks/profile/instructor/courses-instructor tab=1}}
+      </div>
+    </div>
+  </div>
+
+  <div class="profile__more">
+    <button class="profile__more-btn"></button>
+
+    <div class="profile__overlay">
+      {{#> blocks/profile/profile-overlay upgrade=true}}
+        <div class="profile-overlay__item">
+          <a href="#" class="profile-overlay__item-btn">Edit Profile</a>
+        </div>
+
+        <div class="profile-overlay__item">
+          <a href="#" class="profile-overlay__item-btn profile-overlay__item-btn--icon">Sign Out</a>
+        </div>
+
+        <div class="profile-overlay__item">
+          <a href="#" class="profile-overlay__item-btn profile-overlay__item-btn--purple">Become in Instructor</a>
+        </div>
+      {{/blocks/profile/profile-overlay}}
+    </div>
+  </div>
+
+</div>
 
 {{> layout/footer }}

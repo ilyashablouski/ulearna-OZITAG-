@@ -1,0 +1,33 @@
+.tab-all {
+  &__header {
+    display: flex;
+
+    &-item {
+      margin: 0 15px;
+
+      &:first-child {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-left: 0;
+      }
+    }
+
+    &-btn {
+      display: inline-flex;
+      align-items: center;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 140%;
+      color: $color-gray-dark;
+      @include mobile {
+        display: none;
+      }
+
+      &:after {
+        margin-left: 4px;
+        content: '';
+        @include sprite('triangle-down');
+      }
+    }
+  }
+}

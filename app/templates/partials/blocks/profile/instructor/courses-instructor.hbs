@@ -1,0 +1,52 @@
+<div class="courses-instructor">
+  <div class="courses-instructor__header">
+    <span class="courses-instructor__header-title">My Courses</span>
+
+    <div class="courses-instructor__header-btn">
+      {{> ui/btn
+        outline=true
+        label='New course'
+        icon='button-plus'
+        transparent=true
+      }}
+    </div>
+  </div>
+
+
+  <div class="courses-instructor__tabs">
+    <div class="profile-tabs">
+      <div class="profile-tabs__inner">
+        <div class="profile-tabs__item">
+          {{#ifCond tab 1}}
+            <span class="profile-tabs__link active">All</span>
+          {{else}}
+            <a href="#" class="profile-tabs__link">All</a>
+          {{/ifCond}}
+        </div>
+
+        <div class="profile-tabs__item">
+          {{#ifCond tab 2}}
+            <span class="profile-tabs__link active">Active</span>
+          {{else}}
+            <a href="#" class="profile-tabs__link">Active</a>
+          {{/ifCond}}
+        </div>
+
+        <div class="profile-tabs__item">
+          {{#ifCond tab 3}}
+            <span class="profile-tabs__link active">In review</span>
+          {{else}}
+            <a href="#" class="profile-tabs__link">In review</a>
+          {{/ifCond}}
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="courses-instructor__main">
+    {{#ifCond tab 1}}
+      {{> blocks/profile/instructor/tab-all}}
+    {{/ifCond}}
+  </div>
+</div>

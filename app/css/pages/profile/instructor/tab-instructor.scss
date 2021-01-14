@@ -46,7 +46,7 @@
   }
 
   &__block {
-    &:not(first-child) {
+    &:not(:first-child) {
       margin-top: 30px;
     }
 
@@ -56,7 +56,7 @@
     }
 
     &:first-child {
-      @include mobile{
+      @include mobile {
         margin-top: 0;
       }
     }
@@ -67,7 +67,7 @@
   }
 
   &__course-block {
-    &:not(first-child) {
+    &:not(:first-child) {
       margin-top: 8px;
     }
   }
