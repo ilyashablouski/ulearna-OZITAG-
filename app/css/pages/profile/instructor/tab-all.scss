@@ -1,14 +1,27 @@
 .tab-all {
   &__header {
+    margin-top: 16px;
     display: flex;
 
     &-item {
       margin: 0 15px;
+      flex: 0 0 106px;
+      max-width: 106px;
+
+      @include no-desktop {
+        margin: 0 10px;
+      }
 
       &:first-child {
-        flex: 0 0 50%;
-        max-width: 50%;
-        margin-left: 0;
+        flex: 0 0 calc(56.5% - 9px);
+        max-width: calc(56.5% - 9px);
+        margin-right: 0;
+        margin-left: 9px;
+
+        @include no-desktop {
+          flex: 0 0 calc(50% - 9px);
+          max-width: calc(50% - 9px);
+        }
       }
     }
 
@@ -28,6 +41,16 @@
         content: '';
         @include sprite('triangle-down');
       }
+    }
+  }
+
+  &__courses {
+    margin-top: 20px;
+  }
+
+  &__course {
+    &:not(:first-child) {
+      margin-top: 12px;
     }
   }
 }

@@ -1,14 +1,10 @@
 .courses-instructor {
-  position: relative;
-
-  @include mobile {
-    display: flex;
-    flex-direction: column;
-  }
 
   &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 20px;
-    padding-right: 144px;
     padding-bottom: 16px;
 
     @include smallTablet-and-mobile {

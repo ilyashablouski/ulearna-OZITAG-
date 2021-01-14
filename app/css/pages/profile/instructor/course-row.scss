@@ -27,6 +27,15 @@
 
   &__inner {
     display: flex;
+    align-items: center;
+    flex: 0 0 56.5%;
+    max-width: 56.5%;
+
+    @include no-desktop {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
   }
 
   &__img {
@@ -75,15 +84,24 @@
   }
 
   &__item {
-    margin: 0 10px;
+    margin: 0 15px;
     padding: 12px;
-    flex: 0 0 106px;
+    flex: 1 1 106px;
     max-width: 106px;
     font-weight: 600;
     font-size: 14px;
     line-height: 140%;
     background: rgba(218, 228, 237, 0.32);
     border-radius: 10px;
+
+    @include no-desktop {
+      margin: 0 10px;
+    }
+
+    @include smallTablet {
+      flex: 0 0 106px;
+      max-width: 106px;
+    }
 
     &-number {
       display: block;
@@ -105,16 +123,20 @@
   }
 
   &__details {
-    margin-left: auto;
+    margin-left: 15px;
     font-weight: bold;
     font-size: 15px;
     line-height: 22px;
     letter-spacing: 0.02em;
     color: $color-blue;
+
+    @include no-desktop {
+      margin-left: 10px;
+    }
   }
 
   &__more-btn {
-    margin-left: 22px;
+    margin-left: 20px;
     @include sprite('more-btn');
   }
 

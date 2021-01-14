@@ -1,11 +1,12 @@
 .profile-tabs {
   @include reset-slider-container-mobile;
+
   &__inner {
     box-shadow: inset 0px -1px 0px #DAE4ED;
     display: flex;
     white-space: nowrap;
 
-    @include  mobile {
+    @include mobile {
       margin-left: 16px;
       padding-left: 0;
     }
@@ -64,6 +65,11 @@
         background: $color-blue-dark;
         position: absolute;
       }
+    }
+
+    &--indented {
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
 }
