@@ -1,11 +1,16 @@
 <div class="course-row">
-
   <div class="course-row__inner">
     <div class="course-row__img">
       {{> components/image img=(concat 'profile/instructor/' image) img-mobile=(concat 'profile/instructor/' image '-mobile') ext="jpg" no-2x=true}}
 
       {{#if copyright}}
-        <i class="course-card-image__copyright"></i>
+        <i class="course-row__img-copyright"></i>
+      {{/if}}
+
+      {{#if status}}
+        <span class="course-row__img-badge {{#ifCond status "In-review"}}course-row__img-badge--in-review{{/ifCond}}">
+          {{status}}
+        </span>
       {{/if}}
     </div>
     <div class="course-row__info">
@@ -19,7 +24,7 @@
       {{/if}}
 
       <p class="course-row__info-text">{{text}}</p>
-      <div class="course-row__info-label">{{label}}</div>
+      <div class="course-row__info-label {{#if plus}}course-row__info-label--purple{{/if}}">{{label}}</div>
     </div>
   </div>
 
