@@ -82,6 +82,7 @@
 
   &__widgets {
     margin-left: 50px;
+    flex: 0 0 283px;
     max-width: 283px;
 
     @include no-desktop {

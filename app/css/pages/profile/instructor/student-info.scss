@@ -28,7 +28,7 @@
 
   &__course {
     margin-left: 12px;
-    padding: 12px 0;
+    padding: 13px 0;
     padding-right: 55px;
     flex-grow: 1;
     box-shadow: inset 0px -1px 0px #DAE4ED;
@@ -61,8 +61,8 @@
 
   &__progress {
     position: absolute;
-    top: 11px;
-    right: 5px;
+    top: 7px;
+    right: 2px;
     display: inline-flex;
 
     @include mobile {
