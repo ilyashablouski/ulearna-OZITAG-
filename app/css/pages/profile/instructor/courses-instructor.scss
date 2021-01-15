@@ -40,8 +40,10 @@
     }
 
     &-search {
-      @include mobile576 {
-        @include sprite('search-mobile');
+      &-btn {
+        @include mobile576 {
+          @include sprite('search-mobile');
+        }
       }
     }
   }
