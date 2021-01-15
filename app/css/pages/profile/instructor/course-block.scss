@@ -3,6 +3,8 @@
   display: flex;
 
   @include mobile {
+    margin-right: -16px;
+    padding-right: 16px;
     box-shadow: inset 0px -1px 0px #DAE4ED;
   }
 
