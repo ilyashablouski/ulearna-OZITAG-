@@ -3,6 +3,10 @@
     margin-top: 16px;
     display: flex;
 
+    @include mobile {
+      margin-top: 0;
+    }
+
     &-item {
       margin: 0 15px;
       flex: 0 0 106px;
@@ -46,11 +50,28 @@
 
   &__courses {
     margin-top: 20px;
+
+    @include mobile {
+      margin-left: 16px;
+      margin-right: 16px;
+    }
   }
 
   &__course {
     &:not(:first-child) {
       margin-top: 12px;
+    }
+
+    &:nth-child(4) {
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &:nth-child(5) {
+      @include mobile {
+        display: none;
+      }
     }
   }
 }

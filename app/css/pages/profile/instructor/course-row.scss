@@ -5,7 +5,10 @@
   align-items: center;
 
   @include mobile {
-    padding-bottom: 10px;
+    padding-top: 29px;
+    padding-left: 114px;
+    flex-direction: column;
+    align-items: initial;
   }
 
   &:before {
@@ -36,9 +39,14 @@
       max-width: 50%;
     }
 
+    @include mobile {
+      flex: 0 0 auto;
+      max-width: 288px;
+    }
   }
 
   &__img {
+    position: relative;
     flex: 0 0 161px;
     max-width: 161px;
     height: 119px;
@@ -47,9 +55,16 @@
     overflow: hidden;
 
     @include mobile {
-      flex: 0 0 101px;
-      max-width: 101px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 101px;
       height: 75px;
+
+      img {
+        width: 101px;
+        height: 75px;
+      }
     }
 
     &-copyright {
@@ -73,6 +88,10 @@
       border-radius: 6px;
       z-index: 3;
 
+      @include mobile {
+        display: none;
+      }
+
       &--in-review {
         background: $color-gray;
         color: $color-gray-dark;
@@ -84,7 +103,7 @@
     margin-left: 20px;
     max-width: 293px;
     @include mobile {
-      margin-left: 13px;
+      margin-left: 0;
       max-width: none;
       box-shadow: none;
     }
@@ -97,7 +116,7 @@
       letter-spacing: 0.02em;
 
       @include mobile {
-        margin-top: 6px;
+        margin-top: 0;
       }
     }
 
@@ -134,9 +153,35 @@
       max-width: 106px;
     }
 
+    @include mobile {
+      margin: 6px 0 0 0;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+
+    &-title {
+      display: none;
+      @include mobile {
+        display: initial;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 21px;
+        color: $color-blue;
+      }
+    }
+
     &-number {
       display: block;
       color: $color-dark;
+
+      @include mobile {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 21px;
+      }
     }
 
     &-label {
@@ -144,6 +189,10 @@
       white-space: nowrap;
       font-weight: normal;
       color: $color-blue;
+
+      @include mobile {
+        display: none;
+      }
     }
   }
 
@@ -151,6 +200,10 @@
     margin-left: auto;
     display: flex;
     align-items: center;
+
+    @include mobile {
+      margin: 13px 0 0 0;
+    }
   }
 
   &__details {
@@ -164,11 +217,34 @@
     @include no-desktop {
       margin-left: 10px;
     }
+
+    @include mobile {
+      margin: 0;
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
 
   &__more-btn {
     margin-left: 20px;
     @include sprite('more-btn');
+
+    @include mobile {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
 
+  & > .course-row__img-badge {
+    display: none;
+
+    @include mobile {
+      top: 0;
+      left: 114px;
+      display: initial;
+      font-size: 12px;
+      line-height: 150%;
+    }
+  }
 }

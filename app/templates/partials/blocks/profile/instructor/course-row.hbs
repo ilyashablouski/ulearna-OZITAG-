@@ -1,4 +1,9 @@
 <div class="course-row">
+  {{#if status}}
+    <span class="course-row__img-badge {{#ifCond status "In-review"}}course-row__img-badge--in-review{{/ifCond}}">
+      {{status}}
+    </span>
+  {{/if}}
   <div class="course-row__inner">
     <div class="course-row__img">
       {{> components/image img=(concat 'profile/instructor/' image) img-mobile=(concat 'profile/instructor/' image '-mobile') ext="jpg" no-2x=true}}
@@ -29,11 +34,14 @@
   </div>
 
   <div class="course-row__item">
+    <span class="course-row__item-title">Students</span>
     <span class="course-row__item-number">123</span>
     <span class="course-row__item-label">Active</span>
+
   </div>
 
   <div class="course-row__item">
+    <span class="course-row__item-title">Watched Time</span>
     <span class="course-row__item-number">12h</span>
     <span class="course-row__item-label">Total time</span>
   </div>
