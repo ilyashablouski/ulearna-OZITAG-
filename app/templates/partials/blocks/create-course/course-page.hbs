@@ -1,0 +1,34 @@
+<div class="course-page">
+  <div class="course-page__progress">
+    <i class="course-page__progress-line"></i>
+  </div>
+
+  <div class="course-page__header">
+    <div class="container">
+      <a href="#" class="course-page__header-back-link">Back to Profile</a>
+      <span class="course-page__header-title">Create a Course</span>
+    </div>
+  </div>
+
+  <div class="course-page__tabs">
+    <div class="course-tabs">
+      <div class="course-tabs__inner">
+        <div class="course-tabs__item">
+          {{#ifCond tab 1}}
+            <span class="course-tabs__link active">Overview</span>
+          {{else}}
+            <a href="#" class="course-tabs__link">Overview</a>
+          {{/ifCond}}
+        </div>
+      </div>
+    </div>
+
+
+    <div class="course-page__main">
+      {{#ifCond tab 1}}
+        {{> blocks/???}}
+      {{/ifCond}}
+    </div>
+  </div>
+</div>
+

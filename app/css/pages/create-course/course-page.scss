@@ -1,0 +1,30 @@
+.course-page {
+  &__header {
+    &-back-link {
+      font-size: 15px;
+      line-height: 23px;
+      letter-spacing: 0.02em;
+      color: $color-white;
+      font-weight: bold;
+      padding-left: 25px;
+      position: relative;
+
+      &:before {
+        content: '';
+        @include align(false, true);
+        @include sprite('header-back-arrow');
+        @include transition;
+      }
+
+      &:hover {
+        color: $color-blue-light;
+
+        &:before {
+          transform: translateX(-3px) translateY(-50%);
+        }
+      }
+    }
+  }
+}
+
+
