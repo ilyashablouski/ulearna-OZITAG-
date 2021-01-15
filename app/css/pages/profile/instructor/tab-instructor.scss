@@ -64,6 +64,10 @@
 
   &__courses {
     margin-top: 16px;
+
+    @include mobile {
+      margin-top: 20px;
+    }
   }
 
   &__course-block {
@@ -95,6 +99,7 @@
       padding-bottom: 30px;
       padding-left: 16px;
       margin-left: 0;
+      flex: 0 0 auto;
       display: flex;
       max-width: none;
       overflow-x: scroll;
