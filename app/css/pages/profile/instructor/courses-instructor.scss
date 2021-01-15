@@ -25,13 +25,9 @@
       line-height: 43px;
 
       @include mobile {
+        flex: 1 1 auto;
         font-size: 18px;
         line-height: 27px;
-      }
-
-      @include mobile576 {
-        flex: 1 1 100%;
-        max-width: 100%;
       }
     }
 
@@ -43,6 +39,11 @@
       }
     }
 
+    &-search {
+      @include mobile576 {
+        @include sprite('search-mobile');
+      }
+    }
   }
 
 
