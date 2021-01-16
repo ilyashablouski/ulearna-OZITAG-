@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;
     white-space: nowrap;
+    background: $color-white;
 
     @include mobile {
       margin-left: 16px;

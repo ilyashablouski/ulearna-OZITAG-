@@ -45,15 +45,14 @@
         </div>
       </div>
     </div>
+  </div>
 
-
-    <div class="course-page__main">
-      <span class="course-page__title">{{title}}</span>
-      <span class="course-page__label">{{label}}</span>
-      {{#ifCond tab 1}}
-        {{> blocks/create-course/tab-overview}}
-      {{/ifCond}}
-    </div>
+  <div class="course-page__main">
+    <span class="course-page__main-title">{{title}}</span>
+    <span class="course-page__main-label">{{label}}</span>
+    {{#ifCond tab 1}}
+      {{> blocks/create-course/tab-overview}}
+    {{/ifCond}}
   </div>
 </div>
 

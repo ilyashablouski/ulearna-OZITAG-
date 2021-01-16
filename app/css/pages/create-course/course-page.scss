@@ -1,4 +1,6 @@
 .course-page {
+  background: #F4F7FA;
+
   &__progress {
     width: 100%;
     height: 10px;
@@ -9,6 +11,28 @@
       background: $color-green;
       width: 25%;
       height: 10px;
+    }
+  }
+
+  &__main {
+    margin: 0 auto;
+    margin-top: 40px;
+    max-width: 836px;
+
+    &-title {
+      display: block;
+      font-weight: 600;
+      font-size: 29px;
+      line-height: 43px;
+    }
+
+    &-label {
+      margin-top: 8px;
+      display: block;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 146%;
+      color: $color-gray-dark;
     }
   }
 
