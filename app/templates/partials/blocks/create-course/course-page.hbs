@@ -5,8 +5,10 @@
 
   <div class="course-page__header">
     <div class="container">
-      <a href="#" class="course-page__header-back-link">Back to Profile</a>
-      <span class="course-page__header-title">Create a Course</span>
+      <div class="course-page__header-wrapper">
+        <a href="#" class="course-page__header-back-link">Back to Profile</a>
+        <span class="course-page__header-title">Create a Course</span>
+      </div>
     </div>
   </div>
 
@@ -20,13 +22,14 @@
             <a href="#" class="course-tabs__link">Overview</a>
           {{/ifCond}}
         </div>
+
       </div>
     </div>
 
 
     <div class="course-page__main">
       {{#ifCond tab 1}}
-        {{> blocks/???}}
+      {{!> blocks/???}}
       {{/ifCond}}
     </div>
   </div>
