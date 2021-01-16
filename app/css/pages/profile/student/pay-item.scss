@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   position: relative;
+
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -61,6 +62,7 @@
 
   &__btn-check {
     margin-left: auto;
+
     &--active {
       .btn-icon {
         color: $color-blue;
@@ -74,12 +76,13 @@
       max-width: 100%;
     }
   }
+
   &__btn-delete {
-    @include sprite('button-delete');
     position: absolute;
     top: 50%;
     right: 9px;
     transform: translate(0, -50%);
+    color: $color-gray-dark;
     @include transition;
     @include mobile576 {
       top: auto;
@@ -88,9 +91,14 @@
       transform: translate(0, 0);
     }
 
-    &:hover {
-      opacity: 0.8;
-      color: #728da8;
+    svg {
+      width: 18px;
+      height: 22px;
     }
+
+    &:hover {
+      color: $color-blue;
+    }
+
   }
 }

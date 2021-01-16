@@ -11,10 +11,12 @@
     <div class="pay-item__btn-check {{#if active}}pay-item__btn-check--active{{/if}}">
       {{#if active}}
         {{> ui/btn-icon icon="check-mark" label="General"}}
-        {{else}}
+      {{else}}
         {{> ui/btn-text button=true label="Set As General"}}
       {{/if}}
     </div>
   </div>
-  <button class="pay-item__btn-delete"></button>
+  <button class="pay-item__btn-delete">
+    {{> ui/svg name="button-delete"}}
+  </button>
 </div>
