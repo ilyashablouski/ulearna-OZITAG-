@@ -22,14 +22,36 @@
             <a href="#" class="course-tabs__link">Overview</a>
           {{/ifCond}}
         </div>
-
+        <div class="course-tabs__item">
+          {{#ifCond tab 2}}
+            <span class="course-tabs__link active">Video lessons</span>
+          {{else}}
+            <a href="#" class="course-tabs__link">Video lessons</a>
+          {{/ifCond}}
+        </div>
+        <div class="course-tabs__item">
+          {{#ifCond tab 3}}
+            <span class="course-tabs__link active">Quiz</span>
+          {{else}}
+            <a href="#" class="course-tabs__link">Quiz</a>
+          {{/ifCond}}
+        </div>
+        <div class="course-tabs__item">
+          {{#ifCond tab 4}}
+            <span class="course-tabs__link active">Payout Program</span>
+          {{else}}
+            <a href="#" class="course-tabs__link">Payout Program</a>
+          {{/ifCond}}
+        </div>
       </div>
     </div>
 
 
     <div class="course-page__main">
+      <span class="course-page__title">{{title}}</span>
+      <span class="course-page__label">{{label}}</span>
       {{#ifCond tab 1}}
-      {{!> blocks/???}}
+        {{> blocks/create-course/tab-overview}}
       {{/ifCond}}
     </div>
   </div>
