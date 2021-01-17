@@ -89,9 +89,19 @@
     .select2-selection__choice {
       color: $color-blue;
 
+      &:after {
+        content: "\002C\00A0";
+        color: $color-black;
+      }
+
+      &:nth-last-child(2) {
+        &:after {
+          display: none;
+        }
+      }
+
       &__remove {
-        pointer-events: none;
-        //display: none;
+        display: none;
       }
     }
   }
