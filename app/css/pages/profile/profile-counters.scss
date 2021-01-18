@@ -138,7 +138,9 @@
   }
 
   .profile-counters__counter--balance {
-    border-left: none;
-    border-right: 1px solid #dae4ed;
+    @include smallTablet-and-mobile {
+      border-left: none;
+      border-right: 1px solid #dae4ed;
+    }
   }
 }

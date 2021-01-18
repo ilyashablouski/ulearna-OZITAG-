@@ -17,13 +17,12 @@ body.header-fixed {
     right: 0;
     background: linear-gradient(0deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
     box-shadow: 0px 5px 26px rgba(1, 64, 139, 0.14);
-    backdrop-filter: blur(30px);
 
     .header-menu {
       display: none;
     }
 
-    .language-overlay{
+    .language-overlay {
       display: none;
     }
 
@@ -35,9 +34,9 @@ body.header-fixed {
       padding: 17px 0;
     }
 
-    &.header--authenticated .header__inner{
+    &.header--authenticated .header__inner {
       padding: 16px 0;
-      @include mobile{
+      @include mobile {
         padding: 15px 0;
       }
     }
@@ -48,14 +47,6 @@ body.header-fixed {
       &:first-child {
         display: none;
       }
-    }
-
-    .header__actions {
-      margin-left: 26px;
-    }
-
-    .header__center {
-      margin-left: 44px;
     }
 
     @include mobile {
@@ -76,7 +67,7 @@ body.header-fixed {
       }
     }
 
-    .header__right-search{
+    .header__right-search {
       display: none;
     }
   }
