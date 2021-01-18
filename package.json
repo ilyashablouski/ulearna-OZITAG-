@@ -51,6 +51,7 @@
     "yargs": "^14.0.0"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^24.0.0",
     "critical": "^2.0.6",
     "date-fns": "^2.16.1",
     "gulp-cli": "^2.2.0",
