@@ -33,4 +33,10 @@
     margin-top: 24px;
   }
 
+
+  &--hide-mobile {
+    @include mobile {
+      display: none;
+    }
+  }
 }
