@@ -1,0 +1,33 @@
+.editor + .ck {
+
+  .ck-toolbar.ck-toolbar_grouping {
+    height: 50px !important;
+    border: 2px solid #DAE4ED;
+    border-radius: 12px 12px 0 0 !important;
+  }
+
+  .ck-editor__editable {
+    height: 208px;
+    border: 2px solid #DAE4ED !important;
+    border-radius: 0 0 12px 12px !important;
+
+    scrollbar-width: thin;
+    scrollbar-color: $color-gray transparent;
+
+    /* для Chrome/Edge/Safari */
+    &::-webkit-scrollbar {
+      height: 66px;
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-gray;
+      border-radius: 5px;
+      width: 5px;
+    }
+  }
+}

@@ -16,6 +16,7 @@ import { format as dateFormat } from 'date-fns';
 import select2 from 'select2';
 import PerfectScrollbar from 'perfect-scrollbar';
 import SmoothScrollbar from 'smooth-scrollbar';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 window.$ = window.jQuery = jquery;
 window.svg4everybody = svgPolyfill;
@@ -24,6 +25,7 @@ window.IMask = imask;
 window.select2 = select2;
 window.PerfectScrollbar = PerfectScrollbar;
 window.SmoothScrollbar = SmoothScrollbar;
+window.ClassicEditor = ClassicEditor;
 window.datepicker = datepicker;
 window.dateHelper = {
   format: dateFormat,
