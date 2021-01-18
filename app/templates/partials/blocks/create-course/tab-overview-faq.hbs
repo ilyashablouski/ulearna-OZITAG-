@@ -1,14 +1,14 @@
-<div class="tab-overview-faq">
+<div class="tab-overview-faq js-accord {{#if active}}opened{{/if}}">
   <div class="tab-overview-faq__header">
     <div class="tab-overview-faq__header-inner">
       <span class="tab-overview-faq__header-title">Course FAQ</span>
       <span class="tab-overview-faq__header-label">Course FAQ options description </span>
     </div>
 
-    <button class="tab-overview-faq__header-btn"></button>
+    <button class="tab-overview-faq__header-btn js-accord__toggle"></button>
   </div>
 
-  <div class="tab-overview-faq__body">
+  <div class="tab-overview-faq__body js-accord__body">
     <div class="tab-overview-faq__form-field">
       {{#> ui/field label="Question" id="input_course_question" note="Help text (max. -- symbols)"
                     value="Question text"}}
