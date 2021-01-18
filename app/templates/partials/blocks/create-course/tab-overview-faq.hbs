@@ -1,0 +1,30 @@
+<div class="tab-overview-faq">
+  <div class="tab-overview-faq__header">
+    <div class="tab-overview-faq__header-inner">
+      <span class="tab-overview-faq__header-title">Course FAQ</span>
+      <span class="tab-overview-faq__header-label">Course FAQ options description </span>
+    </div>
+
+    <button class="tab-overview-faq__header-btn"></button>
+  </div>
+
+  <div class="tab-overview-faq__body">
+    <div class="tab-overview-faq__form-field">
+      {{#> ui/field label="Question" id="input_course_question" note="Help text (max. -- symbols)"
+                    value="Question text"}}
+        {{> ui/input id="input_course_question" placeholder="Question"}}
+      {{/ui/field}}
+    </div>
+
+    <div class="tab-overview-faq__form-field">
+      {{#> ui/field label="Answer" id="course_textarea" note="Help text (max. -- symbols)"}}
+        {{> ui/textarea id="course_textarea" placeholder="Add text" value="Answer text"}}
+      {{/ui/field}}
+    </div>
+
+    <div class="tab-overview-faq__delete-btn">
+      {{> ui/btn-icon icon="button-reset" label="Delete question"}}
+    </div>
+  </div>
+
+</div>

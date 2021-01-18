@@ -37,5 +37,37 @@
         {{/ui/select}}
       {{/ui/field}}
     </div>
+
+    <div class="tab-overview__form-field">
+      {{#> ui/field label="Course Overview" id="input_editor" note="Help text (max. -- symbols)"
+                    value=""}}
+
+      {{/ui/field}}
+    </div>
+  </div>
+
+  <i class="tab-overview__separator"></i>
+
+  <div class="tab-overview__wrapper">
+    {{> blocks/create-course/tab-overview-faq}}
+
+    <div class="tab-overview__more-btn">
+      {{> ui/btn
+        outline=true
+        label='One more question'
+        icon='button-plus'
+        transparent=true
+      }}
+    </div>
+
+    <div class="tab-overview__next-btn">
+      {{> ui/btn
+        color = "blue"
+        label = "Next"
+        icon="button-arrow-next"
+        icon-right = true
+        w100 = true
+      }}
+    </div>
   </div>
 </div>

@@ -1,0 +1,70 @@
+.tab-overview-faq {
+  padding-bottom: 19px;
+  box-shadow: inset 0px -1px 0px #DAE4ED;
+
+  &__header {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-title {
+      display: block;
+      font-weight: 600;
+      font-size: 21px;
+      line-height: 31px;
+    }
+
+    &-label {
+      margin-top: 3px;
+      display: block;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 146%;
+      color: $color-gray-dark;
+    }
+
+    &-btn {
+      position: relative;
+      width: 38px;
+      height: 38px;
+      background: rgba(32, 183, 247, 0.12);
+      border-radius: 10px;
+
+      &:before, &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 3px;
+        height: 18px;
+        background: $color-blue;
+        border-radius: 5px;
+      }
+
+      &:before {
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+
+      &:after {
+        //TODO: set rotate in 0. if opened
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+    }
+  }
+
+  &__body {
+    margin-top: 32px;
+  }
+
+  &__form-field {
+    &:not(:first-child) {
+      margin-top: 16px;
+    }
+  }
+
+  &__delete-btn {
+    margin-top: 15px;
+  }
+}
