@@ -33,8 +33,11 @@
     margin-top: 24px;
   }
 
+  &--hidden {
+    display: none;
+  }
 
-  &--hide-mobile {
+  &--hidden-mobile {
     @include mobile {
       display: none;
     }

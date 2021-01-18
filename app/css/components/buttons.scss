@@ -203,7 +203,7 @@
   }
 
   &.btn--w100-mobile {
-    @include mobile576 {
+    @include mobile {
       width: 100%;
     }
   }
