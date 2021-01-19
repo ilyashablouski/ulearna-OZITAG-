@@ -1,6 +1,6 @@
 class Editor extends Widget {
   constructor(element) {
-    super(element, '.classic-editor');
+    super(element, '.editor');
   }
 
   static init() {

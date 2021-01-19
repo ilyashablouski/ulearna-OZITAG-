@@ -1,6 +1,6 @@
 <div class="course-page">
   <div class="course-page__progress">
-    <i class="course-page__progress-line"></i>
+    <i class="course-page__progress-line" style="width: {{progress}}%"></i>
   </div>
 
   <div class="course-page__header">
@@ -55,7 +55,11 @@
       <span class="course-page__main-label">{{label}}</span>
     </div>
     {{#ifCond tab 1}}
-      {{> blocks/create-course/tab-overview}}
+      {{> blocks/create-course/overview/tab-overview}}
+    {{/ifCond}}
+
+    {{#ifCond tab 2}}
+      {{> blocks/create-course/lessons/tab-lessons}}
     {{/ifCond}}
   </div>
 </div>

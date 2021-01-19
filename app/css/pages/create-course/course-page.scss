@@ -14,8 +14,8 @@
     &-line {
       display: block;
       background: $color-green;
-      width: 25%;
       height: 10px;
+      width: 0;
     }
   }
 
@@ -71,7 +71,7 @@
   &__tabs {
     padding: 0 16px;
     background: #fff;
-    box-shadow: inset 0px -1px 0px #DAE4ED;
+    border-bottom: 1px solid #DAE4ED;
   }
 
   &__main {

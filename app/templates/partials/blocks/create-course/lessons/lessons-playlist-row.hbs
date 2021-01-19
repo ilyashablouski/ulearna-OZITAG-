@@ -1,0 +1,24 @@
+<div class="lessons-playlist-row">
+  <div class="lessons-playlist-row__img">
+    {{> components/image img=(concat 'create-course/' image) ext="jpg" no-2x=true}}
+
+    {{#if copyright}}
+      <i class="lessons-playlist-row__img-copyright"></i>
+    {{/if}}
+
+    <time class="lessons-playlist-row__img-time">12:30</time>
+  </div>
+
+  <div class="lessons-playlist-row__inner">
+    <div class="lessons-playlist-row__info">
+      {{#if intro}}<span class="lessons-playlist-row__badge">Introduction</span>{{/if}}
+      <p class="lessons-playlist-row__text">{{text}}</p>
+    </div>
+
+    <div class="lessons-playlist-row__buttons">
+      <button class="lessons-playlist-row__edit-btn">{{> ui/svg name="button-edit"}}</button>
+      <button class="lessons-playlist-row__delete-btn">{{> ui/svg name="button-delete"}}</button>
+      <button class="lessons-playlist-row__drag-btn"></button>
+    </div>
+  </div>
+</div>

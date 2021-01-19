@@ -38,11 +38,11 @@
     }
 
     &:hover {
-      color: $color-dark;
+      color: $color-black;
     }
 
     &.active {
-      color: $color-dark;
+      color: $color-black;
       position: relative;
 
       &:after {
@@ -50,7 +50,7 @@
         left: 0;
         right: 0;
         height: 4px;
-        bottom: 0px;
+        bottom: 0;
         background: $color-blue-dark;
         position: absolute;
       }

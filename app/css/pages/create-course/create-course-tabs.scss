@@ -43,11 +43,11 @@
     }
 
     &:hover {
-      color: $color-dark;
+      color: $color-black;
     }
 
     &.active {
-      color: $color-dark;
+      color: $color-black;
       position: relative;
 
       &:after {
@@ -63,6 +63,7 @@
 
     &--passed {
       padding-right: 24px;
+      color: $color-black;
 
       &:after {
         content: "";

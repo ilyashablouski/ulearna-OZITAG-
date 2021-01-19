@@ -1,0 +1,41 @@
+<div class="upload-lesson">
+
+  <div class="upload-lesson__video">
+    <div class="upload-lesson__video-inner">
+      <div class="upload-lesson__video-status">
+        <div class="upload-lesson__video-status-bar">
+          {{> widgets/round-bar
+            color="blue"
+            progress=20}}
+        </div>
+        <span class="upload-lesson__video-status-text">Uploading...</span>
+        <span class="upload-lesson__video-status-label">Wait until your video is uploaded</span>
+      </div>
+    </div>
+
+    <span class="upload-lesson__video-label">Video requirements text.
+    <a href="" class="upload-lesson__video-label-link">Read more</a>
+  </span>
+  </div>
+
+
+  <div class="upload-lesson__input">
+    {{#> ui/field label="Lesson Title" id="input_lesson_title" note="Help text (min. --, max. -- symbols)"}}
+      {{> ui/input
+        id="input_course_name"
+        value="Lesson Title"
+        placeholder="Course Name"
+      }}
+    {{/ui/field}}
+  </div>
+
+  <div class="upload-lesson__block">
+    <div class="upload-lesson__checkbox">
+      {{> ui/checkbox id="upload_lesson_checkbox" checked=true label="Introduction video"}}
+    </div>
+
+    <div class="upload-lesson__upload-btn">
+      {{> ui/btn btn-mode="not-active" label="Upload video"}}
+    </div>
+  </div>
+</div>

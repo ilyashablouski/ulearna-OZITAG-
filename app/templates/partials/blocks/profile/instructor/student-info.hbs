@@ -19,7 +19,7 @@
     {{#when progress-value '>' 20}}
       {{> widgets/round-bar
         progress=progress-value
-        mod='green'
+        color='green'
       }}
     {{/when}}
 
@@ -27,7 +27,7 @@
     {{#when progress-value '==' 20}}
       {{> widgets/round-bar
         progress=progress-value
-        mod='orange'
+        color='orange'
       }}
     {{/when}}
   </div>

@@ -1,6 +1,13 @@
 @import "course-page";
 @import "create-course-tabs";
-@import "tab-overview";
-@import "tab-overview-faq";
+@import "course-page-separator";
+
+@import "overview/tab-overview";
+@import "overview/tab-overview-faq";
+
+@import "lessons/tab-lessons";
+@import "lessons/upload-lesson";
+@import "lessons/lessons-playlist-row";
+
 
 

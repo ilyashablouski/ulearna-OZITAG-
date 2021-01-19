@@ -1,0 +1,63 @@
+.tab-lessons {
+  &__wrapper {
+    margin: 0 auto;
+    max-width: 836px;
+  }
+
+  &__title {
+    margin-top: 30px;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: $color-gray-dark;
+  }
+
+  &__playlist {
+    margin-top: 15px;
+  }
+
+  &__separator {
+    margin-top: 40px;
+    position: relative;
+
+    &-line {
+      border-bottom: 1px solid $color-gray;
+    }
+
+    &-triangle {
+      margin: auto;
+      background: #f4f7fa;
+      border: 1px solid #dae4ed;
+      border-width: 1px 1px 0 0;
+      transform: rotate(135deg);
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -19px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__slider {
+    margin-top: 40px;
+
+    &-title {
+      display: block;
+      font-weight: 600;
+      font-size: 29px;
+      line-height: 43px;
+    }
+
+    &-label {
+      margin-top: 8px;
+      display: block;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 146%;
+      color: $color-gray-dark;
+    }
+  }
+}

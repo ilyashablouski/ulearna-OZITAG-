@@ -1,8 +1,14 @@
 {{!Video-lessons}}
 
 {{> layout/head}}
-{{> layout/header }}
+{{> layout/header authenticated=true}}
 
-
+{{> blocks/create-course/course-page
+  tab=2
+  progress=50
+  tab1-passed=true
+  title="Video Lessons"
+  label="Upload video lessons / description"
+}}
 
 {{> layout/footer }}

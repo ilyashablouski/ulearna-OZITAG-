@@ -211,10 +211,6 @@
   &--not-active {
     background: $color-gray;
     color: $color-white;
-
-    @include mobile {
-      display: none;
-    }
   }
 
   &--no-border {
@@ -226,6 +222,12 @@
     &:hover {
       background: $color-dark;
       color: $color-white;
+    }
+  }
+
+  &--hide-mobile {
+    @include mobile {
+      display: none;
     }
   }
 }

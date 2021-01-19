@@ -21,9 +21,11 @@
     </div>
 
     <div class="tab-overview__form-field">
-      {{#> ui/field label="Course Name" id="input_course_name" note="Help text (min. --, max. -- symbols)"
-                    value="Customizing Type with Draplin: Creating Wordmarks That Work"}}
-        {{> ui/input id="input_course_name" placeholder="Course Name"}}
+      {{#> ui/field label="Course Name" id="input_course_name" note="Help text (min. --, max. -- symbols)"}}
+        {{> ui/input id="input_course_name"
+          value="Customizing Type with Draplin: Creating Wordmarks That Work"
+          placeholder="Course Name"
+        }}
       {{/ui/field}}
     </div>
 
@@ -50,10 +52,10 @@
     </div>
   </div>
 
-  <i class="tab-overview__separator"></i>
+  {{> blocks/create-course/course-page-separator}}
 
   <div class="tab-overview__wrapper">
-    {{> blocks/create-course/tab-overview-faq active=true}}
+    {{> blocks/create-course/overview/tab-overview-faq active=true}}
 
     <div class="tab-overview__more-btn">
       {{> ui/btn

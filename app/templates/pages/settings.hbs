@@ -21,7 +21,13 @@
           <span class="profile__header-title">Settings</span>
 
           <div class="profile__header-btn profile__header-btn--bottom">
-            {{> ui/btn btn-mode="not-active" icon="check-mark" label="Save changes" mod="btn--w100-mobile"}}
+            {{> ui/btn
+              btn-mode="not-active"
+              hide-mobile=true
+              icon="check-mark"
+              label="Save changes"
+              mod="btn--w100-mobile"
+            }}
           </div>
         </div>
         {{> blocks/profile/student/student-settings tab=2}}

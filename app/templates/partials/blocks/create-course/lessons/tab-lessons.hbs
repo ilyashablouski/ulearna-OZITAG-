@@ -1,0 +1,49 @@
+<div class="tab-lessons">
+  <div class="tab-lessons__wrapper">
+    {{> blocks/create-course/lessons/upload-lesson}}
+
+    <div class="tab-lessons__separator">
+      <div class="tab-lessons__separator-line">
+        <div class="tab-lessons__separator-triangle">
+        </div>
+      </div>
+    </div>
+
+    <span class="tab-lessons__title">Course playlist</span>
+    <div class="tab-lessons__playlist">
+      {{>blocks/create-course/lessons/lessons-playlist-row
+        image="course-lesson_01"
+        text="Customizing Type with Draplin: Creating Wordmarks That Work"
+        copyright=true
+        intro=true
+      }}
+
+      {{>blocks/create-course/lessons/lessons-playlist-row
+        image="course-lesson_02"
+        text="Customizing Type with Draplin: Creating Wordmarks That Work"
+        copyright=true
+      }}
+
+      {{>blocks/create-course/lessons/lessons-playlist-row
+        image="course-lesson_03"
+        text="Customizing Type with Draplin: Creating Wordmarks That Work"
+        copyright=true
+      }}
+
+      {{>blocks/create-course/lessons/lessons-playlist-row
+        image="course-lesson_04"
+        text="Customizing Type with Draplin: Creating Wordmarks That Work"
+        copyright=true
+      }}
+    </div>
+  </div>
+
+  {{> blocks/create-course/course-page-separator}}
+
+  <div class="tab-lessons__wrapper">
+    <div class="tab-lessons__slider">
+      <span class="tab-lessons__slider-title">Select a Course Thumbnail</span>
+      <span class="tab-lessons__slider-label">Choose thumbnail for your course lesson’s video covers or upload personal cover image</span>
+    </div>
+  </div>
+</div>
