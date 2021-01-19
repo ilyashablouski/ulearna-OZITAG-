@@ -1,4 +1,4 @@
-.course-tabs {
+.create-course-tabs {
   @include reset-slider-container-mobile;
 
   &__inner {
@@ -26,14 +26,14 @@
   }
 
   &__link {
+    position: relative;
+    padding: 14px 0;
+    display: block;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    text-transform: capitalize;
-    padding: 14px 0;
-    display: block;
-    position: relative;
     color: $color-gray-light;
+    text-transform: capitalize;
 
     @include mobile {
       font-weight: 500;
@@ -58,6 +58,18 @@
         bottom: 0;
         background: $color-blue-dark;
         position: absolute;
+      }
+    }
+
+    &--passed {
+      padding-right: 24px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        @include sprite("check-mark-small");
+        @include align(false, true);
       }
     }
   }

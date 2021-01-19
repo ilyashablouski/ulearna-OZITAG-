@@ -13,34 +13,36 @@
   </div>
 
   <div class="course-page__tabs">
-    <div class="course-tabs">
-      <div class="course-tabs__inner">
-        <div class="course-tabs__item">
+    <div class="create-course-tabs">
+      <div class="create-course-tabs__inner">
+        <div class="create-course-tabs__item">
           {{#ifCond tab 1}}
-            <span class="course-tabs__link active">Overview</span>
+            <span class="create-course-tabs__link active">Overview</span>
           {{else}}
-            <a href="#" class="course-tabs__link">Overview</a>
+            <a href="#" class="create-course-tabs__link {{#if tab1-passed}}create-course-tabs__link--passed{{/if}}">Overview</a>
           {{/ifCond}}
         </div>
-        <div class="course-tabs__item">
+        <div class="create-course-tabs__item">
           {{#ifCond tab 2}}
-            <span class="course-tabs__link active">Video lessons</span>
+            <span class="create-course-tabs__link active">Video lessons</span>
           {{else}}
-            <a href="#" class="course-tabs__link">Video lessons</a>
+            <a href="#" class="create-course-tabs__link {{#if tab2-passed}}create-course-tabs__link--passed{{/if}}">Video
+              lessons</a>
           {{/ifCond}}
         </div>
-        <div class="course-tabs__item">
+        <div class="create-course-tabs__item">
           {{#ifCond tab 3}}
-            <span class="course-tabs__link active">Quiz</span>
+            <span class="create-course-tabs__link active">Quiz</span>
           {{else}}
-            <a href="#" class="course-tabs__link">Quiz</a>
+            <a href="#"
+               class="create-course-tabs__link {{#if tab3-passed}}create-course-tabs__link--passed{{/if}}">Quiz</a>
           {{/ifCond}}
         </div>
-        <div class="course-tabs__item">
+        <div class="create-course-tabs__item">
           {{#ifCond tab 4}}
-            <span class="course-tabs__link active">Payout Program</span>
+            <span class="create-course-tabs__link active">Payout Program</span>
           {{else}}
-            <a href="#" class="course-tabs__link">Payout Program</a>
+            <a href="#" class="create-course-tabs__link">Payout Program</a>
           {{/ifCond}}
         </div>
       </div>
