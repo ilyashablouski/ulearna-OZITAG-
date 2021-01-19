@@ -27,12 +27,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 112px;
+      height: 113px;
     }
 
     &-back-link {
       position: absolute;
-      top: 50%;
+      top: 46%;
       left: 0;
       transform: translate(0, -50%);
       font-size: 15px;
@@ -40,7 +40,7 @@
       letter-spacing: 0.02em;
       color: $color-white;
       font-weight: bold;
-      padding-left: 15px;
+      padding-left: 18px;
 
       &:before {
         content: '';
@@ -60,6 +60,7 @@
     }
 
     &-title {
+      margin-top: -10px;
       font-weight: 600;
       font-size: 29px;
       line-height: 43px;

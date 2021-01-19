@@ -6,6 +6,18 @@
 
   &__form-field {
     margin-top: 30px;
+
+    &:nth-child(3) {
+      margin-top: 23px;
+    }
+
+    &:nth-child(4) {
+      margin-top: 23px;
+    }
+
+    &:nth-child(5) {
+      margin-top: 23px;
+    }
   }
 
   &__separator {
