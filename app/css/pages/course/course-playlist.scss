@@ -10,7 +10,7 @@
   flex-direction: column;
   padding-bottom: 34px;
 
-  @include tablet{
+  @include tablet {
     height: 353px;
   }
 
@@ -39,7 +39,7 @@
   &__toggle {
     @include sprite('playlist-toggle');
 
-    .opened &{
+    .opened & {
       @include sprite('playlist-toggle--fill');
     }
 
@@ -170,5 +170,15 @@
       @include align(true, true);
       @include sprite('course-playlist-pause');
     }
+  }
+
+  .scrollbar-thumb {
+    width: 8px;
+    background: $color-gray-dark;
+  }
+
+  .scrollbar-track-y {
+    width: 8px;
+    background: transparent;
   }
 }
