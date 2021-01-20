@@ -1,7 +1,6 @@
 class Popup {
   constructor(nodeElement) {
     this.eventHandlers = {};
-
     this.nodeElement = nodeElement;
     this.id = nodeElement.dataset.popupId;
 
@@ -39,9 +38,20 @@ class Popup {
     this.close();
   }
 
+  onOpenWithTimeout(element) {
+    setTimeout(() => {
+      element.classList.add('opened');
+    }, 2000);
+  }
+
   init() {
     this.nodeElement.querySelectorAll('.js-popup-close')
       .forEach(element => element.addEventListener('click', this.onCloseClick.bind(this)));
+
+    const popupsWithTimeout = document.querySelectorAll('.js-popup-timeout');
+    popupsWithTimeout.forEach(element => {
+      this.onOpenWithTimeout(element);
+    });
   }
 
   close() {
