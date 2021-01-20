@@ -22,8 +22,8 @@ class HeaderFixed extends Widget {
     if (this.isFixed) return;
     this.isFixed = true;
 
-    this.$node.classList.add('fixed');
     this.$node.classList.add('fixed-prepare');
+    this.$node.classList.add('fixed');
   }
 
   setHeaderAsNotFixed() {
