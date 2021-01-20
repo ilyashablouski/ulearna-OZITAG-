@@ -28,7 +28,7 @@
     padding: 15px 0;
     position: relative;
 
-    @include no-smallTablet{
+    @include no-smallTablet {
       display: none;
     }
 
@@ -73,7 +73,7 @@
       right: 0;
       overflow-y: auto;
 
-      padding-top: 1px;
+      padding-top: 2px;
       padding-bottom: 20px;
       padding-left: $tabletGutter;
       padding-right: $tabletGutter;
