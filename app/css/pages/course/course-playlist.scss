@@ -20,10 +20,11 @@
   }
 
   &__header {
-    padding: 10px 16px;
+    padding: 10px 16px 4px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    line-height: 35px;
 
     @include smallTablet {
       padding-left: $tabletGutter;
@@ -52,7 +53,7 @@
   }
 
   &__title {
-    font-weight: 800;
+    margin-left: 5px;
     display: block;
 
     @include smallTablet-and-mobile {
@@ -65,7 +66,7 @@
   }
 
   &__time {
-    width: 50px;
+    min-width: 37px;
     text-align: right;
   }
 
@@ -110,6 +111,7 @@
     text-overflow: ellipsis;
     display: block;
     flex: 1 1 1px;
+    line-height: 27px;
 
     @include smallTablet-and-mobile {
       font-size: 14px;
@@ -121,7 +123,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 10px 16px;
+    padding: 15px 10px 14px;;
     color: #fff;
     box-shadow: inset 0px -1px 0px rgba(130, 154, 178, 0.4);
     cursor: pointer;
@@ -161,8 +163,8 @@
   }
 
   &__pause {
-    @include circle(24px, $color-blue-dark);
     margin-left: 9px;
+    @include circle(24px, $color-blue-dark);
     position: relative;
 
     &:before {
