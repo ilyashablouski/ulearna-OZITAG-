@@ -1,7 +1,7 @@
 .course-about {
   font-size: 16px;
   line-height: 24px;
-  color: $color-dark;
+  color: $color-black;
 
   &__title {
     font-weight: 600;
@@ -18,6 +18,10 @@
     &:first-child {
       margin-top: 0;
     }
+  }
+
+  &__text {
+    color: $color-dark;
   }
 
   &__faq {
