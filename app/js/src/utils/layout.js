@@ -17,7 +17,7 @@ const Layout = {
   },
 
   isLaptopLayout: function() {
-    return $(window).width() >= 1023;
+    return $(window).width() >= 1024;
   },
 
   isDesktopLayout: function() {

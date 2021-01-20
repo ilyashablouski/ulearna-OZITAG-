@@ -32,16 +32,6 @@ class Chat extends Widget {
 
   static init(elem) {
     new Chat(elem);
-
-    if (window.matchMedia("(min-width: 768px)").matches) {
-      $chatScrollElements.forEach((element) => {
-        SmoothScrollbar.init((element),
-          {
-            alwaysShowTracks: true,
-            thumbMinSize: 66,
-          });
-      });
-    }
   }
 }
 

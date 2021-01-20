@@ -5,46 +5,46 @@
         {{> blocks/profile/chat/chat-search}}
       </div>
 
-        <div class="chat__users js-chat-scroll">
+      <div class="chat__users js-custom-scroll">
+        {{> blocks/profile/chat/chat-user
+          image="user_01"
+          title="Leslie Alexander"
+          messages=2
+        }}
+
+        {{> blocks/profile/chat/chat-user
+          image="user_02"
+          title="Omar Mango"
+        }}
+
+        {{> blocks/profile/chat/chat-user
+          image="user_03"
+          title="Kaiya Mango"
+          messages=2
+          reply=true
+        }}
+
+        {{> blocks/profile/chat/chat-user
+          image="user_04"
+          title="Emerson Geidt"
+        }}
+
+        {{> blocks/profile/chat/chat-user
+          image="user_05"
+          title="Zaire Carder"
+        }}
+
+        {{> blocks/profile/chat/chat-user
+          image="user_06"
+          title="Lindsey Westervelt"
+        }}
+        {{#times 100}}
           {{> blocks/profile/chat/chat-user
             image="user_01"
-            title="Leslie Alexander"
-            messages=2
+            title="Gustavo Rosser"
           }}
-
-          {{> blocks/profile/chat/chat-user
-            image="user_02"
-            title="Omar Mango"
-          }}
-
-          {{> blocks/profile/chat/chat-user
-            image="user_03"
-            title="Kaiya Mango"
-            messages=2
-            reply=true
-          }}
-
-          {{> blocks/profile/chat/chat-user
-            image="user_04"
-            title="Emerson Geidt"
-          }}
-
-          {{> blocks/profile/chat/chat-user
-            image="user_05"
-            title="Zaire Carder"
-          }}
-
-          {{> blocks/profile/chat/chat-user
-            image="user_06"
-            title="Lindsey Westervelt"
-          }}
-          {{#times 100}}
-            {{> blocks/profile/chat/chat-user
-              image="user_01"
-              title="Gustavo Rosser"
-            }}
-          {{/times}}
-        </div>
+        {{/times}}
+      </div>
 
     </div>
 
