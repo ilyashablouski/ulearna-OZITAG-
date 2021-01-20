@@ -3,7 +3,7 @@ class HeaderDesktopSearch extends Widget {
     super(node, '.js-header-search', 'desktop');
 
     this.$input = this.$node.querySelector('input');
-
+    this.$scrollElement = this.$node.querySelector('.js-custom-scroll-header');
     this.init();
   }
 
@@ -11,14 +11,20 @@ class HeaderDesktopSearch extends Widget {
     this.$input.addEventListener('input', () => {
       if (this.$input.value.trim().length > 0) {
         this.$node.classList.add('active');
+        this.addCustomScroll(this.$scrollElement);
       } else {
         this.$node.classList.remove('active');
       }
     });
+
   }
 
   destroy() {
 
+  }
+
+  addCustomScroll(scrollElement) {
+    CustomScroll.init(scrollElement);
   }
 
   static init(el) {

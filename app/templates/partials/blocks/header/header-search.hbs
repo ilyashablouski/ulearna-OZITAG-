@@ -3,45 +3,47 @@
 
   <div class="search-overlay">
     <div class="search-overlay__results">
-      <div class="search-overlay__section">
-        <span class="search-overlay__title">Courses</span>
-        <ul class="search-overlay__list">
-          <li class="search-overlay__row">
-            <a href="#" class="search-overlay__link">Customizing Type with Draplin: Creating Wordmarks That Work</a>
-          </li>
-          <li class="search-overlay__row">
-            <a href="#" class="search-overlay__link">Productivity Masterclass: Create a Custom System that Works</a>
-          </li>
-          <li class="search-overlay__row">
-            <a href="#" class="search-overlay__link">ODD BODIES: Illustrating Expressive, Stylized People</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="search-overlay__section">
-        <span class="search-overlay__title">Skills</span>
-        <ul class="search-overlay__list">
-          <li class="search-overlay__row">
-            <a href="#" class="search-overlay__link">Graphic Design</a>
-          </li>
-          <li class="search-overlay__row">
-            <a href="#" class="search-overlay__link">Animation</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="search-overlay__section">
-        <span class="search-overlay__title">Instructors</span>
-        <ul class="search-overlay__list">
-          {{# times 5}}
+      <div class="search-overlay__wrapper js-custom-scroll-header">
+        <div class="search-overlay__section">
+          <span class="search-overlay__title">Courses</span>
+          <ul class="search-overlay__list">
             <li class="search-overlay__row">
-              <a href="#" class="search-overlay__link">Wade Warren <span>Instructor, Senior Developer</span></a>
+              <a href="#" class="search-overlay__link">Customizing Type with Draplin: Creating Wordmarks That Work</a>
             </li>
             <li class="search-overlay__row">
-              <a href="#" class="search-overlay__link">Kristin Watson <span>Instructor, Photographer</span></a>
+              <a href="#" class="search-overlay__link">Productivity Masterclass: Create a Custom System that Works</a>
             </li>
-          {{/times}}
-        </ul>
+            <li class="search-overlay__row">
+              <a href="#" class="search-overlay__link">ODD BODIES: Illustrating Expressive, Stylized People</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="search-overlay__section">
+          <span class="search-overlay__title">Skills</span>
+          <ul class="search-overlay__list">
+            <li class="search-overlay__row">
+              <a href="#" class="search-overlay__link">Graphic Design</a>
+            </li>
+            <li class="search-overlay__row">
+              <a href="#" class="search-overlay__link">Animation</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="search-overlay__section">
+          <span class="search-overlay__title">Instructors</span>
+          <ul class="search-overlay__list">
+            {{# times 5}}
+              <li class="search-overlay__row">
+                <a href="#" class="search-overlay__link">Wade Warren <span>Instructor, Senior Developer</span></a>
+              </li>
+              <li class="search-overlay__row">
+                <a href="#" class="search-overlay__link">Kristin Watson <span>Instructor, Photographer</span></a>
+              </li>
+            {{/times}}
+          </ul>
+        </div>
       </div>
     </div>
   </div>

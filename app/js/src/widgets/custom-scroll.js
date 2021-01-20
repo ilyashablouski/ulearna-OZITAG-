@@ -27,3 +27,5 @@ document.addEventListener('DOMContentLoaded', () => {
     CustomScroll.init(element);
   });
 });
+
+window.CustomScroll = CustomScroll;
