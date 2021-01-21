@@ -53,12 +53,12 @@
   }
 
   &__item {
+    display: flex;
+    flex-direction: column;
     background: $color-gray-30;
     border-radius: 12px;
     height: 100%;
     text-align: center;
-    display: flex;
-    flex-direction: column;
     padding: 24px 20px 30px;
 
     @include tablet {
@@ -92,6 +92,7 @@
     margin-top: 8px;
     font-size: 16px;
     line-height: 146%;
+
   }
 
   &__value {
@@ -103,10 +104,6 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
-    &-wrapper {
-
-    }
   }
 
   &__star {
@@ -130,7 +127,7 @@
   &__inner {
     flex: 1 1 1px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
   }
 
@@ -142,7 +139,9 @@
   &__progress {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-top: 15px;
+    flex: 1 1 100%;
+    max-width: 100%;
 
     &-bar {
       flex: 1 1 1px;
