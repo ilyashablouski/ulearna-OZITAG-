@@ -2,8 +2,9 @@
   background: $color-background-dark;
   padding: 40px 0;
 
+
   @include smallTablet-and-mobile {
-    padding:0;
+    padding: 0;
   }
 
   &__buttons {
@@ -22,7 +23,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include smallTablet-and-mobile{
+    @include smallTablet-and-mobile {
       padding: 12px 0;
     }
   }
@@ -33,26 +34,16 @@
     display: flex;
     justify-content: space-between;
 
-    @include mobile{
-      width: auto;
+    @include mobile {
       margin-left: 10px;
     }
 
     .course-intro__row & {
       @include smallTablet-and-mobile {
-        width: auto;
+        flex: 1 1 100%;
+        max-width: 100%;
         margin-left: 0;
         margin-top: 20px;
-      }
-
-      @include smallTablet {
-        margin-left: -$tabletGutter;
-        margin-right: -$tabletGutter;
-      }
-
-      @include mobile {
-        margin-left: -$mobileGutter;
-        margin-right: -$mobileGutter;
       }
     }
 
@@ -60,15 +51,75 @@
 
   &__left {
     flex: 1 1 1px;
+
+    @include smallTablet-and-mobile {
+      flex: 1 1 100%;
+      max-width: 100%;
+
+    }
   }
 
   &__row {
-    display: flex;
+    position: relative;
     margin-top: 20px;
+    padding-bottom: 41.6%;
 
     @include smallTablet-and-mobile {
       margin: 0;
+      padding-bottom: 0;
       display: block;
+    }
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+
+    @include smallTablet-and-mobile {
+      margin-left: -$tabletGutter;
+      margin-right: -$tabletGutter;
+      position: static;
+      flex-wrap: wrap;
+    }
+
+    @include mobile {
+      margin-left: -$mobileGutter;
+      margin-right: -$mobileGutter;
+    }
+  }
+
+  &__info {
+    width: 72.8%;
+    display: none;
+
+    @include smallTablet-and-mobile {
+      width: 100%;
+    }
+
+    @include smallTablet {
+      padding-left: $tabletGutter;
+      padding-right: $tabletGutter;
+    }
+
+    @include mobile {
+      padding-left: $mobileGutter;
+      padding-right: $mobileGutter;
+    }
+
+    &--desktop {
+      @include no-smallTablet {
+        display: block;
+      }
+    }
+
+    &--mobile {
+      @include smallTablet-and-mobile {
+        display: block;
+      }
     }
   }
 

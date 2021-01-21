@@ -1,5 +1,4 @@
 .course-playlist {
-  height: 533px;
   background: #33414F;
   border-radius: 10px;
   width: 100%;
@@ -10,12 +9,8 @@
   flex-direction: column;
   padding-bottom: 34px;
 
-  @include tablet {
-    height: 353px;
-  }
 
   @include smallTablet-and-mobile {
-    height: auto;
     padding-bottom: 0;
   }
 
@@ -26,9 +21,16 @@
     align-items: center;
     line-height: 35px;
 
+    @include smallTablet-and-mobile {
+      padding-top: 0;
+      padding-bottom: 0;
+      height: 44px;
+    }
+
     @include smallTablet {
       padding-left: $tabletGutter;
       padding-right: $tabletGutter;
+
     }
 
     @include mobile {
@@ -57,6 +59,7 @@
     display: block;
 
     @include smallTablet-and-mobile {
+      margin-left: 0;
       font-weight: 600;
       font-size: 16px;
       line-height: 24px;
@@ -79,7 +82,7 @@
       margin-left: 0;
       display: none;
       padding-bottom: 8px;
-      max-height: 234px;
+      max-height: 229px;
 
       .opened & {
         display: block;
