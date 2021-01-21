@@ -1,5 +1,5 @@
 .form-input {
-  input, textarea{
+  input, textarea {
     background: #FFFFFF;
     border: 2px solid #DAE4ED;
     border-radius: 12px;
@@ -14,7 +14,6 @@
     }
 
     @include mobile {
-      height: 50px !important;
       padding: 0 14px;
       font-weight: 500;
       font-size: 16px;
@@ -27,7 +26,7 @@
     height: 57px;
   }
 
-  textarea{
+  textarea {
     padding: 14px 16px;
     resize: none;
     height: 186px;
@@ -64,10 +63,10 @@
       left: 15px;
     }
 
-    .form-input--icon-right &{
+    .form-input--icon-right & {
       right: 17px;
       left: auto;
-      @include mobile{
+      @include mobile {
         right: 15px;
       }
     }
@@ -104,6 +103,7 @@
         opacity: 1;
       }
     }
+
     &-tip {
       position: absolute;
       top: 42px;
@@ -124,12 +124,15 @@
       }
     }
   }
+
   &--no-scrollbar {
     textarea {
       height: auto;
+
       &::-webkit-scrollbar {
         display: none;
       }
+
       -ms-overflow-style: none;
       scrollbar-width: none;
 

@@ -202,6 +202,12 @@
   }
 }
 
+@mixin no-smallTablet-and-Tablet() {
+  @media (min-width: 1024px) and (max-width: $tabletMedia) {
+    @content;
+  }
+}
+
 @mixin no-smallTablet() {
   @media (min-width: 1024px) {
     @content;
@@ -268,7 +274,7 @@
   }
 }
 
-@mixin desktop1280{
+@mixin desktop1280 {
   @media(min-width: 1260px) and (max-width: 1340px) {
     @content
   }

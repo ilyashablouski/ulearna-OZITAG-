@@ -16,6 +16,10 @@
   &__icon {
     margin-left: 5px;
 
+    &.checked {
+      @include sprite('rating-star-big--fill');
+    }
+
     &:first-child {
       margin-left: 0;
     }

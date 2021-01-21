@@ -45,7 +45,10 @@
     <div class="reviews-form__section">
       <span class="reviews-form__label">Would you recommend this course?</span>
       <div class="reviews-form__select">
-        {{> ui/radio-simple name="recommend" option-1="Yes" option-2="No"}}
+
+        {{#> ui/field id="recommend-course" }}
+          {{> ui/radio-simple name="recommend" option-1="Yes" option-2="No"}}
+        {{/ui/field}}
       </div>
     </div>
     <div class="reviews-form__section">
@@ -58,6 +61,6 @@
     </div>
   </div>
   <div class="reviews-form__submit">
-    {{> ui/btn color="blue" label="Send review"}}
+    {{> ui/btn button=true type="submit" btn-mode="not-active" mod="btn--w100-mobile" label="Send review"}}
   </div>
 </div>
