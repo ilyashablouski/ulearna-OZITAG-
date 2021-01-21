@@ -24,20 +24,20 @@
     line-height: 24px;
     font-weight: 600;
 
-    span{
+    span {
       color: $color-blue;
     }
   }
 
-  &__actions{
+  &__actions {
     margin-top: 16px;
 
-    @include mobile{
+    @include smallTablet-and-mobile {
       margin-top: 0;
     }
   }
 
-  @include mobile{
+  @include smallTablet-and-mobile {
     margin-bottom: 30px;
   }
 }

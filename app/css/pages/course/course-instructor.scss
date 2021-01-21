@@ -37,9 +37,17 @@
     .btn {
       margin-top: 13px;
 
+      @include smallTablet-and-mobile {
+        margin-top: 15px;
+      }
+
       &:first-child {
         margin-top: 0;
       }
+    }
+
+    @include smallTablet-and-mobile {
+      margin-top: 15px;
     }
   }
 
