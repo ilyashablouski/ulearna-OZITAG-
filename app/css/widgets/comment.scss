@@ -11,7 +11,7 @@
     padding: 15px 15px 30px;
     position: relative;
 
-    @include mobile{
+    @include mobile {
       padding: 0;
     }
 
@@ -21,11 +21,22 @@
       @include sprite('comment-tail');
       top: 0;
       left: 0;
-      transform: translateX(-100%);
+      transform: translate(-100%, -0.4%);
 
       @include mobile {
         display: none;
       }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 15px;
+      height: 21px;
+      background: #F0F4F8;
+      transform: translate(0%, 4%);
     }
 
     @include mobile {
