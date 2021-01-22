@@ -36,6 +36,8 @@
 
     @include mobile {
       margin-left: 10px;
+      justify-content: flex-end;
+
     }
 
     .course-intro__row & {

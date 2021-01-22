@@ -1,3 +1,15 @@
 <div class="course-player">
-
+  {{#if video-overlay}}
+    {{> components/image img="course/video-overlay" img-mobile="course/video-overlay-mobile" ext="jpg" no-2x=true}}
+    <div class="course-player__overlay">
+      <div class="course-player__overlay-info">
+        <i class="course-player__overlay-img"></i>
+        <span class="course-player__overlay-title">Oh no... Free introductory part is over</span>
+        <span class="course-player__overlay-text">Subscribe to unblock all lessons</span>
+        <div class="course-player__overlay-btn">
+          {{> ui/btn color="blue" label="Start free trial"}}
+        </div>
+      </div>
+    </div>
+  {{/if}}
 </div>
