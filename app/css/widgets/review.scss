@@ -61,7 +61,7 @@
     color: $color-dark;
     margin-top: 24px;
 
-    @include mobile{
+    @include mobile {
       font-size: 14px;
       line-height: 21px;
       margin-top: 18px;
@@ -69,13 +69,13 @@
   }
 
   &__summary {
-    margin-top: 25px;
+    margin-top: 20px;
     font-weight: 600;
     font-size: 14px;
     line-height: 140%;
     color: $color-black;
 
-    @include mobile{
+    @include mobile {
       margin-top: 16px;
       font-size: 12px;
       line-height: 150%;
@@ -98,7 +98,7 @@
     display: flex;
     margin-top: 10px;
 
-    @include mobile{
+    @include mobile {
       margin-top: 0;
       display: block;
     }
@@ -106,9 +106,9 @@
     &-item {
       margin-left: 30px;
 
-      @include mobile{
+      @include mobile {
         margin: 20px 0 0 0;
-        &:first-child{
+        &:first-child {
           margin-top: 0;
         }
       }
@@ -128,7 +128,7 @@
       line-height: 140%;
       color: $color-black;
 
-      @include mobile{
+      @include mobile {
         font-size: 12px;
         line-height: 150%;
       }
@@ -146,7 +146,7 @@
       margin-top: 8px;
       display: block;
 
-      @include mobile{
+      @include mobile {
         font-size: 12px;
         line-height: 21px;
       }
