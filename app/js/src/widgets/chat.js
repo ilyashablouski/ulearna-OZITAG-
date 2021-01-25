@@ -2,7 +2,7 @@ class Chat extends Widget {
   constructor(nodeElement) {
     super(nodeElement, '.js-chat', 'mobile');
     this.$backButton = this.queryElement('.btn-arrow--back');
-    this.$chatUsers = this.queryElements('.chat-user');
+    this.$chatUsers = document.querySelectorAll('.chat-user');
     this.$chatWindow = this.queryElement('.chat__right');
     this.init();
   }
