@@ -27,6 +27,7 @@ import './src/widgets/chat';
 import './src/widgets/custom-scroll';
 import './src/widgets/copy-to-clipboard-input';
 import './src/widgets/inputs/editor';
+import './src/widgets/drag-sortable';
 
 import './src/widgets/inputs/numeric-input';
 import './src/widgets/inputs/masked-input';

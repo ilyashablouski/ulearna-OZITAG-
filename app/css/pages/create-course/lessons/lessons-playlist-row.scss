@@ -1,9 +1,14 @@
 .lessons-playlist-row {
   position: relative;
-  margin-bottom: 6px;
-  padding-bottom: 7px;
+  padding-bottom: 10px;
   display: flex;
   @include transition;
+
+  &:not(:first-child) {
+    .lessons-playlist-row__img {
+      margin-top: 2px;
+    }
+  }
 
   &:hover {
     background: rgba(218, 228, 237, 0.12);
@@ -117,5 +122,10 @@
   &__drag-btn {
     margin-left: 23px;
     @include sprite("button-drag");
+    cursor: grab;
+  }
+
+  &.sortable-drag {
+    opacity: 0;
   }
 }
