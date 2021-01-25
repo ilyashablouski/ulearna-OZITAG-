@@ -1,0 +1,8 @@
+<div class="form-radio-image">
+  <label class="form-radio-image__label" for="{{name}}_{{value}}">
+    <input type="radio" {{#if checked}}checked{{/if}} id="{{name}}_{{value}}" name="{{name}}" value="{{value}}"/>
+    <div class="form-radio-image__inner">
+      {{> components/image img=img ext="jpg" no-2x=true}}
+    </div>
+  </label>
+</div>

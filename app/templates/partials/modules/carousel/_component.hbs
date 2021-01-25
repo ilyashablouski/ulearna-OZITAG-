@@ -1,13 +1,14 @@
 <div class="carousel">
-
-  <header class="carousel__header">
-    <h2 class="carousel__title {{#if see-all}}{{else}}carousel__title--big{{/if}}">{{ title }}</h2>
-    {{#if see-all}}
-      <div class="carousel__right">
-        {{> ui/btn-arrow no-mobile-arrow=true label="See all"}}
-      </div>
-    {{/if}}
-  </header>
+  {{#if title}}
+    <header class="carousel__header">
+      <h2 class="carousel__title {{#if see-all}}{{else}}carousel__title--big{{/if}}">{{ title }}</h2>
+      {{#if see-all}}
+        <div class="carousel__right">
+          {{> ui/btn-arrow no-mobile-arrow=true label="See all"}}
+        </div>
+      {{/if}}
+    </header>
+  {{/if}}
 
   <div class="carousel__inner js-carousel" {{#if big}}data-carousel-big="1"{{/if}}>
     {{#if tabs}}
@@ -48,6 +49,10 @@
           <div class="swiper-wrapper">
             {{> @partial-block}}
           </div>
+
+          {{#if swiper-scrollbar}}
+            <div class="swiper-scrollbar"></div>
+          {{/if}}
         </div>
       </div>
     </div>

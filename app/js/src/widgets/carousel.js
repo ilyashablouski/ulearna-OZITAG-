@@ -10,7 +10,6 @@ class Carousel extends Widget {
     this.$navPrev = this.queryElement('.prev');
     this.$navNext = this.queryElement('.next');
     this.$tabs = this.queryElements('.tab');
-
     this.isBig = !!this.$node.dataset.carouselBig;
 
     this.onLayoutChange = this.onLayoutChange.bind(this);
@@ -46,23 +45,49 @@ class Carousel extends Widget {
   }
 
   initSwiper() {
-    this.swiper = new Swiper(this.$slider, {
-      slidesPerView: this.isBig ? 2 : 4,
-      spaceBetween: 0,
-      breakpoints: {
-        1440: {
-          spaceBetween: 13.25,
+
+    // If Carousel with scrollbar
+    if (document.querySelector('.swiper-scrollbar')) {
+      this.swiper = new Swiper(this.$slider, {
+        slidesPerView: 'auto',
+        scrollbar: {
+          el: '.swiper-scrollbar',
+          draggable: true,
         },
-      },
-      navigation: {
-        prevEl: this.$navPrev,
-        nextEl: this.$navNext,
-      },
-      on: {
-        slideChangeTransitionStart: () => this.$slider.classList.add('transition'),
-        slideChangeTransitionEnd: () => this.$slider.classList.remove('transition'),
-      },
-    });
+        spaceBetween: 0,
+        breakpoints: {
+          1440: {
+            spaceBetween: 13.25,
+          },
+        },
+        navigation: {
+          prevEl: this.$navPrev,
+          nextEl: this.$navNext,
+        },
+        on: {
+          slideChangeTransitionStart: () => this.$slider.classList.add('transition'),
+          slideChangeTransitionEnd: () => this.$slider.classList.remove('transition'),
+        },
+      });
+    } else {
+      this.swiper = new Swiper(this.$slider, {
+        slidesPerView: this.isBig ? 2 : 4,
+        spaceBetween: 0,
+        breakpoints: {
+          1440: {
+            spaceBetween: 13.25,
+          },
+        },
+        navigation: {
+          prevEl: this.$navPrev,
+          nextEl: this.$navNext,
+        },
+        on: {
+          slideChangeTransitionStart: () => this.$slider.classList.add('transition'),
+          slideChangeTransitionEnd: () => this.$slider.classList.remove('transition'),
+        },
+      });
+    }
   }
 
   events() {
@@ -147,3 +172,4 @@ class Carousel extends Widget {
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.js-carousel').forEach(item => Carousel.init(item));
 });
+
