@@ -12,28 +12,28 @@
     <span class="tab-lessons__title">Course playlist</span>
     <div class="tab-lessons__playlist">
       {{>blocks/create-course/lessons/lessons-playlist-row
-              image="course-lesson_01"
-              text="Customizing Type with Draplin: Creating Wordmarks That Work"
-              copyright=true
-              intro=true
+        image="course-lesson_01"
+        text="Customizing Type with Draplin: Creating Wordmarks That Work"
+        copyright=true
+        intro=true
       }}
 
       {{>blocks/create-course/lessons/lessons-playlist-row
-              image="course-lesson_02"
-              text="Customizing Type with Draplin: Creating Wordmarks That Work"
-              copyright=true
+        image="course-lesson_02"
+        text="Customizing Type with Draplin: Creating Wordmarks That Work"
+        copyright=true
       }}
 
       {{>blocks/create-course/lessons/lessons-playlist-row
-              image="course-lesson_03"
-              text="Customizing Type with Draplin: Creating Wordmarks That Work"
-              copyright=true
+        image="course-lesson_03"
+        text="Customizing Type with Draplin: Creating Wordmarks That Work"
+        copyright=true
       }}
 
       {{>blocks/create-course/lessons/lessons-playlist-row
-              image="course-lesson_04"
-              text="Customizing Type with Draplin: Creating Wordmarks That Work"
-              copyright=true
+        image="course-lesson_04"
+        text="Customizing Type with Draplin: Creating Wordmarks That Work"
+        copyright=true
       }}
     </div>
   </div>
@@ -47,6 +47,31 @@
 
       <div class="tab-lessons__slider-main">
         {{> modules/carousel/create-course}}
+      </div>
+    </div>
+
+    <div class="tab-lessons__buttons">
+      <div class="tab-lessons__buttons-btn">
+        {{> ui/btn
+          outline=true
+          transparent=true
+          label = "Back"
+          href="/html/filled.html"
+          icon="button-arrow-prev"
+          btn-mode="large"
+          w100 = true
+        }}
+      </div>
+
+      <div class="tab-lessons__buttons-btn">
+        {{> ui/btn
+          color = "blue"
+          label = "Next"
+          icon="button-arrow-next"
+          icon-right = true
+          btn-mode="large"
+          w100 = true
+        }}
       </div>
     </div>
   </div>

@@ -57,7 +57,7 @@ class Carousel extends Widget {
         spaceBetween: 0,
         breakpoints: {
           1440: {
-            spaceBetween: 13.25,
+            spaceBetween: 12,
           },
         },
         navigation: {
