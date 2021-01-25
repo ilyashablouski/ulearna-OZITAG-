@@ -1,10 +1,8 @@
-const $chatScrollElements = document.querySelectorAll('.js-chat-scroll');
-
 class Chat extends Widget {
   constructor(nodeElement) {
     super(nodeElement, '.js-chat', 'mobile');
     this.$backButton = this.queryElement('.btn-arrow--back');
-    this.$chatUsers = document.querySelectorAll('.chat-user');
+    this.$chatUsers = this.queryElements('.chat-user');
     this.$chatWindow = this.queryElement('.chat__right');
     this.init();
   }

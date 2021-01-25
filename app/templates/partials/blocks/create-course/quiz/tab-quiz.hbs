@@ -1,15 +1,15 @@
 <div class="tab-quiz">
-  <div class="tab-quiz__wrapper">
+  <div class="tab-quiz__wrapper js-content-editor">
     <div class="exam-list">
       <div class="exam-list__question">
         <div class="exam-list__question-group">
           <span class="exam-list__question-title">1. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint?</span>
-          <button class="exam-list__edit-btn"></button>
+          <button class="exam-list__edit-btn js-content-edit-btn"></button>
         </div>
 
         <div class="exam-list__question-group">
           <span class="exam-list__question-label">Question description / Help text</span>
-          <button class="exam-list__edit-btn"></button>
+          <button class="exam-list__edit-btn js-content-edit-btn"></button>
         </div>
       </div>
 
@@ -40,7 +40,7 @@
       <div class="exam-list__delete-btn">
         {{> ui/btn-icon
           icon="button-delete"
-          label="Delete"
+          label="Delete question"
         }}
       </div>
     </div>
@@ -75,7 +75,7 @@
       <div class="exam-list__delete-btn">
         {{> ui/btn-icon
           icon="button-delete"
-          label="Delete"
+          label="Delete question"
         }}
       </div>
     </div>
@@ -97,7 +97,7 @@
           outline=true
           transparent=true
           label = "Back"
-          href="/html/filled.html"
+          href="/html/video-lessons.html"
           icon="button-arrow-prev"
           btn-mode="large"
           w100 = true
