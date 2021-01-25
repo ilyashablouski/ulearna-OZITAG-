@@ -1,0 +1,13 @@
+.tab-nav-buttons {
+  margin: 0 -25px;
+  margin-top: 78px;
+  display: flex;
+
+  &__btn {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 25px;
+  }
+}
+
+

@@ -1,0 +1,88 @@
+.exam-list-answer {
+  padding: 16px 0;
+  box-shadow: inset 0px -1px 0px #DAE4ED;
+  @include transition;
+
+  &:hover {
+    background: rgba(218, 228, 237, 0.22);
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      .exam-list-answer__title-edit-btn {
+        visibility: visible;
+        opacity: 1;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  &__title {
+    display: flex;
+
+    &-label {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+      color: $color-dark;
+    }
+
+    &-text {
+      margin-left: 12px;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 146%;
+    }
+
+    &-edit-btn {
+      margin-left: 8px;
+      padding: 3px 0;
+      @include sprite("edit-btn-small");
+      @include transition;
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  &__button-text {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: $color-gray-dark;
+    @include transition;
+
+    &:hover {
+      color: $color-blue;
+    }
+  }
+
+  &__buttons {
+    margin-top: 17px;
+    display: flex;
+  }
+
+  &__button {
+    &:not(:first-child) {
+      margin-left: 27px;
+    }
+
+    &--checked {
+      .btn-icon {
+        color: $color-blue;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}

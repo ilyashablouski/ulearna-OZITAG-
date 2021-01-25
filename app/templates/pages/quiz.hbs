@@ -1,8 +1,15 @@
 {{!Quiz}}
 
 {{> layout/head}}
-{{> layout/header }}
+{{> layout/header authenticated=true}}
 
-
+{{> blocks/create-course/course-page
+  tab=3
+  progress=75
+  tab1-passed=true
+  tab2-passed=true
+  tab-title="Course Exam"
+  label="Course exam description text"
+}}
 
 {{> layout/footer }}

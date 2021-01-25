@@ -1,0 +1,120 @@
+<div class="tab-quiz">
+  <div class="tab-quiz__wrapper">
+    <div class="exam-list">
+      <div class="exam-list__question">
+        <div class="exam-list__question-group">
+          <span class="exam-list__question-title">1. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint?</span>
+          <button class="exam-list__edit-btn"></button>
+        </div>
+
+        <div class="exam-list__question-group">
+          <span class="exam-list__question-label">Question description / Help text</span>
+          <button class="exam-list__edit-btn"></button>
+        </div>
+      </div>
+
+      <div class="exam-list__answers">
+        {{> blocks/create-course/quiz/exam-list-answer
+          label="A"
+          text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."
+        }}
+
+        {{> blocks/create-course/quiz/exam-list-answer
+          label="B"
+          text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."
+          checked=true
+        }}
+
+        {{> blocks/create-course/quiz/exam-list-answer
+          label="C"
+          text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."
+        }}
+
+        {{> blocks/create-course/quiz/exam-list-answer
+          label="D"
+          text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."
+          checked=true
+        }}
+      </div>
+
+      <div class="exam-list__delete-btn">
+        {{> ui/btn-icon
+          icon="button-delete"
+          label="Delete"
+        }}
+      </div>
+    </div>
+
+    <div class="exam-list">
+      <div class="exam-list__question">
+        <div class="exam-list__question-group">
+          <span class="exam-list__question-title">1. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint?</span>
+          <button class="exam-list__edit-btn"></button>
+        </div>
+
+        <div class="exam-list__question-group">
+          <span class="exam-list__question-label">Add question description</span>
+          <button class="exam-list__edit-btn"></button>
+        </div>
+      </div>
+
+      <div class="exam-list__answers">
+        {{> blocks/create-course/quiz/exam-list-answer
+          label="A"
+          text="Add an answer option"
+        }}
+      </div>
+
+      <div class="exam-list__option-btn">
+        {{> ui/btn-icon
+          icon="button-plus"
+          label="One more response option"
+        }}
+      </div>
+
+      <div class="exam-list__delete-btn">
+        {{> ui/btn-icon
+          icon="button-delete"
+          label="Delete"
+        }}
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-quiz__bottom">
+    <div class="tab-quiz__more-btn">
+      {{> ui/btn
+        outline=true
+        label='One More Question'
+        icon='button-plus'
+        transparent=true
+      }}
+    </div>
+
+    <div class="tab-nav-buttons">
+      <div class="tab-nav-buttons__btn">
+        {{> ui/btn
+          outline=true
+          transparent=true
+          label = "Back"
+          href="/html/filled.html"
+          icon="button-arrow-prev"
+          btn-mode="large"
+          w100 = true
+        }}
+      </div>
+
+      <div class="tab-nav-buttons__btn">
+        {{> ui/btn
+          color = "blue"
+          label = "Next"
+          icon="button-arrow-next"
+          icon-right = true
+          btn-mode="large"
+          w100 = true
+        }}
+      </div>
+    </div>
+
+  </div>
+</div>

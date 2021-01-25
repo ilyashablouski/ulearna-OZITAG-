@@ -1,0 +1,30 @@
+<div class="exam-list-answer">
+  <div class="exam-list-answer__title">
+    <span class="exam-list-answer__title-label">{{label}}.</span>
+    <div class="exam-list-answer__group">
+      <span class="exam-list-answer__title-text">{{text}}</span>
+      <button class="exam-list-answer__title-edit-btn"></button>
+    </div>
+
+  </div>
+
+  <div class="exam-list-answer__buttons">
+    <div class="exam-list-answer__button {{#if checked}}exam-list-answer__button--checked{{/if}}">
+      {{#if checked}}
+        {{> ui/btn-icon
+          icon="check-mark"
+          label="Correct"
+        }}
+      {{else}}
+        <button class="exam-list-answer__button-text">Mark as correct</button>
+      {{/if}}
+    </div>
+
+    <div class="exam-list-answer__button">
+      {{> ui/btn-icon
+        icon="button-delete"
+        label="Delete question"
+      }}
+    </div>
+  </div>
+</div>
