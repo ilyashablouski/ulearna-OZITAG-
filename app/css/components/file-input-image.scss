@@ -26,16 +26,17 @@
 
   &__icon {
     margin: 0 auto;
+    margin-top: 7px;
     @include sprite('thumbnail-img');
   }
 
   &__text {
-    margin-top: 16px;
+    margin-top: 20px;
     color: $color-blue;
   }
 
   &__label {
-    margin-top: 6px;
+    margin-top: 9px;
     font-weight: normal;
     font-size: 14px;
     line-height: 140%;

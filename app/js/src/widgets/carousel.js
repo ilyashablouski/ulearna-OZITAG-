@@ -45,7 +45,6 @@ class Carousel extends Widget {
   }
 
   initSwiper() {
-
     // If Carousel with scrollbar
     if (document.querySelector('.swiper-scrollbar')) {
       this.swiper = new Swiper(this.$slider, {

@@ -6,6 +6,8 @@
 
     &-inner {
       display: flex;
+      justify-content: center;
+      align-items: center;
       margin: auto;
       height: 469px;
       background: rgba(218, 228, 237, 0.22);
@@ -14,13 +16,12 @@
     }
 
     &-status {
-      margin: auto;
+      margin-top: -22px;
       display: flex;
       flex-direction: column;
-      align-items: center;
 
       &-text {
-        margin-top: 14px;
+        margin-top: 8px;
         font-weight: 600;
         font-size: 16px;
         line-height: 24px;

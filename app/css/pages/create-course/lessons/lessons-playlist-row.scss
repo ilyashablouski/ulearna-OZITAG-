@@ -1,6 +1,7 @@
 .lessons-playlist-row {
   position: relative;
-  padding-bottom: 13px;
+  margin-bottom: 6px;
+  padding-bottom: 7px;
   display: flex;
   @include transition;
 
@@ -70,7 +71,10 @@
   }
 
   &__badge {
+    margin-top: -25px;
     padding: 2px 8px;
+    display: block;
+    max-width: 104px;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;

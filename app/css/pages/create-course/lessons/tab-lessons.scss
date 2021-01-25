@@ -15,7 +15,7 @@
   }
 
   &__playlist {
-    margin-top: 15px;
+    margin-top: 16px;
   }
 
   &__separator {
@@ -35,14 +35,18 @@
       position: absolute;
       left: 0;
       right: 0;
-      top: -19px;
-      width: 40px;
-      height: 40px;
+      top: -16px;
+      width: 34px;
+      height: 34px;
     }
   }
 
   &__slider {
     margin-top: 40px;
+
+    &-main {
+      margin-top: 31px;
+    }
 
     &-title {
       display: block;
@@ -68,15 +72,15 @@
 
     .carousel__slide {
       @include desktop {
-        width: 245px;
-        padding: 0 4px 24px;
+        width: 237px;
+        padding: 0 0 29px;
       }
+
     }
 
     .carousel__row {
       @include desktop {
         margin: 0;
-        margin-left: -7px;
       }
     }
 
@@ -88,9 +92,21 @@
       }
     }
 
+    .carousel__prev, .carousel__next {
+      top: 43%;
+    }
+
+    .carousel__prev {
+      left: -20px;
+    }
+
+    .carousel__next {
+      right: -20px;
+    }
+
     .swiper-scrollbar {
       position: absolute;
-      left: 4px;
+      left: 0;
       bottom: 3px;
       z-index: 50;
       height: 5px;
@@ -112,7 +128,7 @@
 
   &__buttons {
     margin: 0 -25px;
-    margin-top: 80px;
+    margin-top: 78px;
     display: flex;
 
     &-btn {
