@@ -88,7 +88,7 @@
         display: none;
       }
 
-      &:hover{
+      &:hover {
         color: $color-dark-hover;
       }
     }
@@ -97,9 +97,21 @@
       background: $color-blue;
       color: $color-white;
       border-color: $color-blue;
-      &:hover{
+
+      &:hover {
         color: $color-white;
       }
     }
+  }
+
+  &__subtitle {
+    position: absolute;
+    top: 30px;
+    left: 34px;
+    display: block;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 146%;
+    color: $color-gray-dark;
   }
 }

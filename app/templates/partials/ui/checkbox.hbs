@@ -1,6 +1,9 @@
 <div class="form-checkbox {{#if button}}form-checkbox--button{{/if}}">
   <label class="form-checkbox__label" for="{{id}}">
-    <input type="checkbox" {{#if checked}}checked{{/if}} id="{{id}}"/>
+    <input type="checkbox" {{#if checked}}checked{{/if}} id="{{id}}" />
     <span class="form-checkbox__inner">{{{label}}}</span>
   </label>
+  {{#if subtitle}}
+    <span class="form-checkbox__subtitle">{{subtitle}}</span>
+  {{/if}}
 </div>

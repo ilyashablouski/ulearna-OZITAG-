@@ -3,7 +3,9 @@
     <input type="radio" {{#if checked}}checked{{/if}} id="{{name}}_{{value}}" name="{{name}}" value="{{value}}" />
     <div class="settings-radio-form__inner">
       <span class="settings-radio-form__title">{{ label }}</span>
-      <span class="settings-radio-form__text">{{ text }} {{#if more-btn}}<a href="#">More About</a>{{/if}}</span>
+      <span class="settings-radio-form__text">{{ text }} {{#if more-btn}}
+        <a class="settings-radio-form__more-btn" href="#">More About</a>{{/if}}
+      </span>
     </div>
   </label>
 </div>

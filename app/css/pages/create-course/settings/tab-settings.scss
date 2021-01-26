@@ -3,4 +3,70 @@
     margin: 0 auto;
     max-width: 836px;
   }
+
+  &__radios {
+    margin: 0 auto;
+    margin-top: 19px;
+    max-width: 896px;
+  }
+
+  &__radio {
+    margin-top: 14px;
+  }
+
+  &__rate {
+    margin-top: 30px;
+
+    &-title {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+      color: $color-gray-dark;
+    }
+
+    &-item {
+      padding: 16px 0;
+      display: flex;
+      justify-content: space-between;
+
+      &:not(:last-child) {
+        box-shadow: inset 0px -1px 0px #DAE4ED;
+      }
+
+      &-title {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 146%;
+        color: $color-gray-dark;
+      }
+
+      &-value {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 146%;
+        color: $color-black;
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 40px;
+
+    &-text {
+      display: block;
+      font-weight: 600;
+      font-size: 29px;
+      line-height: 43px;
+      color: $color-black;
+    }
+
+    &-label {
+      display: block;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 146%;
+      color: $color-gray-dark;
+    }
+  }
 }

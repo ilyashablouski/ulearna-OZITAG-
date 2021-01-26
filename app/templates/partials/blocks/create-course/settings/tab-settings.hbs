@@ -1,17 +1,72 @@
 <div class="tab-settings">
+  <div class="tab-settings__radios">
+    <div class="tab-settings__radio">
+      {{> blocks/ create-course/settings/settings-radio-form
+        name="setting"
+        checked=true
+        value="premium"
+        label="Ulearna Premium"
+        text="Revenue based on premium watch time."
+        more-btn=true
+      }}
+    </div>
+    <div class="tab-settings__radio">
+      {{> blocks/ create-course/settings/settings-radio-form
+        name="setting"
+        value="plus"
+        label="Ulearna Plus"
+        text="Define your own course price and sell it individually."
+        more-btn=true
+      }}
+    </div>
+    <div class="tab-settings__radio">
+      {{> blocks/ create-course/settings/settings-radio-form
+        name="setting"
+        value="free"
+        label="Free"
+        text="Give back to the community by offering the course free "
+      }}
+    </div>
+  </div>
+  <div class="tab-settings__wrapper">
+    <div class="tab-settings__rate">
+      <span class="tab-settings__rate-title">Sell option rate</span>
+      <div class="tab-settings__rate-item">
+        <span class="tab-settings__rate-item-title">Paid program</span>
+        <span class="tab-settings__rate-item-value">UlearnaPlus</span>
+      </div>
 
-  {{> blocks/ create-course/settings/settings-radio
-    name="setting"
-    checked=true
-    id="setting_1"
-    value="premium"
-    label="Ulearna Premium"
-    text="Revenue based on premium watch time"
-    more-btn=true
-  }}
+      <div class="tab-settings__rate-item">
+        <span class="tab-settings__rate-item-title">Course rate</span>
+        <span class="tab-settings__rate-item-value">$00 / per 00h</span>
+      </div>
+
+      <div class="tab-settings__rate-item">
+        <span class="tab-settings__rate-item-title">Profit</span>
+        <span class="tab-settings__rate-item-value">$00 / per 00h</span>
+      </div>
+    </div>
+  </div>
+
+  {{> blocks/create-course/course-page-separator}}
 
   <div class="tab-settings__wrapper">
+    <div class="tab-settings__title">
+      <span class="tab-settings__title-text">Invite to Course</span>
+      <span class="tab-settings__title-label">Send invite descriprion options</span>
+    </div>
 
+    <div class="tab-settings__checkbox">
+      {{> ui/checkbox
+        id="checkbox_02"
+        checked=true
+        label='Send notification to my followers'
+        subtitle="All your 168 followers will receive invitations"
+      }}
+    </div>
+  </div>
+
+  <div class="tab-settings__wrapper">
     <div class="tab-nav-buttons">
       <div class="tab-nav-buttons__btn">
         {{> ui/btn
@@ -35,5 +90,4 @@
       </div>
     </div>
   </div>
-
 </div>
