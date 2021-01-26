@@ -4,6 +4,10 @@
   &__wrapper {
     margin: 0 auto;
     max-width: 896px;
+
+    span.selection {
+      background: #E4F6FE;
+    }
   }
 
   &__bottom {
