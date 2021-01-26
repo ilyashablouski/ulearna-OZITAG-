@@ -1,11 +1,11 @@
 .exam-list {
-  padding: 20px 30px 30px 20px;
+  padding: 20px 30px 30px 30px;
   background: $color-white;
   box-shadow: 0 4px 14px rgba(1, 64, 139, 0.14);
   border-radius: 12px;
 
   &:not(:first-child) {
-    margin-top: 30px;
+    margin-top: 27px;
   }
 
   &__question {
@@ -42,6 +42,10 @@
       line-height: 146%;
       color: $color-dark;
     }
+  }
+
+  &__answers {
+    margin-top: 15px;
   }
 
   &__edit-btn {

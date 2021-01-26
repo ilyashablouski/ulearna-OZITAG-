@@ -1,5 +1,5 @@
 .exam-list-answer {
-  padding: 16px 0;
+  padding: 18px 0;
   box-shadow: inset 0px -1px 0px #DAE4ED;
   @include transition;
 
@@ -25,6 +25,7 @@
 
   &__title {
     display: flex;
+    align-items: flex-start;
 
     &-label {
       font-weight: 600;
