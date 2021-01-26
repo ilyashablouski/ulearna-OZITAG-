@@ -47,6 +47,7 @@
 
   input:checked + .form-radio-image__inner {
     border: 3px solid $color-blue;
+    @include transition;
 
     &:before {
       background: $color-blue;

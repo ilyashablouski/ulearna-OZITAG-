@@ -4,6 +4,11 @@
   border: 3px dashed #DAE4ED;
   border-radius: 12px;
   height: 100%;
+  @include transition;
+
+  &:hover {
+    background: rgb(186 193 199 / 22%);
+  }
 
   &__input {
     position: absolute;
