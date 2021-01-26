@@ -1,0 +1,39 @@
+<div class="tab-settings">
+
+  {{> blocks/ create-course/settings/settings-radio
+    name="setting"
+    checked=true
+    id="setting_1"
+    value="premium"
+    label="Ulearna Premium"
+    text="Revenue based on premium watch time"
+    more-btn=true
+  }}
+
+  <div class="tab-settings__wrapper">
+
+    <div class="tab-nav-buttons">
+      <div class="tab-nav-buttons__btn">
+        {{> ui/btn
+          outline=true
+          transparent=true
+          label = "Back"
+          href="/html/video-lessons.html"
+          icon="button-arrow-prev"
+          btn-mode="large"
+          w100 = true
+        }}
+      </div>
+
+      <div class="tab-nav-buttons__btn">
+        {{> ui/btn
+          color = "blue"
+          label = "Create course"
+          btn-mode="large"
+          w100 = true
+        }}
+      </div>
+    </div>
+  </div>
+
+</div>
