@@ -13,20 +13,51 @@
     @include mobile {
       margin: 0 -16px;
       box-shadow: inset 0px -1px 0px #DAE4ED;
-
     }
-  }
 
-  &__dropdown-btn {
-    display: none;
-    @include mobile {
-      padding: 15px 23px 15px 16px;
+    &-item {
+      position: relative;
+      display: none;
+      @include mobile {
+        padding: 15px 23px 15px 16px;
+        display: block;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        background: #F4F7FA;
+        box-shadow: inset 0px -1px 0px #DAE4ED;
+      }
+    }
+
+    &-body {
+      display: none;
+
+      &.animate {
+        position: relative;
+        display: block;
+        height: 0;
+        overflow: hidden;
+        transition: height .32s ease;
+      }
+    }
+
+    &-btn {
+      position: absolute;
+      @include align(false, true);
+      top: 47%;
+      right: 23px;
+      @include sprite('arrow-dropdown');
+      transition: transform .32s ease;
+      transform-origin: center center;
+      transform: rotate(-180deg);
+    }
+
+    &.opened .article-page__dropdown-body {
       display: block;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 24px;
-      background: #F4F7FA;
-      box-shadow: inset 0px -1px 0px #DAE4ED;
+    }
+
+    &.opened .article-page__dropdown-btn {
+      transform: rotate(0deg);
     }
   }
 

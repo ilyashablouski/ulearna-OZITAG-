@@ -1,29 +1,32 @@
 <div class="article-page">
   <div class="article-page__left">
-    <div class="article-page__dropdown">
-      <div class="article-page__dropdown-btn">
+    <div class="article-page__dropdown js-accord opened">
+      <div class="article-page__dropdown-item js-accord__toggle">
         Learning Plans
+        <i class="article-page__dropdown-btn"></i>
       </div>
-      {{> blocks/article/article-nav}}
-      <div class="article-page__left-links">
-        <div class="article-page__left-links-item">
-          <a class="article-page__left-link">Terms of Use</a>
-        </div>
+      <div class="article-page__dropdown-body js-accord__body">
+        {{> blocks/article/article-nav}}
+        <div class="article-page__left-links">
+          <div class="article-page__left-links-item">
+            <a class="article-page__left-link">Terms of Use</a>
+          </div>
 
-        <div class="article-page__left-links-item">
-          <a class="article-page__left-link">Privacy Policy</a>
+          <div class="article-page__left-links-item">
+            <a class="article-page__left-link">Privacy Policy</a>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="article-page__left-card">
       {{> widgets/notify-card
-        title="Need help? Ask us!"
-        text="We are here to help text"
-        label="Write to support"
-        narrow=true
-        btn-icon="button-message"
-        btn-size="small"
+              title="Need help? Ask us!"
+              text="We are here to help text"
+              label="Write to support"
+              narrow=true
+              btn-icon="button-message"
+              btn-size="small"
       }}
     </div>
   </div>
