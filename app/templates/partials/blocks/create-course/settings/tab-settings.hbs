@@ -58,7 +58,7 @@
 
     <div class="tab-settings__checkbox">
       {{> ui/checkbox
-        id="checkbox_02"
+        id="checkbox_send-notify"
         checked=true
         label='Send notification to my followers'
         subtitle="All your 168 followers will receive invitations"
@@ -81,6 +81,25 @@
       dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud
       amet.
     </p>
+
+    <div class="tab-settings__checkboxes">
+      <div class="tab-settings__checkbox-small">
+        {{> ui/checkbox
+          id="checkbox_term_1"
+          checked=true
+          small=true
+          label='<a href=#>Terms</a> confromation item'
+        }}
+      </div>
+      <div class="tab-settings__checkbox-small">
+        {{> ui/checkbox
+          id="checkbox_term_2"
+          checked=true
+          small=true
+          label='<a href=#>Terms</a> confromation item'
+        }}
+      </div>
+    </div>
   </div>
 
   <div class="tab-settings__wrapper">

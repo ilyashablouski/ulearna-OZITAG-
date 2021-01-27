@@ -91,4 +91,14 @@
     line-height: 146%;
     color: $color-gray-dark;
   }
+
+  &__checkboxes {
+    margin-top: 16px;
+  }
+
+  &__checkbox-small {
+    &:not(:first-child) {
+      margin-top: 18px;
+    }
+  }
 }
