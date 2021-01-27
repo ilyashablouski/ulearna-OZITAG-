@@ -44,7 +44,7 @@
       position: absolute;
       opacity: 0;
       @include align(false, true);
-      left: 38px;
+      left: 36px;
       @include sprite('radio-tick');
     }
   }
