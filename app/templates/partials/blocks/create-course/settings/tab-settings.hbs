@@ -31,19 +31,21 @@
   <div class="tab-settings__wrapper">
     <div class="tab-settings__rate">
       <span class="tab-settings__rate-title">Sell option rate</span>
-      <div class="tab-settings__rate-item">
-        <span class="tab-settings__rate-item-title">Paid program</span>
-        <span class="tab-settings__rate-item-value">UlearnaPlus</span>
-      </div>
+      <div class="tab-settings__rate-items">
+        <div class="tab-settings__rate-item">
+          <span class="tab-settings__rate-item-title">Paid program</span>
+          <span class="tab-settings__rate-item-value">UlearnaPlus</span>
+        </div>
 
-      <div class="tab-settings__rate-item">
-        <span class="tab-settings__rate-item-title">Course rate</span>
-        <span class="tab-settings__rate-item-value">$00 / per 00h</span>
-      </div>
+        <div class="tab-settings__rate-item">
+          <span class="tab-settings__rate-item-title">Course rate</span>
+          <span class="tab-settings__rate-item-value">$00 / per 00h</span>
+        </div>
 
-      <div class="tab-settings__rate-item">
-        <span class="tab-settings__rate-item-title">Profit</span>
-        <span class="tab-settings__rate-item-value">$00 / per 00h</span>
+        <div class="tab-settings__rate-item">
+          <span class="tab-settings__rate-item-title">Profit</span>
+          <span class="tab-settings__rate-item-value">$00 / per 00h</span>
+        </div>
       </div>
     </div>
   </div>
@@ -103,26 +105,28 @@
   </div>
 
   <div class="tab-settings__wrapper">
-    <div class="tab-nav-buttons">
-      <div class="tab-nav-buttons__btn">
-        {{> ui/btn
-          outline=true
-          transparent=true
-          label = "Back"
-          href="/html/video-lessons.html"
-          icon="button-arrow-prev"
-          btn-mode="large"
-          w100 = true
-        }}
-      </div>
+    <div class="tab-settings__buttons">
+      <div class="tab-nav-buttons">
+        <div class="tab-nav-buttons__btn">
+          {{> ui/btn
+            outline=true
+            transparent=true
+            label = "Back"
+            href="/html/video-lessons.html"
+            icon="button-arrow-prev"
+            btn-mode="large"
+            w100 = true
+          }}
+        </div>
 
-      <div class="tab-nav-buttons__btn">
-        {{> ui/btn
-          color = "blue"
-          label = "Create course"
-          btn-mode="large"
-          w100 = true
-        }}
+        <div class="tab-nav-buttons__btn">
+          {{> ui/btn
+            color = "blue"
+            label = "Create course"
+            btn-mode="large"
+            w100 = true
+          }}
+        </div>
       </div>
     </div>
   </div>

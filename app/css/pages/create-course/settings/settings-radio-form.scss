@@ -17,7 +17,7 @@
   }
 
   &__inner {
-    padding: 20px 0 17px 82px;
+    padding: 17px 0 17px 80px;
     display: block;
     position: relative;
     background: $color-white;
@@ -36,7 +36,7 @@
       @include circle(32px);
       border: 3px solid $color-gray;
       @include align(false, true);
-      left: 30px;
+      left: 27px;
     }
 
     &:after {

@@ -10,9 +10,17 @@
     }
   }
 
+  &__more-btn {
+    margin-top: 20px;
+  }
+
+
   &__bottom {
     margin: 0 auto;
-    margin-top: 30px;
     max-width: 835px;
+  }
+
+  &__buttons {
+    margin-top: 78px;
   }
 }

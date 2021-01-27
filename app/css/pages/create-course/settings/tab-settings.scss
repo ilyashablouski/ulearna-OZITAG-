@@ -6,12 +6,14 @@
 
   &__radios {
     margin: 0 auto;
-    margin-top: 19px;
+    margin-top: 17px;
     max-width: 896px;
   }
 
   &__radio {
-    margin-top: 14px;
+    &:not(:first-child) {
+      margin-top: 12px;
+    }
   }
 
   &__rate {
@@ -23,6 +25,10 @@
       line-height: 24px;
       letter-spacing: 0.02em;
       color: $color-gray-dark;
+    }
+
+    &-items {
+      margin-top: 8px;
     }
 
     &-item {
@@ -51,7 +57,7 @@
   }
 
   &__title {
-    margin-top: 40px;
+    margin-top: 42px;
 
     &-text {
       display: block;
@@ -62,6 +68,7 @@
     }
 
     &-label {
+      margin-top: 8px;
       display: block;
       font-weight: normal;
       font-size: 16px;
@@ -72,7 +79,7 @@
 
   &__checkbox {
     margin-top: 30px;
-    padding-bottom: 60px;
+    padding-bottom: 56px;
     box-shadow: inset 0px -1px 0px #DAE4ED;
   }
 
@@ -100,5 +107,9 @@
     &:not(:first-child) {
       margin-top: 18px;
     }
+  }
+
+  &__buttons {
+    margin-top: 63px;
   }
 }
