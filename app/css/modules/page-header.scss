@@ -17,6 +17,7 @@
   &--with-search {
     .page-header__inner {
       margin: 0 -16px;
+      margin-top: 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -28,9 +29,10 @@
     }
 
     .page-header__search {
+      margin-top: 19px;
       padding: 0 16px;
-      flex: 1 1 726px;
-      max-width: 726px;
+      flex: 1 1 758px;
+      max-width: 758px;
     }
   }
 

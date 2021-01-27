@@ -1,9 +1,7 @@
 .article-main {
-  margin-left: 39px;
-
   &__block {
     &:not(:first-child) {
-      margin-top: 30px;
+      margin-top: 31px;
     }
 
     &:nth-child(2) {
@@ -52,7 +50,7 @@
     color: $color-dark;
 
     &:not(:first-child) {
-      margin-top: 20px;
+      margin-top: 23px;
     }
 
     &--large {

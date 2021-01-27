@@ -1,12 +1,14 @@
 .article-page {
-  margin-top: 40px;
+  margin-top: 41px;
   display: flex;
 
   &__left {
+    margin-left: -12px;
     flex: 0 0 307px;
     max-width: 307px;
 
     @include smallTablet {
+      margin-left: 0;
       flex: 0 0 230px;
       max-width: 230px;
     }
@@ -33,11 +35,18 @@
     }
 
     &-card {
+      position: relative;
+      left: -12px;
       margin-top: 16px;
+
+      @include smallTablet {
+        left: 0;
+      }
     }
   }
 
   &__right {
+    margin-left: 39px;
     flex: 1 1 auto;
   }
 }

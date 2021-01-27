@@ -1,11 +1,8 @@
-<div class="notify-card {{#if hide-notify}}notify-card--hidden{{/if}} {{#if
-  hide-mobile}}notify-card--hidden-mobile{{/if}}">
+<div class="notify-card {{#if hide-notify}}notify-card--hidden{{/if}} {{#if narrow}}notify-card--narrow{{/if}}
+  {{#if hide-mobile}}notify-card--hidden-mobile{{/if}}">
   <div class="notify-card__title">{{title}}</div>
   <div class="notify-card__text">{{text}}</div>
   <div class="notify-card__btn">
-    {{#if  btn-icon
-    }}
-      {{> ui/btn color="blue" label=label icon=btn-icon btn-mode='w100'}}
-    {{/if}}
+    {{> ui/btn color="blue" label=label narrow=narrow icon=btn-icon size=btn-size btn-mode='w100'}}
   </div>
 </div>

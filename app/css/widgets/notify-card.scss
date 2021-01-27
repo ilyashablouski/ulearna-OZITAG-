@@ -42,4 +42,10 @@
       display: none;
     }
   }
+
+  &--narrow {
+    .notify-card__btn {
+      margin-top: 15px;
+    }
+  }
 }

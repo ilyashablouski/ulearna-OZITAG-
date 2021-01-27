@@ -1,12 +1,9 @@
 {{!Article}}
 
 {{> layout/head}}
-{{> layout/header }}
+{{> layout/header authenticated=true}}
 
-{{> modules/page-header/_component title="Course Catalog"
-  search=true
-  input-placeholder = "Search in support"
-}}
+{{> modules/page-header/article}}
 
 <div class="container">
   {{> blocks/article/article-page}}
