@@ -2,10 +2,18 @@
   &__block {
     &:not(:first-child) {
       margin-top: 31px;
+
+      @include mobile {
+        margin-top: 18px;
+      }
     }
 
     &:nth-child(2) {
       margin-top: 40px;
+
+      @include mobile {
+        margin-top: 30px;
+      }
     }
   }
 
@@ -18,6 +26,11 @@
       font-weight: bold;
       font-size: 38px;
       line-height: 57px;
+
+      @include mobile {
+        font-size: 22px;
+        line-height: 33px;
+      }
     }
 
     &--h4 {
@@ -25,6 +38,11 @@
       font-weight: 600;
       font-size: 29px;
       line-height: 43px;
+
+      @include mobile {
+        font-size: 18px;
+        line-height: 27px;
+      }
     }
 
     &--h5 {
@@ -32,6 +50,11 @@
       font-weight: 600;
       font-size: 21px;
       line-height: 31px;
+
+      @include mobile {
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
 
     &--h6 {
@@ -40,6 +63,11 @@
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 0.02em;
+
+      @include mobile {
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
   }
 
@@ -49,6 +77,11 @@
     line-height: 146%;
     color: $color-dark;
 
+    @include mobile {
+      font-size: 14px;
+      line-height: 21px;
+    }
+
     &:not(:first-child) {
       margin-top: 23px;
     }
@@ -56,11 +89,20 @@
     &--large {
       font-size: 18px;
       line-height: 150%;
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 21px;
+      }
     }
   }
 
   &__list {
     margin-top: 18px;
+
+    @include mobile {
+      margin-top: 10px;
+    }
 
     &-item {
       padding-left: 24px;
@@ -70,8 +112,16 @@
       line-height: 146%;
       color: $color-dark;
 
+      @include mobile {
+        font-size: 14px;
+        line-height: 21px;
+      }
+
       &:not(:first-child) {
         margin-top: 18px;
+        @include mobile {
+          margin-top: 12px;
+        }
       }
 
 
@@ -85,12 +135,20 @@
         height: 10px;
         background: $color-blue;
         border-radius: 3px;
+
+        @include mobile {
+          top: 48%;
+        }
       }
     }
   }
 
   &__bottom {
     margin-top: 40px;
+
+    @include mobile {
+      margin-top: 30px;
+    }
 
     &-text {
       font-weight: normal;

@@ -1,16 +1,49 @@
 .article-page {
+  position: relative;
   margin-top: 41px;
   display: flex;
+
+  @include mobile {
+    margin-top: 0;
+    padding-bottom: 176px;
+    display: block;
+  }
+
+  &__dropdown {
+    @include mobile {
+      margin: 0 -16px;
+      box-shadow: inset 0px -1px 0px #DAE4ED;
+
+    }
+  }
+
+  &__dropdown-btn {
+    display: none;
+    @include mobile {
+      padding: 15px 23px 15px 16px;
+      display: block;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      background: #F4F7FA;
+      box-shadow: inset 0px -1px 0px #DAE4ED;
+    }
+  }
 
   &__left {
     margin-left: -12px;
     flex: 0 0 307px;
     max-width: 307px;
 
-    @include smallTablet {
+    @include smallTablet-and-mobile {
       margin-left: 0;
       flex: 0 0 230px;
       max-width: 230px;
+    }
+
+    @include mobile {
+      flex: 0 0 auto;
+      max-width: none;
     }
 
     &-links {
@@ -18,6 +51,9 @@
 
       &-item {
         padding: 10px 12px;
+        @include mobile {
+          padding: 8px 16px;
+        }
       }
     }
 
@@ -39,8 +75,16 @@
       left: -12px;
       margin-top: 16px;
 
-      @include smallTablet {
+      @include smallTablet-and-mobile {
         left: 0;
+      }
+
+      @include mobile {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 2;
       }
     }
   }
@@ -48,5 +92,10 @@
   &__right {
     margin-left: 39px;
     flex: 1 1 auto;
+
+    @include mobile {
+      margin-top: 16px;
+      margin-left: 0;
+    }
   }
 }
