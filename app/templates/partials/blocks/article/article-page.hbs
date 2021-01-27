@@ -1,0 +1,29 @@
+<div class="article-page">
+  <div class="article-page__left">
+    {{> blocks/article/article-nav}}
+
+    <div class="article-page__left-links">
+      <div class="article-page__left-links-item">
+        <a class="article-page__left-link">Terms of Use</a>
+      </div>
+
+      <div class="article-page__left-links-item">
+        <a class="article-page__left-link">Privacy Policy</a>
+      </div>
+    </div>
+
+    <div class="article-page__left-card">
+      {{> widgets/notify-card
+        title="Need help? Ask us!"
+        text="We are here to help text"
+        label="Write to support"
+        btn-icon="button-message"
+      }}
+    </div>
+  </div>
+
+
+  <div class="article-page__right">
+    {{> blocks/article/article-main}}
+  </div>
+</div>

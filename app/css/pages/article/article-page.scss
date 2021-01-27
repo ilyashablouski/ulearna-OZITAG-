@@ -1,0 +1,43 @@
+.article-page {
+  margin-top: 40px;
+  display: flex;
+
+  &__left {
+    flex: 0 0 307px;
+    max-width: 307px;
+
+    @include smallTablet {
+      flex: 0 0 230px;
+      max-width: 230px;
+    }
+
+    &-links {
+      margin-top: 16px;
+
+      &-item {
+        padding: 10px 12px;
+      }
+    }
+
+    &-link {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+      color: $color-gray-dark;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    &-card {
+      margin-top: 16px;
+    }
+  }
+
+  &__right {
+    flex: 1 1 auto;
+  }
+}

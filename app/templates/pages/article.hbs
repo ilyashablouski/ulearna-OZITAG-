@@ -3,6 +3,13 @@
 {{> layout/head}}
 {{> layout/header }}
 
+{{> modules/page-header/_component title="Course Catalog"
+  search=true
+  input-placeholder = "Search in support"
+}}
 
+<div class="container">
+  {{> blocks/article/article-page}}
+</div>
 
 {{> layout/footer }}

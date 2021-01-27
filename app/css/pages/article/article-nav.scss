@@ -1,0 +1,25 @@
+.article-nav {
+  &__item {
+
+  }
+
+  &__link {
+    padding: 10px 12px;
+    display: block;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    border-radius: 6px;
+    @include transition;
+
+    &.active {
+      background: #F7F9FB;
+      color: $color-blue;
+    }
+
+    &:hover {
+      background: #F7F9FB;
+    }
+  }
+}
