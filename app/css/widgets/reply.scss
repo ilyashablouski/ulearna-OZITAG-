@@ -7,6 +7,12 @@
     height: 64px;
     overflow: hidden;
     border-radius: 100%;
+
+    @include mobile {
+      flex: 0 0 48px;
+      max-width: 48px;
+      height: 48px;
+    }
   }
 
   &__wrapper {
@@ -30,6 +36,13 @@
       font-size: 14px;
       line-height: 140%;
       color: $color-gray-dark;
+
+      @include mobile {
+        margin-top: 4px;
+        display: block;
+        font-size: 12px;
+        line-height: 150%;
+      }
     }
   }
 
@@ -39,6 +52,10 @@
     font-size: 14px;
     line-height: 140%;
     color: $color-gray-dark;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__text {
@@ -47,5 +64,21 @@
     font-size: 16px;
     line-height: 146%;
     color: $color-dark;
+
+    @include mobile {
+      margin-top: 16px;
+      margin-left: -64px;
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  &__btn {
+    display: none;
+    @include mobile {
+      margin-top: 8px;
+      margin-left: -64px;
+      display: inline-block;
+    }
   }
 }

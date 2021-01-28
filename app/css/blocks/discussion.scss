@@ -51,6 +51,10 @@
     display: none;
     margin-left: 80px;
 
+    @include mobile {
+      margin-left: 0;
+    }
+
     &.animate {
       position: relative;
       display: block;
@@ -69,26 +73,42 @@
 
       &--lvl2 {
         margin-left: 95px;
+
+        @include mobile {
+          margin-left: 16px;
+        }
       }
 
       &--lvl3 {
         margin-left: 190px;
         padding-left: 14px;
+        @include mobile {
+          display: none;
+        }
       }
 
       &--lvl4 {
         margin-left: 285px;
         padding-left: 12px;
+        @include mobile {
+          display: none;
+        }
       }
 
       &--lvl5 {
         margin-left: 82px;
         padding-left: 10px;
+        @include mobile {
+          display: none;
+        }
       }
 
       &--lvl6 {
         margin-left: 80px;
         padding-left: 8px;
+        @include mobile {
+          display: none;
+        }
       }
     }
 
