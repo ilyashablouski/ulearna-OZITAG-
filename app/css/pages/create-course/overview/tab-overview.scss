@@ -7,6 +7,10 @@
   &__form-field {
     margin-top: 30px;
 
+    &:nth-child(1) {
+      max-width: 393px;
+    }
+
     &:nth-child(3) {
       margin-top: 23px;
     }
