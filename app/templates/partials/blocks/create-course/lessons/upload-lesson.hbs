@@ -5,9 +5,9 @@
       <div class="upload-lesson__video-status">
         <div class="upload-lesson__video-status-bar">
           {{> widgets/round-bar
-            color="blue"
-            progress=20
-            large=true
+                  color="blue"
+                  progress=20
+                  large=true
           }}
         </div>
         <span class="upload-lesson__video-status-text">Uploading...</span>
@@ -24,9 +24,9 @@
   <div class="upload-lesson__input">
     {{#> ui/field label="Lesson Title" id="input_lesson_title" note="Help text (min. --, max. -- symbols)"}}
       {{> ui/input
-        id="input_course_name"
-        value="Lesson Title"
-        placeholder="Course Name"
+              id="input_course_name"
+              value="Lesson Title"
+              placeholder="Title your lesson with short description"
       }}
     {{/ui/field}}
   </div>
