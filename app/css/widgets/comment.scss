@@ -10,6 +10,7 @@
     border-radius: 0 12px 12px 12px;
     padding: 15px 15px 30px;
     position: relative;
+    cursor: pointer;
 
     @include mobile {
       padding: 0;

@@ -32,6 +32,10 @@
   }
 
   &__message {
+    &.opened .discussion__replies {
+      display: block;
+    }
+
     margin-top: 20px;
 
     @include mobile {
@@ -44,8 +48,16 @@
   }
 
   &__replies {
-    margin-top: 12px;
+    display: none;
     margin-left: 80px;
+
+    &.animate {
+      position: relative;
+      display: block;
+      height: 0;
+      overflow: hidden;
+      transition: height .32s ease;
+    }
 
     &-nested {
       padding-left: 16px;
@@ -78,6 +90,11 @@
         margin-left: 80px;
         padding-left: 8px;
       }
+    }
+
+    &-hide-btn {
+      margin-top: 12px;
+      display: inline-block;
     }
   }
 

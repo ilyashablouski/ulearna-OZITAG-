@@ -8,14 +8,14 @@
     </div>
   </div>
   <div class="discussion__list">
-    <div class="discussion__message">
+    <div class="discussion__message js-accord opened">
       {{> widgets/comment
         image="avatars/01" name="You, Ali Kazai" date="1 day ago"
         message="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
       }}
 
-      <div class="discussion__replies">
-        <div class="discussion__replies-hide-btn">
+      <div class="discussion__replies js-accord__body">
+        <div class="discussion__replies-hide-btn js-accord__close">
           {{> ui/btn-text button=true label="Hide replies"}}
         </div>
 

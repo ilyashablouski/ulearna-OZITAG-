@@ -6,6 +6,7 @@ class Accord extends Widget {
 
     this.$toggle = options.toggleElement ? options.toggleElement : this.queryElement('.toggle');
     this.$body = options.bodyElement ? options.bodyElement : this.queryElement('.body');
+    this.$closeBtns = options.closeElements ? options.closeElements : this.queryElements('.close');
 
     this.opened = this.$node.classList.contains('opened');
     this.busy = false;
@@ -13,14 +14,21 @@ class Accord extends Widget {
     this.eventHandlers = {};
 
     this.onToggleClick = this.onToggleClick.bind(this);
+    this.onClose = this.onClose.bind(this);
   }
 
   build() {
     this.$toggle.addEventListener('click', this.onToggleClick);
+    this.$closeBtns.forEach(element => {
+      element.addEventListener('click', this.onClose);
+    });
   }
 
   destroy() {
     this.$toggle.removeEventListener('click', this.onToggleClick);
+    this.$closeBtns.forEach(element => {
+      element.removeEventListener('click', this.onClose);
+    });
   }
 
   on(event, handler) {
@@ -59,6 +67,12 @@ class Accord extends Widget {
     this.busy = true;
 
     !this.$node.classList.contains('opened') ? this.open() : this.close();
+  }
+
+  onClose() {
+    if (this.busy) return;
+    this.busy = true;
+    this.close();
   }
 
   collapse() {
