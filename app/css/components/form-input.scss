@@ -83,6 +83,10 @@
       @include sprite('input-clipboard');
       pointer-events: initial;
     }
+
+    &--message {
+      @include sprite('message-blue');
+    }
   }
 
   &__clipboard {
@@ -139,6 +143,39 @@
       @include mobile {
         padding: 11px 6px 11px 14px;
         font-size: 18px;
+      }
+    }
+  }
+
+  &__submit-btn {
+    position: absolute;
+    @include align(false, true);
+    right: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+
+    &--arrow-right {
+      &:before {
+        content: "";
+        @include sprite("arrow-right");
+      }
+    }
+  }
+
+  &--icon-submit {
+    input {
+      padding-right: 37px;
+      height: 50px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      color: #052433;
+
+      &:focus {
+        border: 2px solid $color-blue;
       }
     }
   }

@@ -1,11 +1,13 @@
-<div class="form-input {{#if icon}}form-input--icon{{/if}} {{#when date '||' clipboard}}form-input--icon-right{{/when}} {{#if
-        mod}}{{mod}}{{/if}}">
+<div class="form-input {{#if icon}}form-input--icon{{/if}} {{#if submit-btn}}form-input--icon-submit{{/if}} {{#when date
+                                                                                                                    '||'
+                                                                                                                    clipboard}}form-input--icon-right{{/when}} {{#if
+  mod}}{{mod}}{{/if}}">
   <input type="{{#if type}}{{type}}{{else}}{{#if date}}date{{else}}{{/if}}text{{/if}}" autocomplete="off"
          placeholder="{{ placeholder }}"
          class=" {{#if mask}}js-masked-input{{/if}} {{#if numeric}}js-numeric-input{{/if}} {{#if
-                 date}}js-datepicker{{/if}}"
+           date}}js-datepicker{{/if}}"
          {{#if maxlength}}maxlength="{{maxlength}}"{{/if}}  {{#if mask}}data-mask="{{mask}}"{{/if}}
-          {{#if value}}value="{{value}}"{{/if}}/>
+    {{#if value}}value="{{value}}"{{/if}}/>
 
   {{#if icon}}
     <i class="form-input__icon form-input__icon--{{icon}}"></i>
@@ -20,5 +22,9 @@
       <i class="form-input__icon form-input__icon--clipboard"></i>
       <span class="form-input__clipboard-tip">Copy link</span>
     </div>
+  {{/if}}
+
+  {{#if submit-btn}}
+    <button class="form-input__submit-btn form-input__submit-btn--{{submit-btn}}" type="submit"></button>
   {{/if}}
 </div>

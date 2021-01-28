@@ -1,6 +1,10 @@
 .course-page {
   background: #F4F7FA;
 
+  @include no-desktop {
+    display: none;
+  }
+
   &__wrapper {
     margin: 0 auto;
     max-width: 836px;

@@ -1,0 +1,46 @@
+<div class="redirect-page">
+  <div class="container">
+    <div class="redirect-page__header">
+      {{> ui/btn-arrow label="Back to profile" back=true}}
+    </div>
+
+    <div class="redirect-page__informer">
+      <i class="redirect-page__informer-icon"></i>
+      <span class="redirect-page__informer-title">Go to desktop version</span>
+      <span class="redirect-page__informer-label">Please, go to Ulearna desktop version to create the course</span>
+      <div class="redirect-page__informer-btn">
+        {{> ui/btn
+          outline=true
+          transparent=true
+          label='Switch to desktop version'
+          size='small'
+        }}
+      </div>
+    </div>
+
+    <div class="redirect-page__main">
+      <span class="redirect-page__main-title">Ulearna App for mobile learning</span>
+      <span class="redirect-page__main-label">Upload courses, watch video lessons and much more</span>
+      <div class="redirect-page__main-input">
+        {{> ui/input
+          id="input_email"
+          icon="message"
+          placeholder="Email"
+          value="Email@mail.com"
+          submit-btn="arrow-right"
+        }}
+      </div>
+      <div class="redirect-page__main-btn">
+        {{> ui/btn
+          color="blue"
+          label='Sign Up For a Demo'
+          size='small'
+          w100=true
+        }}
+      </div>
+      <div class="redirect-page__main-img">
+        {{>components/image img="create-course/phones" ext="png" no-lazy=true}}
+      </div>
+    </div>
+  </div>
+</div>

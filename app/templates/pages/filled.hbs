@@ -1,13 +1,15 @@
 {{!Filled}}
 
 {{> layout/head}}
-{{> layout/header authenticated=true}}
+{{> layout/header no-desktop-shadow=true authenticated=true}}
 
 {{> blocks/create-course/course-page
-        tab=1
-        progress=25
-        tab-title="Welcome text, course overview title"
-        label="Course overview description text"
+  tab=1
+  progress=25
+  tab-title="Welcome text, course overview title"
+  label="Course overview description text"
 }}
+
+{{> blocks/create-course/redirect-page}}
 
 {{> layout/footer }}

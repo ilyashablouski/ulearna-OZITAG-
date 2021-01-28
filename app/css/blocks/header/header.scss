@@ -128,4 +128,10 @@
   &--with-shadow {
     box-shadow: 0 4px 14px rgba(1, 64, 139, 0.14);
   }
+
+  &--no-desktop-shadow {
+    @include no-desktop {
+      box-shadow: 0 4px 14px rgba(1, 64, 139, 0.14);
+    }
+  }
 }
