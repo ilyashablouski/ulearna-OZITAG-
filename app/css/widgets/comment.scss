@@ -37,6 +37,10 @@
       height: 21px;
       background: #F0F4F8;
       transform: translate(0%, 4%);
+
+      @include mobile {
+        display: none;
+      }
     }
 
     @include mobile {

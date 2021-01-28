@@ -1,0 +1,51 @@
+.reply {
+  display: flex;
+
+  &__img {
+    flex: 0 0 64px;
+    max-width: 64px;
+    height: 64px;
+    overflow: hidden;
+    border-radius: 100%;
+  }
+
+  &__wrapper {
+    margin-left: 16px;
+  }
+
+  &__title {
+    &-name {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+
+      &:hover {
+        color: $color-blue;
+      }
+    }
+
+    &-time {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 140%;
+      color: $color-gray-dark;
+    }
+  }
+
+  &__label {
+    margin-top: 5px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+    color: $color-gray-dark;
+  }
+
+  &__text {
+    margin-top: 8px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 146%;
+    color: $color-dark;
+  }
+}

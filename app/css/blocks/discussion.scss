@@ -43,6 +43,48 @@
     }
   }
 
+  &__replies {
+    margin-top: 12px;
+    margin-left: 80px;
+
+    &-nested {
+      padding-left: 16px;
+      border-left: 2px solid $color-gray;
+
+      &--lvl1 {
+        margin-left: 0;
+      }
+
+      &--lvl2 {
+        margin-left: 95px;
+      }
+
+      &--lvl3 {
+        margin-left: 190px;
+        padding-left: 14px;
+      }
+
+      &--lvl4 {
+        margin-left: 285px;
+        padding-left: 12px;
+      }
+
+      &--lvl5 {
+        margin-left: 82px;
+        padding-left: 10px;
+      }
+
+      &--lvl6 {
+        margin-left: 80px;
+        padding-left: 8px;
+      }
+    }
+  }
+
+  &__reply {
+    margin-top: 20px;
+  }
+
   &__pagination {
     margin-top: 40px;
     display: flex;

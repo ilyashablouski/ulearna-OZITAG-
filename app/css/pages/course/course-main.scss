@@ -37,11 +37,6 @@
       display: block;
       padding-top: 16px;
     }
-
-    @include mobile {
-      margin-left: -$mobileGutter;
-      margin-right: -$mobileGutter;
-    }
   }
 
   @include no-smallTablet {

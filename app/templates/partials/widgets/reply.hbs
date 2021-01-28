@@ -1,0 +1,14 @@
+<div class="reply">
+  <div class="reply__img">
+    {{> components/image img=image img-mobile=(concat image '-mobile') ext="jpg"}}
+  </div>
+
+  <div class="reply__wrapper">
+    <div class="reply__title">
+      <a href="#" class="reply__title-name">{{name}}</a>
+      <time class="reply__title-time">{{time}}</time>
+    </div>
+    <div class="reply__label">{{label}}</div>
+    <div class="reply__text">{{text}}</div>
+  </div>
+</div>
