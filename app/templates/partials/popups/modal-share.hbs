@@ -6,21 +6,50 @@
     </div>
     {{#when socials '||' copy-link}}
       <div class="modal-share__content">
-        <div class="modal-share__socials">
-          <a href="#" class="modal-share__social-link modal-share__social-link--facebook"></a>
-          <a href="#" class="modal-share__social-link modal-share__social-link--twitter"></a>
-          <a href="#" class="modal-share__social-link modal-share__social-link--copy"></a>
-        </div>
+        {{#if socials}}
+          <div class="modal-share__socials">
+            <a href="#" class="modal-share__social-link modal-share__social-link--facebook"></a>
+            <a href="#" class="modal-share__social-link modal-share__social-link--twitter"></a>
+            <a href="#" class="modal-share__social-link modal-share__social-link--copy"></a>
+          </div>
+        {{/if}}
+
+        {{#if copy-link}}
+          <div class="modal-share__input-copy">
+            {{> ui/input id="input_link" placeholder="URL" value="https://link_course_name" clipboard=true}}
+          </div>
+        {{/if}}
+
         <div class="modal-share__separator">
           <span>or</span>
         </div>
         <div class="modal-share__form">
-          {{> ui/input id="input_email" placeholder="Email adresses (Separate by Commas)"}}
-        </div>
-        <div class="modal-share__form-btn">
-          {{> ui/btn color="blue" size="large" label="Send" w100=true}}
+          <div class="modal-share__input">
+            {{> ui/input id="input_email" placeholder="Email adresses (Separate by Commas)"}}
+          </div>
+
+          <div class="modal-share__form-btn">
+            {{> ui/btn button=true type="submit" color="blue" size="large" label="Send" w100=true}}
+          </div>
         </div>
       </div>
     {{/when}}
+
+    {{#if confirm}}
+      <div class="modal-share__content">
+        <p class="modal-share__text">
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
+        </p>
+        <div class="modal-share__buttons">
+          <div class="modal-share__form-btn">
+            {{> ui/btn transparent=true size="large" label="Send confirmation mail again" w100=true}}
+          </div>
+
+          <div class="modal-share__form-btn">
+            {{> ui/btn color="blue" size="large" label="Back to Homepage" w100=true}}
+          </div>
+        </div>
+      </div>
+    {{/if}}
   </div>
 {{/popups/_base}}

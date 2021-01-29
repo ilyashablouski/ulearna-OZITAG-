@@ -1,6 +1,7 @@
 .modal-share {
   padding: 30px;
   min-width: 556px;
+  max-width: 558px;
 
   @include smallTablet-and-mobile {
     padding: 25px;
@@ -53,7 +54,11 @@
     width: 86px;
     height: 52px;
     border-radius: 10px;
+    @include transition;
 
+    &:hover {
+      opacity: 0.8;
+    }
 
     &:after {
       content: "";
@@ -117,11 +122,28 @@
     }
   }
 
+  &__input-copy {
+    margin-top: 24px;
+  }
+
   &__form {
     margin-top: 20px;
   }
 
+  &__text {
+    margin-top: 36px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    color: $color-dark;
+  }
+
   &__form-btn {
     margin-top: 20px;
+  }
+
+  &__buttons {
+    margin-top: 52px;
   }
 }
