@@ -109,6 +109,8 @@ class PopupManager {
       return;
     }
 
+    hideScrollbar();
+
     this.overlay = document.createElement('div');
     this.overlay.classList.add('popup-overlay');
     document.body.appendChild(this.overlay);
@@ -127,6 +129,7 @@ class PopupManager {
 
       this.overlay.addEventListener('transitionend', () => {
         overlay.remove();
+        showScrollbar();
       });
 
       this.overlay = null;
