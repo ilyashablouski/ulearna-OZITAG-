@@ -1,0 +1,49 @@
+.menu-overlay {
+  padding: 10px 16px 16px;
+  background: $color-white;
+  box-shadow: 0 6px 44px rgba(1, 64, 139, 0.24);
+  border-radius: 12px;
+
+  &__item {
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 0 16px;
+
+    &:hover {
+      background: rgba(218, 228, 237, 0.22);
+    }
+
+    &-btn {
+      padding: 12px 0;
+      display: inline-flex;
+      width: 100%;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 140%;
+      color: $color-gray-dark;
+
+      &--icon {
+        position: relative;
+        padding-left: 24px;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(0, -50%);
+          @include sprite('sign-out')
+        }
+      }
+
+      &--purple {
+        color: $color-purple;
+      }
+
+    }
+  }
+
+  &__btn {
+    margin-top: 14px;
+  }
+}

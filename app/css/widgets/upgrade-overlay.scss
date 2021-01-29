@@ -1,0 +1,42 @@
+.upgrade-overlay {
+  position: relative;
+  padding: 16px;
+  background: $color-white;
+  box-shadow: 0 6px 44px rgba(1, 64, 139, 0.24);
+  border-radius: 12px;
+
+  &__icon {
+    margin: 0 auto;
+    @include sprite('lock-gray');
+  }
+
+  &__text {
+    margin: 0 auto;
+    margin-top: 17px;
+    max-width: 183px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    color: $color-gray-dark;
+  }
+
+  &__btn {
+    margin-top: 14px;
+  }
+
+  &__close {
+    position: absolute;
+    right: 19px;
+    top: 19px;
+    width: 25px;
+    height: 25px;
+
+    &:before {
+      content: '';
+      @include align();
+      @include sprite('cross-small');
+    }
+  }
+
+}

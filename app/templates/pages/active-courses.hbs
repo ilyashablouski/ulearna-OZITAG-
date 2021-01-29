@@ -28,19 +28,7 @@
     <button class="profile__more-btn"></button>
 
     <div class="profile__overlay">
-      {{#> blocks/profile/profile-overlay upgrade=true}}
-        <div class="profile-overlay__item">
-          <a href="#" class="profile-overlay__item-btn">Edit Profile</a>
-        </div>
-
-        <div class="profile-overlay__item">
-          <a href="#" class="profile-overlay__item-btn profile-overlay__item-btn--icon">Sign Out</a>
-        </div>
-
-        <div class="profile-overlay__item">
-          <a href="#" class="profile-overlay__item-btn profile-overlay__item-btn--purple">Become in Instructor</a>
-        </div>
-      {{/blocks/profile/profile-overlay}}
+      {{> widgets/profile-overlay}}
     </div>
   </div>
 

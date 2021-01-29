@@ -1,0 +1,21 @@
+<div class="profile-overlay">
+  <div class="profile-overlay__content">
+    <div class="profile-overlay__item">
+      <a href="#" class="profile-overlay__item-btn">Edit Profile</a>
+    </div>
+
+    <div class="profile-overlay__item">
+      <a href="#" class="profile-overlay__item-btn profile-overlay__item-btn--icon">Sign Out</a>
+    </div>
+
+    <div class="profile-overlay__item">
+      <a href="#" class="profile-overlay__item-btn profile-overlay__item-btn--purple">Become in Instructor</a>
+    </div>
+  </div>
+
+  {{#if upgrade}}
+    <div class="profile-overlay__btn">
+      {{> ui/btn color='orange' label="Upgrade to Student"}}
+    </div>
+  {{/if}}
+</div>

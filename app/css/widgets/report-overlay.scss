@@ -1,0 +1,42 @@
+.report-overlay {
+  position: relative;
+  padding: 16px;
+  background: $color-white;
+  box-shadow: 0 6px 44px rgba(1, 64, 139, 0.24);
+  border-radius: 12px;
+
+  &__link {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    color: $color-gray-dark;
+    @include transition;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__btn {
+    margin-top: 20px;
+    padding-left: 22px;
+    position: relative;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    color: #F74420;
+    @include transition;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:before {
+      position: absolute;
+      @include align(false, true);
+      left: 0;
+      content: '';
+      @include sprite("delete-red");
+    }
+  }
+}

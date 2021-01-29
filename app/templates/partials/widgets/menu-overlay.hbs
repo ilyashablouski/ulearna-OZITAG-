@@ -1,0 +1,33 @@
+<div class="menu-overlay">
+  <div class="menu-overlay__content">
+    <div class="menu-overlay__item">
+      <a href="#" class="menu-overlay__item-btn">View Profile</a>
+    </div>
+
+    <div class="menu-overlay__item">
+      <a href="#" class="menu-overlay__item-btn">My Courses</a>
+    </div>
+
+    <div class="menu-overlay__item">
+      <a href="#" class="menu-overlay__item-btn">Settings</a>
+    </div>
+
+    <div class="menu-overlay__item">
+      <a href="#" class="menu-overlay__item-btn">Support</a>
+    </div>
+
+    <div class="menu-overlay__item">
+      <a href="#" class="menu-overlay__item-btn menu-overlay__item-btn--icon">Sign Out</a>
+    </div>
+
+    <div class="menu-overlay__item">
+      <a href="#" class="menu-overlay__item-btn menu-overlay__item-btn--purple">Become in Instructor</a>
+    </div>
+  </div>
+
+  {{#if upgrade}}
+    <div class="menu-overlay__btn">
+      {{> ui/btn color='orange' label="Upgrade to Student"}}
+    </div>
+  {{/if}}
+</div>

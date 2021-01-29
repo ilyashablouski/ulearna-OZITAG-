@@ -61,7 +61,6 @@ class TabItem {
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.js-tabsWidget').forEach((element) => {
     TabsWidget.init(element);
-    console.log('hello');
   });
 });
 
