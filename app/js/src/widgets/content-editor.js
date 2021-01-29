@@ -11,17 +11,25 @@ class ContentEditor extends Widget {
       const editableElement = clickedElement.previousElementSibling;
       const notEditElement = !clickedElement.classList.contains('js-content-edit-btn') && !clickedElement.hasAttribute('contenteditable');
       if (clickedElement.classList.contains('js-content-edit-btn')) {
-        this.onEditElement(editableElement);
+        this.onToggleElement(editableElement);
       } else if (notEditElement) {
         this.onAnchorElements();
       }
     });
   }
 
+  onToggleElement(editableElement) {
+    editableElement.getAttribute('contenteditable') ? this.onAnchorElement(editableElement) : this.onEditElement(editableElement);
+  }
+
   onEditElement(element) {
     element.setAttribute('contenteditable', true);
     this.setCustomRangeColor(element);
     this.setCaret(element);
+  }
+
+  onAnchorElement(element) {
+    element.removeAttribute('contenteditable');
   }
 
   onAnchorElements() {
@@ -33,16 +41,15 @@ class ContentEditor extends Widget {
     });
 
     for (const filteredElement of filteredElements) {
-      filteredElement.setAttribute('contenteditable', false);
+      filteredElement.removeAttribute('contenteditable');
       this.removeCustomRangeColor(filteredElement);
     }
   }
 
-  setCaret(element) {
-    const childNode = element.firstChild;
+  setCaret(editableElement) {
     const range = document.createRange();
     const selection = window.getSelection();
-    range.selectNodeContents(childNode);
+    range.selectNodeContents(editableElement);
     range.collapse(false);
 
     selection.removeAllRanges();
