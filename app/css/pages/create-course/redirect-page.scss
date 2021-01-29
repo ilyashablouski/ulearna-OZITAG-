@@ -10,10 +10,6 @@
     margin-bottom: -60px;
   }
 
-  &__header {
-
-  }
-
   &__informer {
     margin-top: 40px;
     display: flex;
@@ -79,7 +75,10 @@
     }
 
     &-input {
+      margin-left: auto;
+      margin-right: auto;
       margin-top: 16px;
+      max-width: 500px;
     }
 
     &-btn {

@@ -1,0 +1,44 @@
+<div class="notify-overlay">
+  <button class="notify-overlay__close"></button>
+  <div class="notify-overlay__header">
+    <span class="notify-overlay__header-title">Notifications</span>
+    <span class="notify-overlay__header-label">4</span>
+  </div>
+
+  <div class="notify-overlay__content">
+    <div class="notify-overlay__item notify-overlay__item--warning">
+      <div class="notify-overlay__inner">
+        <span class="notify-overlay__item-text">Some issues. Notification text</span>
+        <time class="notify-overlay__item-time">5h ago</time>
+      </div>
+    </div>
+
+    <div class="notify-overlay__item notify-overlay__item--bell">
+      <div class="notify-overlay__inner">
+        <span class="notify-overlay__item-text">Notification text</span>
+        <time class="notify-overlay__item-time">5h ago</time>
+      </div>
+    </div>
+
+    <div class="notify-overlay__item notify-overlay__item--hat">
+      <div class="notify-overlay__inner">
+        <span class="notify-overlay__item-text"><a href="#">Course name</a> Notification text. Notification long textNotification text</span>
+        <time class="notify-overlay__item-time">5h ago</time>
+      </div>
+    </div>
+
+    <div class="notify-overlay__item">
+      <div class="notify-overlay__item-img">
+        {{> components/image img="overlays/notify" ext="jpg"}}
+      </div>
+      <div class="notify-overlay__inner">
+        <span class="notify-overlay__item-text"><a href="#">Craig Dias</a> start follow you</span>
+        <time class="notify-overlay__item-time">5h ago</time>
+      </div>
+    </div>
+
+    <div class="notify-overlay__btn">
+      {{> ui/btn-text color="blue" label="Show all"}}
+    </div>
+  </div>
+</div>

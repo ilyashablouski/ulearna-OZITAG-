@@ -1,0 +1,131 @@
+.notify-overlay {
+  position: relative;
+  background: $color-white;
+  box-shadow: 0 6px 44px rgba(1, 64, 139, 0.24);
+  border-radius: 12px;
+  max-width: 394px;
+
+  &__close {
+    position: absolute;
+    right: 19px;
+    top: 13px;
+    width: 25px;
+    height: 25px;
+
+    &:before {
+      content: '';
+      @include align();
+      @include sprite('cross-small');
+    }
+  }
+
+  &__header {
+    padding: 12px 25px;
+    text-align: center;
+    background: rgba(218, 228, 237, 0.22);
+
+    &-title {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+    }
+
+    &-label {
+      margin-left: 6px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 26px;
+      height: 26px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+      background: rgba(66, 219, 146, 0.12);
+      color: $color-green;
+      border-radius: 100%;
+    }
+  }
+
+  &__content {
+    margin-top: 8px;
+    padding: 0 16px 16px;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    padding-left: 46px;
+    padding-top: 12px;
+    padding-bottom: 8px;
+    box-shadow: inset 0px -1px 0px #DAE4ED;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 12px;
+      left: 7px;
+    }
+
+    &--warning {
+      &:before {
+        @include sprite('warning');
+      }
+    }
+
+    &--bell {
+      &:before {
+        @include sprite('bell');
+      }
+    }
+
+    &--hat {
+      &:before {
+        @include sprite('hat-green');
+      }
+    }
+
+
+    &-text {
+      display: block;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 140%;
+      color: $color-dark;
+
+      a {
+        font-weight: 600;
+        color: $color-blue;
+
+        &:hover {
+          color: #09aef5;
+        }
+      }
+    }
+
+    &-time {
+      margin-top: 3px;
+      display: inline-block;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 140%;
+      color: $color-gray-dark;
+    }
+
+    &-img {
+      position: absolute;
+      top: 12px;
+      left: 0;
+      width: 32px;
+      height: 32px;
+      overflow: hidden;
+      border-radius: 100%;
+    }
+  }
+
+  &__btn {
+    text-align: center;
+    margin-top: 29px;
+  }
+}
