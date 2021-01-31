@@ -5,20 +5,24 @@
       <span class="exam-list-answer__title-text">{{text}}</span>
       <button class="exam-list-answer__title-edit-btn js-content-edit-btn"></button>
     </div>
-
   </div>
 
   <div class="exam-list-answer__buttons">
-    <div class="exam-list-answer__button {{#if checked}}exam-list-answer__button--checked{{/if}}">
-      {{#if checked}}
-        {{> ui/btn-icon
-          icon="check-mark"
-          label="Correct"
-        }}
-      {{else}}
-        <button class="exam-list-answer__button-text">Mark as correct</button>
-      {{/if}}
+    <div class="exam-list-answer__checkbox js-quiz__toggle">
+      <label class="exam-list-answer__checkbox-label" for="{{id}}">
+        <input type="checkbox" {{#if checked}}checked{{/if}} id="{{id}}" />
+        {{#if checked}}
+          <span class="exam-list-answer__checkbox-inner">
+          {{> ui/svg name="check-mark"}}
+            Correct
+          </span>
+
+        {{else}}
+          <span class="exam-list-answer__checkbox-inner">Mark as correct</span>
+        {{/if}}
+      </label>
     </div>
+
 
     <div class="exam-list-answer__button">
       {{> ui/btn-icon

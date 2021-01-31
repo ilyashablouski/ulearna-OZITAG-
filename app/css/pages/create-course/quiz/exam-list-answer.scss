@@ -28,6 +28,7 @@
     align-items: flex-start;
 
     &-label {
+      margin-right: 12px;
       font-weight: 600;
       font-size: 16px;
       line-height: 24px;
@@ -36,7 +37,6 @@
     }
 
     &-text {
-      margin-left: 12px;
       font-weight: normal;
       font-size: 16px;
       line-height: 146%;
@@ -52,38 +52,57 @@
     }
   }
 
-  &__button-text {
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 22px;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-    color: $color-gray-dark;
-    @include transition;
+  &__checkbox {
+    position: relative;
+    display: inline-flex;
 
-    &:hover {
-      color: $color-blue;
-    }
-  }
+    &-label {
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+      text-transform: capitalize;
+      color: $color-gray-dark;
+      cursor: pointer;
+      @include transition;
 
-  &__buttons {
-    margin-top: 17px;
-    display: flex;
-  }
-
-  &__button {
-    &:not(:first-child) {
-      margin-left: 27px;
+      &:hover {
+        color: $color-blue;
+      }
     }
 
-    &--checked {
-      .btn-icon {
+    &-inner {
+      display: inline-flex;
+      align-items: center;
+
+      svg {
+        margin-right: 6px;
+      }
+    }
+
+    input {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      border: 0;
+
+      &:checked + .exam-list-answer__checkbox-inner {
         color: $color-blue;
 
         &:hover {
-          opacity: 0.8;
+          color: #09aef5;
         }
       }
     }
   }
+
+  &__buttons {
+    margin-top: 16px;
+    display: flex;
+  }
+
+  &__button {
+    margin-left: 27px;
+  }
 }
+

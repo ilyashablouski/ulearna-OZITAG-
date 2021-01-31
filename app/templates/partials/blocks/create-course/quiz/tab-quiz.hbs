@@ -1,15 +1,16 @@
-<div class="tab-quiz">
+<div class="tab-quiz js-quiz">
   <div class="tab-quiz__wrapper js-content-editor">
     <div class="exam-list">
       <div class="exam-list__question">
         <div class="exam-list__question-group">
-          <span class="exam-list__question-title">1. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint?</span>
-          <button class="exam-list__edit-btn js-content-edit-btn"></button>
+          <span class="exam-list__question-number">1.</span>
+          <span class="exam-list__question-title">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint?</span>
+          <button class="exam-list__edit-btn js-content-edit-btn js-content-edit-btn"></button>
         </div>
 
         <div class="exam-list__question-group">
           <span class="exam-list__question-label">Question description / Help text</span>
-          <button class="exam-list__edit-btn js-content-edit-btn"></button>
+          <button class="exam-list__edit-btn js-content-edit-btn js-content-edit-btn"></button>
         </div>
       </div>
 
@@ -17,23 +18,27 @@
         {{> blocks/create-course/quiz/exam-list-answer
           label="A"
           text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."
+          id=1
         }}
 
         {{> blocks/create-course/quiz/exam-list-answer
           label="B"
           text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."
           checked=true
+          id=2
         }}
 
         {{> blocks/create-course/quiz/exam-list-answer
           label="C"
           text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."
+          id=3
         }}
 
         {{> blocks/create-course/quiz/exam-list-answer
           label="D"
           text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."
           checked=true
+          id=4
         }}
       </div>
 
@@ -45,16 +50,17 @@
       </div>
     </div>
 
-    <div class="exam-list">
+    <div class="exam-list exam-list--default js-quiz__default">
       <div class="exam-list__question">
         <div class="exam-list__question-group">
-          <span class="exam-list__question-title">1. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint?</span>
-          <button class="exam-list__edit-btn"></button>
+          <span class="exam-list__question-number">1.</span>
+          <span class="exam-list__question-title">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint?</span>
+          <button class="exam-list__edit-btn js-content-edit-btn"></button>
         </div>
 
         <div class="exam-list__question-group">
           <span class="exam-list__question-label">Add question description</span>
-          <button class="exam-list__edit-btn"></button>
+          <button class="exam-list__edit-btn js-content-edit-btn"></button>
         </div>
       </div>
 
@@ -65,7 +71,7 @@
         }}
       </div>
 
-      <div class="exam-list__option-btn">
+      <div class="exam-list__option-btn js-quiz__add-response">
         {{> ui/btn-icon
           icon="button-plus"
           label="One more response option"
@@ -82,8 +88,9 @@
   </div>
 
   <div class="tab-quiz__bottom">
-    <div class="tab-quiz__more-btn">
+    <div class="tab-quiz__more-btn js-quiz__add-question">
       {{> ui/btn
+        button=true
         outline=true
         label='One More Question'
         icon='button-plus'
