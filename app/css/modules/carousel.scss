@@ -43,6 +43,17 @@
 
   &__slider {
     position: relative;
+
+    ._with-pagination & {
+      @include desktop {
+        .swiper-wrapper {
+          padding-bottom: 20px;
+        }
+        .carousel__next, .carousel__prev{
+          margin-top: -20px;
+        }
+      }
+    }
   }
 
   &__row {
@@ -98,7 +109,7 @@
     padding: 0 18px 15px;
 
     @include tablet-and-mobile {
-      width: 282px + 15px;
+      width: 282px + 15px !important;
       margin-right: 9px;
       padding: 0 15px 15px 0;
     }
@@ -106,16 +117,68 @@
     @include tablet {
       &:last-child {
         padding-right: 30px;
-        width: calc(282px + 30px);
+        width: calc(282px + 30px) !important;
       }
     }
 
     @include mobile {
-      width: 262px + 15px;
+      width: 262px + 15px !important;
 
       &:last-child {
         padding-right: 15px;
-        width: calc(262px + 15px);
+        width: calc(262px + 15px) !important;
+      }
+    }
+
+    .carousel__slider--full & {
+      @include tablet-and-mobile {
+        width: auto;
+        margin-right: 0;
+        padding: 0;
+
+        .carousel__slide-cell {
+          @include tablet-and-mobile {
+            width: 282px + 15px;
+            margin-right: 9px;
+            padding: 0 15px 15px 0;
+          }
+
+          @include mobile {
+            width: 262px + 15px;
+
+            &:last-child {
+              padding-right: 15px;
+              width: calc(262px + 15px);
+            }
+          }
+        }
+
+        @include tablet {
+          &:last-child {
+            .carousel__slide-cell:last-child {
+              width: calc(282px + 30px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__slide-row {
+    display: flex;
+  }
+
+  &__slide-cell {
+    @include desktop {
+      width: 50%;
+      padding: 0 25px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
       }
     }
   }
@@ -165,6 +228,17 @@
       top: auto;
       bottom: -60px;
       right: 10px;
+    }
+  }
+
+  .swiper-pagination {
+    margin-top: 10px;
+    position: absolute;
+    bottom: 0;
+    @include align(true, false);
+
+    @include tablet-and-mobile {
+      display: none;
     }
   }
 }

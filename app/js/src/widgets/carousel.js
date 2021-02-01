@@ -4,6 +4,7 @@ class Carousel extends Widget {
 
     this.swiper = null;
     this.activeFilter = null;
+    this.$pagination = null;
 
     this.$slider = this.queryElement('.slider');
     this.$slides = this.queryElements('.item');
@@ -11,6 +12,7 @@ class Carousel extends Widget {
     this.$navNext = this.queryElement('.next');
     this.$tabs = this.queryElements('.tab');
     this.isBig = !!this.$node.dataset.carouselBig;
+    this.isFull = !!this.$node.dataset.carouselFull;
 
     this.onLayoutChange = this.onLayoutChange.bind(this);
 
@@ -70,8 +72,16 @@ class Carousel extends Widget {
         },
       });
     } else {
+
+      if (this.isFull) {
+        this.$pagination = document.createElement('div');
+        this.$pagination.classList.add('swiper-pagination');
+        this.$slider.append(this.$pagination);
+        this.$node.classList.add('_with-pagination');
+      }
+
       this.swiper = new Swiper(this.$slider, {
-        slidesPerView: this.isBig ? 2 : 4,
+        slidesPerView: this.isFull ? 1 : (this.isBig ? 2 : 4),
         spaceBetween: 0,
         breakpoints: {
           1440: {
@@ -82,6 +92,10 @@ class Carousel extends Widget {
           prevEl: this.$navPrev,
           nextEl: this.$navNext,
         },
+        pagination: this.isFull ? {
+          el: this.$pagination,
+          clickable: true,
+        } : false,
         on: {
           slideChangeTransitionStart: () => this.$slider.classList.add('transition'),
           slideChangeTransitionEnd: () => this.$slider.classList.remove('transition'),
@@ -140,7 +154,9 @@ class Carousel extends Widget {
       }
     });
 
-    this.$node.classList.toggle('no-navigation', visibleCount <= 4);
+    const itemsCount = this.isFull ? 1 : (this.isBig ? 2 : 4);
+
+    this.$node.classList.toggle('no-navigation', visibleCount <= itemsCount);
 
     if (this.swiper) {
       this.swiper.destroy(true, true);

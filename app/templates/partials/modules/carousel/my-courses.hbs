@@ -1,18 +1,22 @@
-{{#> modules/carousel/_component title=title big=true  see-all=true}}
+{{#> modules/carousel/_component full-slide=true title=title big=true see-all=true}}
   {{# times 3}}
-  <div class="swiper-slide carousel__slide js-carousel__item">
-    {{> widgets/course-card big=true progress=25 free=true
-            image="carousel/big_01"
-            title="Customizing Type with Draplin: Creating Wordmarks That Work"
-            author="by Kaylynn Dorwart"
-    }}
-  </div>
-  <div class="swiper-slide carousel__slide js-carousel__item">
-    {{> widgets/course-card big=true progress=75 original=true
-            image="carousel/big_02"
-            title="Productivity Masterclass: Create a Custom System that Works"
-            author="by Leo Workman"
-    }}
-  </div>
+    <div class="swiper-slide carousel__slide js-carousel__item">
+      <div class="carousel__slide-row">
+        <div class="carousel__slide-cell">
+          {{> widgets/course-card big=true progress=25 free=true
+                  image="carousel/big_01"
+                  title="Customizing Type with Draplin: Creating Wordmarks That Work"
+                  author="by Kaylynn Dorwart"
+          }}
+        </div>
+        <div class="carousel__slide-cell">
+          {{> widgets/course-card big=true progress=75 original=true
+                  image="carousel/big_02"
+                  title="Productivity Masterclass: Create a Custom System that Works"
+                  author="by Leo Workman"
+          }}
+        </div>
+      </div>
+    </div>
   {{/times}}
 {{/modules/carousel/_component}}

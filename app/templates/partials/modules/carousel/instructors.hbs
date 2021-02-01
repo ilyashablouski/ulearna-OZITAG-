@@ -1,33 +1,37 @@
-{{#> modules/carousel/_component title=title see-all=true}}
+{{#> modules/carousel/_component full-slide=true title=title see-all=true}}
   {{#times 3}}
-    <div class="carousel__slide swiper-slide js-carousel__item">
-      {{> widgets/instructor-card
-              image="carousel/instructor_01" name="Jaydon Dorwart" position="Senior developer"
-              course-title="Customizing Type with Draplin: Creating Wordmarks That Work"
-              other-count=8
-      }}
-    </div>
-    <div class="carousel__slide swiper-slide js-carousel__item">
-      {{> widgets/instructor-card sale=true original=true
-              image="carousel/instructor_02" name="Zaire Saris" position="Senior developer"
-              course-title="Productivity Masterclass: Create a Custom System that Works"
-              other-count=12 plus=true plus-price="8$" plus-price-old="16$"
-      }}
-    </div>
-    <div class="carousel__slide swiper-slide js-carousel__item">
-      {{> widgets/instructor-card free=true original=true
-              image="carousel/instructor_03" name="Marilyn Lubin" position="Senior developer"
-              course-image="home/featured/01"
-              course-title="ODD BODIES: Illustrating Expressive, Stylized People"
-              other-count=3 plus=true
-      }}
-    </div>
-    <div class="carousel__slide swiper-slide js-carousel__item">
-      {{> widgets/instructor-card
-              image="carousel/instructor_04" name="Charlie Levin" position="Senior developer"
-              course-title="Fundamentals of DSLR Photography"
-              other-count=6
-      }}
+    <div class="swiper-slide carousel__slide js-carousel__item">
+      <div class="carousel__slide-row">
+        <div class="carousel__slide-cell">
+          {{> widgets/instructor-card
+                  image="carousel/instructor_01" name="Jaydon Dorwart" position="Senior developer"
+                  course-title="Customizing Type with Draplin: Creating Wordmarks That Work"
+                  other-count=8
+          }}
+        </div>
+        <div class="carousel__slide-cell">
+          {{> widgets/instructor-card sale=true original=true
+                  image="carousel/instructor_02" name="Zaire Saris" position="Senior developer"
+                  course-title="Productivity Masterclass: Create a Custom System that Works"
+                  other-count=12 plus=true plus-price="8$" plus-price-old="16$"
+          }}
+        </div>
+        <div class="carousel__slide-cell">
+          {{> widgets/instructor-card free=true original=true
+                  image="carousel/instructor_03" name="Marilyn Lubin" position="Senior developer"
+                  course-image="home/featured/01"
+                  course-title="ODD BODIES: Illustrating Expressive, Stylized People"
+                  other-count=3 plus=true
+          }}
+        </div>
+        <div class="carousel__slide-cell">
+          {{> widgets/instructor-card
+                  image="carousel/instructor_04" name="Charlie Levin" position="Senior developer"
+                  course-title="Fundamentals of DSLR Photography"
+                  other-count=6
+          }}
+        </div>
+      </div>
     </div>
   {{/times}}
 {{/modules/carousel/_component}}

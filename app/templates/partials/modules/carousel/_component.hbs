@@ -10,7 +10,7 @@
     </header>
   {{/if}}
 
-  <div class="carousel__inner js-carousel" {{#if big}}data-carousel-big="1"{{/if}}>
+  <div class="carousel__inner js-carousel" {{#if full-slide}}data-carousel-full="1"{{/if}} {{#if big}}data-carousel-big="1"{{/if}}>
     {{#if tabs}}
       <div class="carousel__tabs">
         <div class="tabs">
@@ -37,7 +37,7 @@
         </div>
       </div>
     {{/if}}
-    <div class="carousel__slider">
+    <div class="carousel__slider {{#if full-slide}}carousel__slider--full{{/if}}">
       <div class="carousel__prev">
         <button class="button-nav button-nav--prev js-carousel__prev"></button>
       </div>
