@@ -63,6 +63,10 @@
       padding-left: 25px;
       position: relative;
 
+      @include mobile320{
+        padding-left: 15px;
+      }
+
       &:before {
         content: '';
         @include align(false, true);
@@ -92,6 +96,53 @@
       }
     }
   }
+
+  &__next {
+
+    &-link {
+      font-size: 15px;
+      line-height: 23px;
+      letter-spacing: 0.02em;
+      color: $color-white;
+      font-weight: bold;
+      padding-right: 25px;
+      position: relative;
+
+      @include mobile320{
+        padding-right: 15px;
+      }
+
+      &:before {
+        content: '';
+        @include align(false, true);
+        @include sprite('header-next-arrow');
+        @include transition;
+        right: 0;
+      }
+
+      &:hover {
+        color: $color-blue-light;
+
+        &:before {
+          transform: translateX(3px) translateY(-50%);
+        }
+      }
+    }
+
+    .page-header--center & {
+      position: absolute;
+      right: 0;
+      @include align(false, true);
+
+      @include mobile {
+        display: block;
+        transform: none;
+        text-align: left;
+        top: 0;
+      }
+    }
+  }
+
 
   &__inner {
     margin: 30px 0 0 0;
