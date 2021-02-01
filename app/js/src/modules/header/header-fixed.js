@@ -38,7 +38,7 @@ class HeaderFixed extends Widget {
   update() {
     const scrollTop = (window.pageYOffset || document.documentElement.scrollTop) - (document.documentElement.clientTop || 0);
 
-    if (scrollTop > 300) {
+    if (scrollTop > window.innerHeight) {
       this.setHeaderAsFixed();
     } else {
       this.setHeaderAsNotFixed();

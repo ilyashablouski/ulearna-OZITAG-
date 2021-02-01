@@ -6,7 +6,7 @@ class Header extends Widget {
     HeaderMenu.init(this.$node);
     HeaderSearch.init(this.$node);
 
-    if (this.$node.classList.contains('.js-header--fixed')) {
+    if (this.$node.classList.contains('js-header--fixed')) {
       HeaderFixed.init(this.$node);
     }
   }
