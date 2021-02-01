@@ -53,6 +53,7 @@ class Carousel extends Widget {
           el: '.swiper-scrollbar',
           draggable: true,
         },
+        grabCursor: true,
         spaceBetween: 0,
         breakpoints: {
           1440: {

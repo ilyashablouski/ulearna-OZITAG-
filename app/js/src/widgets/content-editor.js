@@ -30,7 +30,6 @@ class ContentEditor extends Widget {
 
   onAnchorElement(element) {
     element.removeAttribute('contenteditable');
-    this.removeCustomRangeColor(element);
   }
 
   onAnchorElements() {

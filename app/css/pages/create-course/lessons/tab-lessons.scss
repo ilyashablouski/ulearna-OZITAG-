@@ -94,14 +94,25 @@
 
     .carousel__prev, .carousel__next {
       top: 43%;
+
+      @include small-desktop {
+        bottom: auto;
+      }
     }
 
     .carousel__prev {
       left: -20px;
+      @include small-desktop {
+        transform: translateY(-50%) translateX(-100%);
+      }
     }
 
     .carousel__next {
       right: -20px;
+      @include small-desktop {
+        transform: translateY(-50%) translateX(100%);
+      }
+
     }
 
     .swiper-scrollbar {

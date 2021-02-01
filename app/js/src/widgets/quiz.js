@@ -10,18 +10,18 @@ class Quiz extends Widget {
     document.addEventListener('click', e => {
       const clickedElement = e.target;
       const toggleBtn = clickedElement.closest('.js-quiz__toggle');
-      const isQuestionBtn = clickedElement.closest('.js-quiz__add-question');
-      const isResponseBtn = clickedElement.closest('.js-quiz__add-response');
+      const questionBtn = clickedElement.closest('.js-quiz__add-question');
+      const responseBtn = clickedElement.closest('.js-quiz__add-response');
       console.log('Toggle btn:' + toggleBtn + '\r\n',
-        'Question btn:' + isQuestionBtn + '\r\n',
-        'Response btn:' + isResponseBtn + '\r\n');
+        'Question btn:' + questionBtn + '\r\n',
+        'Response btn:' + responseBtn + '\r\n');
 
       if (toggleBtn) {
         this.onToggleChecked(toggleBtn);
-      } else if (isQuestionBtn) {
+      } else if (questionBtn) {
         this.addQuestion();
-      } else if (isResponseBtn) {
-        this.addResponse();
+      } else if (responseBtn) {
+        this.addResponse(responseBtn);
       }
     });
   }
@@ -61,11 +61,39 @@ class Quiz extends Widget {
   }
 
   addQuestion() {
-    const cloneQuizElement = this.$defaultQuizElement.cloneNode(true);
+    const cloneQuizElement = this.$defaultQuizElement.parentElement.lastElementChild.cloneNode(true);
+    this.editQuestionNumber(cloneQuizElement);
+
     this.$defaultQuizElement.parentElement.append(cloneQuizElement);
-    console.log(cloneQuizElement);
   }
 
+  addResponse(buttonElement) {
+    const parentResponseElement = buttonElement.previousElementSibling;
+    const cloneResponseElement = parentResponseElement.lastElementChild.cloneNode(true);
+    this.editResponseLetter(cloneResponseElement);
+
+    parentResponseElement.append(cloneResponseElement);
+  }
+
+
+  editQuestionNumber(element) {
+    const elementNumberString = element.querySelector('.exam-list__question-number');
+    const string = elementNumberString.textContent;
+
+    let elementNumber = Number(string);
+    elementNumber++;
+    elementNumberString.textContent = elementNumber + '.';
+  }
+
+  editResponseLetter(element) {
+    const elementString = element.querySelector('.exam-list-answer__title-label');
+    const string = elementString.textContent;
+    let letterUtf8Number = string.charCodeAt(0);
+    letterUtf8Number++;
+    const newString = String.fromCharCode(letterUtf8Number);
+    elementString.textContent = newString + '.';
+    console.log(newString);
+  }
 
   static init(element, options = {}) {
     new Quiz(element, options);
