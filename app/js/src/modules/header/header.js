@@ -5,7 +5,10 @@ class Header extends Widget {
     HeaderBurger.init(this.$node);
     HeaderMenu.init(this.$node);
     HeaderSearch.init(this.$node);
-    HeaderFixed.init(this.$node);
+
+    if (this.$node.classList.contains('.js-header--fixed')) {
+      HeaderFixed.init(this.$node);
+    }
   }
 
   static init(el) {
