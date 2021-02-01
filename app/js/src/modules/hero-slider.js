@@ -17,7 +17,7 @@ class HeroSlider extends Widget {
     this.$playButton = null;
 
     this.soundEnabled = false;
-    this.playEnabled = false;
+    this.playEnabled = true;
 
     this.currentVideo = null;
 
