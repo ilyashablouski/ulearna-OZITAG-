@@ -6,7 +6,7 @@ class HeaderFixed extends Widget {
 
     this.events();
 
-    this.update();
+    this.update(true);
     this.updateHeight();
   }
 
@@ -35,7 +35,7 @@ class HeaderFixed extends Widget {
     this.$node.classList.remove('fixed');
   }
 
-  update() {
+  update(onLoad) {
     const scrollTop = (window.pageYOffset || document.documentElement.scrollTop) - (document.documentElement.clientTop || 0);
 
     if (scrollTop > window.innerHeight) {
@@ -44,12 +44,14 @@ class HeaderFixed extends Widget {
       this.setHeaderAsNotFixed();
     }
 
+    if (onLoad) {
+      return;
+    }
+
     if (this.isFixed === false && scrollTop > this.baseBeight && document.body.classList.contains('header-fixed') === false) {
       this.$node.classList.add('fixed-prepare');
       document.body.classList.add('header-fixed');
-    }
-
-    if (scrollTop <= this.baseBeight) {
+    } else if (scrollTop <= this.baseBeight) {
       this.$node.classList.remove('fixed-prepare');
       document.body.classList.remove('header-fixed');
     }
