@@ -12,13 +12,9 @@ class Quiz extends Widget {
       const toggleBtn = clickedElement.closest('.js-quiz__toggle');
       const questionBtn = clickedElement.closest('.js-quiz__add-question');
       const responseBtn = clickedElement.closest('.js-quiz__add-response');
-      const questionDeleteBtn = clickedElement.closest('.js-quiz__delete-question');
-      const responseDeleteBtn = clickedElement.closest('.js-quiz__delete-response');
+      const questionRemoveBtn = clickedElement.closest('.js-quiz__delete-question');
+      const responseRemoveBtn = clickedElement.closest('.js-quiz__delete-response');
 
-
-      console.log('Toggle btn:' + toggleBtn + '\r\n',
-        'Question btn:' + questionBtn + '\r\n',
-        'Response btn:' + responseBtn + '\r\n');
 
       if (toggleBtn) {
         this.onToggleChecked(toggleBtn);
@@ -26,6 +22,12 @@ class Quiz extends Widget {
         this.addQuestion();
       } else if (responseBtn) {
         this.addResponse(responseBtn);
+      }
+
+      if (questionRemoveBtn) {
+        this.removeQuestion(questionRemoveBtn);
+      } else if (responseRemoveBtn) {
+        this.removeResponse(responseRemoveBtn);
       }
     });
   }
@@ -75,6 +77,20 @@ class Quiz extends Widget {
 
     parentResponseElement.append(cloneResponseElement);
   }
+
+  removeQuestion(buttonElement) {
+    const questionElement = buttonElement.closest('.js-quiz__question');
+    questionElement.remove();
+  };
+
+  removeResponse(buttonElement) {
+    const responseElement = buttonElement.closest('.js-quiz__response');
+    const responseElementsCollection = buttonElement.closest('.js-quiz__responses').children;
+    if (responseElementsCollection.length > 1) {
+      responseElement.remove();
+      console.log(responseElementsCollection);
+    }
+  };
 
 
   editQuestionNumber(element) {

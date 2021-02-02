@@ -1,6 +1,6 @@
 <div class="tab-quiz js-quiz">
   <div class="tab-quiz__wrapper js-content-editor">
-    <div class="exam-list">
+    <div class="exam-list js-quiz__question">
       <div class="exam-list__question">
         <div class="exam-list__question-group">
           <span class="exam-list__question-number">1.</span>
@@ -14,7 +14,7 @@
         </div>
       </div>
 
-      <div class="exam-list__answers">
+      <div class="exam-list__answers js-quiz__responses">
         {{> blocks/create-course/quiz/exam-list-answer
           label="A"
           text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint."
@@ -64,7 +64,7 @@
         </div>
       </div>
 
-      <div class="exam-list__answers">
+      <div class="exam-list__answers js-quiz__responses">
         {{> blocks/create-course/quiz/exam-list-answer
           label="A"
           text="Add an answer option"
