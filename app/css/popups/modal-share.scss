@@ -24,8 +24,8 @@
     position: absolute;
     right: 4%;
     top: 6%;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     @include transition;
 
     @include smallTablet-and-mobile {
@@ -37,6 +37,10 @@
       content: '';
       @include sprite('modal-close');
       @include align();
+    }
+
+    &:hover {
+      background: rgba(218, 228, 237, .2);
     }
   }
 
