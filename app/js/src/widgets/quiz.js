@@ -12,6 +12,10 @@ class Quiz extends Widget {
       const toggleBtn = clickedElement.closest('.js-quiz__toggle');
       const questionBtn = clickedElement.closest('.js-quiz__add-question');
       const responseBtn = clickedElement.closest('.js-quiz__add-response');
+      const questionDeleteBtn = clickedElement.closest('.js-quiz__delete-question');
+      const responseDeleteBtn = clickedElement.closest('.js-quiz__delete-response');
+
+
       console.log('Toggle btn:' + toggleBtn + '\r\n',
         'Question btn:' + questionBtn + '\r\n',
         'Response btn:' + responseBtn + '\r\n');
@@ -27,37 +31,34 @@ class Quiz extends Widget {
   }
 
   onToggleChecked(element) {
-    element.classList.toggle('checked');
-    if (element.classList.contains('checked')) {
-      this.setChecked(element);
+    const checkboxElement = element.querySelector('input');
+    if (checkboxElement.hasAttribute('checked')) {
+      this.setUnchecked(checkboxElement);
     } else {
-      this.setUnchecked(element);
+      this.setChecked(checkboxElement);
     }
   }
 
   setChecked(element) {
-    const checkedElement =
-      `<label class="exam-list-answer__checkbox-label" for="2">
-        <input type="checkbox" checked="" id="1">
-          <span class="exam-list-answer__checkbox-inner">
-          <svg class="icon icon--check-mark">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#check-mark"></use>
-          </svg>
-            Correct
-          </span>
-      </label>`;
+    element.setAttribute('checked', '');
 
-    element.innerHTML = checkedElement;
+    const checkedElementText = element.nextElementSibling;
+    checkedElementText.innerHTML =
+      `<span class="exam-list-answer__checkbox-inner">
+        <svg class="icon icon--check-mark">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                 xlink:href="../assets/images/spriteInline.svg#check-mark"></use>
+        </svg>
+        Correct
+      </span>`;
   }
 
   setUnchecked(element) {
-    const uncheckedElement =
-      `<label class="exam-list-answer__checkbox-label" for="1">
-        <input type="checkbox" id="2">
-          <span class="exam-list-answer__checkbox-inner">Mark as correct</span>
-      </label>`;
+    element.removeAttribute('checked');
 
-    element.innerHTML = uncheckedElement;
+    const checkedElementText = element.nextElementSibling;
+    checkedElementText.innerHTML =
+      `<span class="exam-list-answer__checkbox-inner">Mark as correct</span>`;
   }
 
   addQuestion() {
