@@ -12,9 +12,19 @@
 
     <div class="tab-overview__form-field">
       {{#> ui/field label="Course Category" id="select_course_category" note="Help text"}}
-        {{#> ui/select id="select_course_category"}}
-          <option value="0">Creative Writing</option>
+        {{#> ui/select id="select_course_category" multiple-search=true}}
           <option value="1">Creative Writing</option>
+          <option value="0">Creative Writing</option>
+          <option value="2">Creative Writing</option>
+        {{/ui/select}}
+      {{/ui/field}}
+    </div>
+
+    <div class="tab-overview__form-field">
+      {{#> ui/field label="Course Subcategory" id="select_course_subcategory" note="Help text"}}
+        {{#> ui/select id="select_course_category" multiple-search=true}}
+          <option value="1">Creative Writing</option>
+          <option value="0">Creative Writing</option>
           <option value="2">Creative Writing</option>
         {{/ui/select}}
       {{/ui/field}}
