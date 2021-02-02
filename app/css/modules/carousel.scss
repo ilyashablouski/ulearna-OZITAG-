@@ -132,28 +132,29 @@
 
     .carousel__slider--full & {
       @include tablet-and-mobile {
-        width: auto;
+        width: auto !important;
         margin-right: 0;
         padding: 0;
 
         .carousel__slide-cell {
           @include tablet-and-mobile {
-            width: 282px + 15px;
+            width: 282px + 15px !important;
             margin-right: 9px;
             padding: 0 15px 15px 0;
           }
 
           @include mobile {
-            width: 262px + 15px;
+            width: 262px + 15px !important;
 
             &:last-child {
               padding-right: 15px;
-              width: calc(262px + 15px);
+              width: calc(262px + 15px) !important;
             }
           }
         }
 
         @include tablet {
+          width: auto;
           &:last-child {
             .carousel__slide-cell:last-child {
               width: calc(282px + 30px);
