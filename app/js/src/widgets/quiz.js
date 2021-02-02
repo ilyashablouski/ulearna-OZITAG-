@@ -12,6 +12,10 @@ class Quiz extends Widget {
       const toggleBtn = clickedElement.closest('.js-quiz__toggle');
       const questionBtn = clickedElement.closest('.js-quiz__add-question');
       const responseBtn = clickedElement.closest('.js-quiz__add-response');
+      const questionDeleteBtn = clickedElement.closest('.js-quiz__delete-question');
+      const responseDeleteBtn = clickedElement.closest('.js-quiz__delete-response');
+
+
       console.log('Toggle btn:' + toggleBtn + '\r\n',
         'Question btn:' + questionBtn + '\r\n',
         'Response btn:' + responseBtn + '\r\n');
