@@ -52,7 +52,7 @@ class HeaderFixed extends Widget {
       this.$node.classList.remove('fixed-prepare');
       document.body.classList.remove('header-fixed');
 
-      console.log('remove header fixed');
+      console.log('remove header fixed', scrollTop, this.baseBeight);
     }
   }
 
