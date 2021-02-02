@@ -1,5 +1,6 @@
 .exam-list-answer {
   padding: 18px 0;
+  height: 99px;
   box-shadow: inset 0px -1px 0px #DAE4ED;
   @include transition;
 
@@ -63,7 +64,6 @@
       letter-spacing: 0.02em;
       text-transform: capitalize;
       color: $color-gray-dark;
-      cursor: pointer;
       @include transition;
 
       &:hover {
@@ -85,6 +85,7 @@
       top: 0;
       bottom: 0;
       border: 0;
+      cursor: pointer;
 
       &:checked + .exam-list-answer__checkbox-inner {
         color: $color-blue;
