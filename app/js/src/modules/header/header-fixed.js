@@ -38,26 +38,21 @@ class HeaderFixed extends Widget {
 
     if (scrollTop > window.innerHeight) {
       this.setHeaderAsFixed();
-      console.log('set as fixed');
     } else {
       this.setHeaderAsNotFixed();
-      console.log('set as not fixed');
     }
 
     if (this.isFixed === false && scrollTop > this.baseBeight && document.body.classList.contains('header-fixed') === false) {
       this.$node.classList.add('fixed-prepare');
       document.body.classList.add('header-fixed');
-      console.log('add header fixed');
     } else if (scrollTop <= this.baseBeight) {
       this.$node.classList.remove('fixed-prepare');
       document.body.classList.remove('header-fixed');
-
-      console.log('remove header fixed', scrollTop, this.baseBeight);
     }
   }
 
   updateHeight() {
-    this.baseBeight = this.$node.offsetHeight;
+    this.baseBeight = 100;
   }
 
   onScroll() {
