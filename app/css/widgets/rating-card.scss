@@ -105,12 +105,15 @@
     .rating-card--energy.rating-card--small & {
       @include sprite('rating-energy');
 
-      &.rating-card__item--max {
-        @include sprite('rating-energy-full');
-      }
-
       &.rating-card__item--active {
         @include sprite('rating-energy--fill');
+      }
+
+      &.rating-card__item--max {
+        @include sprite('rating-energy-full-small');
+        &.fill {
+          @include sprite('rating-energy-full--fill-small');
+        }
       }
     }
   }
