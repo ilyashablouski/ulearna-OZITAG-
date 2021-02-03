@@ -1,6 +1,6 @@
 class CustomScroll extends Widget {
   constructor(nodeElement) {
-    super(nodeElement, '.js-custom-scroll');
+    super(nodeElement, '.js-custom-scroll', 'laptop');
     this.init();
   }
 

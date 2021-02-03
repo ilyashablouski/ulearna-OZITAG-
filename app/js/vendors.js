@@ -9,7 +9,7 @@ import 'lazysizes/plugins/native-loading/ls.native-loading';
 import 'lazysizes/plugins/object-fit/ls.object-fit';
 import svgPolyfill from 'svg4everybody';
 import jquery from 'jquery';
-import Swiper, {Pagination } from 'swiper';
+import swiper from 'swiper';
 import imask from 'imask';
 import datepicker from 'js-datepicker';
 import { format as dateFormat } from 'date-fns';
@@ -21,10 +21,7 @@ import Sortable from 'sortablejs';
 
 window.$ = window.jQuery = jquery;
 window.svg4everybody = svgPolyfill;
-
-window.Swiper = Swiper;
-Swiper.use([Pagination]);
-
+window.Swiper = swiper;
 window.IMask = imask;
 window.select2 = select2;
 window.PerfectScrollbar = PerfectScrollbar;
