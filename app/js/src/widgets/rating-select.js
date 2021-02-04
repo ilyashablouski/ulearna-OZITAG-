@@ -40,7 +40,13 @@ class RatingSelect extends Widget {
     triggerInputChange(this.$input);
 
     this.$icons.forEach(($icon, ind) => {
-      if (ind < this.value) {
+      if (this.value === 4 && this.mode === 'level') {
+        if (ind === 3) {
+          $icon.classList.add('fill');
+        } else{
+          $icon.classList.remove('fill');
+        }
+      } else if (ind < this.value) {
         $icon.classList.add('fill');
       } else {
         $icon.classList.remove('fill');
