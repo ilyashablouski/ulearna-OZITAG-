@@ -76,7 +76,11 @@
             {{> blocks/course/reviews/form }}
           {{/ifCond}}
           {{#ifCond tab 3}}
-            {{> blocks/course/discussion/discussion }}
+            {{#if search}}
+              {{> blocks/course/discussion/discussion-search }}
+            {{else}}
+              {{> blocks/course/discussion/discussion }}
+            {{/if}}
             {{> blocks/course/discussion/form }}
           {{/ifCond}}
           {{#ifCond tab 4}}

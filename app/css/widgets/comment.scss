@@ -148,6 +148,11 @@
   &__main {
     margin-top: 10px;
 
+    mark{
+      background: transparent;
+      color: $color-blue;
+    }
+
     @include smallTablet-and-mobile {
       margin-top: 16px;
       font-size: 14px;

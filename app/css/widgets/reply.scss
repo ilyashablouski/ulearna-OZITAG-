@@ -91,6 +91,11 @@
       font-size: 14px;
       line-height: 21px;
     }
+    mark {
+      background: transparent;
+      color: $color-blue;
+    }
+
   }
 
   &__btn {
