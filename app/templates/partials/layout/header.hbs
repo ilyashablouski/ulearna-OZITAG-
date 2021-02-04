@@ -1,4 +1,5 @@
-<header class="header page__header js-header {{#if fixed}}js-header--fixed{{/if}} {{#if authenticated}}header--authenticated{{/if}}
+<header class="header page__header js-header {{#if fixed}}js-header--fixed{{/if}} {{#if
+        authenticated}}header--authenticated{{/if}}
   {{#if shadow}}header--with-shadow{{/if}} {{#if no-desktop-shadow}}header--no-desktop-shadow{{/if}}">
   <div class="container">
     <div class="header__wrapper">
@@ -43,7 +44,7 @@
         <div class="header__right">
           {{#if authenticated}}
             <div class="header__right-search">
-              <a href="course-catalog-search.html" class="header__right-search-button"></a>
+              <button class="js-header__open-search header__right-search-button"></button>
             </div>
           {{/if}}
           <div class="header__language">

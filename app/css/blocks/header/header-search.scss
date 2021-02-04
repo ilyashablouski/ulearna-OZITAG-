@@ -1,21 +1,54 @@
-.header-search{
+.header-search {
   display: none;
   position: relative;
 
-  .search-overlay{
+  .search-overlay {
     position: absolute;
     left: 0;
     right: 0;
     display: none;
   }
 
-  &.active{
-    .search-overlay{
+  &.active {
+    .search-overlay {
       display: block;
     }
   }
 
-  .fixed &{
+  .fixed & {
     display: block;
+  }
+
+  .header-search__input-cancel {
+    display: none;
+  }
+
+  .header:not(.fixed) & {
+    @include desktop {
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 0;
+      &.visible {
+        display: block;
+      }
+    }
+
+    @include desktop {
+      .header-search__input {
+        display: flex;
+        align-items: center;
+
+        &-cancel {
+          display: block;
+          font-weight: bold;
+          font-size: 15px;
+          line-height: 22px;
+          letter-spacing: 0.02em;
+          color: $color-gray-dark;
+          margin-left: 14px;
+        }
+      }
+    }
   }
 }

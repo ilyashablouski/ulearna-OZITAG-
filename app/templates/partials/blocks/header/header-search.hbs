@@ -1,5 +1,9 @@
-<div class="header-search js-header-desktop-search">
-  {{> widgets/search-input }}
+<div class="header-search js-header-search">
+
+  <div class="header-search__input">
+    {{> widgets/search-input }}
+    <button class="header-search__input-cancel js-header__close-search">Cancel</button>
+  </div>
 
   <div class="search-overlay">
     <div class="search-overlay__results">

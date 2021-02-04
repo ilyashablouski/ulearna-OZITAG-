@@ -1,52 +1,32 @@
 class HeaderSearch extends Widget {
   constructor(node) {
-    super(node, 'js-header', 'tablet-mobile');
+    super(node, '.js-header-search', 'desktop');
 
-    this.$container = this.queryElement('.search');
-    this.$toggleButtons = this.queryElements('.search-toggle');
-
-    this.onToggleClick = this.onToggleClick.bind(this);
-    this.opened = false;
-
+    this.$input = this.$node.querySelector('input');
+    this.$scrollElement = this.$node.querySelector('.js-custom-scroll-header');
     this.init();
   }
 
   build() {
-    this.$toggleButtons.forEach($button => {
-      $button.addEventListener('click', this.onToggleClick);
+    this.$input.addEventListener('input', () => {
+      if (this.$input.value.trim().length > 0) {
+        this.$node.classList.add('active');
+        this.addCustomScroll(this.$scrollElement);
+      } else {
+        this.$node.classList.remove('active');
+      }
     });
   }
 
-  destroy() {
-    this.$toggleButtons.forEach($button => {
-      $button.removeEventListener('click', this.onToggleClick);
-    });
-  }
-
-  onToggleClick(e) {
-    e.preventDefault();
-
-    this.toggle();
-  }
-
-  toggle() {
-    this.opened ? this.close() : this.open();
-  }
-
-  open() {
-    this.opened = true;
-    this.$container.classList.add('visible');
-    this.$container.querySelector('input').focus();
-  }
-
-  close() {
-    this.opened = false;
-    this.$container.classList.remove('visible');
+  addCustomScroll(scrollElement) {
+    CustomScroll.init(scrollElement);
   }
 
   static init(el) {
-    new HeaderSearch(el);
+    el && new HeaderSearch(el);
   }
 }
 
-window.HeaderSearch = HeaderSearch;
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.js-header-search').forEach(item => HeaderSearch.init(item));
+});

@@ -76,6 +76,7 @@
   &__center {
     flex: 1 1 1px;
     margin-left: 44px;
+    position: relative;
 
     @include tablet-and-mobile {
       display: none;
@@ -108,6 +109,12 @@
 
         &:hover {
           opacity: .85;
+        }
+
+        @include desktop{
+          &.hidden{
+            display: none;
+          }
         }
       }
 

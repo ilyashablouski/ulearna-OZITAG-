@@ -49,7 +49,8 @@ import './src/modules/header/header-burger';
 import './src/modules/header/header-fixed';
 import './src/modules/header/header-menu';
 import './src/modules/header/header-search';
-import './src/modules/header/header-desktop-search';
+import './src/modules/header/header-mobile';
+import './src/modules/header/header-desktop';
 import './src/modules/header/header';
 
 import './src/modules/home-students';

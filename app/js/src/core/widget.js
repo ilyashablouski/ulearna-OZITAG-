@@ -70,7 +70,7 @@ class Widget {
    * @param selector
    * @returns Node
    */
-  queryElement(selector) {
+  queryElement(selector, optional) {
     let $node = null;
 
     if (selector) {
@@ -84,7 +84,7 @@ class Widget {
       }
     }
 
-    if (!$node) {
+    if (!$node && !optional) {
       throw new Error(`Widget "${this.selector}" Error: Child element (selector "${selector}") not found`);
     }
 
