@@ -37,6 +37,7 @@ import './src/widgets/inputs/numeric-input';
 import './src/widgets/inputs/masked-input';
 import './src/widgets/inputs/datepicker';
 import './src/widgets/inputs/select';
+import './src/widgets/inputs/search-input';
 
 import './src/widgets/carousel';
 import './src/widgets/mobile-slider';
