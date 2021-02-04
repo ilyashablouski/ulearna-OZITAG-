@@ -14,7 +14,7 @@
       flex: 1 1 53.27%;
       max-width: 53.27%;
 
-      @include mobile {
+      @include smallTablet-and-mobile {
         width: auto;
 
         .search-input {
@@ -35,7 +35,7 @@
 
     margin-top: 20px;
 
-    @include mobile {
+    @include smallTablet-and-mobile {
       margin-top: 40px;
     }
 
@@ -48,7 +48,7 @@
     display: none;
     margin-left: 80px;
 
-    @include mobile {
+    @include smallTablet-and-mobile {
       margin-left: 0;
     }
 
@@ -71,7 +71,7 @@
       &--lvl2 {
         margin-left: 95px;
 
-        @include mobile {
+        @include smallTablet-and-mobile {
           margin-left: 16px;
         }
       }
@@ -79,7 +79,7 @@
       &--lvl3 {
         margin-left: 190px;
         padding-left: 14px;
-        @include mobile {
+        @include smallTablet-and-mobile {
           display: none;
         }
       }
@@ -87,7 +87,7 @@
       &--lvl4 {
         margin-left: 285px;
         padding-left: 12px;
-        @include mobile {
+        @include smallTablet-and-mobile {
           display: none;
         }
       }
@@ -95,7 +95,7 @@
       &--lvl5 {
         margin-left: 82px;
         padding-left: 10px;
-        @include mobile {
+        @include smallTablet-and-mobile {
           display: none;
         }
       }
@@ -111,7 +111,7 @@
           max-width: 107px;
         }
 
-        @include mobile {
+        @include smallTablet-and-mobile {
           display: none;
         }
       }
@@ -121,7 +121,7 @@
       margin-top: 12px;
       display: inline-block;
 
-      @include mobile {
+      @include smallTablet-and-mobile {
         margin-top: 24px;
       }
     }

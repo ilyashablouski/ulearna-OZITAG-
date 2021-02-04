@@ -14,7 +14,7 @@
     overflow: hidden;
     border-radius: 100%;
 
-    @include mobile {
+    @include smallTablet-and-mobile {
       flex: 0 0 48px;
       max-width: 48px;
       height: 48px;
@@ -22,15 +22,19 @@
   }
 
   &__wrapper {
-    position: relative;
     margin-left: 16px;
+
+    @include smallTablet-and-mobile {
+      position: relative;
+      padding-bottom: 30px;
+    }
   }
 
   &__title {
-    display: inline-flex;
-    align-items: baseline;
+    display: flex;
+    align-items: center;
 
-    @include mobile {
+    @include smallTablet-and-mobile {
       display: block;
     }
 
@@ -52,7 +56,7 @@
       line-height: 140%;
       color: $color-gray-dark;
 
-      @include mobile {
+      @include smallTablet-and-mobile {
         margin-top: 4px;
         margin-left: 0;
         display: block;
@@ -69,7 +73,7 @@
     line-height: 140%;
     color: $color-gray-dark;
 
-    @include mobile {
+    @include smallTablet-and-mobile {
       display: none;
     }
   }
@@ -81,7 +85,7 @@
     line-height: 146%;
     color: $color-dark;
 
-    @include mobile {
+    @include smallTablet-and-mobile {
       margin-top: 18px;
       margin-left: -64px;
       font-size: 14px;
@@ -90,15 +94,18 @@
   }
 
   &__btn {
-    //TODO:
     opacity: 1;
     @include transition;
+    margin-left: 16px;
 
-    @include mobile {
-      opacity: 1;
+    @include smallTablet-and-mobile {
+      position: absolute;
+      left: 0;
+      bottom: 0;
       margin-top: 8px;
       margin-left: -64px;
       display: inline-block;
+      opacity: 1;
     }
   }
 }

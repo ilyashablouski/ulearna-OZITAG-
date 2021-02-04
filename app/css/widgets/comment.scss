@@ -12,7 +12,7 @@
     position: relative;
     cursor: pointer;
 
-    @include mobile {
+    @include smallTablet-and-mobile {
       padding: 0;
     }
 
@@ -24,7 +24,7 @@
       left: 0;
       transform: translate(-100%, -0.4%);
 
-      @include mobile {
+      @include smallTablet-and-mobile {
         display: none;
       }
     }
@@ -39,19 +39,19 @@
       background: #F0F4F8;
       transform: translate(0%, 4%);
 
-      @include mobile {
+      @include smallTablet-and-mobile {
         display: none;
       }
     }
 
-    @include mobile {
+    @include smallTablet-and-mobile {
       margin-left: 0;
       background: transparent;
       border-radius: 0;
     }
   }
 
-  @include no-mobile {
+  @include no-smallTablet {
     &:hover {
       .comment__reply {
         opacity: 1;
@@ -60,7 +60,7 @@
   }
 
   &__reply {
-    @include no-mobile {
+    @include no-smallTablet {
       position: absolute;
       right: 16px;
       top: 14px;
@@ -69,14 +69,14 @@
       z-index: 1;
     }
 
-    @include mobile {
+    @include smallTablet-and-mobile {
       margin-top: 8px;
     }
   }
 
   &__user {
 
-    @include mobile {
+    @include smallTablet-and-mobile {
       display: flex;
       align-items: center;
     }
@@ -85,7 +85,7 @@
       display: block;
       border-radius: 50%;
 
-      @include no-mobile {
+      @include no-smallTablet {
         position: absolute;
         left: -80px;
         top: 10px;
@@ -93,7 +93,7 @@
         height: 64px;
       }
 
-      @include mobile {
+      @include smallTablet-and-mobile {
         width: 48px;
         height: 48px;
         filter: drop-shadow(0px 4px 14px rgba(0, 29, 72, 0.12))
@@ -105,7 +105,7 @@
         display: block;
         border-radius: 50%;
 
-        @include mobile {
+        @include smallTablet-and-mobile {
           width: 48px;
           height: 48px;
         }
@@ -116,7 +116,7 @@
       display: flex;
       align-items: baseline;
 
-      @include mobile {
+      @include smallTablet-and-mobile {
         display: block;
         margin-left: 12px;
       }
@@ -137,7 +137,7 @@
       line-height: 140%;
       color: $color-gray-dark;
 
-      @include mobile {
+      @include smallTablet-and-mobile {
         margin-left: 0;
         font-size: 12px;
         line-height: 150%;
@@ -148,7 +148,7 @@
   &__main {
     margin-top: 10px;
 
-    @include mobile {
+    @include smallTablet-and-mobile {
       margin-top: 16px;
       font-size: 14px;
       line-height: 21px;
