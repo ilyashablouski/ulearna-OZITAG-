@@ -64,11 +64,11 @@
       color: $color-gray-dark;
     }
 
-    .swiper-container {
-      &:after, &:before {
-        display: none !important;
-      }
-    }
+    //.swiper-container {
+    //  &:after, &:before {
+    //    display: none !important;
+    //  }
+    //}
 
     .carousel__slide {
       @include desktop {

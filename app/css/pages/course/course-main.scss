@@ -10,7 +10,7 @@
   }
 
   &__tabs {
-    @include no-smallTablet {
+    @include desktop {
       padding-right: 333px;
     }
 
@@ -59,7 +59,7 @@
 
   &__sidebar {
     &--no-mobile {
-      @include smallTablet-and-mobile {
+      @include tablet-and-mobile {
         display: none;
       }
     }

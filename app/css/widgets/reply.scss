@@ -1,6 +1,12 @@
 .reply {
   display: flex;
 
+  &:hover {
+    .reply__btn {
+      opacity: 1;
+    }
+  }
+
   &__img {
     flex: 0 0 64px;
     max-width: 64px;
@@ -16,10 +22,18 @@
   }
 
   &__wrapper {
+    position: relative;
     margin-left: 16px;
   }
 
   &__title {
+    display: inline-flex;
+    align-items: baseline;
+
+    @include mobile {
+      display: block;
+    }
+
     &-name {
       font-weight: 600;
       font-size: 16px;
@@ -32,6 +46,7 @@
     }
 
     &-time {
+      margin-left: 6px;
       font-weight: normal;
       font-size: 14px;
       line-height: 140%;
@@ -39,6 +54,7 @@
 
       @include mobile {
         margin-top: 4px;
+        margin-left: 0;
         display: block;
         font-size: 12px;
         line-height: 150%;
@@ -66,7 +82,7 @@
     color: $color-dark;
 
     @include mobile {
-      margin-top: 16px;
+      margin-top: 18px;
       margin-left: -64px;
       font-size: 14px;
       line-height: 21px;
@@ -74,8 +90,12 @@
   }
 
   &__btn {
-    display: none;
+    //TODO:
+    opacity: 1;
+    @include transition;
+
     @include mobile {
+      opacity: 1;
       margin-top: 8px;
       margin-left: -64px;
       display: inline-block;

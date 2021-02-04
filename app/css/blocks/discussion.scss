@@ -11,7 +11,8 @@
     align-items: center;
 
     &-left {
-      width: 504px;
+      flex: 1 1 53.27%;
+      max-width: 53.27%;
 
       @include mobile {
         width: auto;
@@ -20,10 +21,6 @@
           display: none;
         }
       }
-    }
-
-    &-right {
-
     }
   }
 
@@ -106,6 +103,14 @@
       &--lvl6 {
         margin-left: 80px;
         padding-left: 8px;
+
+        .reply__title-name {
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          max-width: 107px;
+        }
+
         @include mobile {
           display: none;
         }
@@ -115,6 +120,10 @@
     &-hide-btn {
       margin-top: 12px;
       display: inline-block;
+
+      @include mobile {
+        margin-top: 24px;
+      }
     }
   }
 
