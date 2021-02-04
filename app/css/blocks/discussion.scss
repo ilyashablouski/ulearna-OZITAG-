@@ -5,6 +5,39 @@
     margin-top: 0;
   }
 
+  &__search {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    @include smallTablet-and-mobile {
+      display: none !important;
+    }
+
+    &-reset {
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+      color: $color-gray-dark;
+      @include transition;
+      display: none;
+
+      position: absolute;
+      top: 50%;
+      transform: translateX(100%) translateY(-50%);
+      right: -20px;
+
+      &:hover {
+        color: $color-blue;
+      }
+
+      .discussion__search._with-value & {
+        display: block;
+      }
+    }
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;
