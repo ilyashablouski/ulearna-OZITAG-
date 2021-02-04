@@ -31,6 +31,7 @@ import './src/widgets/drag-sortable';
 import './src/widgets/content-editor';
 import './src/widgets/quiz';
 import './src/widgets/rating-select';
+import './src/widgets/home-video';
 
 import './src/widgets/inputs/numeric-input';
 import './src/widgets/inputs/masked-input';

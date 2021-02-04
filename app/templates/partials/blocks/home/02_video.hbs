@@ -1,22 +1,37 @@
 <section class="section">
-
-  <div class="home-video">
+  <div class="home-video js-home-video">
     <div class="home-video__wrapper">
       <div class="home-video__bg">
+        <div class="home-video__video">
+          <video src="../assets/video/home-student/2.mp4" loop muted playsinline autoplay></video>
+        </div>
+        <!--
         {{> components/image img="home/video-bg" img-mobile="home/video-bg-mobile"  ext="jpg" no-2x=true}}
+        -->
       </div>
       <div class="home-video__inner">
-        <a href="https://www.youtube.com/watch?v=ze_ie8Ctp60" target="_blank" data-youtube-id="ze_ie8Ctp60"
-           class="js-video-link home-video__watch">
-          Watch Full Video
-        </a>
+        <div class="home-video__actions">
+          <div class="home-video__actions-item">
+            <button class="home-video__action js-home-video__toggle home-video__action--toggle"></button>
+          </div>
+          <div class="home-video__actions-item">
+            <button class="home-video__action js-home-video__sound home-video__action--sound">
+              Sound Off
+            </button>
+          </div>
+          <div class="home-video__actions-item">
+            <a href="https://www.youtube.com/watch?v=ze_ie8Ctp60" target="_blank" data-youtube-id="ze_ie8Ctp60"
+               class="js-video-link home-video__action home-video__action--full">
+              Watch Full Video
+            </a>
+          </div>
+        </div>
         <span class="home-video__title">Join <strong class="home-video__title-bold">Ulearna</strong> to watch, read, learn, create, debate ideas and Inspire</span>
         <div class="home-video__cta">
           {{> ui/btn size="large" color="orange" label="Get Started For Free"}}
         </div>
       </div>
     </div>
-
     <div class="home-video__button">
       <button class="home-video__scroll js-scroll-to" data-target=".home-featured"></button>
     </div>

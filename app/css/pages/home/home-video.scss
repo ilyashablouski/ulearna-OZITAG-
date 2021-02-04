@@ -9,6 +9,25 @@
     }
   }
 
+  &__video {
+    @include fill;
+    z-index: -1;
+
+    @include mobile {
+      overflow: hidden;
+    }
+
+    video {
+      width: 100%;
+      @include align(true, true);
+
+      @include mobile {
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+
   &__bg {
     @include fill;
     z-index: 0;
@@ -35,10 +54,27 @@
     }
   }
 
-  &__watch {
+  &__actions {
     position: absolute;
     top: 30px;
     right: 40px;
+    display: flex;
+
+    @include tablet-and-mobile {
+      top: 15px;
+      right: 15px;
+    }
+
+    &-item {
+      margin-left: 10px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__action {
     background: rgba(130, 154, 178, 0.2);
     backdrop-filter: blur(44px);
     border-radius: 8px;
@@ -52,25 +88,68 @@
     display: flex;
     align-items: center;
     letter-spacing: 0.02em;
+    white-space: nowrap;
 
-    @include tablet-and-mobile {
-      top: 15px;
-      right: 15px;
-    }
-
-    &:before {
-      content: '';
-      @include sprite('video-watch');
-      @include align(false, true);
-      left: 16px;
+    @include mobile {
+      padding: 0 10px 0 30px;
+      font-size: 13px;
     }
 
     &:hover {
       opacity: .85;
     }
+
+    &--full {
+      &:before {
+        content: '';
+        @include sprite('video-watch');
+        @include align(false, true);
+        left: 16px;
+
+        @include mobile {
+          left: 10px;
+        }
+      }
+    }
+
+    &--toggle {
+      width: 48px;
+      height: 42px;
+
+      &:before {
+        content: '';
+        @include align(true, true);
+        @include sprite('hero-video-pause');
+      }
+
+      &._paused:before {
+        @include sprite('hero-video-play');
+      }
+    }
+
+    &--sound {
+      @include no-mobile {
+        min-width: 132px;
+      }
+
+      &:before {
+        content: '';
+        left: 14px;
+        @include align(false, true);
+        @include sprite('hero-video-sound-on');
+
+        @include mobile {
+          left: 10px;
+        }
+      }
+
+      &._off:before {
+        @include sprite('hero-video-sound-off');
+      }
+    }
   }
 
-  &__button{
+  &__button {
     display: flex;
     justify-content: center;
     margin-top: 0;
@@ -110,12 +189,12 @@
       min-height: 500px;
     }
 
-    @include tablet{
+    @include tablet {
       padding-left: $tabletGutter;
       padding-right: $tabletGutter;
     }
 
-    @include mobile{
+    @include mobile {
       padding-left: $mobileGutter;
       padding-right: $mobileGutter;
     }
