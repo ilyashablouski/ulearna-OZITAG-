@@ -22,7 +22,7 @@
       @include sprite('comment-tail');
       top: 0;
       left: 0;
-      transform: translate(-100%, -0.4%);
+      transform: translate(-98%, -0.4%);
 
       @include smallTablet-and-mobile {
         display: none;
