@@ -32,11 +32,13 @@ import './src/widgets/content-editor';
 import './src/widgets/quiz';
 import './src/widgets/rating-select';
 import './src/widgets/home-video';
+import './src/widgets/discussion-search';
 
 import './src/widgets/inputs/numeric-input';
 import './src/widgets/inputs/masked-input';
 import './src/widgets/inputs/datepicker';
 import './src/widgets/inputs/select';
+import './src/widgets/inputs/search-input';
 
 import './src/widgets/carousel';
 import './src/widgets/mobile-slider';

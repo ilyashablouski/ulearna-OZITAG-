@@ -20,7 +20,7 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 150%;
-    padding: 0 20px 0 50px;
+    padding: 0 50px 0 50px;
     border: 2px solid #DAE4ED;
     border-radius: 12px;
     @include transition;
@@ -41,6 +41,12 @@
         @include sprite('search-big-blue');
       }
     }
+
+    &:placeholder-shown {
+      ~ .search-input__reset {
+        display: none;
+      }
+    }
   }
 
   &--big {
@@ -54,4 +60,14 @@
     }
   }
 
+  &__reset {
+    position: absolute;
+    right: 20px;
+    @include align(false, true);
+    @include sprite('search-reset');
+
+    &:hover {
+      @include sprite('search-reset-blue');
+    }
+  }
 }
