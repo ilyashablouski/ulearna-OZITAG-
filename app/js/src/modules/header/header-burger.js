@@ -9,6 +9,8 @@ class HeaderBurger extends Widget {
     this.opened = false;
 
     this.init();
+
+    return this;
   }
 
   build() {
@@ -39,7 +41,13 @@ class HeaderBurger extends Widget {
   }
 
   static init(el) {
-    new HeaderBurger(el);
+    HeaderBurger.el = new HeaderBurger(el);
+  }
+
+  static open() {
+    if (HeaderBurger.el) {
+      HeaderBurger.el.open();
+    }
   }
 }
 

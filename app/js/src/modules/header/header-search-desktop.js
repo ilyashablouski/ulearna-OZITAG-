@@ -1,4 +1,4 @@
-class HeaderSearch extends Widget {
+class HeaderSearchDesktop extends Widget {
   constructor(node) {
     super(node, '.js-header-search', 'desktop');
 
@@ -23,10 +23,10 @@ class HeaderSearch extends Widget {
   }
 
   static init(el) {
-    el && new HeaderSearch(el);
+    el && new HeaderSearchDesktop(el);
   }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.js-header-search').forEach(item => HeaderSearch.init(item));
+  document.querySelectorAll('.js-header-search').forEach(item => HeaderSearchDesktop.init(item));
 });

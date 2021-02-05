@@ -45,7 +45,13 @@ class HeaderMobile extends Widget {
   }
 
   static init(el) {
-    new HeaderMobile(el);
+    self.el = new HeaderMobile(el);
+  }
+
+  static openSearch() {
+    if (self.el) {
+      self.el.open();
+    }
   }
 }
 
