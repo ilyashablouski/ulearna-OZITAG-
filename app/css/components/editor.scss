@@ -1,14 +1,26 @@
 .editor + .ck {
+  ul {
+    list-style-type: disc;
+    padding-inline-start: 40px;
+  }
+
+  ol {
+    list-style-type: decimal;
+    padding-inline-start: 40px;
+  }
 
   .ck-toolbar.ck-toolbar_grouping {
     height: 50px !important;
+    background: #F9FBFC;
     border: 2px solid #DAE4ED;
     border-radius: 12px 12px 0 0 !important;
   }
 
   .ck-editor__editable {
     height: 208px;
-    border: 2px solid #DAE4ED !important;
+    border-left: 2px solid #DAE4ED !important;
+    border-right: 2px solid #DAE4ED !important;
+    border-bottom: 2px solid #DAE4ED !important;
     border-radius: 0 0 12px 12px !important;
 
     scrollbar-width: thin;
@@ -29,9 +41,22 @@
       border-radius: 5px;
       width: 5px;
     }
+
+    &_inline {
+      border: none;
+
+      & > :first-child {
+        margin-top: 13px;
+      }
+    }
+
+    &:not(.ck-editor__nested-editable).ck-focused {
+      border: none;
+    }
   }
 
   h2 {
+    margin-bottom: 4px;
     font-style: normal;
     font-weight: 600;
     font-size: 29px;
@@ -40,6 +65,7 @@
   }
 
   h3 {
+    margin-bottom: 9px;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -48,6 +74,7 @@
   }
 
   h4 {
+    margin-bottom: 9px;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -57,5 +84,79 @@
 
   .ck-dropdown {
     display: none;
+  }
+
+  .editor__heading {
+    color: $color-gray;
+
+    &:hover, &:focus, &:active {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    svg {
+      cursor: pointer;
+    }
+
+    svg path {
+      fill: $color-gray;
+      cursor: pointer;
+    }
+
+    &--2 {
+      svg {
+        height: 11px;
+      }
+    }
+
+    &--3 {
+      svg {
+        height: 15px;
+      }
+    }
+
+    &--4 {
+      svg {
+        height: 18px;
+      }
+    }
+
+    &.ck-on {
+      background: transparent;
+
+      svg path {
+        fill: $color-blue;
+      }
+    }
+
+  }
+
+  .ck-button {
+    border: none;
+
+    &.ck-on {
+      background: transparent;
+    }
+  }
+
+  .ck.ck-button:not(.ck-button_with-text) {
+    padding: 7px;
+
+    svg path {
+      fill: $color-gray-dark;
+    }
+
+    border-radius: 10px;
+
+    &:hover, &:focus, &:active {
+      background: #DFF3FB;
+      border: none;
+      box-shadow: none;
+    }
+
+    &.ck-on {
+      background: #DFF3FB;
+    }
   }
 }
