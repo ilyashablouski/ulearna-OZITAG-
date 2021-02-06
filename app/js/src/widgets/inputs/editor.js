@@ -9,9 +9,9 @@ class Editor extends Widget {
       toolbar: ['bold', 'italic', 'bulletedList', 'numberedList', '|', 'heading'],
       heading: {
         options: [
-          { model: 'heading2', view: 'h2', title: 'A', class: 'editor__heading editor__heading--2' },
-          { model: 'heading3', view: 'h3', title: 'A', class: 'editor__heading editor__heading--3' },
           { model: 'heading4', view: 'h4', title: 'A', class: 'editor__heading editor__heading--4' },
+          { model: 'heading3', view: 'h3', title: 'A', class: 'editor__heading editor__heading--3' },
+          { model: 'heading2', view: 'h2', title: 'A', class: 'editor__heading editor__heading--2' },
         ],
       },
     })
