@@ -4,6 +4,8 @@ class HomeVideo extends Widget {
 
     this.$playButton = this.queryElement('.toggle', true);
     this.$soundButton = this.queryElement('.sound');
+    this.$fullScreenButton = this.queryElement('.full', true);
+
     this.video = nodeElement.querySelector('video');
 
     this.playEnabled = true;
@@ -21,10 +23,27 @@ class HomeVideo extends Widget {
       });
     }
 
+    if (this.$fullScreenButton) {
+      this.$fullScreenButton.addEventListener('click', e => {
+        e.preventDefault();
+        this.fullScreen();
+      });
+    }
+
     this.$soundButton.addEventListener('click', e => {
       e.preventDefault();
       this.sound();
     });
+  }
+
+  fullScreen() {
+    if (this.video.requestFullscreen) {
+      this.video.requestFullscreen();
+    } else if (this.video.webkitRequestFullscreen) {
+      this.video.webkitRequestFullscreen();
+    } else if (this.video.msRequestFullscreen) {
+      this.video.msRequestFullscreen();
+    }
   }
 
   toggle() {
