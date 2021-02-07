@@ -2,7 +2,7 @@ class HomeVideo extends Widget {
   constructor(nodeElement) {
     super(nodeElement, '.js-home-video');
 
-    this.$playButton = this.queryElement('.toggle');
+    this.$playButton = this.queryElement('.toggle', true);
     this.$soundButton = this.queryElement('.sound');
     this.video = nodeElement.querySelector('video');
 
@@ -14,10 +14,12 @@ class HomeVideo extends Widget {
 
 
   build() {
-    this.$playButton.addEventListener('click', e => {
-      e.preventDefault();
-      this.toggle();
-    });
+    if (this.$playButton) {
+      this.$playButton.addEventListener('click', e => {
+        e.preventDefault();
+        this.toggle();
+      });
+    }
 
     this.$soundButton.addEventListener('click', e => {
       e.preventDefault();
@@ -44,10 +46,12 @@ class HomeVideo extends Widget {
   }
 
   drawPlayButton() {
-    if (this.playEnabled) {
-      this.$playButton.classList.remove('_paused');
-    } else {
-      this.$playButton.classList.add('_paused');
+    if (this.$playButton) {
+      if (this.playEnabled) {
+        this.$playButton.classList.remove('_paused');
+      } else {
+        this.$playButton.classList.add('_paused');
+      }
     }
   }
 

@@ -2,7 +2,7 @@ class HeaderSearchMobile extends Widget {
   constructor(node) {
     super(node, '.js-header', 'tablet-mobile');
 
-    this.$button = this.queryElement('.open-search');
+    this.$button = this.queryElement('.open-search', true);
     this.$stickyInput = this.queryElement('.header-search__input .search-input__input');
 
     this.onSearchClick = this.onSearchClick.bind(this);
@@ -12,12 +12,17 @@ class HeaderSearchMobile extends Widget {
   }
 
   build() {
-    this.$button.addEventListener('click', this.onSearchClick);
+    if (this.$button) {
+      this.$button.addEventListener('click', this.onSearchClick);
+    }
     this.$stickyInput.addEventListener('focus', this.onInputFocus);
   }
 
   destroy() {
-    this.$button.removeEventListener('click', this.onSearchClick);
+    if (this.$button) {
+      this.$button.removeEventListener('click', this.onSearchClick);
+    }
+
     this.$stickyInput.removeEventListener('focus', this.onInputFocus);
   }
 
@@ -27,7 +32,7 @@ class HeaderSearchMobile extends Widget {
     this.open();
   }
 
-  onInputFocus(){
+  onInputFocus() {
     this.open();
   }
 
