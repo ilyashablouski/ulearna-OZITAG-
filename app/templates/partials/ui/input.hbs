@@ -1,4 +1,4 @@
-<div class="form-input {{#if icon}}form-input--icon{{/if}} {{#if submit-btn}}form-input--icon-submit{{/if}} {{#when date
+<div class="form-input {{#if icon}}form-input--icon{{/if}} {{#if submit-btn}}form-input--icon-submit{{/if}} {{#if icon-date}}form-input--icon-right{{/if}} {{#when date
                                                                                                                     '||'
                                                                                                                     clipboard}}form-input--icon-right{{/when}} {{#if
   mod}}{{mod}}{{/if}}">
@@ -14,6 +14,10 @@
   {{/if}}
 
   {{#if date}}
+    <i class="form-input__icon form-input__icon--date"></i>
+  {{/if}}
+
+  {{#if icon-date}}
     <i class="form-input__icon form-input__icon--date"></i>
   {{/if}}
 
