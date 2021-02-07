@@ -89,6 +89,7 @@
     align-items: center;
     letter-spacing: 0.02em;
     white-space: nowrap;
+    position: relative;
 
     @include mobile {
       padding: 0 10px 0 30px;
