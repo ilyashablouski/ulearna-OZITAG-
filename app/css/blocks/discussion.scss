@@ -56,13 +56,13 @@
       }
     }
 
-    @include smallTablet-and-mobile{
-      &._opened{
-        .discussion__search-mobile{
+    @include smallTablet-and-mobile {
+      &._opened {
+        .discussion__search-mobile {
           display: none;
         }
 
-        .search-input{
+        .search-input {
           width: auto;
           right: 70px;
           position: absolute;
@@ -71,12 +71,16 @@
           left: 0;
         }
 
-        .discussion__search-reset{
+        .discussion__search-reset {
           display: block;
           right: 70px;
           background: #fff;
           z-index: 1;
           padding-left: 15px;
+
+          @include smallTablet-and-mobile {
+            display: none;
+          }
         }
       }
     }
@@ -87,7 +91,7 @@
     justify-content: space-between;
     align-items: center;
 
-    @include smallTablet-and-mobile{
+    @include smallTablet-and-mobile {
       min-height: 42px;
       position: relative;
     }
@@ -102,14 +106,25 @@
     }
   }
 
+  &__label {
+    margin-top: 30px;
+    display: block;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: $color-gray-dark;
+  }
+
   &__list {
     margin-top: 30px;
+
+    &--search-results {
+      margin-top: 20px;
+    }
   }
 
   &__message {
-    &.opened .discussion__replies {
-      display: block;
-    }
 
     margin-top: 20px;
 
@@ -123,27 +138,44 @@
   }
 
   &__replies {
-    display: none;
+    margin-top: 20px;
     margin-left: 80px;
 
+    &.opened .discussion__replies-results {
+      display: block;
+    }
+
     @include smallTablet-and-mobile {
+      margin-top: 24px;
       margin-left: 0;
     }
 
-    &.animate {
-      position: relative;
-      display: block;
-      height: 0;
-      overflow: hidden;
-      transition: height .32s ease;
+    &-results {
+      margin-top: 13px;
+      display: none;
+
+      &.animate {
+        position: relative;
+        display: block;
+        height: 0;
+        overflow: hidden;
+        transition: height .32s ease;
+      }
+
     }
 
     &-nested {
-      padding-left: 16px;
+      padding-left: 12px;
       border-left: 2px solid $color-gray;
 
       &--lvl1 {
         margin-left: 0;
+
+        .discussion__reply {
+          &:first-child {
+            margin-top: 0;
+          }
+        }
       }
 
       &--lvl2 {
@@ -156,7 +188,7 @@
 
       &--lvl3 {
         margin-left: 190px;
-        padding-left: 14px;
+        padding-left: 11px;
         @include smallTablet-and-mobile {
           display: none;
         }
@@ -164,14 +196,14 @@
 
       &--lvl4 {
         margin-left: 285px;
-        padding-left: 12px;
+        padding-left: 8px;
         @include smallTablet-and-mobile {
           display: none;
         }
       }
 
       &--lvl5 {
-        margin-left: 82px;
+        margin-left: 80px;
         padding-left: 10px;
         @include smallTablet-and-mobile {
           display: none;
@@ -195,22 +227,32 @@
       }
     }
 
-    &-hide-btn {
-      margin-top: 12px;
+    &-btn {
       display: inline-block;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+      color: $color-gray-dark;
+      @include transition;
 
-      @include smallTablet-and-mobile {
-        margin-top: 24px;
+      &:hover {
+        color: $color-gray-dark-hover;
+      }
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 21px;
       }
     }
   }
 
   &__reply {
-    margin-top: 20px;
+    margin-top: 21px;
   }
 
   &__pagination {
-    margin-top: 40px;
+    margin-top: 44px;
     display: flex;
     justify-content: flex-end;
   }
