@@ -8,7 +8,10 @@
   &__search {
     display: flex;
     align-items: center;
-    position: relative;
+
+    @include no-smallTablet {
+      position: relative;
+    }
 
     &-reset {
       font-weight: bold;
@@ -52,12 +55,42 @@
         display: block;
       }
     }
+
+    @include smallTablet-and-mobile{
+      &._opened{
+        .discussion__search-mobile{
+          display: none;
+        }
+
+        .search-input{
+          width: auto;
+          right: 70px;
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          left: 0;
+        }
+
+        .discussion__search-reset{
+          display: block;
+          right: 70px;
+          background: #fff;
+          z-index: 1;
+          padding-left: 15px;
+        }
+      }
+    }
   }
 
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include smallTablet-and-mobile{
+      min-height: 42px;
+      position: relative;
+    }
 
     &-left {
       flex: 1 1 53.27%;
