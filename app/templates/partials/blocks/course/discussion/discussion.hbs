@@ -1,7 +1,11 @@
 <div class="discussion">
   <div class="discussion__header">
     <div class="discussion__header-left">
-      {{> widgets/search-input placeholder="Search in discussions" big=true }}
+      <div class="discussion__search js-discussion-search">
+        <button class="discussion__search-mobile"></button>
+        {{> widgets/search-input placeholder="Search in discussions" big=true }}
+        <button class="discussion__search-reset js-discussion-search__reset">Cancel</button>
+      </div>
     </div>
     <div class="discussion__header-right">
       {{> widgets/pagination }}
