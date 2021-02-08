@@ -77,10 +77,6 @@
           background: #fff;
           z-index: 1;
           padding-left: 15px;
-
-          @include smallTablet-and-mobile {
-            display: none;
-          }
         }
       }
     }
