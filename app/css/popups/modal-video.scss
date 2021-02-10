@@ -1,0 +1,14 @@
+.modal-video {
+  width: 1000px;
+  max-width: 100%;
+
+  @include smallTablet-and-mobile {
+    min-width: 0;
+    width: 100%;
+  }
+
+  video{
+    width: 100%;
+    display: block;
+  }
+}

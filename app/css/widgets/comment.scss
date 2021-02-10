@@ -8,9 +8,8 @@
     flex: 1 1 1px;
     background: $color-gray-40;
     border-radius: 0 12px 12px 12px;
-    padding: 15px 15px 30px;
+    padding: 16px;
     position: relative;
-    cursor: pointer;
 
     @include smallTablet-and-mobile {
       padding: 0;
@@ -147,8 +146,10 @@
 
   &__main {
     margin-top: 10px;
+    font-size: 16px;
+    line-height: 146%;
 
-    mark{
+    mark {
       background: transparent;
       color: $color-blue;
     }

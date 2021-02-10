@@ -1,128 +1,131 @@
 <div class="discussion">
   <div class="discussion__header">
     <div class="discussion__header-left">
-      {{> widgets/search-input placeholder="Search in discussions" big=true }}
+      <div class="discussion__search js-discussion-search">
+        <button class="discussion__search-mobile js-discussion-search__toggle"></button>
+        {{> widgets/search-input placeholder="Search in discussions" big=true }}
+        <button class="discussion__search-reset js-discussion-search__reset">Cancel</button>
+      </div>
     </div>
     <div class="discussion__header-right">
       {{> widgets/pagination }}
     </div>
   </div>
   <div class="discussion__list">
-    <div class="discussion__message js-accord opened">
+    <div class="discussion__message">
       {{> widgets/comment
         image="avatars/01" name="You, Ali Kazai" date="1 day ago"
         message="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
       }}
 
-      <div class="discussion__replies js-accord__body">
-        <div class="discussion__replies-hide-btn js-accord__close">
-          {{> ui/btn-text button=true label="Hide replies"}}
-        </div>
+      <div class="discussion__replies js-accord opened">
+        <button class="discussion__replies-btn js-accord__toggle"><span>Hide Replies</span></button>
+        <div class="discussion__replies-results js-accord__body">
+          <div class="discussion__replies-nested discussion__replies-nested--lvl1">
+            <div class="discussion__reply">
+              {{> widgets/reply
+                image="course/reply_01"
+                name="Murvin Murphy, Instructor"
+                time="2 day ago"
+                label="Replied to: Ali Kazal"
+                text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+              }}
+            </div>
 
-        <div class="discussion__replies-nested discussion__replies-nested--lvl1">
-          <div class="discussion__reply">
-            {{> widgets/reply
-              image="course/reply_01"
-              name="Murvin Murphy, Instructor"
-              time="2 day ago"
-              label="Replied to: Ali Kazal"
-              text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
-            }}
+            <div class="discussion__reply">
+              {{> widgets/reply
+                image="course/reply_02"
+                name="Marcus Vaccaro"
+                time="3 day ago"
+                label="Replied to: Murvin Murphy, Instructor"
+                text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+              }}
+
+            </div>
           </div>
 
-          <div class="discussion__reply">
-            {{> widgets/reply
-              image="course/reply_02"
-              name="Marcus Vaccaro"
-              time="3 day ago"
-              label="Replied to: Murvin Murphy, Instructor"
-              text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
-            }}
-
-          </div>
-        </div>
-
-        <div class="discussion__replies-nested discussion__replies-nested--lvl2">
-          <div class="discussion__reply">
-            {{> widgets/reply
-              image="course/reply_03"
-              name="Leo Gouse"
-              time="24, August 2020"
-              label="Replied to: Marcus Vaccaro"
-              text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit."
-            }}
-          </div>
-        </div>
-
-        <div class="discussion__replies-nested discussion__replies-nested--lvl3">
-          <div class="discussion__reply">
-            {{> widgets/reply
-              image="course/reply_04"
-              name="Giana Passaquindici Arcand"
-              time="24, August 2020"
-              label="Replied to: Leo Gouse"
-              text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit."
-            }}
-          </div>
-        </div>
-
-        <div class="discussion__replies-nested discussion__replies-nested--lvl4">
-          <div class="discussion__reply">
-            {{> widgets/reply
-              image="course/reply_05"
-              name="Cooper Korsgaard"
-              time="24, August 2020"
-              label="Replied to: Giana Passaquindici Arcand"
-              text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit."
-            }}
-          </div>
-
-          <div class="discussion__replies-nested discussion__replies-nested--lvl5">
+          <div class="discussion__replies-nested discussion__replies-nested--lvl2">
             <div class="discussion__reply">
               {{> widgets/reply
                 image="course/reply_03"
                 name="Leo Gouse"
                 time="24, August 2020"
-                label="Replied to: Cooper Korsgaard"
+                label="Replied to: Marcus Vaccaro"
+                text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit."
+              }}
+            </div>
+          </div>
+
+          <div class="discussion__replies-nested discussion__replies-nested--lvl3">
+            <div class="discussion__reply">
+              {{> widgets/reply
+                image="course/reply_04"
+                name="Giana Passaquindici Arcand"
+                time="24, August 2020"
+                label="Replied to: Leo Gouse"
+                text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit."
+              }}
+            </div>
+          </div>
+
+          <div class="discussion__replies-nested discussion__replies-nested--lvl4">
+            <div class="discussion__reply">
+              {{> widgets/reply
+                image="course/reply_05"
+                name="Cooper Korsgaard"
+                time="24, August 2020"
+                label="Replied to: Giana Passaquindici Arcand"
                 text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit."
               }}
             </div>
 
-            <div class="discussion__replies-nested discussion__replies-nested--lvl6">
+            <div class="discussion__replies-nested discussion__replies-nested--lvl5">
               <div class="discussion__reply">
                 {{> widgets/reply
-                  image="course/reply_06"
-                  name="Aspen Curtis"
+                  image="course/reply_03"
+                  name="Leo Gouse"
                   time="24, August 2020"
-                  label="Replied to: Murvin Murphy, Instructor"
+                  label="Replied to: Cooper Korsgaard"
+                  text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit."
+                }}
+              </div>
+
+              <div class="discussion__replies-nested discussion__replies-nested--lvl6">
+                <div class="discussion__reply">
+                  {{> widgets/reply
+                    image="course/reply_06"
+                    name="Aspen Curtis"
+                    time="24, August 2020"
+                    label="Replied to: Murvin Murphy, Instructor"
+                    text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit."
+                  }}
+                </div>
+              </div>
+
+              <div class="discussion__reply">
+                {{> widgets/reply
+                  image="course/reply_07"
+                  name="Martin Saris"
+                  time="24, August 2020"
+                  label="Replied to: Cooper Korsgaard"
                   text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit."
                 }}
               </div>
             </div>
 
+
             <div class="discussion__reply">
               {{> widgets/reply
-                image="course/reply_07"
-                name="Martin Saris"
+                image="course/reply_08"
+                name="Leo George"
                 time="24, August 2020"
-                label="Replied to: Cooper Korsgaard"
-                text="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit."
+                label="Replied to: Giana Passaquindici Arcand"
+                text="Amet minim mollit non deserunt ullamco est sit aliqua"
               }}
             </div>
           </div>
 
-
-          <div class="discussion__reply">
-            {{> widgets/reply
-              image="course/reply_08"
-              name="Leo George"
-              time="24, August 2020"
-              label="Replied to: Giana Passaquindici Arcand"
-              text="Amet minim mollit non deserunt ullamco est sit aliqua"
-            }}
-          </div>
         </div>
-
       </div>
     </div>
 

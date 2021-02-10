@@ -64,6 +64,9 @@ class Popup {
 
   open() {
     this.nodeElement.classList.add('opened');
+    this.trigger('opened', {
+      node: this.nodeElement,
+    });
   }
 }
 
@@ -96,11 +99,12 @@ class PopupManager {
     this.createOverlay();
 
     const popup = this.popups[popupId];
-    popup.open();
 
     this.visiblePopup = popup;
 
     popup.on('closed', () => this.hideOverlay());
+
+    popup.open();
   }
 
   createOverlay() {

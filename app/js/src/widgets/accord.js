@@ -6,7 +6,6 @@ class Accord extends Widget {
 
     this.$toggle = options.toggleElement ? options.toggleElement : this.queryElement('.toggle');
     this.$body = options.bodyElement ? options.bodyElement : this.queryElement('.body');
-    this.$closeBtns = options.closeElements ? options.closeElements : this.queryElements('.close');
 
     this.opened = this.$node.classList.contains('opened');
     this.busy = false;
@@ -19,16 +18,11 @@ class Accord extends Widget {
 
   build() {
     this.$toggle.addEventListener('click', this.onToggleClick);
-    this.$closeBtns.forEach(element => {
-      element.addEventListener('click', this.onClose);
-    });
   }
 
   destroy() {
     this.$toggle.removeEventListener('click', this.onToggleClick);
-    this.$closeBtns.forEach(element => {
-      element.removeEventListener('click', this.onClose);
-    });
+
   }
 
   on(event, handler) {
@@ -56,6 +50,19 @@ class Accord extends Widget {
     // setTimeout(() => this.scrollToView(), 300);
   }
 
+  closeReply() {
+    this.collapse();
+    this.$node.classList.remove('opened');
+    this.$toggle.querySelector('span').textContent = 'Show Replies';
+  }
+
+  openReply() {
+    this.$node.classList.add('opened');
+    this.expand();
+    this.trigger('opening');
+    this.$toggle.querySelector('span').textContent = 'Hide Replies';
+  }
+
   close() {
     this.collapse();
     this.$node.classList.remove('opened');
@@ -65,8 +72,12 @@ class Accord extends Widget {
     e.preventDefault();
     if (this.busy) return;
     this.busy = true;
+    if (this.$toggle.classList.contains('discussion__replies-btn')) {
+      !this.$node.classList.contains('opened') ? this.openReply() : this.closeReply();
 
-    !this.$node.classList.contains('opened') ? this.open() : this.close();
+    } else {
+      !this.$node.classList.contains('opened') ? this.open() : this.close();
+    }
   }
 
   onClose() {

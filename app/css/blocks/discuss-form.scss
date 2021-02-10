@@ -4,27 +4,27 @@
   line-height: 43px;
   margin-top: 20px;
 
-  .form-field{
+  .form-field {
     padding-bottom: 0;
   }
 
-  &__title{
+  &__title {
     font-weight: 600;
     font-size: 29px;
     line-height: 43px;
     color: $color-black;
     display: block;
 
-    @include mobile{
+    @include mobile {
       font-size: 18px;
       line-height: 27px;
     }
   }
 
-  &__inner{
+  &__inner {
     margin-top: 20px;
 
-    @include mobile{
+    @include mobile {
       margin-top: 16px;
       background: rgba(218, 228, 237, 0.3);
       border-radius: 12px;
@@ -32,16 +32,20 @@
       margin-right: -$mobileGutter;
       padding: 16px;
     }
+
+    .comment__inner {
+      padding-bottom: 27px;
+    }
   }
 
-  &__button{
+  &__button {
     display: flex;
     justify-content: flex-end;
     margin-top: 30px;
 
-    @include mobile{
+    @include mobile {
       margin-top: 20px;
-      .btn{
+      .btn {
         width: 100%;
       }
     }
