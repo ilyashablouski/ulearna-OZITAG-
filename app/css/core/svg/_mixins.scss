@@ -177,6 +177,7 @@ $sprite: map-get($icons, sprite) !default;
     // Shares the backgrounds
 
     display: $display;
+    border-radius: 0;
     background-color: transparent;
     background-image: url(map-get($sprite, svgPath));
     background-size: mq-px2em(map-get($sprite, width)) mq-px2em(map-get($sprite, height));
