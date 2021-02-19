@@ -10,16 +10,16 @@
     </div>
 
     <div class="follower-card__send-button">
-      {{> ui/btn-icon icon="button-message" color="blue" label="Send Message"}}
+      {{> ui/btn-icon icon="button-message"  size="small" mod="btn--thin-text" color="blue" label="Send Message"}}
     </div>
 
     {{#if followed}}
       <div class="follower-card__follow-button">
-        {{> ui/btn icon="check-mark" color="light-blue-sky"  label="Followed"}}
+        {{> ui/btn icon="check-mark" size="small" mod="btn--thin-text" color="light-blue-sky"  label="Followed"}}
       </div>
     {{else}}
       <div class="follower-card__follow-button">
-        {{> ui/btn icon="button-plus" color="blue"  label="Follow"}}
+        {{> ui/btn icon="button-plus" size="small" mod="btn--thin-text" color="blue"  label="Follow"}}
       </div>
     {{/if}}
 

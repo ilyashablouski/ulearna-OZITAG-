@@ -55,10 +55,18 @@
   }
 
   &__more {
+    @include align(false, true);
+    right: 0;
+    z-index: 2;
+
     &:hover {
       .follower-card__more-overlay {
         visibility: visible;
         opacity: 1;
+      }
+
+      .follower-card__more-btn {
+        color: $color-blue;
       }
     }
   }
@@ -66,16 +74,13 @@
   &__more-btn {
     color: $color-gray-dark;
     @include transition;
-
-    &:hover {
-      color: $color-blue;
-    }
   }
 
   &__more-overlay {
     position: absolute;
-    bottom: -64px;
-    right: 10px;
+    top: 22px;
+    right: 2px;
+    min-width: 216px;
     visibility: hidden;
     opacity: 0;
     z-index: 2;
