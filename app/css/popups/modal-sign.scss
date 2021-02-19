@@ -182,6 +182,12 @@
     &-link {
       font-weight: 700;
       color: $color-blue;
+      cursor: pointer;
+      @include transition;
+
+      &:hover {
+        color: #09aef5;
+      }
     }
   }
 }

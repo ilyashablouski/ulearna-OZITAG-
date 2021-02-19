@@ -22,7 +22,7 @@
 
     <div class="tab-overview__form-field">
       {{#> ui/field label="Course Subcategory" id="select_course_subcategory" note="Help text"}}
-        {{#> ui/select id="select_course_category" multiple-search=true}}
+        {{#> ui/select id="select_course_subcategory" multiple-search=true}}
           <option value="1">Creative Writing</option>
           <option value="0">Creative Writing</option>
           <option value="2">Creative Writing</option>
@@ -33,8 +33,8 @@
     <div class="tab-overview__form-field">
       {{#> ui/field label="Course Name" id="input_course_name" note="Help text (min. --, max. -- symbols)"}}
         {{> ui/input id="input_course_name"
-          value="Customizing Type with Draplin: Creating Wordmarks That Work"
-          placeholder="Course Name"
+                value="Customizing Type with Draplin: Creating Wordmarks That Work"
+                placeholder="Course Name"
         }}
       {{/ui/field}}
     </div>
@@ -69,22 +69,22 @@
 
     <div class="tab-overview__more-btn">
       {{> ui/btn
-        outline=true
-        label='One More Question'
-        icon='button-plus'
-        transparent=true
+              outline=true
+              label='One More Question'
+              icon='button-plus'
+              transparent=true
       }}
     </div>
 
     <div class="tab-overview__next-btn">
       {{> ui/btn
-        color = "blue"
-        label = "Next"
-        href="/html/video-lessons.html"
-        icon="button-arrow-next"
-        icon-right = true
-        btn-mode="large"
-        w100 = true
+              color = "blue"
+              label = "Next"
+              href="/html/video-lessons.html"
+              icon="button-arrow-next"
+              icon-right = true
+              btn-mode="large"
+              w100 = true
       }}
     </div>
   </div>

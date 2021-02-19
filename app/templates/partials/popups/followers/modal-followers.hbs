@@ -6,7 +6,13 @@
     </div>
 
     <div class="modal-followers__content">
+      <div class="modal-followers__input">
+        {{> widgets/search-input placeholder="Search" big=true }}
+      </div>
 
+      <div class="modal-followers__cards">
+        {{> popups/followers/follower-card}}
+      </div>
     </div>
   </div>
 {{/popups/_base}}
