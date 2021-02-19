@@ -48,57 +48,6 @@
     }
   }
 
-  &__socials {
-    margin: 0 -10px;
-    margin-top: 24px;
-    display: flex;
-    justify-content: center;
-  }
-
-  &__social-link {
-    margin: 0 10px;
-    position: relative;
-    display: block;
-    width: 86px;
-    height: 52px;
-    border-radius: 10px;
-    @include transition;
-
-    &:hover {
-      opacity: 0.8;
-    }
-
-    &:after {
-      content: "";
-      position: absolute;
-      @include align();
-    }
-
-    &--facebook {
-      background: #4A67AD;
-
-      &:after {
-        @include sprite('facebook-small');
-      }
-    }
-
-    &--twitter {
-      background: #4BA0EC;
-
-      &:after {
-        @include sprite('twitter-small');
-      }
-    }
-
-    &--copy {
-      background: $color-gray;
-
-      &:after {
-        @include sprite('copy');
-      }
-    }
-  }
-
   &__separator {
     margin-top: 20px;
     font-weight: 600;
@@ -130,28 +79,4 @@
     }
   }
 
-  &__input-copy {
-    margin-top: 24px;
-  }
-
-  &__form {
-    margin-top: 20px;
-  }
-
-  &__text {
-    margin-top: 36px;
-    text-align: center;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 150%;
-    color: $color-dark;
-  }
-
-  &__form-btn {
-    margin-top: 20px;
-  }
-
-  &__buttons {
-    margin-top: 52px;
-  }
 }

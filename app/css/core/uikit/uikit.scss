@@ -350,6 +350,7 @@
 
   &-row {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     padding-left: 1px;
     @include mobile {
