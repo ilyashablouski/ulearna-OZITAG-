@@ -7,6 +7,10 @@
   box-shadow: 0 6px 44px rgb(1 64 139 / 24%);
   overflow: hidden;
 
+  @include mobile {
+    display: block;
+  }
+
   &__left {
     padding: 144px 50px 50px;
     flex: 1 1 auto;
@@ -15,6 +19,10 @@
     @include smallTablet {
       padding: 144px 30px 50px;
       flex: 1 0 auto;
+    }
+
+    @include mobile {
+      display: none;
     }
 
     &-icon {
@@ -49,6 +57,10 @@
     padding: 25px 48px 50px;
     flex: 1 1 auto;
     background: $color-white;
+
+    @include mobile {
+      padding: 25px;
+    }
   }
 
   &__header {
@@ -83,6 +95,10 @@
 
   &__content {
     margin-top: 36px;
+
+    @include mobile {
+      margin-top: 20px;
+    }
   }
 
   &__button {
@@ -96,6 +112,10 @@
     line-height: 24px;
     letter-spacing: 0.02em;
     color: $color-gray-dark;
+
+    @include mobile {
+      margin-top: 20px;
+    }
 
     span {
       display: flex;
@@ -122,6 +142,9 @@
 
   &__form {
     margin-top: 30px;
+    @include mobile {
+      margin-top: 20px;
+    }
 
     &-input {
       &:not(:first-child) {
@@ -135,10 +158,23 @@
     margin-top: 20px;
     display: flex;
 
+    @include mobile {
+      display: block;
+    }
+
     &-input {
       padding: 0 10px;
       flex: 0 0 50%;
       max-width: 50%;
+
+      @include mobile {
+        display: block;
+        max-width: none;
+
+        &:last-child {
+          margin-top: 20px;
+        }
+      }
     }
   }
 
@@ -149,6 +185,10 @@
   &__text-block {
     margin-top: 30px;
     text-align: center;
+
+    @include mobile {
+      margin-top: 20px;
+    }
 
     &-text {
       font-size: 16px;
@@ -170,6 +210,10 @@
 
   &__terms {
     margin-top: 40px;
+
+    @include mobile {
+      margin-top: 20px;
+    }
 
     &-text {
       text-align: center;

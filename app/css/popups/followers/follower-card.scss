@@ -24,6 +24,10 @@
     align-items: center;
     width: 100%;
     box-shadow: inset 0px -1px 0px #DAE4ED;
+
+    @include mobile {
+      min-width: 450px;
+    }
   }
 
   &__info {
@@ -55,10 +59,6 @@
   }
 
   &__more {
-    @include align(false, true);
-    right: 0;
-    z-index: 2;
-
     &:hover {
       .follower-card__more-overlay {
         visibility: visible;
@@ -72,13 +72,19 @@
   }
 
   &__more-btn {
+    @include align(false, true);
+    right: 0;
     color: $color-gray-dark;
     @include transition;
+
+    @include mobile {
+      right: 10px;
+    }
   }
 
   &__more-overlay {
     position: absolute;
-    top: 22px;
+    top: 50px;
     right: 2px;
     min-width: 216px;
     visibility: hidden;
