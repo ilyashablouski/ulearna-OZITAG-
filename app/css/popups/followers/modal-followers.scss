@@ -22,8 +22,8 @@
 
   &__close {
     position: absolute;
-    right: 2.2%;
-    top: 2.2%;
+    right: 3%;
+    top: 2.5%;
     width: 30px;
     height: 30px;
     @include transition;
@@ -39,5 +39,29 @@
     }
   }
 
+  &__input {
+    margin-top: 20px;
+  }
 
+  &__cards {
+    margin-right: -5px;
+    margin-top: 8px;
+    max-height: 549px;
+    overflow: auto;
+  }
+
+  .scrollbar-track {
+    background: rgba(218, 228, 237, 0.52);
+    border-radius: 5px;
+  }
+
+  .scrollbar-track-y {
+    width: 5px;
+  }
+
+  .scrollbar-thumb {
+    width: 5px;
+    background: rgba(130, 154, 178, 0.42);
+    border-radius: 5px;
+  }
 }

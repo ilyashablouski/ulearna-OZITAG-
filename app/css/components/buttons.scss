@@ -99,6 +99,15 @@
     }
   }
 
+  &--light-blue-sky {
+    background: $color-blue-12;
+    color: $color-blue;
+
+    &:hover {
+      background: darken($color-blue-12, 10%);
+    }
+  }
+
   &--light-blue {
     background: rgba(33, 151, 255, 0.22);
     color: #2197FF;

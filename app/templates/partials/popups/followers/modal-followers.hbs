@@ -1,8 +1,8 @@
 {{#> popups/_base id=id}}
   <div class="modal-followers">
-    <div class="modal-sign__header">
-      <span class="modal-sign__title">{{title}}</span>
-      <button class="modal-sign__close js-popup-close"></button>
+    <div class="modal-followers__header">
+      <span class="modal-followers__title">{{title}}</span>
+      <button class="modal-followers__close js-popup-close"></button>
     </div>
 
     <div class="modal-followers__content">
@@ -10,8 +10,58 @@
         {{> widgets/search-input placeholder="Search" big=true }}
       </div>
 
-      <div class="modal-followers__cards">
-        {{> popups/followers/follower-card}}
+      <div class="modal-followers__cards js-custom-scroll">
+        {{> popups/followers/follower-card
+                image="popups/follower_01"
+                name="Ann Bergson"
+                label="Student"
+                followed=true
+        }}
+        {{> popups/followers/follower-card
+                image="popups/follower_02"
+                name="Lincoln Dokidis"
+                label="Student"
+                followed=true
+        }}
+        {{> popups/followers/follower-card
+                image="popups/follower_03"
+                name="Anika Rosser"
+                label="Student"
+                followed=true
+        }}
+        {{> popups/followers/follower-card
+                image="popups/follower_04"
+                name="Emerson Baptista"
+                label="Student"
+                followed=true
+        }}
+        {{> popups/followers/follower-card
+                image="popups/follower_05"
+                name="Brandon Lipshutz"
+                label="Student"
+                followed=true
+        }}
+        {{> popups/followers/follower-card
+                image="popups/follower_06"
+                name="Lydia Press"
+                label="Student"
+                followed=true
+        }}
+        {{> popups/followers/follower-card
+                image="popups/follower_07"
+                name="Rayna Westervelt"
+                label="Student"
+                followed=true
+        }}
+
+        {{#times 7}}
+          {{> popups/followers/follower-card
+                  image="popups/follower_07"
+                  name="Rayna Westervelt"
+                  label="Student"
+                  followed=true
+          }}
+        {{/times}}
       </div>
     </div>
   </div>
