@@ -8,13 +8,13 @@
   overflow: hidden;
 
   &__left {
-    padding: 50px;
-    padding-top: 144px;
+    padding: 144px 50px 50px;
     flex: 1 1 auto;
     background: linear-gradient(180deg, #20B7F7 0%, #2197FF 100%);
 
-    &-info {
-
+    @include smallTablet {
+      padding: 144px 30px 50px;
+      flex: 1 0 auto;
     }
 
     &-icon {
@@ -29,6 +29,11 @@
       font-size: 38px;
       line-height: 57px;
       color: $color-white;
+
+      @include smallTablet {
+        max-width: 0;
+        min-width: 0;
+      }
     }
 
     &-label {
@@ -44,12 +49,6 @@
     padding: 25px 48px 50px;
     flex: 1 1 auto;
     background: $color-white;
-  }
-
-  @include smallTablet-and-mobile {
-    padding: 25px;
-    min-width: 0;
-    width: 100%;
   }
 
   &__header {
@@ -70,11 +69,6 @@
     width: 30px;
     height: 30px;
     @include transition;
-
-    @include smallTablet-and-mobile {
-      right: 2%;
-      top: 2%;
-    }
 
     &:before {
       content: '';
