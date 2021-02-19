@@ -23,15 +23,13 @@
   position: fixed;
   left: 50%;
   top: 50%;
+  width: 100%;
   transform: translate(-50%, -50%) scale(0);
-  border-radius: 12px;
   opacity: 0;
-  @include transition;
-  background: #FFFFFF;
   min-width: 216px;
-  box-shadow: 0 6px 44px rgba(1, 64, 139, 0.24);
   overflow: hidden;
   z-index: 1001;
+  @include transition;
 
   @include tablet-and-mobile {
     max-width: 95%;
