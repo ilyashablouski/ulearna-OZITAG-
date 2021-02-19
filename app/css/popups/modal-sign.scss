@@ -1,11 +1,50 @@
 .modal-sign {
   position: relative;
   margin: 0 auto;
-  padding: 30px;
-  max-width: 558px;
-  border-radius: 12px;
+  display: flex;
+  max-width: 937px;
+  border-radius: 30px 0 30px 30px;
   box-shadow: 0 6px 44px rgb(1 64 139 / 24%);
-  background: $color-white;
+  overflow: hidden;
+
+  &__left {
+    padding: 50px;
+    padding-top: 144px;
+    flex: 1 1 auto;
+    background: linear-gradient(180deg, #20B7F7 0%, #2197FF 100%);
+
+    &-info {
+
+    }
+
+    &-icon {
+      @include sprite('modal-logo');
+    }
+
+    &-text {
+      margin-top: 20px;
+      max-width: 231px;
+      min-width: 231px;
+      font-weight: bold;
+      font-size: 38px;
+      line-height: 57px;
+      color: $color-white;
+    }
+
+    &-label {
+      margin-top: 19px;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 150%;
+      color: $color-white;
+    }
+  }
+
+  &__right {
+    padding: 25px 48px 50px;
+    flex: 1 1 auto;
+    background: $color-white;
+  }
 
   @include smallTablet-and-mobile {
     padding: 25px;
@@ -26,8 +65,8 @@
 
   &__close {
     position: absolute;
-    right: 4%;
-    top: 6%;
+    right: 2.2%;
+    top: 2.2%;
     width: 30px;
     height: 30px;
     @include transition;
@@ -48,8 +87,16 @@
     }
   }
 
-  &__separator {
+  &__content {
+    margin-top: 36px;
+  }
+
+  &__button {
     margin-top: 20px;
+  }
+
+  &__separator {
+    margin-top: 30px;
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
@@ -79,4 +126,68 @@
     }
   }
 
+  &__form {
+    margin-top: 30px;
+
+    &-input {
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__form-group {
+    margin: 0 -10px;
+    margin-top: 20px;
+    display: flex;
+
+    &-input {
+      padding: 0 10px;
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  &__btn-submit {
+    margin-top: 15px;
+  }
+
+  &__text-block {
+    margin-top: 30px;
+    text-align: center;
+
+    &-text {
+      font-size: 16px;
+      line-height: 146%;
+      color: $color-dark;
+    }
+
+    &-link {
+      font-weight: 700;
+      color: $color-blue;
+      cursor: pointer;
+      @include transition;
+
+      &:hover {
+        color: #09aef5;
+      }
+    }
+  }
+
+  &__terms {
+    margin-top: 40px;
+
+    &-text {
+      text-align: center;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 19px;
+      color: $color-gray-dark;
+    }
+
+    &-link {
+      font-weight: 700;
+      color: $color-blue;
+    }
+  }
 }

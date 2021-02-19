@@ -4,7 +4,7 @@
       <div class="modal-sign__left-info">
         <i class="modal-sign__left-icon"></i>
         <div class="modal-sign__left-text">Welcome back to Ulearna</div>
-        <div class="modal-sign__left-label">Welcome back to Ulearna welcome text</div>
+        <div class="modal-sign__left-label">Welcome back to<br> Ulearna welcome text</div>
       </div>
     </div>
 
@@ -16,17 +16,68 @@
 
       <div class="modal-sign__content">
         <div class="modal-sign__button">
-          {{> ui/btn size="small" label="Sign up with Facebook"}}
+          {{> ui/btn icon="facebook-blue" w100=true mod="btn--light-blue" label="Sign Up With Facebook"}}
         </div>
         <div class="modal-sign__button">
-          {{> ui/btn size="small" label="Sign up with Google"}}
+          {{> ui/btn icon="google-green" w100=true mod="btn--light-green" label="Sign Up With Google"}}
         </div>
 
         <div class="modal-sign__separator">
           <span>or</span>
         </div>
-        <div class="modal-sign__btn-bottom">
-          {{> ui/btn size="large" label="Sign up" w100=true}}
+
+        <div class="modal-sign__form">
+          <div class="modal-sign__form-input">
+            {{> ui/input id="input_name" placeholder="Your name"}}
+          </div>
+          <div class="modal-sign__form-input">
+            {{> ui/input id="input_email" placeholder="Your email"}}
+          </div>
+
+          <div class="modal-sign__form-group">
+            <div class="modal-sign__form-group-input">
+              {{#> ui/field error="Minimum 8 symbols" id="input_password"}}
+                {{> ui/input id="input_password"
+                  type="password"
+                  placeholder="Your password"
+                  value="123456"
+                  mod="form-input--error"
+                  icon="error"
+                  icon-position="right"
+                }}
+              {{/ui/field}}
+            </div>
+
+            <div class="modal-sign__form-group-input">
+              {{> ui/input id="input_password"
+                type="password"
+                placeholder="Repeat password"
+                mod="form-input--check"
+                icon="check"
+                icon-position="right"
+              }}
+            </div>
+          </div>
+
+          <div class="modal-sign__btn-submit">
+            {{> ui/btn button=true type="submit" color="blue" size="large" label="Sign up" w100=true}}
+          </div>
+
+          <div class="modal-sign__text-block">
+            <span class="modal-sign__text-block-text">Already have an account? <a href="#"
+                                                                                  class="modal-sign__text-block-link">Sign In</a>
+          </span>
+          </div>
+
+          <div class="modal-sign__terms">
+            <p class="modal-sign__terms-text">
+              <a href="#" class="modal-sign__terms-link">Terms of use</a>&nbsp;and&nbsp;<a href="#"
+                                                                                           class="modal-sign__terms-link">Privacy
+              Policy</a>
+              mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit
+              mollit. Exercitation veniam consequat sunt nostrud amet.
+            </p>
+          </div>
         </div>
       </div>
     </div>

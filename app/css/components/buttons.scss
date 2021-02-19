@@ -99,6 +99,24 @@
     }
   }
 
+  &--light-blue {
+    background: rgba(33, 151, 255, 0.22);
+    color: #2197FF;
+
+    &:hover {
+      background: darken(rgba(33, 151, 255, 0.22), 10%);
+    }
+  }
+
+  &--light-green {
+    background: rgba(66, 219, 146, 0.22);
+    color: $color-green;
+
+    &:hover {
+      background: darken(rgba(66, 219, 146, 0.22), 10%);
+    }
+  }
+
   &--outline {
     border: 1px solid $color-dark;
     color: $color-dark;

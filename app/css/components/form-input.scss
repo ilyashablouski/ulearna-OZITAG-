@@ -48,6 +48,11 @@
 
     input {
       padding-right: 48px;
+      padding-left: 16px;
+
+      @include mobile {
+        padding-left: 46px;
+      }
     }
   }
 
@@ -86,6 +91,14 @@
 
     &--message {
       @include sprite('message-blue');
+    }
+
+    &--error {
+      @include sprite('input-warning');
+    }
+
+    &--check {
+      @include sprite('check-eye');
     }
   }
 
@@ -176,6 +189,16 @@
 
       &:focus {
         border: 2px solid $color-blue;
+      }
+    }
+  }
+
+  &--error {
+    input {
+      border: 2px solid $color-red;
+
+      &:focus {
+        border-color: $color-red;
       }
     }
   }

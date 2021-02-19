@@ -1,8 +1,7 @@
-<div class="form-input {{#if icon}}form-input--icon{{/if}} {{#if submit-btn}}form-input--icon-submit{{/if}} {{#if icon-date}}form-input--icon-right{{/if}} {{#when date
-                                                                                                                    '||'
-                                                                                                                    clipboard}}form-input--icon-right{{/when}} {{#if
-  mod}}{{mod}}{{/if}}">
-  <input type="{{#if type}}{{type}}{{else}}{{#if date}}date{{else}}{{/if}}text{{/if}}" autocomplete="off"
+<div class="form-input {{#if icon}}form-input--icon{{/if}} {{#if submit-btn}}form-input--icon-submit{{/if}} {{#if
+  icon-date}}form-input--icon-right{{/if}} {{#when date '||'icon-right}}form-input--icon-right{{/when}} {{#if
+  icon-position}} form-input--icon-{{icon-position}}{{/if}} {{#if mod}}{{mod}}{{/if}}">
+  <input type="{{#if type}}{{type}}{{else}}{{#if date}}date{{else}}{{/if}}text{{/if}}" id="{{id}}" autocomplete="off"
          placeholder="{{ placeholder }}"
          class=" {{#if mask}}js-masked-input{{/if}} {{#if numeric}}js-numeric-input{{/if}} {{#if
            date}}js-datepicker{{/if}}"

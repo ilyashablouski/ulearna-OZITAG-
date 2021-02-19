@@ -3,8 +3,16 @@
   position: relative;
   width: 100%;
 
-  @include mobile{
+  @include mobile {
     padding-bottom: 22px;
+  }
+
+  &--error {
+    padding-bottom: 0;
+
+    .form-field__input {
+      margin-top: 0;
+    }
   }
 
   &__label {
@@ -40,4 +48,14 @@
       line-height: 150%;
     }
   }
+
+  &__error {
+    margin-top: 6px;
+    display: inline-block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+    color: $color-red;
+  }
+
 }
