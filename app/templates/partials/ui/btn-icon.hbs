@@ -1,4 +1,4 @@
-<button class="btn-icon">
+<button class="btn-icon {{#if color}}btn-icon--{{color}}{{/if}} {{#if mod}}btn-icon--{{mod}}{{/if}}">
   {{> ui/svg name=icon}}
   {{ label }}
 </button>

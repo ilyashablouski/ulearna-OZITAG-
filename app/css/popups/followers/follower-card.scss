@@ -1,0 +1,95 @@
+.follower-card {
+  display: flex;
+  align-items: center;
+
+  &__user-img {
+    margin-right: 14px;
+    flex: 0 0 48px;
+    max-width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    overflow: hidden;
+
+    img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  &__inner {
+    margin-right: 13px;
+    position: relative;
+    padding: 16px 0 19px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-shadow: inset 0px -1px 0px #DAE4ED;
+
+    @include mobile {
+      min-width: 450px;
+    }
+  }
+
+  &__info {
+    margin-right: auto;
+  }
+
+  &__user-name {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  &__user-label {
+    margin-top: 6px;
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+    color: $color-gray-dark;
+  }
+
+  &__send-button {
+    margin: 0 10px;
+  }
+
+  &__follow-button {
+    margin: 0 36px 0 10px;
+  }
+
+  &__more {
+    &:hover {
+      .follower-card__more-overlay {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .follower-card__more-btn {
+        color: $color-blue;
+      }
+    }
+  }
+
+  &__more-btn {
+    @include align(false, true);
+    right: 0;
+    color: $color-gray-dark;
+    @include transition;
+
+    @include mobile {
+      right: 10px;
+    }
+  }
+
+  &__more-overlay {
+    position: absolute;
+    top: 50px;
+    right: 2px;
+    min-width: 216px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 2;
+    @include transition;
+  }
+}

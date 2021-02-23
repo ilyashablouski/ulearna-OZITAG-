@@ -1,0 +1,35 @@
+<div class="follower-card">
+  <div class="follower-card__user-img">
+    {{> components/image img=image ext="jpg"}}
+  </div>
+
+  <div class="follower-card__inner">
+    <div class="follower-card__info">
+      <span class="follower-card__user-name">{{name}}</span>
+      <span class="follower-card__user-label">{{label}}</span>
+    </div>
+
+    <div class="follower-card__send-button">
+      {{> ui/btn-icon icon="button-message"  size="small" mod="btn--thin-text" color="blue" label="Send Message"}}
+    </div>
+
+    {{#if followed}}
+      <div class="follower-card__follow-button">
+        {{> ui/btn icon="check-mark" size="small" mod="btn--thin-text" color="light-blue-sky"  label="Followed"}}
+      </div>
+    {{else}}
+      <div class="follower-card__follow-button">
+        {{> ui/btn icon="button-plus" size="small" mod="btn--thin-text" color="blue"  label="Follow"}}
+      </div>
+    {{/if}}
+
+    <div class="follower-card__more">
+      <button class="follower-card__more-btn">
+        {{> ui/svg name="more-btn"}}
+      </button>
+      <div class="follower-card__more-overlay">
+        {{> widgets/report-overlay}}
+      </div>
+    </div>
+  </div>
+</div>

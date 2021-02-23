@@ -9,11 +9,11 @@
   font-weight: bold;
   @include transition;
 
-  svg{
+  svg {
     margin-right: 6px;
   }
 
-  &:hover{
+  &:hover {
     color: $color-gray-dark-hover;
   }
 
@@ -28,5 +28,17 @@
       margin-right: 0;
       margin-left: 6px;
     }
+  }
+
+  &--blue {
+    color: $color-blue;
+
+    &:hover {
+      color: #09aef5;
+    }
+  }
+
+  &--thin-text {
+    font-weight: 600;
   }
 }
