@@ -49,6 +49,10 @@
     opacity: 1;
   }
 
+  &.instant{
+    transition: none;
+  }
+
   &__content {
     position: relative;
   }
