@@ -10,6 +10,9 @@
   &__img {
     height: 72px;
     width: 72px;
+    min-width: 72px;
+    max-height: 72px;
+    max-width: 72px;
     border-radius: 100%;
     overflow: hidden;
     filter: drop-shadow(0px 4px 14px rgba(1, 64, 139, 0.14));
@@ -18,6 +21,9 @@
       margin-top: 20px;
       height: 64px;
       width: 64px;
+      min-width: 64px;
+      max-height: 64px;
+      max-width: 64px;
     }
   }
 
