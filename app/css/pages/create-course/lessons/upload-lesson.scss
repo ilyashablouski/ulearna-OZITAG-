@@ -5,6 +5,7 @@
     text-align: center;
 
     &-inner {
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -74,7 +75,44 @@
     align-items: center;
   }
 
-  &__upload-btn {
+  &__upload {
+    position: relative;
     margin-left: 145px;
+
+    &-btn {
+      border-radius: 8px;
+      padding: 14px 16px;
+      color: #fff;
+      font-size: 16px;
+      text-align: center;
+      line-height: 100%;
+      letter-spacing: .01em;
+      font-weight: 700;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #dae4ed;
+      color: #fff;
+      cursor: pointer;
+      @include transition;
+
+      &:hover {
+        background: darken(#dae4ed, 10%);
+      }
+    }
+
+    &-input {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+
+    &-text {
+
+    }
   }
+
 }

@@ -59,11 +59,6 @@ class Carousel extends Widget {
         spaceBetween: 0,
         preventClicks: false,
         preventClicksPropagation: false,
-        breakpoints: {
-          1440: {
-            spaceBetween: 12,
-          },
-        },
         navigation: {
           prevEl: this.$navPrev,
           nextEl: this.$navNext,

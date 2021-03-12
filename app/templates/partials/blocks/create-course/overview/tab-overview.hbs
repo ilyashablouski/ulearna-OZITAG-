@@ -1,6 +1,6 @@
 <div class="tab-overview">
   <div class="tab-overview__wrapper">
-    <div class="tab-overview__form-field">
+    <div class="tab-overview__form-field tab-overview__form-field--short">
       {{#> ui/field label="Course Language" id="select_course_language" note="Help text"}}
         {{#> ui/select id="select_course_language"}}
           <option value="0">English</option>
@@ -9,56 +9,57 @@
         {{/ui/select}}
       {{/ui/field}}
     </div>
+    <div class="tab-overview__inner">
+      <div class="tab-overview__form-field">
+        {{#> ui/field label="Course Category" id="select_course_category" note="Help text"}}
+          {{#> ui/select id="select_course_category" multiple-search=true}}
+            <option value="1">Creative Writing</option>
+            <option value="0">Creative Writing</option>
+            <option value="2">Creative Writing</option>
+          {{/ui/select}}
+        {{/ui/field}}
+      </div>
 
-    <div class="tab-overview__form-field">
-      {{#> ui/field label="Course Category" id="select_course_category" note="Help text"}}
-        {{#> ui/select id="select_course_category" multiple-search=true}}
-          <option value="1">Creative Writing</option>
-          <option value="0">Creative Writing</option>
-          <option value="2">Creative Writing</option>
-        {{/ui/select}}
-      {{/ui/field}}
-    </div>
+      <div class="tab-overview__form-field">
+        {{#> ui/field label="Course Subcategory" id="select_course_subcategory" note="Help text"}}
+          {{#> ui/select id="select_course_subcategory" multiple-search=true}}
+            <option value="1">Creative Writing</option>
+            <option value="0">Creative Writing</option>
+            <option value="2">Creative Writing</option>
+          {{/ui/select}}
+        {{/ui/field}}
+      </div>
 
-    <div class="tab-overview__form-field">
-      {{#> ui/field label="Course Subcategory" id="select_course_subcategory" note="Help text"}}
-        {{#> ui/select id="select_course_subcategory" multiple-search=true}}
-          <option value="1">Creative Writing</option>
-          <option value="0">Creative Writing</option>
-          <option value="2">Creative Writing</option>
-        {{/ui/select}}
-      {{/ui/field}}
-    </div>
+      <div class="tab-overview__form-field">
+        {{#> ui/field label="Course Name" id="input_course_name" note="Help text (min. --, max. -- symbols)"}}
+          {{> ui/input id="input_course_name"
+            value="Customizing Type with Draplin: Creating Wordmarks That Work"
+            placeholder="Course Name"
+          }}
+        {{/ui/field}}
+      </div>
 
-    <div class="tab-overview__form-field">
-      {{#> ui/field label="Course Name" id="input_course_name" note="Help text (min. --, max. -- symbols)"}}
-        {{> ui/input id="input_course_name"
-                value="Customizing Type with Draplin: Creating Wordmarks That Work"
-                placeholder="Course Name"
-        }}
-      {{/ui/field}}
-    </div>
+      <div class="tab-overview__form-field">
+        {{#> ui/field label="Course Skills" id="input_course_skills" note="Help text"
+                      value=""}}
+          {{#> ui/select id="select_course_skills" multiple-search=true}}
+            <option value="0">Skill name</option>
+            <option value="1">Skill name</option>
+            <option value="2">Skill name</option>
+          {{/ui/select}}
+        {{/ui/field}}
+      </div>
 
-    <div class="tab-overview__form-field">
-      {{#> ui/field label="Course Skills" id="input_course_skills" note="Help text"
-                    value=""}}
-        {{#> ui/select id="select_course_skills" multiple-search=true}}
-          <option value="0">Skill name</option>
-          <option value="1">Skill name</option>
-          <option value="2">Skill name</option>
-        {{/ui/select}}
-      {{/ui/field}}
-    </div>
-
-    <div class="tab-overview__form-field">
-      {{#> ui/field label="Course Overview" id="classic_editor" note="Help text (max. -- symbols)"
-                    value=""}}
-        <div class="editor">
-          <h2>Bold Big Text</h2>
-          <h3>Body medium text</h3>
-          <h4>Body small text</h4>
-        </div>
-      {{/ui/field}}
+      <div class="tab-overview__form-field">
+        {{#> ui/field label="Course Overview" id="classic_editor" note="Help text (max. -- symbols)"
+                      value=""}}
+          <div class="editor">
+            <h2>Bold Big Text</h2>
+            <h3>Body medium text</h3>
+            <h4>Body small text</h4>
+          </div>
+        {{/ui/field}}
+      </div>
     </div>
   </div>
 
@@ -69,22 +70,22 @@
 
     <div class="tab-overview__more-btn">
       {{> ui/btn
-              outline=true
-              label='One More Question'
-              icon='button-plus'
-              transparent=true
+        outline=true
+        label='One More Question'
+        icon='button-plus'
+        transparent=true
       }}
     </div>
 
     <div class="tab-overview__next-btn">
       {{> ui/btn
-              color = "blue"
-              label = "Next"
-              href="/html/video-lessons.html"
-              icon="button-arrow-next"
-              icon-right = true
-              btn-mode="large"
-              w100 = true
+        color = "blue"
+        label = "Next"
+        href="/html/video-lessons.html"
+        icon="button-arrow-next"
+        icon-right = true
+        btn-mode="large"
+        w100 = true
       }}
     </div>
   </div>

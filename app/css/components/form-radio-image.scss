@@ -3,6 +3,10 @@
   position: relative;
   width: 100%;
 
+  img {
+    min-height: 174px;
+  }
+
   input {
     position: absolute;
     top: 0;

@@ -11,11 +11,13 @@
     </div>
   {{/if}}
   <div class="program-card__label">{{label}}</div>
-  <div class="program-card__btn">
-    {{#if not-upgrade}}
-      {{> ui/btn btn-mode="no-border" mod="btn--w100-mobile" label=btn-label}}
-    {{else}}
-      {{> ui/btn outline=true mod="btn--w100-mobile" label=btn-label}}
-    {{/if}}
+  <div class="program-card__bottom">
+    <div class="program-card__btn">
+      {{#if not-upgrade}}
+        {{> ui/btn btn-mode="no-border" mod="btn--w100-mobile" label=btn-label}}
+      {{else}}
+        {{> ui/btn outline=true mod="btn--w100-mobile" label=btn-label}}
+      {{/if}}
+    </div>
   </div>
 </div>

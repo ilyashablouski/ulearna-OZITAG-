@@ -11,7 +11,7 @@
     padding-bottom: 0;
   }
 
-  &__group {
+  &__inner {
     margin-top: 30px;
     padding-bottom: 40px;
     @include mobile {
@@ -45,6 +45,10 @@
     &:last-child {
       padding-bottom: 0;
     }
+  }
+
+  &__group {
+    max-width: 504px;
 
     &-title {
       font-weight: 600;
@@ -60,8 +64,6 @@
   }
 
   &__input {
-    max-width: 504px;
-
     @include mobile {
       padding-right: 16px;
     }
@@ -78,10 +80,6 @@
           margin-top: 20px;
         }
       }
-    }
-
-    &:last-child {
-      margin-top: 10px;
     }
 
     &-note {

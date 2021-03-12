@@ -1,97 +1,103 @@
 <div class="student-account">
-  <div class="student-account__group">
-    <div class="student-account__input">
-      {{#> ui/field label="Library Language" id="input_language"}}
-        {{#> ui/select id="select_language" placeholder="English" }}
-          <option value="0">English</option>
-          <option value="1">Russian</option>
-          <option value="2">Russian</option>
-          <option value="3">United States 2</option>
-          <option value="4">English 2</option>
-          <option value="5">Russian 2</option>
-        {{/ui/select}}
-      {{/ui/field}}
+  <div class="student-account__inner">
+    <div class="student-account__group">
+      <div class="student-account__input">
+        {{#> ui/field label="Library Language" id="input_language"}}
+          {{#> ui/select id="select_language" placeholder="English" }}
+            <option value="0">English</option>
+            <option value="1">Russian</option>
+            <option value="2">Russian</option>
+            <option value="3">United States 2</option>
+            <option value="4">English 2</option>
+            <option value="5">Russian 2</option>
+          {{/ui/select}}
+        {{/ui/field}}
 
-      <span class="student-account__input-note"><b>Upgrade For X$</b> to have access to Ulearna in all languages</span>
+        <span
+          class="student-account__input-note"><b>Upgrade For X$</b> to have access to Ulearna in all languages</span>
+      </div>
     </div>
   </div>
+  <div class="student-account__inner">
+    <div class="student-account__group">
+      <div class="student-account__checkboxes">
+        <span class="student-account__checkboxes-title">Privacy Settings</span>
 
-  <div class="student-account__group">
-    <div class="student-account__checkboxes">
-      <span class="student-account__checkboxes-title">Privacy Settings</span>
-
-      <div class="student-account__checkbox">
-        {{> ui/checkbox id="checkbox_01" checked=true label="Make my profile private"}}
-        <span class="student-account__checkbox-note">Option description</span>
-      </div>
-
-      <div class="student-account__checkbox">
-        {{> ui/checkbox id="checkbox_02" label="Remove my profile from web search results"}}
-        <span class="student-account__checkbox-note">Option description</span>
-      </div>
-    </div>
-
-    <div class="student-account__checkboxes">
-      <div class="student-account__checkboxes-title">Notifications</div>
-
-      <div class="student-account__checkbox">
-        {{> ui/checkbox id="checkbox_03" checked=true label="Notification option"}}
-        <span class="student-account__checkbox-note">Notification option description</span>
-      </div>
-
-      <div class="student-account__checkbox">
-        {{> ui/checkbox id="checkbox_04" checked=true label="Notification option"}}
-        <span class="student-account__checkbox-note">Notification option description</span>
-      </div>
-
-      <div class="student-account__checkbox">
-        {{> ui/checkbox id="checkbox_05" checked=true label="Notification option"}}
-        <span class="student-account__checkbox-note">Notification option description</span>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="student-account__group">
-    <div class="student-account__input student-account__input--note">
-      {{#> ui/field label="Username" note="Help text" id="student_username" }}
-        {{> ui/input id="student_username" placeholder="Name" value="Ali Kazal"}}
-      {{/ui/field}}
-    </div>
-
-    <div class="student-account__input">
-      {{#> ui/field label="Your Email" id="student_email" }}
-        {{> ui/input id="student_email" placeholder="Email" value="Ali_Kazal@mail.com"}}
-      {{/ui/field}}
-    </div>
-
-    <div class="student-account__input student-account__input--clipboard">
-      {{#> ui/field label="Your Ulearna URL" id="student_ulearna-url" }}
-        {{> ui/input id="student_ulearna-url" placeholder="URL" value="https://www.Ulearna.com/Ali_Kazal" icon-right=true clipboard=true}}
-      {{/ui/field}}
-    </div>
-
-    <div class="student-account__input">
-      {{#> ui/field label="Gender" id="student_gender" }}
-        <div class="student-account__input-radios">
-          {{> ui/radio-simple name="gender" option-1="Male" option-2="Female"}}
+        <div class="student-account__checkbox">
+          {{> ui/checkbox id="checkbox_01" checked=true label="Make my profile private"}}
+          <span class="student-account__checkbox-note">Option description</span>
         </div>
-      {{/ui/field}}
-    </div>
 
-  </div>
-
-  <div class="student-account__group">
-    <span class="student-account__group-title">Password</span>
-
-    <div class="student-account__input">
-      {{#> ui/field label="Current Password" id="student_password" }}
-        <span class="student-account__input-password">••••••••</span>
-
-        <div class="student-account__input-btn">
-          {{> ui/btn color="outline" transparent=true label="Change Password"}}
+        <div class="student-account__checkbox">
+          {{> ui/checkbox id="checkbox_02" label="Remove my profile from web search results"}}
+          <span class="student-account__checkbox-note">Option description</span>
         </div>
-      {{/ui/field}}
+      </div>
+
+      <div class="student-account__checkboxes">
+        <div class="student-account__checkboxes-title">Notifications</div>
+
+        <div class="student-account__checkbox">
+          {{> ui/checkbox id="checkbox_03" checked=true label="Notification option"}}
+          <span class="student-account__checkbox-note">Notification option description</span>
+        </div>
+
+        <div class="student-account__checkbox">
+          {{> ui/checkbox id="checkbox_04" checked=true label="Notification option"}}
+          <span class="student-account__checkbox-note">Notification option description</span>
+        </div>
+
+        <div class="student-account__checkbox">
+          {{> ui/checkbox id="checkbox_05" checked=true label="Notification option"}}
+          <span class="student-account__checkbox-note">Notification option description</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="student-account__inner">
+    <div class="student-account__group">
+      <div class="student-account__input student-account__input--note">
+        {{#> ui/field label="Username" note="Help text" id="student_username" }}
+          {{> ui/input id="student_username" placeholder="Name" value="Ali Kazal"}}
+        {{/ui/field}}
+      </div>
+
+      <div class="student-account__input">
+        {{#> ui/field label="Your Email" id="student_email" }}
+          {{> ui/input id="student_email" placeholder="Email" value="Ali_Kazal@mail.com"}}
+        {{/ui/field}}
+      </div>
+
+      <div class="student-account__input student-account__input--clipboard">
+        {{#> ui/field label="Your Ulearna URL" id="student_ulearna-url" }}
+          {{> ui/input id="student_ulearna-url" placeholder="URL" value="https://www.Ulearna.com/Ali_Kazal" icon-right=true clipboard=true}}
+        {{/ui/field}}
+      </div>
+
+      <div class="student-account__input">
+        {{#> ui/field label="Gender" id="student_gender" }}
+          <div class="student-account__input-radios">
+            {{> ui/radio-simple name="gender" option-1="Male" option-2="Female"}}
+          </div>
+        {{/ui/field}}
+      </div>
+
+    </div>
+  </div>
+  <div class="student-account__inner">
+    <div class="student-account__group">
+      <span class="student-account__group-title">Password</span>
+
+      <div class="student-account__input">
+        {{#> ui/field label="Current Password" id="student_password" }}
+          <span class="student-account__input-password">••••••••</span>
+
+          <div class="student-account__input-btn">
+            {{> ui/btn color="outline" transparent=true label="Change Password"}}
+          </div>
+        {{/ui/field}}
+      </div>
     </div>
   </div>
 </div>

@@ -74,8 +74,12 @@
       @include desktop {
         width: 237px;
         padding: 0 0 29px;
-      }
+        min-height: 177px;
 
+        &:not(:first-child) {
+          margin-left: 20px;
+        }
+      }
     }
 
     .carousel__row {

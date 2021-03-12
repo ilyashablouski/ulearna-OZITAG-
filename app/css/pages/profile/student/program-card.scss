@@ -1,6 +1,9 @@
 .program-card {
   position: relative;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background: #FFFFFF;
   box-shadow: 0 4px 14px rgba(1, 64, 139, 0.14);
   border-radius: 12px;
@@ -59,6 +62,10 @@
     }
   }
 
+  &__bottom {
+    margin-top: auto;
+  }
+
 
   &--not-upgrade {
     background: $color-blue;
@@ -88,14 +95,15 @@
       display: block;
       background: #51C7F9;
       border-radius: 10px;
-        &:before {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          content:'';
-          @include sprite('writing');
-        }
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: '';
+        @include sprite('writing');
+      }
     }
 
     &-tip {

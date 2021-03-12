@@ -12,15 +12,15 @@
 
     <div class="chat-user__inner">
       <span class="chat-user__title">{{title}}</span>
-      <p class="chat-user__text">
+      <div class="chat-user__info">
         {{#if reply}}
           <i
             class="chat-user__reply-img">{{>components/image img='profile/chat/user_01-small' ext="jpg" no-2x=true}}</i>
-      <b>You:&nbsp;</b>Amet minim mol..
+          <span class="chat-user__text chat-user__text--short"><b>You:&nbsp;</b>Amet minim mol Amet minim mol Amet minim mol</span>
         {{else}}
-          Amet minim mollit non deserunt ullamco est sit...
+          <span class="chat-user__text">Amet minim mollit non deserunt ullamco est sit Amet minim mollit non deserunt ullamco est sit</span>
         {{/if}}
-      </p>
+      </div>
       <time class="chat-user__time">1 day ago</time>
     </div>
   </div>

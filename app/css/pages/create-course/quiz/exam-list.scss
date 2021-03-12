@@ -35,6 +35,10 @@
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 0.02em;
+
+      &.selection {
+        background: #E4F6FE;
+      }
     }
 
     &-label {

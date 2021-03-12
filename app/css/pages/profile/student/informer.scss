@@ -1,5 +1,6 @@
 .informer {
-  height: 420px;
+  min-height: 420px;
+
   &__content {
     margin-top: 8px;
     display: none;
@@ -11,8 +12,12 @@
       animation: 150ms ease-in-out fadeIn;
 
       @keyframes fadeIn {
-        0% {opacity:0;}
-        100% {opacity:1;}
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
       }
     }
   }
@@ -69,6 +74,7 @@
   }
 
   &__hint {
+    margin-top: 8px;
     position: relative;
     padding: 10px 10px 10px 44px;
     background: rgba(66, 219, 146, 0.1);

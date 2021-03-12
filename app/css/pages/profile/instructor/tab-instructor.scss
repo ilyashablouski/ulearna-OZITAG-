@@ -93,6 +93,11 @@
       margin-left: 30px;
     }
 
+    @include no-smallTablet-and-Tablet {
+      flex: 0 0 250px;
+      max-width: 250px;
+    }
+
     @include mobile {
       order: 1;
       padding-top: 16px;
@@ -112,14 +117,14 @@
       margin-top: 15px;
     }
 
-    &:nth-child(3) {
+    &--followers {
       order: 1;
       @include mobile {
         margin-top: 0;
       }
     }
 
-    &:nth-child(2) {
+    &--categories {
       order: 2;
       @include mobile {
         margin-top: 0;
@@ -127,7 +132,7 @@
       }
     }
 
-    &:nth-child(1) {
+    &--highlights {
       order: 3;
       @include mobile {
         margin-top: 0;

@@ -67,21 +67,24 @@
   }
 
   &__cards {
-    margin-top: 16px;
+    margin-top: 0px;
     display: flex;
     flex-wrap: wrap;
     margin-left: -25px;
     margin-right: -25px;
 
     @include mobile {
+      margin-top: 16px;
       margin-left: -16px;
       margin-right: -16px;
     }
   }
 
   &__card {
+    margin-top: 16px;
     padding-left: 25px;
     padding-right: 25px;
+    width: 100%;
 
     @include mobile {
       padding-left: 16px;
@@ -93,7 +96,7 @@
       }
     }
 
-    &:nth-child(1) {
+    &--left {
       flex: 0 0 55.57%;
       max-width: 55.57%;
 
@@ -103,7 +106,7 @@
       }
     }
 
-    &:nth-child(2) {
+    &--right {
       flex: 0 0 44.43%;
       max-width: 44.43%;
 

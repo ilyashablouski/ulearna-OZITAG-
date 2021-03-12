@@ -117,27 +117,29 @@
   &__widget {
     &:not(:first-child) {
       margin-top: 15px;
+
+      @include mobile {
+        margin-top: 0;
+      }
     }
 
-    &:nth-child(3) {
+    &--learning {
       order: 1;
       @include mobile {
         margin-top: 0;
       }
     }
 
-    &:nth-child(2) {
+    &--tags {
       order: 2;
       @include mobile {
-        margin-top: 0;
         margin-left: 16px;
       }
     }
 
-    &:nth-child(1) {
+    &--highlights {
       order: 3;
       @include mobile {
-        margin-top: 0;
         margin-left: 16px;
         padding-right: 16px;
       }

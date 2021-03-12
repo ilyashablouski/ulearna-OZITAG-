@@ -51,13 +51,13 @@
         <button class="tab-instructor__header-btn">Weekly</button>
       </div>
       <div class="tab-instructor__students">
-          {{> blocks/profile/instructor/student-info
-            image="student_01"
-            student-name="Marvin Murphy"
-            course-name="ODD BODIES: Illustrating Expressive, Stylized People"
-            passed=10
-            progress-value=60
-          }}
+        {{> blocks/profile/instructor/student-info
+          image="student_01"
+          student-name="Marvin Murphy"
+          course-name="ODD BODIES: Illustrating Expressive, Stylized People"
+          passed=10
+          progress-value=60
+        }}
 
         {{> blocks/profile/instructor/student-info
           image="student_02"
@@ -103,15 +103,15 @@
   </div>
 
   <div class="tab-instructor__widgets">
-    <div class="tab-instructor__widget">
+    <div class="tab-instructor__widget tab-instructor__widget--highlights">
       {{> blocks/profile/profile-widget highlights=true  title="Credential and Highlights"}}
     </div>
 
-    <div class="tab-instructor__widget">
+    <div class="tab-instructor__widget tab-instructor__widget--categories">
       {{> blocks/profile/profile-widget tags=true title="Professional categories"}}
     </div>
 
-    <div class="tab-instructor__widget">
+    <div class="tab-instructor__widget tab-instructor__widget--followers">
       {{> blocks/profile/profile-widget followers=true  title="Followers"}}
     </div>
   </div>

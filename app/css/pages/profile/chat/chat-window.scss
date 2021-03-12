@@ -47,6 +47,12 @@
       max-height: 538px;
       min-height: 538px;
     }
+
+    .scroll-content {
+      @include no-smallTablet {
+        padding-bottom: 20px;
+      }
+    }
   }
 
   &__message {

@@ -49,8 +49,16 @@
   &__img {
     width: 48px;
     height: 48px;
+    min-width: 48px;
+    max-height: 48px;
     border-radius: 100%;
     overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__counter {
@@ -84,7 +92,7 @@
     }
   }
 
-  &__text {
+  &__info {
     margin-top: 6px;
     display: flex;
     align-items: center;
@@ -96,6 +104,25 @@
       margin-top: 4px;
       font-size: 12px;
       line-height: 150%;
+    }
+  }
+
+  &__text {
+    max-height: 38px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    @include mobile {
+      max-height: 36px;
+    }
+
+    &--short {
+      max-height: 19px;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
     }
   }
 
@@ -116,9 +143,18 @@
 
   &__reply-img {
     margin-right: 8px;
+    display: block;
     width: 24px;
     height: 24px;
+    min-width: 24px;
+    max-height: 24px;
     border-radius: 100%;
     overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }

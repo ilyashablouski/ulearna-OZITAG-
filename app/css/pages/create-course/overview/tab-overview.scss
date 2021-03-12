@@ -1,26 +1,24 @@
 .tab-overview {
+  margin-top: 30px;
+
   &__wrapper {
     margin: 0 auto;
     max-width: 836px;
   }
 
-  &__form-field {
+  &__inner {
     margin-top: 30px;
+  }
 
-    &:nth-child(1) {
+  &__form-field {
+    margin-top: 23px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &--short {
       max-width: 393px;
-    }
-
-    &:nth-child(3) {
-      margin-top: 23px;
-    }
-
-    &:nth-child(4) {
-      margin-top: 23px;
-    }
-
-    &:nth-child(5) {
-      margin-top: 23px;
     }
   }
 
