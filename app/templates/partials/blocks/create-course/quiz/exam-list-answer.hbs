@@ -2,8 +2,9 @@
   <div class="exam-list-answer__title">
     <span class="exam-list-answer__title-label">{{label}}.</span>
     <div class="exam-list-answer__group">
-      <span class="exam-list-answer__title-text">{{text}}</span>
-      <button class="exam-list-answer__title-edit-btn js-content-edit-btn"></button>
+      <label class="exam-list-answer__title-text js-content-editor__editable">
+        <input class="exam-list__input" type="hidden" name="answer" value="">{{text}}</label>
+      <button class="exam-list__edit-btn js-content-edit-btn"></button>
     </div>
   </div>
 

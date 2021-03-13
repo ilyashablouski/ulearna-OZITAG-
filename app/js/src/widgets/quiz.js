@@ -92,7 +92,6 @@ class Quiz extends Widget {
     }
   };
 
-
   editQuestionNumber(element) {
     const elementNumberString = element.querySelector('.exam-list__question-number');
     const string = elementNumberString.textContent;

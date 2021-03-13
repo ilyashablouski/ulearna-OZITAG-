@@ -9,7 +9,10 @@ class ContentEditor extends Widget {
     document.addEventListener('click', e => {
       const clickedElement = e.target;
       const editableElement = clickedElement.previousElementSibling;
-      const notEditElement = !clickedElement.classList.contains('js-content-edit-btn') && !clickedElement.hasAttribute('contenteditable');
+      //Condition description
+      const notEditElement = !clickedElement.classList.contains('js-content-edit-btn')
+        && !clickedElement.hasAttribute('contenteditable') && !clickedElement.closest('.js-content-editor__editable');
+
       if (clickedElement.classList.contains('js-content-edit-btn')) {
         this.onToggleElement(editableElement);
       } else if (notEditElement) {
@@ -24,6 +27,9 @@ class ContentEditor extends Widget {
 
   onEditElement(element) {
     element.setAttribute('contenteditable', true);
+    element.addEventListener('input', () => {
+      this.contentEditableHandler(element);
+    });
     this.setCustomRangeColor(element);
     this.setCaret(element);
   }
@@ -34,7 +40,7 @@ class ContentEditor extends Widget {
   }
 
   onAnchorElements() {
-    const editableElements = this.$node.querySelectorAll('span');
+    const editableElements = this.$node.querySelectorAll('.js-content-editor__editable');
     const editableElementsArray = Object.values(editableElements);
 
     const filteredElements = editableElementsArray.filter(element => {
@@ -63,6 +69,12 @@ class ContentEditor extends Widget {
 
   removeCustomRangeColor(rangeElement) {
     rangeElement.classList.remove('selection');
+  }
+
+  contentEditableHandler(editableElement) {
+    const input = editableElement.querySelector('input');
+    const text = editableElement.textContent;
+    input.value = text;
   }
 
   static init(element) {

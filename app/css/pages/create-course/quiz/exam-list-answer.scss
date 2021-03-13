@@ -1,6 +1,5 @@
 .exam-list-answer {
   padding: 18px 0;
-  height: 99px;
   box-shadow: inset 0px -1px 0px #DAE4ED;
   @include transition;
 
@@ -13,7 +12,7 @@
     align-items: center;
 
     &:hover {
-      .exam-list-answer__title-edit-btn {
+      .exam-list__edit-btn {
         visibility: visible;
         opacity: 1;
 
@@ -41,15 +40,10 @@
       font-weight: normal;
       font-size: 16px;
       line-height: 146%;
-    }
 
-    &-edit-btn {
-      margin-left: 8px;
-      padding: 3px 0;
-      @include sprite("edit-btn-small");
-      @include transition;
-      visibility: hidden;
-      opacity: 0;
+      &.selection {
+        background: #E4F6FE;
+      }
     }
   }
 
